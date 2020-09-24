@@ -1,0 +1,126 @@
+@font-face{
+	font-family: "opendyslexic";
+	src: url('../fonts/OpenDyslexic-Regular.otf');
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face{
+	font-family: "opendyslexic";
+	src: url('../fonts/OpenDyslexic-Italic.otf');
+	font-style: italic;
+	font-weight: normal;
+}
+@font-face{
+	font-family: "opendyslexic";
+	src: url('../fonts/OpenDyslexic-Bold.otf');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face{
+	font-family: "opendyslexic";
+	src: url('../fonts/OpenDyslexic-BoldItalic.otf');
+	font-weight: bold;
+	font-style: italic;
+}
+
+* {
+   font-family: "opendyslexic";
+}
+
+html {
+	background-color: #f5f5f5;
+}   
+
+header  {
+	background-color: #527a53;
+}  
+
+header h1 {
+	color: #f9f9f9;
+}  
+
+footer {
+	font-size: 80%;
+}                                
+
+h1 {
+	color: #527a53;
+}
+
+h2,h3 {
+	color: #659d68; 
+}
+
+h3 {
+	font-style: italic;
+}
+
+h4 {
+	color: #435a43;
+}
+
+a {
+	color: #52797a;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #53527a;
+}
+
+/* Estilos para el acordeón */
+.ac-container{
+	text-align: left;
+	margin: 3em 0;
+	}
+	
+	.ac-container label{
+		padding: 0.5em 2em;
+		position: relative;
+		z-index: 20;
+		display: block;
+		cursor: pointer;
+		font-weight: bold;
+		font-size: 130%;
+		color: #f9f9f9;
+		background: #527a53;
+		}
+	
+		.ac-container label:hover{
+			background: #80a980;
+		}
+
+	.ac-container label:hover:after,
+	.ac-container input:checked + label:hover:after{
+		content: "+";
+		position: absolute;
+		right: 1em;
+		font-weight: bold;
+		}
+
+	.ac-container input:checked + label:hover:after{
+		content: "-";
+		position: absolute;
+		right: 1em;
+		font-weight: bold;
+		}
+	
+	.ac-container input{
+		display: none;
+		}
+
+	.ac {
+		overflow: hidden;
+		height: 0;
+		position: relative;
+		z-index: 10;
+		transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+		}
+
+	.ac-container input:checked ~ .ac{
+		height: inherit;
+		margin: 0.5em 1em;
+		text-align: justify;
+		line-height: 150%;
+		word-spacing: 0.15em;
+		}
