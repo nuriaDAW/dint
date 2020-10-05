@@ -72,6 +72,20 @@ a:visited {
 	color: #53527a;
 }
 
+img {
+	max-width: 100%; /* Fija como tamaño máximo de la imagen el del contenedor */
+}
+
+/* Estilos para iconos */
+.mdi.mdi-pdf-box {
+	color: #f72a2a;
+	font-size: large;
+}
+
+.mdi.mdi-image-area {
+	font-size: x-large;
+}
+
 /* Estilos para el acordeón */
 .ac-container{
 	text-align: left;
