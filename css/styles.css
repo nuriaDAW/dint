@@ -33,7 +33,7 @@ html {
 
 header  {
 	background-color: #527a53;
-	padding: 1%;
+	padding: 0.5%;
 }
 
 header h1 {
@@ -49,7 +49,7 @@ h1 {
 }
 
 h2,h3 {
-	color: #659d68; 
+	color: #657a52; 
 }
 
 h3 {
@@ -65,7 +65,7 @@ p {
 }
 
 a {
-	color: #52797a;
+	color: #436465;
 	text-decoration: none;
 }
 
