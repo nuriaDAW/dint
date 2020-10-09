@@ -77,6 +77,11 @@ img {
 	max-width: 100%; /* Fija como tamaño máximo de la imagen el del contenedor */
 }
 
+.alerta {
+	color:rgb(233, 17, 17);
+	font-weight: bold;
+}
+
 /* Estilos para iconos */
 .mdi.mdi-pdf-box {
 	color: #f72a2a;

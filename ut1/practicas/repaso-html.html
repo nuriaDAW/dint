@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Nuria">
+    <title>Repaso HTML</title>
+    <link rel="icon" href="../../img/logo.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="../../img/logo.png" sizes="16x16" type="image/png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+
+<body>
+    <header>
+        <a href="../../index.html">
+            <h1>Diseño de Interfaces Web</h1>
+        </a>
+    </header>
+    <nav></nav>
+    <main>
+        <section>
+            <h1>Práctica: Repaso de HTML</h1>
+            <p>Actividades del punto "1.7. Lenguaje de marcas HTML5" del libro Diseño Web de Interfaces de Garceta.</p>
+        </section>
+        <section>
+            <article id="enlaces">
+                <header>
+                    <h1>Enlaces (&lt;a&gt;)</h1>
+                </header>
+                <p>This is a <a href="http://www.google.com">Link to Google</a>.</p>
+                <p>Go to <a href="http://www.w3c.org" target="_blank">the W3C</a>.</p>
+                <p>Website of <a href="http://www.cuatrovientos.org" title="Cuatrovientos site">Cuatrovientos</a>.</p>
+            </article>
+            <article id="parrafos">
+                <header>
+                    <h1>Párrafos (&lt;p&gt;)</h1>
+                </header>
+                <p>Esto es un párrafo. Contiene un texto largo.</p>
+                <p>Cada párrafo genera un salto de línea respecto al final además de cierto margen.</p>
+                <p>Este sería el párrafo final.</p>
+            </article>
+            <article id="tablas">
+                <header>
+                    <h1>Tablas (&lt;table&gt;)</h1>
+                </header>
+                <table id="sample">
+                    <caption>Sample table</caption>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>HTML</td>
+                            <td>Languaje of web documents</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>JavaScript</td>
+                            <td>Languaje of web and mobiles</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr colspan="3">
+                            <th>2 items</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </article>
+            <article id="listas">
+                <header>
+                    <h1>Listas (&lt;ol&gt;, &lt;ul&gt;)</h1>
+                </header>
+                <h3>Ordered list: best languajes</h3>
+                <ol>
+                    <li>JavaScript</li>
+                    <li>C++</li>
+                    <li>php</li>
+                </ol>
+                <h3>Unordered list: some databases</h3>
+                <ul>
+                    <li>MySQL</li>
+                    <li>Mongodb</li>
+                    <li>Oracle</li>
+                </ul>
+            </article>
+            <article id="imagenes">
+                <header>
+                    <h1>Imágenes (&lt;img&gt;)</h1>
+                </header>
+                <p>Los atributos <em>alt</em>, para mostrar texto alternativo a la imagen, y <em>title</em> son
+                    interesantes para aplicar mejor técnicas de SEO. </p>
+                <p>El atributo <em>crossorigins</em>, válido para imagen y vídeo, permite configurar peticiones a
+                    otros orígenes con dos posibles valores: </p>
+                <ul>
+                    <li>
+                        <em>user-credentials:</em> habilita CORS enviando las credenciales del usuario (envío de
+                        cookies, certificado o los valores de autenticación básica junto con la petición del recurso
+                        solicitado).
+                    </li>
+                    <li>
+                        <em>anonymous:</em> habilita el soporte para CORS, pero sin enviar credenciales al otro extermo.
+                    </li>
+                </ul>
+                <img id="image-1" title="Sample image" alt="Sample image" src="../../img/HTML5_Logo_64.png" />
+            </article>
+            <article id="videos">
+                <header>
+                    <h1>Vídeos (&lt;video&gt;)</h1>
+                </header>
+                <video id="myVideo" width="300" height="200" autoplay="autoplay" controls="controls" loop="loop"
+                    muted="muted">
+                    <source src="../../media/videos/trailer.mp4" type="video/mp4" />
+                    <source src="../../media/videos/trailer.ogv" type="video/ogg" />
+                    <source src="../../media/videos/trailer.webm" type="video/webm" />
+                    <track kind="subtitles" label="English subtitles" src="subtitles_en.vtt" srclang="en" default>
+                    <track kind="subtitles" label="Spanish subtitles" src="subtitles_es.vtt" srclang="es">
+                    </track>
+                </video>
+                <small>
+                    <p>Trailer creado por la <a href="https://www.blender.org/foundation/" target="_blank">Blender
+                    Foundation</a>.</p>
+                </small>
+            </article>
+            <article id="audios">
+                <header>
+                    <h1>Audios (&lt;audio&gt;)</h1>
+                </header>
+                <audio id="audio-1" controls="controls">
+                    <source src="../../media/audios/e-mail.mp3" type="audio/mp3" />
+                    <source src="../../media/audios/e-mail.ogg" type="audio/ogg" />
+                    <source src="../../media/audios/e-mail.wav" type="audio/wav" />
+                </audio>
+            </article>
+            <article id="canvas-repaso">
+                <header>
+                    <h1>Canvas (&lt;canvas&gt;)</h1>
+                </header>
+                <p>Un canvas es un lienzo donde se pueden pintar gráficos mediante un API de JS.</p>
+                <p>Ha supuesto la posibilidad de desarrollar juegos en HTML5.</p>
+                <canvas id="canvas-1" width="300" height="200"></canvas>
+                <script>
+                    var canvas = document.getElementById('canvas-1');
+                    var ctx = canvas.getContext('2d');
+                    // draw to ctx object
+                    // Sample code fills canvas with grey color:
+                    ctx.fillStyle = '#FFEE00';
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                    // black rectangle
+                    ctx.fillStyle = '#00EEFF';
+                    ctx.fillRect(10, 10, 100, 100);
+                    // outlined rectangle
+                    ctx.strokeRect(150, 10, 100, 100);
+                </script>
+            </article>
+            <article id="menu-context">
+                <header>
+                    <h1>Menús contextuales (&lt;menu&gt;)</h1>
+                </header>
+                <p>Permite crear menús contextuales dentro de la página. ¡OJO! No es un menú de NAV.</p>
+                <p><span class="alerta">Elemento desaprobado.</span> Ref.:<a
+                        href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/menu"
+                        target="_blank">https://developer.mozilla.org/es/docs/Web/HTML/Elemento/menu</a></p>
+            </article>
+            <article id="formularios">
+                <header>
+                    <h1>Formularios (&lt;form&gt;)</h1>
+                </header>
+                <form name="sampleform" id="form-1" action="" method="post">
+                    <fieldset>
+                        <legend>This is a form</legend>
+                        <input type="text" name="username" value="">
+                        <input type="submit" name="submit" value="Send">
+                    </fieldset>
+                </form>
+                <h2>Label (&lt;label&gt;)</h2>
+                <p>Una <em>label</em> nos permite etiquetar de manera formal un campo de formulario.</p>
+                <div>
+                    <!-- El atributo for crea un vínculo con el campo. Al hacer click sobre el label se seleciona 
+                        el elemento del formulario o toma el foco -->
+                    <label id="labelUsername" for="username">Username</label>
+                    <input type="text" name="username" id="username" value="">
+                </div>
+                <div>
+                    <label id="labelRemember" for="remember">Remember me</label>
+                    <input type="checkbox" name="remember" id="remember" value="">
+                </div>
+                <h2>Datalist (&lt;datalist&gt;)</h2>
+                <p>Una <em>datalist</em> genera una lista de datos reutilizable por <em>inputs</em>, como listas.</p>
+                <input list="languageList" id="languages" />
+                <datalist id="languageList">
+                    <option value="1">JavaScript</option>
+                    <option value="2">TypeScript</option>
+                    <option value="3">CoffeeScript</option>
+                </datalist>
+                <h2>Input (&lt;input&gt;)</h2>
+                <p>Mediante los <em>input</em> creamos los campos del formulario.</p>
+                <label for="login">Login</label>
+                <input id="login" name="login" placeholder="Type your login name" type="text" />
+                <h2>Button</h2>
+                <p>Hay tres tipos básicos:</p>
+                <ol>
+                    <li><strong>Input Button:</strong> botón genérico. Hay que asociarle JS o no hará nada.</li>
+                    <input type="button" value="Normal button" autofocus="autofocus" id="btn" />
+                    <li><strong>Input Submit:</strong> dentro de un formulario provoca el envío del mismo.</li>
+                    <input type="submit" value="Send Form" autofocus="autofocus" id="sbmt" formaction="" />
+                    <li><strong>Input Reset:</strong> dentro de un formulario deja todos los campos vacíos o con las
+                        elecciones por defecto.</li>
+                    <input type="reset" value="Reset All" autofocus="disabled" id="rst" />
+                    <li><strong>Button:</strong> etiqueta que representa un botón.</li>
+                    <button id="other">This is just another button</button>
+                </ol>
+                <h2>Meter (&lt;meter&gt;)</h2>
+                <p>Muestra una barra de progreso. Lo lógico es que sus valores cambien con JS.</p>
+                <meter value="5" min="0" max="10" low="1" high="9" optimum="5" id="myMeter">This is a meter from 0 to
+                    10</meter>
+                <h3>Ejemplo de formulario</h3>
+                <form enctype="multipart/form-data" method="post">
+                    <fieldset>
+                        <legend>Input text</legend>
+                        <div style="margin:1em;">
+                            <!-- Input text: caja de texto. Si alguno de los campos no es compatible con el navegador se puede sustituir por este -->
+                            <label for="text1">Text type</label><br />
+                            <input id="text1" name="Text" placeholder="Text" type="text" />
+                        </div>
+                        <div style="margin:1em;">
+                            <label for="input-1">Input DNI</label><br />
+                            <input id="input-1" name="dniInput" placeholder="Insert DNI" pattern="[0-9]{8}[A-Z]{1}"
+                                maxlength="9" autocomplete="true" required="true" type="text" />
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Textarea</legend>
+                        <div style="margin:1em;">
+                            <div>
+                                <label for="textarea1">Description</label>
+                            </div>
+                            <!-- Textarea: caja de texto multilínea -->
+                            <textarea id="textarea1" name="Description" placeholder="Insert your description" cols="40"
+                                rows="8"></textarea>
+                        </div>
+                        <div style="margin:1em;">
+                            <div>
+                                <label for="textarea2">Description with options</label>
+                            </div>
+                            <textarea id="textarea1" name="Description" disabled="disabled"
+                                placeholder="Insert your description, 255 chars" maxlength="255" autofocus="true"
+                                required="true" cols="40" rows="8"></textarea>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Input search</legend>
+                        <div style="margin:1em;">
+                            <!-- Input search: campo para búsquedas -->
+                            <label form="search1">Search</label><br />
+                            <input id="search2" name="search2" placeholder="Required search" pattern="[a-zA-Z]{1,10}"
+                                maxlength="10" autofocus="true" required="true" type="search" />
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Input password</legend>
+                        <div style="margin:1em;">
+                            <!-- Input password: caja de texto cuyos caracteres están enmascarados con asteriscos -->
+                            <label for="password1">Password</label><br />
+                            <input id="password1" name="password1" placeholder="Enter password" type="password" />
+                        </div>
+                        <div style="margin:1em;">
+                            <label for="password2">Reenter password</label><br />
+                            <input id="password2" name="password2" placeholder="Enter password" maxlength="15"
+                                required="true" type="password" />
+                        </div>
+                        <div style="margin:1em;">
+                            <label for="password3">Password min</label><br />
+                            <input id="password3" name="password3" placeholder="Enter minimum password"
+                                pattern="[\w\W]{4,}" title="Pasword should contain four characters minimum." required="true" type="password" />
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Input number</legend>
+                        <div style="margin:1em;">
+                            <!-- Input number: caja de texto en la que solo se pueden introducir valores numéricos -->
+                            <label for="number1">Any number</label><br />
+                            <input id="number1" name="number1" placeholder="Enter a number" type="number" />
+                        </div>
+                        <div style="margin:1em;">
+                            <label for="number2">Age</label><br />
+                            <input id="number2" name="number2" placeholder="Enter your age" min="0" max="150"
+                                required="true" type="number" />
+                        </div>
+                        <div style="margin:1em;">
+                            <label for="number3">Zip code</label><br />
+                            <input id="number3" name="number3" placeholder="Enter zip code" min="10000" max="99999"
+                                pattern="[0-9]{5}" title="Zip code should contain five numbers." required="true" type="number" />
+                        </div>
+                        <div style="margin:1em;">
+                            <label for="number4">Even numbers</label><br />
+                            <input id="number4" name="number4" placeholder="Even numbers: 2, 4, 6" min="2" max="100"
+                                step="2" required="true" type="number" />
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Input file</legend>
+                        <small>
+                            <p>Este campo permite adjuntar y enviar ficheros a través de los formularios.</p>
+                            <p>Hay que anadir el atributo <em>enctype</em> a la etiqueta <em>form</em> para que se
+                                envíen
+                                correctamente. <em>enctype</em> solo se puede usar con el método POST.</p>
+                            <p>&lt;form enctype="multipart/form-data" ...&gt;</p>
+                        </small>
+                        <div style="margin:1em;">
+                            <label for="file1">Upload</label><br />
+                            <input id="file1" name="file1" placeholder="Select field" type="file" />
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Input url</legend>
+                        <!-- Input url: campo de texto que permite introducir una url -->
+                        <div style="margin:1em;">
+                            <label for="url1">Your site (any://)</label><br />
+                            <input id="url1" name="url1" placeholder="Enter valid url" type="url" />
+                        </div>
+                        <div style="margin:1em;">
+                            <label for="url2">Your site (https://)</label><br />
+                            <input id="url2" name="url2" placeholder="Enter valid url" pattern="https?://.+"
+                                type="url" />
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Input email</legend>
+                        <!-- Input email: campo de texto específico para email -->
+                        <div style="margin:1em;">
+                            <label for="email1">Email</label><br />
+                            <input id="email1" name="email1" placeholder="Enter mail" type="email" />
+                        </div>
+                        <div style="margin:1em;">
+                            <label for="email2">Enter company email</label><br />
+                            <input id="email2" name="url2" placeholder="Enter company email" type="email" />
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Input tel</legend>
+                        <!-- Input tel: campo de texto específico para teléfono -->
+                        <div style="margin:1em;">
+                            <label for="tel1">Telephone</label><br />
+                            <input id="tel1" name="tel1" placeholder="Enter telephone" type="tel" />
+                        </div>
+                        <div style="margin:1em;">
+                            <label for="tel2">Local telephone</label><br />
+                            <input id="tel2" name="tel2" placeholder="Enter your local phone 948..."
+                                pattern="^948[0-9]{6}" maxlength="9" title="Valid telephone contains 6 to 9 numbers." required="true" type="tel" />
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Input date</legend>
+                        <!-- Input date: campo para seleccionar fechas sin necesidad de JS -->
+                        <div style="margin:1em;">
+                            <label for="date1">enter date</label><br />
+                            <input id="date1" name="date1" placeholder="Enter date" type="date" />
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Input time</legend>
+                        <!-- Input time: campo que permite indicar una hora -->
+                        <div style="margin:1em;">
+                            <label for="time1">Enter time</label><br />
+                            <input id="time1" name="time1" placeholder="Enter time" type="time" />
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Input datetime</legend>
+                        <!-- Input datetime: combina input date e input time. Los navegadores principales no lo reconocen -->
+                        <div style="margin:1em;">
+                            <label for="datetime1">Enter datetime</label><br />
+                            <input id="datetime1" name="datetime1" placeholder="Enter datetime" type="datetime" />
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Input week</legend>
+                        <!-- Input week: caja de texto para recoger una semana del año -->
+                        <div style="margin:1em;">
+                            <label for="week1">Choose week</label><br />
+                            <input id="week1" name="week1" placeholder="Choose week" type="week" />
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Input month</legend>
+                        <!-- Input month: caja de texto para introducir un mes y un año -->
+                        <div style="margin:1em;">
+                            <label for="month1">Choose month</label><br />
+                            <input id="month1" name="month1" placeholder="Choose month" type="month" />
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Input color</legend>
+                        <!-- Input color: cuadro de diálogo para seleccionar un color -->
+                        <div style="margin:1em;">
+                            <label for="color1">Choose color</label><br />
+                            <input id="color1" name="color1" placeholder="Choose color" type="color" />
+                        </div>
+                        <div style="margin:1em;">
+                            <label for="color2">Favourite color</label><br />
+                            <input id="color2" name="color2" placeholder="Choose color" type="color" />
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Input range</legend>
+                        <!-- Input range: campo para elegir un valor dentro de un rango -->
+                        <div style="margin:1em;">
+                            <label for="rateFilm">Rate this film</label><br />
+                            <input id="rateFilm" name="rate" type="range" min="1" max="10" rate="5" />
+                        </div>
+                    </fieldset>
+                    <input type="submit">
+                </form>
+            </article>
+        </section>
+        <hr />
+        <a href="index.html"><i class="material-icons">arrow_back</i></a>
+    </main>
+    <footer>
+        <p>Nuria Barrios Santos | 2020 <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"> CC BY
+                4.0</a>.</p>
+    </footer>
+</body>
+
+</html>
