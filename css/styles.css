@@ -41,6 +41,8 @@ header h1 {
 }  
 
 footer {
+	display: flex;
+	justify-content: space-between;
 	font-size: 80%;
 }                                
 
