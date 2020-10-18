@@ -1,27 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     <url>
         <loc>https://nuriadaw.github.io/dint/index.html</loc>
-        <lastmod>2020-10-12T16:26:26+00:00</lastmod>
+        <lastmod>2020-10-18T19:52:25+00:00</lastmod>
    </url>
    <url>
         <loc>https://nuriadaw.github.io/dint/ut1/index.html</loc>
-        <lastmod>2020-10-12T16:26:26+00:00</lastmod>
+        <lastmod>2020-10-18T19:52:25+00:00</lastmod>
     </url>
     <url>
         <loc>https://nuriadaw.github.io/dint/ut1/documentacion/index.html</loc>
-        <lastmod>2020-10-12T16:26:26+00:00</lastmod>
+        <lastmod>2020-10-18T19:52:25+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut1/documentacion/color_interfaz_usuario.pdf</loc>
+        <lastmod>2020-10-18T19:52:25+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut1/documentacion/wireframes.pdf</loc>
+        <lastmod>2020-10-18T19:52:25+00:00</lastmod>
     </url>
     <url>
         <loc>https://nuriadaw.github.io/dint/ut1/documentacion/html-div.html</loc>
-        <lastmod>2020-10-12T16:26:26+00:00</lastmod>
+        <lastmod>2020-10-18T19:52:25+00:00</lastmod>
         </url>
     <url>   
         <loc>https://nuriadaw.github.io/dint/ut1/documentacion/html-float.html</loc>
-        <lastmod>2020-10-12T16:26:26+00:00</lastmod>
+        <lastmod>2020-10-18T19:52:25+00:00</lastmod>
     </url>
     <url>
         <loc>https://nuriadaw.github.io/dint/ut1/documentacion/html-flex.html</loc>
-        <lastmod>2020-10-12T16:26:26+00:00</lastmod>    
+        <lastmod>2020-10-18T19:52:25+00:00</lastmod>  
     </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut1/practicas/index.html</loc>
+        <lastmod>2020-10-18T19:52:26+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut1/practicas/p1/index.html</loc>
+        <lastmod>2020-10-18T19:52:26+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut1/practicas/p1/barriossantos_nuria-plantilla_documentacion_dint.pdf</loc>
+        <lastmod>2020-10-18T19:52:26+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut1/practicas/practica-colores.html</loc>
+        <lastmod>2020-10-18T19:52:26+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut1/practicas/practica-fuentes.html</loc>
+        <lastmod>2020-10-18T19:52:26+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut1/practicas/practica-iconos/index.html</loc>
+        <lastmod>2020-10-18T19:52:26+00:00</lastmod>
+</url>
+<url>
+        <loc>https://nuriadaw.github.io/dint/ut1/practicas/practica-iconos/iconos-material.html</loc>
+        <lastmod>2020-10-18T19:52:26+00:00</lastmod>
+</url>
+<url>
+        <loc>https://nuriadaw.github.io/dint/ut1/practicas/practica-iconos/iconos-boostrap.html</loc>
+        <lastmod>2020-10-18T19:52:26+00:00</lastmod>
+</url>
+<url>
+        <loc>https://nuriadaw.github.io/dint/ut1/practicas/practica-iconos/iconos-varias-fuentes.html</loc>
+        <lastmod>2020-10-18T19:52:26+00:00</lastmod>
+</url>
+<url>
+    <loc>https://nuriadaw.github.io/dint/ut1/practicas/disenno-web-cliente/index.html</loc>
+    <lastmod>2020-10-18T19:52:25+00:00</lastmod>
+</url>
+<url>
+    <loc>https://nuriadaw.github.io/dint/ut1/practicas/disenno-web-cliente/seech_guia_estilos.pdf</loc>
+    <lastmod>2020-10-18T19:52:25+00:00</lastmod>
+</url>
+<url>
+    <loc>https://nuriadaw.github.io/dint/ut1/practicas/disenno-web-cliente/seech.bmpr</loc>
+    <lastmod>2020-10-18T19:52:26+00:00</lastmod>
+</url>
+<url>
+    <loc>https://nuriadaw.github.io/dint/ut1/practicas/practica-balsamiq/index.html</loc>
+    <image:image>
+         <image:loc>https://nuriadaw.github.io/dint/img/telegram.png"</image:loc>
+    </image:image>
+    <lastmod>2020-10-18T19:52:26+00:00</lastmod>
+</url>
+<url>
+    <loc>https://nuriadaw.github.io/dint/ut1/practicas/practica-balsamiq/practica-balsamiq.pdf</loc>
+    <lastmod>2020-10-18T19:52:26+00:00</lastmod>
+</url>
+<url>
+    <loc>https://nuriadaw.github.io/dint/ut1/practicas/repaso-html.html</loc>
+    <video:video>            
+        <video:title>Sintel</video:title>
+        <video:description>Joung warrion woman rears a dragon.</video:description>    
+        <video:content_loc>https://nuriadaw.github.io/dint/media/videos/trailer.mp4</video:content_loc>
+    </video:video>
+    <lastmod>2020-10-18T19:52:26+00:00</lastmod>
+</url>
+<url>
+    <loc>https://nuriadaw.github.io/dint/ut1/practicas/practica-sitemaps/index.html</loc>
+    <lastmod>2020-10-18T19:52:26+00:00</lastmod>
+</url>
+<url>
+    <loc>https://nuriadaw.github.io/dint/ut1/practicas/practica-sitemaps/practica_sitemaps.pdf</loc>
+    <lastmod>2020-10-18T19:52:26+00:00</lastmod>
+</url>
+<url>
+    <loc>https://nuriadaw.github.io/dint/ut1/herramientas.html</loc>
+    <lastmod>2020-10-18T19:52:25+00:00</lastmod>
+</url>
 </urlset>
