@@ -2146,7 +2146,6 @@
  *    without disabling user zoom.
  */
 html {
-  font-family: sans-serif;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -2266,6 +2265,10 @@ dfn {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
+}
+
+h1.header, h5.header {
+    text-shadow: 2px 2px 4px #000000;
 }
 
 /**
@@ -2901,6 +2904,9 @@ ul.staggered-list li {
   padding: 10px 0px;
   color: rgba(255, 255, 255, 0.8);
   background-color: #3d5c3e !important;
+}
+.footer-copyright a {
+  color: #b3b3cc;
 }
 
 table, th, td {
@@ -4270,11 +4276,13 @@ nav .button-collapse i {
 }
 
 nav .brand-logo {
-  position: absolute;
-  color: #fff;
+  position: relative;
+  color: grey;
   display: inline-block;
+  width: 3rem;
   font-size: 2.1rem;
   padding: 0;
+  vertical-align: middle;
 }
 
 nav .brand-logo.center {
@@ -4425,34 +4433,34 @@ nav .input-field label.active i {
   }
 }
 
-@font-face {
-  font-family: "Roboto";
-  src: local(Roboto Thin), url("../fonts/roboto/Roboto-Thin.woff2") format("woff2"), url("../fonts/roboto/Roboto-Thin.woff") format("woff");
-  font-weight: 100;
+
+@font-face{
+	font-family: "opendyslexic";
+	src: url('../../../../fonts/OpenDyslexic-Regular.otf');
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face{
+	font-family: "opendyslexic";
+	src: url('../../../../fonts/OpenDyslexic-Italic.otf');
+	font-style: italic;
+	font-weight: normal;
+}
+@font-face{
+	font-family: "opendyslexic";
+	src: url('../../../../fonts/OpenDyslexic-Bold.otf');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face{
+	font-family: "opendyslexic";
+	src: url('../../../../fonts/OpenDyslexic-BoldItalic.otf');
+	font-weight: bold;
+	font-style: italic;
 }
 
-@font-face {
-  font-family: "Roboto";
-  src: local(Roboto Light), url("../fonts/roboto/Roboto-Light.woff2") format("woff2"), url("../fonts/roboto/Roboto-Light.woff") format("woff");
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: local(Roboto Regular), url("../fonts/roboto/Roboto-Regular.woff2") format("woff2"), url("../fonts/roboto/Roboto-Regular.woff") format("woff");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: local(Roboto Medium), url("../fonts/roboto/Roboto-Medium.woff2") format("woff2"), url("../fonts/roboto/Roboto-Medium.woff") format("woff");
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: local(Roboto Bold), url("../fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("../fonts/roboto/Roboto-Bold.woff") format("woff");
-  font-weight: 700;
+* {
+   font-family: "opendyslexic";
 }
 
 a {
@@ -4461,7 +4469,6 @@ a {
 
 html {
   line-height: 1.5;
-  font-family: "Roboto", sans-serif;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.87);
 }

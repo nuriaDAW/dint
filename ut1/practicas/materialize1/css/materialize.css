@@ -4404,9 +4404,10 @@ nav .brand-logo {
     position: relative;
     color: grey;
     display: inline-block;
-    width: 5%;
+    width: 3rem;
     font-size: 2.1rem;
     padding: 0;
+    vertical-align: middle;
 }
 
 nav .brand-logo.center {

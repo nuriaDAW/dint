@@ -35,14 +35,39 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+@font-face{
+	font-family: "opendyslexic";
+	src: url('../../../../../../fonts/OpenDyslexic-Regular.otf');
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face{
+	font-family: "opendyslexic";
+	src: url('../../../../../../fonts/OpenDyslexic-Italic.otf');
+	font-style: italic;
+	font-weight: normal;
+}
+@font-face{
+	font-family: "opendyslexic";
+	src: url('../../../../../../fonts/OpenDyslexic-Bold.otf');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face{
+	font-family: "opendyslexic";
+	src: url('../../../../../../fonts/OpenDyslexic-BoldItalic.otf');
+	font-weight: bold;
+	font-style: italic;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: "opendyslexic";
 }
 
 html {
-  font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -54,7 +79,6 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -153,13 +177,13 @@ sup {
 }
 
 a {
-  color: #007bff;
+  color: #436465;
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: #0056b3;
+  color: #436465;
   text-decoration: underline;
 }
 
@@ -1116,7 +1140,19 @@ pre code {
     -ms-flex: 0 0 33.333333%;
     flex: 0 0 33.333333%;
     max-width: 33.333333%;
+    padding: 2rem 2rem 5rem ;
   }
+
+  .col-md-4 h2 {
+    color: var(--green);
+  }
+
+  .col-md-4 p:nth-of-type(2) {
+    position: absolute;
+    top: 80%;
+    bottom:0;
+  }
+
   .col-md-5 {
     -ms-flex: 0 0 41.666667%;
     flex: 0 0 41.666667%;
@@ -2576,7 +2612,7 @@ fieldset:disabled a.btn {
 
 .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+  box-shadow: 0 0 0 0.2rem #436465;
 }
 
 .btn-secondary {
@@ -3031,14 +3067,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-light {
-  color: #f8f9fa;
-  border-color: #f8f9fa;
+  color: #8dda94;
+  border-color: #8dda94;
 }
 
 .btn-outline-light:hover {
   color: #212529;
-  background-color: #f8f9fa;
-  border-color: #f8f9fa;
+  background-color: #8dda94;
+  border-color: #8dda94;
 }
 
 .btn-outline-light:focus, .btn-outline-light.focus {
@@ -4677,15 +4713,15 @@ input[type="button"].btn-block {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.5);
+  color: #8dda94;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(142, 214, 226, 0.75);
 }
 
 .navbar-dark .navbar-nav .nav-link.disabled {
-  color: rgba(255, 255, 255, 0.25);
+  color: #91a793;
 }
 
 .navbar-dark .navbar-nav .show > .nav-link,
@@ -4834,6 +4870,8 @@ input[type="button"].btn-block {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: 100%;
+  height:14vw;
+  object-fit: cover;
 }
 
 .card-img,
@@ -10143,6 +10181,10 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .text-muted {
+  color: #2c2c2c !important;
+}
+
+#navbarHeader .text-muted {
   color: #6c757d !important;
 }
 
@@ -10270,10 +10312,9 @@ a.text-dark:hover, a.text-dark:focus {
 	bottom: 4rem;
 	right: 1%;
 	z-index: 99;
-	background-color: #f5f5f5;
+	background-color: transparent;
   color: #527a53;
 	border: none;
-	border-radius: 20%;
 	outline: none;
 	cursor: pointer;
   }
@@ -10284,4 +10325,11 @@ a.text-dark:hover, a.text-dark:focus {
 
     #myBtn .material-icons {
       font-size: 48px;
+    }
+
+    #logo-marca {
+      position: relative;
+      float: left;
+      width: 10rem;
+      padding: 1rem;
     }

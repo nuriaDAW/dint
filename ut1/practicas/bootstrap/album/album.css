@@ -31,3 +31,7 @@ footer {
 footer p {
   margin-bottom: .25rem;
 }
+
+svg {
+  margin-right: 0.5rem;
+}
