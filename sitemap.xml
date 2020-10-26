@@ -111,7 +111,39 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     <lastmod>2020-10-18T19:52:26+00:00</lastmod>
 </url>
 <url>
+    <loc>https://nuriadaw.github.io/dint/ut1/practicas/materialize1/index.html</loc>
+    <lastmod>2020-10-26T22:56:43+00:00</lastmod>
+</url>
+<url>
+    <loc>https://nuriadaw.github.io/dint/ut1/practicas/materialize-parallax/index.html</loc>
+    <lastmod>2020-10-26T22:56:43+00:00</lastmod>
+</url>
+<url>
+    <loc>https://nuriadaw.github.io/dint/ut1/practicas/bootstrap/index.html</loc>
+    <lastmod>2020-10-26T22:56:43+00:00</lastmod>
+</url>
+<url>
     <loc>https://nuriadaw.github.io/dint/ut1/herramientas.html</loc>
     <lastmod>2020-10-18T19:52:25+00:00</lastmod>
+</url>
+<url>
+    <loc>https://nuriadaw.github.io/dint/ut2/index.html</loc>
+    <lastmod>2020-10-26T22:56:43+00:00</lastmod>
+</url>
+<url>
+    <loc>https://nuriadaw.github.io/dint/ut2/documentacion/index.html</loc>
+    <lastmod>2020-10-26T22:56:43+00:00</lastmod>
+</url>
+<url>
+    <loc>https://nuriadaw.github.io/dint/ut2/documentacion/menusCSS.pdf</loc>
+    <lastmod>2020-10-26T22:56:43+00:00</lastmod>
+</url>
+<url>
+    <loc>https://nuriadaw.github.io/dint/ut2/practicas/index.html</loc>
+    <lastmod>2020-10-26T22:56:43+00:00</lastmod>
+</url>
+<url>
+    <loc>https://nuriadaw.github.io/dint/ut2/practicas/practica-menu.html</loc>
+    <lastmod>2020-10-26T22:56:43+00:00</lastmod>
 </url>
 </urlset>
