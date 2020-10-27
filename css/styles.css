@@ -27,9 +27,16 @@
    font-family: "opendyslexic";
 }
 
-html {
+html,body {
 	background-color: #f5f5f5;
+	padding: 0;
+	margin: 0;
+	width: 100vw;
 }   
+
+main, footer {
+	margin: 0 1rem;
+}
 
 header  {
 	background-color: #527a53;
@@ -93,6 +100,67 @@ img {
 .mdi.mdi-image-area {
 	font-size: x-large;
 }
+
+/* Home icon */
+#modules {
+	display:inline-flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1.5%;
+	font-size: 0.70rem;
+	font-weight: bold;
+}
+
+#modules .material-icons {
+	font-size: 3rem;
+}
+
+/* Menú lateral webs */
+#websSidenav {
+	display: inline-flex;
+	position:absolute;
+	top:20%;
+  	right:-245px;
+	width:280px;
+  }
+
+  	#websSidenav:hover{
+		right:0;
+  	}
+
+  	#websSidenav ul {
+		list-style-type: none;
+		padding: 0;
+		margin:0;
+		width: 100%;
+		background-color: rgba(76, 175, 80, 0.3);
+	}
+
+	#websSidenav li a {
+		display: block;
+		padding: 0.2em;
+		margin-left: 1.5em;
+	}
+
+	#websSidenav a:hover{
+		color: #f5f5f5;
+	}
+	
+	#websSidenav li:hover {
+		background-color: rgba(101, 122, 82,0.3);
+  	}
+
+  	#websSidenav p {
+		padding:0.5em;
+		margin:0;
+		text-align: center;
+		font-weight: bold;
+		background-color:#435a43;
+		color:#f5f5f5;
+		writing-mode: vertical-rl;
+		transform: rotate(180deg);
+		border-radius: 0 0.5em 0.5em 0;
+	  }
 
 /* Estilos para el acordeón */
 .ac-container{
