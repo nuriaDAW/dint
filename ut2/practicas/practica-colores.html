@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Nuria">
+    <title>Práctica colores, imagen fondo y bordes</title>
+    <link rel="icon" href="../../img/logo.svg" type="image/svg+xml">
+    <link rel="icon" href="../../img/logo.png" sizes="16x16" type="image/png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.materialdesignicons.com/5.6.55/css/materialdesignicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <style>
+        #colors {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* ">" Descendiente inmediato (hijos)*/
+        #colors>article {
+            margin: 0 4rem;
+        }
+
+        #colors div {
+            width: 20rem;
+            padding: 2rem;
+            margin: 0 auto;
+            color: rgb(60, 60, 60);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        /* Estilos para los colores */
+
+        #mate-1 {
+            background-color: rgb(82, 122, 83);
+        }
+
+        #mate-2 {
+            background-color: rgb(92, 138, 93);
+        }
+
+        #mate-3 {
+            background-color: rgb(102, 153, 103);
+        }
+
+        #transparent-1 {
+            background-color: rgba(82, 122, 83, 0.8);
+        }
+
+        #transparent-2 {
+            background-color: rgba(92, 138, 93, 0.5);
+        }
+
+        #transparent-3 {
+            background-color: rgba(102, 153, 103, 0.3);
+        }
+
+        body {
+            background-image: url("../../img/img_tree.png");
+            background-repeat: no-repeat;
+            background-position: right top;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="../../index.html">
+            <h1>Diseño de Interfaces Web</h1>
+        </a>
+    </header>
+    <main>
+        <h1>Práctica: Colores, imagen fondo y bordes redondeados</h1>
+        <p>Práctica para trabajar con colores RGB, imágenes de fondo fijas y bordes redondeados.</p>
+        <hr />
+        <!-- Colores RGB-->
+        <section id="colors">
+            <article id="mate-colors">
+                <h2>Colores</h2>
+                <div id="mate-1">rgb(82, 122, 83)</div>
+                <div id="mate-2">rgb(92, 138, 93)</div>
+                <div id="mate-3">rgb(102, 153, 103)</div>
+            </article>
+            <article id="transparent-colors">
+                <h2>Colores con transparencia</h2>
+                <div id="transparent-1">rgba(82, 122, 83,0.8)</div>
+                <div id="transparent-2">rgba(92, 138, 93,0.5)</div>
+                <div id="transparent-3">rgba(102, 153, 103,0.3)</div>
+            </article>
+        </section>
+        <!-- Capa con imagen de fondo fija https://www.w3schools.com/css/tryit.asp?filename=trycss_background-image_attachment -->
+        <section id="fixed-background">
+            <h2>Capa con imagen de fondo fija</h2>
+            <p>Esta capa tiene un fondo fijo "background-attachment: fixed;"</p>
+        </section>
+        <!-- Ejemplo de bordes redondeados -->
+        <hr />
+        <a href="index.html"><i class="material-icons">arrow_back</i></a>
+    </main>
+    <footer>
+        <p>Nuria Barrios Santos | 2020 <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"> CC BY
+                4.0</a>.</p>
+        <p><a href="../../sitemap.xml">Sitemap</a></p>
+        <p>
+            <a
+                href="https://validator.w3.org/unicorn/check?ucn_uri=https%3A%2F%2Fnuriadaw.github.io%2Fdint&ucn_task=conformance#css3-validator_info_1">
+                <img style="border:0;width:88px;height:31px" src="//jigsaw.w3.org/css-validator/images/vcss"
+                    alt="¡CSS Válido!" />
+            </a>
+        </p>
+    </footer>
+</body>
+
+</html>
