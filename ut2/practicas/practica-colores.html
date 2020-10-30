@@ -11,10 +11,16 @@
     <link href="https://cdn.materialdesignicons.com/5.6.55/css/materialdesignicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../css/styles.css">
     <style>
+        h2 {
+            text-align: center;
+        }
+
+        /* Estilos para los contenedores de los colores */
         #colors {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            padding: 3rem;
         }
 
         /* ">" Descendiente inmediato (hijos)*/
@@ -27,10 +33,6 @@
             padding: 2rem;
             margin: 0 auto;
             color: rgb(60, 60, 60);
-        }
-
-        h2 {
-            text-align: center;
         }
 
         /* Estilos para los colores */
@@ -59,12 +61,66 @@
             background-color: rgba(102, 153, 103, 0.3);
         }
 
-        body {
+        /* Estilos para la imagen de fondo fija */
+        #fixed-background {
+            height: 20rem;
+            width: 50rem;
+            padding: 3rem;
+            margin: 0 auto;
             background-image: url("../../img/img_tree.png");
             background-repeat: no-repeat;
-            background-position: right top;
+            background-position: 75% 100%;
             background-attachment: fixed;
         }
+
+        /* Estilos para los bordes redondeados */
+        #rounded-corners {
+            height: 15rem;
+            width: 50rem;
+            padding: 2rem;
+            margin: 2rem auto;
+        }
+
+        .rounded {
+            border: double rgb(82, 122, 83) thick;
+            border-radius: 5px;
+        }
+
+        /* Estilos para el botón */
+        .button {
+            width: 8rem;
+            text-align: center;
+        }
+            /* Estilos para el enlace del botón */
+            .button a {
+                display: block;
+                padding: 1rem;
+                width: 100%;
+                color: rgb(82, 122, 83);
+                font-weight: bold;
+            }
+            /* El botón cambia de fondo y de borde al pasar el ratón por encima */
+            .button:hover {
+                background-color: rgba(82, 122, 83, 0.8);
+                border: solid rgb(82, 122, 83) thick;
+            }
+
+        /* Contenido que aparece después de <a> al pasar el ratón por el botón */
+            .button a:after {
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                transition-duration: 0.2s;
+            }
+
+            .button:hover a {
+                padding-right: 1.5rem;
+                color: #fafafa;
+            }
+
+                .button:hover a:after {
+                opacity: 1;
+                }
     </style>
 </head>
 
@@ -76,7 +132,10 @@
     </header>
     <main>
         <h1>Práctica: Colores, imagen fondo y bordes redondeados</h1>
-        <p>Práctica para trabajar con colores RGB, imágenes de fondo fijas y bordes redondeados.</p>
+        <p>Práctica para trabajar con <a href="https://www.w3schools.com/css/css_colors_rgb.asp" target="_blank">colores
+                RGB</a>, <a href="https://www.w3schools.com/css/css_background_attachment.asp" target="_blank">imágenes
+                de fondo fijas</a> y <a href="https://www.w3schools.com/css/css_border_rounded.asp"
+                target="_blank">bordes redondeados</a>.</p>
         <hr />
         <!-- Colores RGB-->
         <section id="colors">
@@ -93,12 +152,17 @@
                 <div id="transparent-3">rgba(102, 153, 103,0.3)</div>
             </article>
         </section>
-        <!-- Capa con imagen de fondo fija https://www.w3schools.com/css/tryit.asp?filename=trycss_background-image_attachment -->
+        <!-- Capa con imagen de fondo fija  -->
         <section id="fixed-background">
             <h2>Capa con imagen de fondo fija</h2>
-            <p>Esta capa tiene un fondo fijo "background-attachment: fixed;"</p>
+            <p>Esta capa tiene un fondo fijo; propiedad: <em>"background-attachment: fixed;"</em></p>
         </section>
         <!-- Ejemplo de bordes redondeados -->
+        <section id="rounded-corners" class="rounded">
+            <h2>Capa con bordes redondeados</h2>
+            <p>Esta capa tiene bordes redondeados; propiedad: <em>"border-radius"</em></p>
+            <div class="button rounded"><a href="../../index.html">Home</a></div>
+        </section>
         <hr />
         <a href="index.html"><i class="material-icons">arrow_back</i></a>
     </main>
