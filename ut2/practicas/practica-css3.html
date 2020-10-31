@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Nuria">
+    <title>Práctica CSS3</title>
+    <link rel="icon" href="../../img/logo.svg" type="image/svg+xml">
+    <link rel="icon" href="../../img/logo.png" sizes="16x16" type="image/png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.materialdesignicons.com/5.6.55/css/materialdesignicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <style>
+        /* Estilos para la hamburguesa */
+        .fa-bars,
+        .fa-times,
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        /* Estilos para la barra de navegación */
+        .topnav {
+            top: 0; /* Donde quedará fijo el elemento sticky al hacer scroll */
+            position: sticky; /* Convierte en pegajosa (relative+fixed) la barra de navegación */
+            display: flex; /* Convierte la barra de navegación en un contendor flexible */
+            background-color: #476b49;
+            z-index: 1000;
+        }
+
+            .topnav * {
+                font-size: 1.1rem; /* 1rem= 16px */
+            }
+
+            /* Estilos para los enlaces de la barra de navegación */
+            .topnav a {
+                color: #f5f5f5;
+                display: flex;
+                text-align: center;
+                padding: 0.875rem 1rem;
+            }
+
+                /* Cambia el color de los enlaces al pasar el ratón sobre ellos */
+                .topnav a:hover {
+                    background-color: rgb(102, 153, 103);
+                }
+
+                /* Estilo para el elemento "activo" (página actual) */
+                .topnav a.active {
+                    background-color: #53527a;
+                }
+
+            /* Estilos para la caja de búsqueda */
+            .topnav .search-container {
+                align-self: center; /* Centra un elemento flex verticalemente */
+                margin-left: auto; /* Deja todo el espacio a la izquierda */
+            }
+                 /* Estilos para el botón de búsqueda */
+                .topnav .search-container button {
+                    float: right;
+                    padding: 0.4rem 0.8rem;
+                    margin-right: 1rem;
+                    background: #ccc;
+                    border: none;
+                    cursor: pointer;
+                    color: #424242;
+                }
+
+                    .topnav .search-container button:hover {
+                        background: #c2c2c2;
+                    }
+                /* Estilos para la caja de texto */
+                .topnav input[type=text] {
+                    padding: 0.4rem;
+                    border: none;
+                }
+
+        /* Menú dropdown */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 10rem;
+            box-shadow: 0px 8px 16px 0px rgba(60, 60, 60, 0.2);
+        }
+            /* Estilos para los enlaces del contenido del menú */
+            .dropdown-content a {
+                display: block;
+                color: #424242;
+                padding: 0.75rem 1rem;
+                text-align: left;
+            }
+
+            .dropdown-content a:not(:last-child) { /* El borde no se aplica al último hijo de tipo a */
+                border-bottom: rgb(101, 122, 82) solid;
+            }
+
+            .dropdown-content a:hover {
+                background-color: #ddd;
+                border-bottom: #ddd solid;
+            }
+
+                .dropdown:hover .dropdown-content {
+                    display: block;
+                }
+
+        /* Estilos para main */
+        main {
+            margin-top: 2rem; /* Añade un margen superior para evitar la superposición al contenido */
+        }
+
+        /* Menú lateral fijo webs */
+        .fixed-menu {
+            position: fixed; /* posición fija absoluta (con respecto a la ventana) */
+            top: 30%;
+            right: -235px;
+            z-index: 900;
+        }
+
+            .fixed-menu:hover {
+                display: inline-flex;
+                right: 0;
+            }
+
+            .fixed-menu h2 {
+                padding: 0.5em;
+                margin: 0;
+                background-color: #435a43;
+                color: #f5f5f5;
+                border-radius: 0.5em 0 0 0.5em;
+            }
+
+                .fixed-menu:hover h2 {
+                    text-align: center;
+                    writing-mode: vertical-rl; /* Cambia la dirección de escritura del texto a vertical */
+                    transform: rotate(180deg);
+                    border-radius: 0 0.5em 0.5em 0;
+                }
+
+                .fixed-menu:hover h2::after { 
+                    content: 'Webs amigas'; /* Añade contenido después de h2 */
+                }
+
+                .fixed-menu:hover h2 i {
+                    display: none;
+                }
+
+            .hidden {
+                visibility: hidden;
+                width: 280px;
+            }
+
+                .fixed-menu:hover .hidden {
+                    background-color: #ccc;
+                    visibility: visible;
+                }
+
+            .fixed-menu ul {
+                list-style-type: none;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+
+            .fixed-menu li a {
+                display: block;
+                padding: 0.2em;
+                margin-left: 1.5em;
+            }
+
+                .fixed-menu li:hover {
+                    background-color: rgba(101, 122, 82, 0.3);
+                }
+
+                .fixed-menu a:hover {
+                    color: #f5f5f5;
+                }
+        /* Estilos de posicionamiento */
+        #parent1 {
+            position: static;
+            border: 1px solid blue;
+            width: 300px;
+            height: 100px;
+        }
+
+        #child1 {
+            position: absolute;
+            border: 1px solid red;
+            top: 70px;
+            right: 15px;
+        }
+
+        #parent2 {
+            position: relative;
+            border: 1px solid blue;
+            width: 300px;
+            height: 100px;
+        }
+
+        #child2 {
+            position: absolute;
+            border: 1px solid red;
+            top: 60px;
+            right: 15px;
+        }
+
+        #parent3 {
+            position: absolute;
+            border: 1px solid blue;
+            width: 300px;
+            height: 100px;
+            top: 710px;
+            right: 15px;
+        }
+
+        #child3 {
+            position: absolute;
+            border: 1px solid red;
+            top: 60px;
+            right: 15px;
+        }
+
+        #parent4 {
+            position: fixed;
+            border: 1px solid blue;
+            background-color: rgba(255, 200, 200, 0.5);
+            width: 300px;
+            height: 100px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        #child4 {
+            position: absolute;
+            border: 1px solid red;
+            top: 60px;
+            right: 15px;
+        }
+
+        /* Para pantallas de hasta 800px*/
+        @media screen and (max-width: 800px) {
+            p {
+                font-size: 14px; /* Ahora 1rem=14px */
+            }
+
+            main {
+                margin-left: 2rem;
+            }
+
+            header h1 {
+                text-align: center;
+                font-size: 1.5rem;
+            }
+            /* Estilos para el menú hamburguesa */
+            .fa-bars,
+            .fa-times,
+            input[type="checkbox"] {
+                position: fixed;
+                margin: 0.5rem;
+                padding: 0;
+                left: 0;
+                top: 0;
+            }
+
+            input[type="checkbox"] {
+                display: block;
+                opacity: 0;
+                z-index: 1000; /* Si hay elementos que se superpongan quedará por encima */
+            }
+
+            .fa-bars,
+            .fa-times {
+                font-size: 1.1rem;
+                pointer-events: none;
+                color: #424242;
+            }
+
+            input[type="checkbox"]:checked~.topnav,
+            input[type="checkbox"]:checked~.fa-times,
+            input[type="checkbox"]:not(:checked)~.fa-bars {
+                display: block;
+            }
+
+            input[type="checkbox"]:checked~.fa-times {
+                margin: 0;
+                padding: 0.5rem;
+                width: 100%;
+                background-color: #476b49;
+                color: #fafafa;
+                z-index:1000;
+            }
+
+            /* Estilos para la barra de navegación superior */
+            .topnav {
+                position: fixed;
+                flex-direction: column;
+                display: none;
+                width: 100%;
+                top: 2rem;
+            }
+
+                .topnav a {
+                    text-align: left;
+                    width: 100%;
+                    margin: 0;
+                    padding: 0.875rem;
+                }
+
+                .topnav .search-container {
+                    width: 100%;
+                }
+
+                    .topnav .search-container button {
+                        float: right;
+                        width: 15%;
+                        padding: 0.875rem;
+                        margin-right: 0;
+                        border: 1px solid #ccc;
+                    }
+
+                .topnav input[type=text] {
+                    float: left;
+                    width: 85%;
+                    padding: 0.875rem;
+                    border: 1px solid #ccc;
+                }
+            /* Estilos para menú dropdown */
+            .dropdown:hover .dropdown-content {
+                width: 100%;
+                position: relative;
+            }
+          
+            /* Menú oculto  fijo */
+            .fixed-menu * {
+                font-size: 90%;
+            }
+
+            .fixed-menu {
+                right: -155px;
+            }
+
+            .hidden {
+                width: 180px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="../../index.html">
+            <h1>Diseño de Interfaces Web</h1>
+        </a>
+    </header>
+    <!-- Menú hamburguesa -->
+    <input type="checkbox" />
+    <i class="fa fa-bars"></i>
+    <i class="fa fa-times"></i>
+    <!-- Barra de navegación-->
+    <nav class="topnav">
+        <a class="active" href="#"><i class="fa fa-home"></i></a>
+        <div class="dropdown">
+            <a href="../../ut1/index.html">UT1</a>
+            <div class="dropdown-content">
+                <a href="../../ut1/documentacion/index.html">DOCUMENTACIÓN</a>
+                <a href="../../ut1/herramientas.html">HERRAMIENTAS</a>
+                <a href="../../ut1/practicas/index.html">PRÁCTICAS</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="../index.html">UT2</a>
+            <div class="dropdown-content">
+                <a href="../documentacion/index.html">DOCUMENTACIÓN</a>
+                <a href="../herramientas.html">HERRAMIENTAS</a>
+                <a href="../index.html">PRÁCTICAS</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="../../ut3/index.html">UT3</a>
+            <div class="dropdown-content">
+                <a href="../../ut3/documentacion/index.html">DOCUMENTACIÓN</a>
+                <a href="../../ut3/herramientas.html">HERRAMIENTAS</a>
+                <a href="../../ut3/practicas/index.html">PRÁCTICAS</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="../../ut5/index.html">UT5</a>
+            <div class="dropdown-content">
+                <a href="../../ut5/documentacion/index.html">DOCUMENTACIÓN</a>
+                <a href="../../ut5/herramientas.html">HERRAMIENTAS</a>
+                <a href="../../ut5/practicas/index.html">PRÁCTICAS</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="../../ut6/index.html">UT6</a>
+            <div class="dropdown-content">
+                <a href="../../ut6/documentacion/index.html">DOCUMENTACIÓN</a>
+                <a href="../../ut6/herramientas.html">HERRAMIENTAS</a>
+                <a href="../../ut6/practicas/index.html">PRÁCTICAS</a>
+            </div>
+        </div>
+        <div class="search-container">
+            <form action="#">
+                <input type="text" placeholder="Buscar...">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </nav>
+    <main>
+        <h1>Práctica CSS3</h1>
+        <p>Práctica para trabajar con <a href="https://www.w3schools.com/howto/howto_css_searchbar.asp"
+                target="_blank">barras de navegación adaptativas con caja de búsqueda</a>, menús ocultos</a> y <a
+                href="https://www.w3schools.com/cssref/pr_class_position.asp" target="_blank">la propiedad position</a>
+            de CSS3.</p>
+        <hr />
+
+        <!-- Menú oculto-->
+        <div class="fixed-menu">
+            <h2><i class="fa fa-fw fa-heart"></i></h2>
+            <div class="hidden">
+                <ul>
+                    <li><a href="http://bajo-code/bajoweb.git">Diego Bajo</a></li>
+                    <li><a href="http://khadyCi.github.io/DINT">Khady Cisse</a></li>
+                    <li><a href="http://notfercam.github.io/Web-Interfaces">David Fernández</a></li>
+                    <li><a href="http://diego19g.github.io/PaginaDisenio/lio">Diego Garcia</a></li>
+                    <li><a href="http://carlos-palalo.github.io/dint">Carlos Palacios</a></li>
+                    <li><a href="http://cristinagreche.github.io/dint">Cristina Rodriguez</a></li>
+                    <li><a href="http://guiiller22.github.io/proyecto_disenyo">Guillermo Rodriguez</a></li>
+                    <li><a href="http://luisvalles92.github.io/MyWeb">Luis Valles</a></li>
+                    <li><a href="http://javivn99.github.io/PaginaDaw">Javier Velázquez</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Propiedad position  -->
+        <section id="position">
+            <h2>Propiedad position</h2>
+            <h3>position: static;</h3>
+            <p>El elemento Parent1 tiene una <em>position: static</em>, y sigue el flujo natural de la página.
+                NO actúa como punto de anclaje para el elemento Child1, posicionado de manera absoluta.</p>
+            <div id="parent1">Parent1: position: static.
+                <div id="child1">Child1: position: absolute, right: 15px, top: 60px</div>
+            </div>
+            <h3>position: relative;</h3>
+            <p>El elemento Parent2 tiene una <em>position: relativa</em>, y sigue el flujo natural de la página.
+                Actúa como punto de anclaje para el elemento Child2, posicionado de manera absoluta:</p>
+            <div id="parent2">Parent2: position: relative.
+                <div id="child2">Child2: position: absolute, right: 15px, top: 60px</div>
+            </div>
+            <h3>position: absolute;</h3>
+            <p>El elemento Parent3 tiene una <em>position: absoluta</em>, y NO sigue el flujo natural de la página.
+                Tomará la posición según el ancestro más cercano.
+                Actúa como punto de anclaje para el elemento Child3, posicionado de manera absoluta.</p>
+            <div id="parent3">Parent3: position: absolute, top: 710px, right: 15px.
+                <div id="child3">Child3: position: absolute, right: 15px, top: 60px</div>
+            </div>
+            <h3>position: fixed;</h3>
+            <p>El elemento Parent4 tiene una <em>position: fixed</em>, y NO sigue el flujo natural de la página.
+                Tomará la posición según la ventana virtual (viewport).
+                Actúa como punto de anclaje para el elemento Child4, posicionado de manera absoluta.</p>
+            <div id="parent4">Parent4: position: fixed, bottom: 0, left: 0, right: 0.
+                <div id="child4">Child4: position: absolute, right: 15px, top: 60px</div>
+            </div>
+        </section>
+        <hr />
+        <a href="index.html"><i class="material-icons">arrow_back</i></a>
+    </main>
+    <footer>
+        <p>Nuria Barrios Santos | 2020 <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"> CC BY
+                4.0</a>.</p>
+        <p>
+            <a
+                href="https://validator.w3.org/unicorn/check?ucn_uri=https%3A%2F%2Fnuriadaw.github.io%2Fdint&ucn_task=conformance#css3-validator_info_1">
+                <img style="border:0;width:88px;height:31px" src="//jigsaw.w3.org/css-validator/images/vcss"
+                    alt="¡CSS Válido!" />
+            </a>
+        </p>
+    </footer>
+</body>
+
+</html>
