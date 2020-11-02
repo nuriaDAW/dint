@@ -7,7 +7,7 @@
     <title>Práctica CSS3</title>
     <link rel="icon" href="../../img/logo.svg" type="image/svg+xml">
     <link rel="icon" href="../../img/logo.png" sizes="16x16" type="image/png">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.materialdesignicons.com/5.6.55/css/materialdesignicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../css/styles.css">
@@ -107,12 +107,14 @@
         /* Estilos para main */
         main {
             margin-top: 2rem; /* Añade un margen superior para evitar la superposición al contenido */
+            box-shadow: 0 -2rem #f5f5f5; /* Aplica una sombra sólida del color del fondo para cubrir el margin */
+            padding-top: 0; /* Sobreescribe el relleno por defecto para compensar el margin */
         }
 
         /* Menú lateral fijo webs */
         .fixed-menu {
             position: fixed; /* posición fija absoluta (con respecto a la ventana) */
-            top: 30%;
+            top: 40%;
             right: -235px;
             z-index: 900;
         }
@@ -186,7 +188,7 @@
         #child1 {
             position: absolute;
             border: 1px solid red;
-            top: 70px;
+            top: 0;
             right: 15px;
         }
 
@@ -209,7 +211,7 @@
             border: 1px solid blue;
             width: 300px;
             height: 100px;
-            top: 710px;
+            top: 525px;
             right: 15px;
         }
 
@@ -240,12 +242,13 @@
 
         /* Para pantallas de hasta 800px*/
         @media screen and (max-width: 800px) {
-            p {
+            :root {
                 font-size: 14px; /* Ahora 1rem=14px */
             }
 
             main {
-                margin-left: 2rem;
+                margin-top: 0;
+                box-shadow: none;
             }
 
             header h1 {
@@ -274,6 +277,7 @@
                 font-size: 1.1rem;
                 pointer-events: none;
                 color: #424242;
+                z-index: 1000;
             }
 
             input[type="checkbox"]:checked~.topnav,
@@ -333,7 +337,7 @@
           
             /* Menú oculto  fijo */
             .fixed-menu * {
-                font-size: 90%;
+                font-size: 0.85rem;
             }
 
             .fixed-menu {
@@ -351,6 +355,7 @@
     <header>
         <a href="../../index.html">
             <h1>Diseño de Interfaces Web</h1>
+            <a id="sitemap" href="../../sitemap.xml">Sitemap</a>
         </a>
     </header>
     <!-- Menú hamburguesa -->
@@ -439,7 +444,7 @@
             <p>El elemento Parent1 tiene una <em>position: static</em>, y sigue el flujo natural de la página.
                 NO actúa como punto de anclaje para el elemento Child1, posicionado de manera absoluta.</p>
             <div id="parent1">Parent1: position: static.
-                <div id="child1">Child1: position: absolute, right: 15px, top: 60px</div>
+                <div id="child1">Child1: position: absolute, right: 15px, top: 0</div>
             </div>
             <h3>position: relative;</h3>
             <p>El elemento Parent2 tiene una <em>position: relativa</em>, y sigue el flujo natural de la página.
@@ -451,7 +456,7 @@
             <p>El elemento Parent3 tiene una <em>position: absoluta</em>, y NO sigue el flujo natural de la página.
                 Tomará la posición según el ancestro más cercano.
                 Actúa como punto de anclaje para el elemento Child3, posicionado de manera absoluta.</p>
-            <div id="parent3">Parent3: position: absolute, top: 710px, right: 15px.
+            <div id="parent3">Parent3: position: absolute, top: 525px, right: 15px.
                 <div id="child3">Child3: position: absolute, right: 15px, top: 60px</div>
             </div>
             <h3>position: fixed;</h3>
@@ -462,20 +467,19 @@
                 <div id="child4">Child4: position: absolute, right: 15px, top: 60px</div>
             </div>
         </section>
-        <hr />
-        <a href="index.html"><i class="material-icons">arrow_back</i></a>
     </main>
     <footer>
-        <p>Nuria Barrios Santos | 2020 <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"> CC BY
-                4.0</a>.</p>
-        <p>
-            <a
-                href="https://validator.w3.org/unicorn/check?ucn_uri=https%3A%2F%2Fnuriadaw.github.io%2Fdint&ucn_task=conformance#css3-validator_info_1">
-                <img style="border:0;width:88px;height:31px" src="//jigsaw.w3.org/css-validator/images/vcss"
-                    alt="¡CSS Válido!" />
-            </a>
-        </p>
-    </footer>
+		<div class="footer-copyright">	
+			<p>Nuria Barrios Santos | 2020 <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"> CC BY 4.0</a>.</p>
+			<p>
+				<a
+					href="https://validator.w3.org/unicorn/check?ucn_uri=https%3A%2F%2Fnuriadaw.github.io%2Fdint&ucn_task=conformance#">
+					<img style="border:0;width:88px;height:31px" src="//jigsaw.w3.org/css-validator/images/vcss"
+						alt="¡CSS Válido!" />
+				</a>
+			</p>
+		</div>
+	</footer>
 </body>
 
 </html>
