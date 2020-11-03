@@ -482,23 +482,13 @@ div.gallery {
 }
 
 .home-ut ul {
-  	display: -webkit-box;
-  	display: -webkit-flex;
-  	display: -ms-flexbox;
   	display: flex;
   	height: 55vh;
   	list-style: none;
 }
 
 .home-ut li {
-  	-webkit-box-flex: 1;
-  	-webkit-flex: 1;
-  	-ms-flex: 1;
   	flex: 1;
-  	-webkit-transition: -webkit-box-flex 500ms ease-out;
-  	-webkit-transition: -webkit-flex 500ms ease-out;
-  	transition: -webkit-box-flex 500ms ease-out;
-  	transition: -ms-flex 500ms ease-out;
 	transition: flex 500ms ease-out;
 }
 
@@ -507,9 +497,6 @@ div.gallery {
 	}
 
 	.home-ut li:hover {
-		-webkit-box-flex: 3;
-		-webkit-flex: 3;
-		-ms-flex: 3;
 		flex: 3;
 	}
 
