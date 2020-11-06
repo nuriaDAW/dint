@@ -7,29 +7,34 @@
     <title>Práctica menús</title>
     <link rel="icon" href="../../img/logo.svg" type="image/svg+xml">
     <link rel="icon" href="../../img/logo.png" sizes="16x16" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet"> 
-	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="../../css/styles.css">
     <style>
-        .imgbox{
-            position: relative;
-            display:inline-block;
+        .img-gallery > div {
+            display: flex;
+        }
+
+        .img-gallery h2 {
+            padding: 0.5rem;
+        }
+
+        .imgbox {
             width: calc(33.33% - 1rem);
-            height: 100%;
             margin: 0.275rem;
             padding: 0.4rem;
             text-align: center;
             line-height: 1.6;
             border: 0.02rem solid gray;
-            box-shadow: 0.4rem 0.4rem 0.275rem  rgba(60, 60, 60, 0.5);
+            box-shadow: 0.4rem 0.4rem 0.275rem rgba(60, 60, 60, 0.5);
         }
 
-        #boxhidden {
-
+        .imgbox:hover #imgdisplay {
+            display: none;
         }
 
-        #boxvisibility {
-
+        .imgbox:hover #imgvisibility {
+            visibility: hidden;
         }
 
         .textbox {
@@ -37,17 +42,16 @@
             font-size: 1.1rem;
         }
 
-        img {
-            width: fit-content;
-            height: auto;
-        }
-
-        button{
+        button {
             width: 100%;
             padding: 0.5rem;
             background-color: #527a53;
             color: #f9f9f9;
             border: none;
+        }
+
+        footer {
+            clear: both;
         }
     </style>
 </head>
@@ -104,85 +108,95 @@
     </nav>
     <main>
         <h1>Práctica: Visibilidad CSS</h1>
-        <p>Difference between display:none and visiblity: hidden.</p>
-        <p>display:none removes the element from the document. It does not take up any space.</p>
-        <p>visibility:hidden hides the element, but it still takes up space in the layout.</p>
+        <p>Ver las diferencias entre <em>display:none</em> and <em>visiblity: hidden</em>.</p>
+        <p><em>display:none</em> elimina el elmento del documento. No guarda el espacio del elemento.</p>
+        <p><em>visibility:hidden</em> oculta el elemento, pero guarda el espacio en el layout.</p>
         <hr />
-        <div>
-            <h2>Galleria de imágenes</h2>
-            <div class="imgbox" id="boxhidden">
-                <span class="textbox">Caja con <em>display</em></span>
-                <img src="../../img/img_5terre.jpg">
-            </div>
-            <div class="imgbox" id="boxvisibility">
-                <span class="textbox">Caja con <em>visibility</em></span>
-                <img src="../../img/img_lights.jpg">
-            </div>
-            <div class="imgbox">
-                <span class="textbox">Caja 3</span>
-                <img src="../../img/img_forest.jpg">
+        <div class="img-gallery">
+            <h2>Galería de imágenes</h2>
+            <div>
+                <div class="imgbox">
+                    <span class="textbox"></span>Caja con <em>display</em></span>
+                    <img id="imgdisplay" src="../../img/img_5terre.jpg" alt="Italy">
+                    <p>La imagen desaparece <em>onhover</em>.</p>
+                </div>
+                <div class="imgbox">
+                    <span class="textbox">Caja con <em>visibility</em></span>
+                    <img id="imgvisibility" src="../../img/img_lights.jpg" alt="Lights">
+                    <p>La imagen se oculta <em>onhover</em>.</p>
+                </div>
+                <div class="imgbox">
+                    <span class="textbox">Caja sin efecto</span>
+                    <img src="../../img/img_forest.jpg" alt="Forest">
+                    <p>La imagen no tiene efectos.</p>
+                </div>
             </div>
         </div>
-        <div>
-            <h2>Galleria de imágenes con botones</h2>
-            <div class="imgbox" id="imgbox1">
-                <span class="textbox">Caja con <em>display</em></span>
-                <img src="../../img/img_5terre.jpg">
-                <button  onclick="removeElement()">Quitar</button>
-            </div>
-            <div class="imgbox" id="imgbox2">
-                <span class="textbox">Caja con <em>visibility</em></span>
-                <img src="../../img/img_lights.jpg">
-                <button onclick="changeVisibility()">Ocultar</button>
-            </div>
-            <div class="imgbox" id="imgbox3">
-                <span class="textbox">Caja 3</span>
-                <img src="../../img/img_forest.jpg">
-                <button onclick="resetElement()">Reiniciar todo</button>
+        <div class="img-gallery">
+            <h2>Galería de imágenes con botones</h2>
+            <div>
+                <div class="imgbox" id="imgboxhidden">
+                    <span class="textbox">Caja con <em>display</em></span>
+                    <img src="../../img/img_5terre.jpg" alt="Italy">
+                    <button onclick="removeElement()">Quitar</button>
+                </div>
+                <div class="imgbox" id="imgboxvisibility">
+                    <span class="textbox">Caja con <em>visibility</em></span>
+                    <img src="../../img/img_lights.jpg" alt="Lights">
+                    <button onclick="changeVisibility()">Ocultar</button>
+                </div>
+                <div class="imgbox">
+                    <span class="textbox">Caja sin efecto</span>
+                    <img src="../../img/img_forest.jpg" alt="Forest">
+                    <button onclick="resetElement()">Reiniciar todo</button>
+                </div>
             </div>
         </div>
     </main>
     <footer>
-		<div class="footer-resources">
-			<a href="index.html"><i class='fas fa-hand-point-left'></i></a>
-			<div>
-				<h2>Recursos de interés</h2>
-				<div class="resources-columns">
-					<a href="https://www.w3.org" target="_blank">W3C</a>
-					<a href="https://almanac.httparchive.org/en/2019/" target="_blank">Web Almanac (reporte anual del estado de la Web)</a>
-					<a href="../../infografias.html">Infografías sobre diseño de interfaces</a>
-					<a href="https://developer.mozilla.org/en-US/" target="_blank">MDN webdocs</a>
-					<a href="https://www.w3schools.com" target="_blank">W3schools</a>
-					<a href="https://www.eniun.com/diseno-interfaces-web-ciclo-formativo/" target="_blank">Curso eniun</a>
-					<a href="https://css-tricks.com" target="_blank">CSS Tricks</a>
-					<a href="https://codepen.io/" target="_blank">Codepen</a>
-				</div>
-			</div>
-		</div>
-		<div class="footer-copyright">	
-			<p>Nuria Barrios Santos | 2020 <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"> CC BY 4.0</a>.</p>
-			<p>
-				<a
-					href="https://validator.w3.org/unicorn/check?ucn_uri=https%3A%2F%2Fnuriadaw.github.io%2Fdint&ucn_task=conformance#css3-validator_warning_1">
-					<img style="border:0;width:88px;height:31px" src="//jigsaw.w3.org/css-validator/images/vcss"
-						alt="¡CSS Válido!" />
-				</a>
-			</p>
-		</div>
+        <div class="footer-resources">
+            <a href="index.html"><i class='fas fa-hand-point-left'></i></a>
+            <div>
+                <h2>Recursos de interés</h2>
+                <div class="resources-columns">
+                    <a href="https://www.w3.org" target="_blank">W3C</a>
+                    <a href="https://almanac.httparchive.org/en/2019/" target="_blank">Web Almanac (reporte anual del
+                        estado de la Web)</a>
+                    <a href="../../infografias.html">Infografías sobre diseño de interfaces</a>
+                    <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN webdocs</a>
+                    <a href="https://www.w3schools.com" target="_blank">W3schools</a>
+                    <a href="https://www.eniun.com/diseno-interfaces-web-ciclo-formativo/" target="_blank">Curso
+                        eniun</a>
+                    <a href="https://css-tricks.com" target="_blank">CSS Tricks</a>
+                    <a href="https://codepen.io/" target="_blank">Codepen</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>Nuria Barrios Santos | 2020 <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"> CC BY
+                    4.0</a>.</p>
+            <p>
+                <a
+                    href="https://validator.w3.org/unicorn/check?ucn_uri=https%3A%2F%2Fnuriadaw.github.io%2Fdint&ucn_task=conformance#css3-validator_warning_1">
+                    <img style="border:0;width:88px;height:31px" src="//jigsaw.w3.org/css-validator/images/vcss"
+                        alt="¡CSS Válido!" />
+                </a>
+            </p>
+        </div>
     </footer>
-    
+
     <script>
         function removeElement() {
-          document.getElementById("imgbox1").style.display = "none";
+            document.getElementById("imgboxhidden").style.display = "none";
         }
-        
+
         function changeVisibility() {
-          document.getElementById("imgbox2").style.visibility = "hidden";
+            document.getElementById("imgboxvisibility").style.visibility = "hidden";
         }
-        
+
         function resetElement() {
-          document.getElementById("imgbox1").style.display = "block";
-          document.getElementById("imgbox2").style.visibility = "visible";
+            document.getElementById("imgboxhidden").style.display = "block";
+            document.getElementById("imgboxvisibility").style.visibility = "visible";
         }
     </script>
 </body>
