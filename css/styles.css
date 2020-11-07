@@ -351,6 +351,9 @@ div.gallery {
 	#wid-units > div{
 		height: 20rem;
 		width:calc(100%/3);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: bottom;
 	}
 
 		#wid-units > div:nth-child(1), #wid-units > div:nth-child(2){
@@ -358,38 +361,29 @@ div.gallery {
 		}
 
 		#wid-units > div:nth-child(1){
-			background-image: url("../img/web-planning.png");
-			background-size: 80%;
-			background-repeat: no-repeat;
-			background-position: bottom;
+			background-image: url("../img/web_planning.svg");
 			background-color: #476b48;
 		}
 		#wid-units > div:nth-child(2){
-			background-image: url("../img/css_styles.png");
-			background-size: 80%;
-			background-repeat: no-repeat;
-			background-position: bottom right;
+			background-image: url("../img/css_styles.svg");
 			background-color: var(--primary);
 		}
 		#wid-units > div:nth-child(3){
-			background: url("../img/multimedia.png");
-			background-size: contain;
+			background: url("../img/multimedia.svg");
 			background-repeat: no-repeat;
 			background-position: bottom;
 			background-color:#5c8a5d;
 		}
 		#wid-units > div:nth-child(4){
-			background: url("../img/accessibility.png");
-			background-size: contain;
+			background: url("../img/accessibility.svg");
 			background-repeat: no-repeat;
 			background-position: bottom;
 			background-color: #669967;
 		}
 		#wid-units > div:nth-child(5){
-			background: url("../img/usability.png");
-			background-size: contain;
+			background: url("../img/usability.svg");
 			background-repeat: no-repeat;
-			background-position: bottom;
+			background-position: center 0.563rem;
 			background-color: #75a377;
 		}
 
@@ -404,7 +398,7 @@ div.gallery {
 			height: 85%;
 			font-size: 1.2rem;
 			color:var(--text-light);
-			background: linear-gradient(rgba(52, 58, 64,0.6),rgba(52, 58, 64,0.6))  no-repeat top;
+			background: linear-gradient(rgba(52, 58, 64,0.8),rgba(52, 58, 64,0.8))  no-repeat top;
 			background-size: 100%  3rem;
 		}
 
@@ -413,7 +407,7 @@ div.gallery {
 			position:relative;
 			padding: 0.875rem;
 			bottom:0;
-			opacity: 0;
+			visibility: hidden;
 			color: var(--text-light);
 			text-align: center;
 			background: rgba(52, 58, 64,0.9);
@@ -423,8 +417,8 @@ div.gallery {
 				padding-right: 0.7rem;
 			}
 			
-			.hidden-bar:hover {
-			opacity: 1;
+			div:hover > .hidden-bar {
+				visibility: visible;
 			}
 
 /* Menú lateral webs */
@@ -475,72 +469,87 @@ div.gallery {
 	  }
 
 /* Menú principal unidades temáticas */
-.home-ut ul,
-.home-ut li {
-	margin: 0;
-  	padding: 0;
+.home-ut {
+	display:flex;
+	height: 35rem;
 }
 
-.home-ut ul {
-  	display: flex;
-  	height: 55vh;
-  	list-style: none;
+.home-ut div {
+	width: 30%;
+	margin: 0 1rem;
+	background-size: 80%;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
-.home-ut li {
-  	flex: 1;
-	transition: flex 500ms ease-out;
+.ut1 div {
+	background-image: url("../img/web_planning.svg");
 }
 
-	.home-ut li:nth-child(n) {
-		transition: background-size 500ms linear;
+.ut2 div {
+	background-image: url("../img/css_styles.svg");
+}
+
+.ut3 div {
+	background-image: url("../img/multimedia.svg");
+}
+
+.ut5 div {
+	background-image: url("../img/accessibility.svg");
+}
+
+.ut6 div {
+	background-image: url("../img/usability.svg");
+}
+
+.home-ut div a img {
+	width: 35%;
+}
+
+	.home-ut div a:not(:first-child) img{
+		margin-top: 65%;
 	}
 
-	.home-ut li:hover {
-		flex: 3;
+	.home-ut div a:first-child img{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
-		.home-ut  li:nth-child(n):hover {
-			background-size: contain;
-			background-position: bottom;
+	.home-ut div a:last-child img{
+		float: right;
+	}
+
+	.home-ut section {
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+
+	.home-ut section h1 {
+		text-align: left;
+	}
+
+		.home-ut section h1 span {
+			display: inline-block;
+			width: 1.75rem;
+			height: 1.75rem;
+			color: var(--text-light);
+			text-align: center;
+			background-color: var(--primary);
+			border-radius: 50%;
 		}
 
-		.home-ut  li:nth-child(1):hover {
-			background-position: right bottom;
-		}
-
-	.home-ut  li:nth-child(1) { 
-		background-image: url('../img/documentation.png');
-		background-repeat: no-repeat;
-		background-position: left bottom;
-		background-color: var(--primary);
-	 }
-
-	.home-ut  li:nth-child(2) { 
-		background-image: url('../img/tools.png');
-		background-repeat: no-repeat;
-		background-position: left top;
-		background-color: #5c8a5d;
-	}
-
-	.home-ut li:nth-child(3) { 
-		background-image: url('../img/practices.png');
-		background-repeat: no-repeat;
-		background-position: center;
-		background-color: #669968;
-	}
-	
-.home-ut  a {
-	display: block;
-	padding: 1rem;
-	width: 100%;
-	height: 100%;
-	font-size: 1.5rem;
-	color:var(--text-light);
-	background: linear-gradient(rgba(52, 58, 64,0.9),rgba(52, 58, 64,0.9))  no-repeat top;
-	background-size: 100%  3.5rem;
-}
-
+	.home-ut ul {
+		list-style: none;
+	  }
+	  
+	.home-ut ul li::before {
+		content: "\058E";  /* Añade contenido: \058E es un código unicode CSS */
+		color:var(--primary);
+		display: inline-block; /* Necesario para añadir espacio entre la viñeta y el texto */
+		width: 1.5rem; /* Necesario para añadir espacio entre la viñeta y el texto */
+		font-weight: bold;
+	  }
 
 /* Estilos para el acordeón */
 .ac-container{

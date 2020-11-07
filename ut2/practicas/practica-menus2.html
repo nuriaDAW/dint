@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Nuria">
+    <title>Práctica menús II</title>
+    <link rel="icon" href="../../img/logo.svg" type="image/svg+xml">
+    <link rel="icon" href="../../img/logo.png" sizes="16x16" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <style>
+        /* Estilos para aumentar la altura y que no se superpongan los menús */
+        main {
+            height: 78rem;
+        }
+
+        .dropdown-container {
+            height: 22rem;
+        }
+
+        /* Estilos para la barra de navegación */
+        .dropdown-navbar {
+            background-color: #527a53;
+        }
+
+            .dropdown-navbar a {
+                font-size: 1rem;
+                color: #fafafa;
+                text-align: center;
+                padding: 1rem;
+                text-decoration: none;
+            }
+        /* Estilos para el menú dropdown */
+        .dropdown-menu {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            padding: 1rem;
+            background-color: #527a53;
+            color: #f5f5f5;
+            font-size: 1rem;
+            border: none;
+        }
+
+        .dropdown-menu-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 10rem;
+            box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-menu-content a {
+            color: #424242;
+            padding: 0.75rem 1rem;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-navbar a:hover, .dropdown-menu:hover .dropbtn {
+            background-color: #435a43;
+        }
+
+        .dropdown-menu:hover .dropdown-menu-content {
+            display: block;
+        }
+
+        .dropdown-menu-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Estilos para el menú de hamburguesa */
+        .ham-menu {
+            background-color:#424242;
+            position: relative;
+        }
+
+        #links {
+            display: none;
+        }
+
+        .ham-menu a {
+            display: block;
+            color: #fafafa;
+            padding: 1rem;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+            .ham-menu a.icon {
+            display: block;
+            position: absolute;
+            top:0;
+            left: 0;
+            background: #527a53;
+            }
+
+                .ham-menu a.icon:hover {
+                    background: #435a43;
+                    color: #fafafa;
+                }
+
+            .ham-menu a:hover {
+                background-color: #fafafa;
+                color: #424242;
+            }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="../../index.html">
+            <h1>Diseño de Interfaces Web</h1>
+            <a id="sitemap" href="../../sitemap.xml">Sitemap</a>
+        </a>
+    </header>
+    <nav class="topnav">
+        <a href="../../index.html"><i class="fas fa-home"></i></a>
+        <div class="dropdown">
+            <a href="../../ut1/index.html">UT1</a>
+            <div class="dropdown-content">
+                <a href="../../ut1/documentacion/index.html">DOCUMENTACIÓN</a>
+                <a href="../../ut1/index.html">HERRAMIENTAS</a>
+                <a href="../../ut1/practicas/index.html">PRÁCTICAS</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="../index.html">UT2</a>
+            <div class="dropdown-content">
+                <a href="../documentacion/index.html">DOCUMENTACIÓN</a>
+                <a href="../herramientas.html">HERRAMIENTAS</a>
+                <a href="index.html">PRÁCTICAS</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="../../ut3/index.html">UT3</a>
+            <div class="dropdown-content">
+                <a href="../../ut3/documentacion/index.html">DOCUMENTACIÓN</a>
+                <a href="../../ut3/herramientas.html">HERRAMIENTAS</a>
+                <a href="../../ut3/practicas/index.html">PRÁCTICAS</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="../../ut5/index.html">UT5</a>
+            <div class="dropdown-content">
+                <a href="../../ut5/documentacion/index.html">DOCUMENTACIÓN</a>
+                <a href="../../ut5/herramientas.html">HERRAMIENTAS</a>
+                <a href="../../ut5/practicas/index.html">PRÁCTICAS</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="../../ut6/index.html">UT6</a>
+            <div class="dropdown-content">
+                <a href="../../ut6/documentacion/index.html">DOCUMENTACIÓN</a>
+                <a href="../../ut6/herramientas.html">HERRAMIENTAS</a>
+                <a href="../../ut6/practicas/index.html">PRÁCTICAS</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <h1>Práctica: Menús dropdown y de hamburguesa</h1>
+        <p>Práctica para familirizarse con los menús dropdown y de hamburgesa.</p>
+        <hr />
+        <div class="dropdown-container">
+            <h2>Hoverable Dropdown Menu</h2>
+            <p>Mueve el ratón sobre el botón para abrir el menú dropdown.</p>
+            <div class="dropdown-menu">
+                <button class="dropbtn">Temas</button>
+                <div class="dropdown-menu-content">
+                    <a href="../../ut1/index.html">Tema 1</a>
+                    <a href="../index.html">Tema 2</a>
+                    <a href="../../ut3/index.html">Tema 3</a>
+                    <a href="../../ut5/index.html">Tema 5</a>
+                    <a href="../../ut6/index.html">Tema 6</a>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown-container">
+            <h2>Menú dropdown en barra de navegación</h2>
+            <p>Mueve el ratón sobre el enlace "Temas" para abrir el menú dropdown.</p>
+            <div class="dropdown-navbar">
+                <a href="#home">Home</a>
+                <a href="../../sitemap.xml">Sitemap</a>
+                <div class="dropdown-menu">
+                    <button class="dropbtn">Temas 
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-menu-content">
+                        <a href="../../ut1/index.html">Tema 1</a>
+                        <a href="../index.html">Tema 2</a>
+                        <a href="../../ut3/index.html">Tema 3</a>
+                        <a href="../../ut5/index.html">Tema 5</a>
+                        <a href="../../ut6/index.html">Tema 6</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown-container">
+            <h2>Mi menú con hamburguesa</h2>
+            <div class="ham-menu">
+                <div id="links">
+                    <a href="../../ut1/index.html">Tema 1</a>
+                    <a href="../index.html">Tema 2</a>
+                    <a href="../../ut3/index.html">Tema 3</a>
+                    <a href="../../ut5/index.html">Tema 5</a>
+                    <a href="../../ut6/index.html">Tema 6</a>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="displayLinks()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-resources">
+            <a href="index.html"><i class='fas fa-hand-point-left'></i></a>
+            <div>
+                <h2>Recursos de interés</h2>
+                <div class="resources-columns">
+                    <a href="https://www.w3.org" target="_blank">W3C</a>
+                    <a href="https://almanac.httparchive.org/en/2019/" target="_blank">Web Almanac (reporte anual del
+                        estado de la Web)</a>
+                    <a href="../../infografias.html">Infografías sobre diseño de interfaces</a>
+                    <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN webdocs</a>
+                    <a href="https://www.w3schools.com" target="_blank">W3schools</a>
+                    <a href="https://www.eniun.com/diseno-interfaces-web-ciclo-formativo/" target="_blank">Curso
+                        eniun</a>
+                    <a href="https://css-tricks.com" target="_blank">CSS Tricks</a>
+                    <a href="https://codepen.io/" target="_blank">Codepen</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>Nuria Barrios Santos | 2020 <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"> CC BY
+                    4.0</a>.</p>
+            <p>
+                <a
+                    href="https://validator.w3.org/unicorn/check?ucn_uri=https%3A%2F%2Fnuriadaw.github.io%2Fdint&ucn_task=conformance#css3-validator_warning_1">
+                    <img style="border:0;width:88px;height:31px" src="//jigsaw.w3.org/css-validator/images/vcss"
+                        alt="¡CSS Válido!" />
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function displayLinks() {
+          var x = document.getElementById("links");
+          var y = document.getElementsByClassName("icon")[0];
+          if (x.style.display === "block") {
+            x.style.display = "none";
+            y.style.width = "auto";
+          } else {
+            x.style.display = "block";
+            y.style.width = "100%"; 
+          }
+        }
+    </script>
+</body>
+
+</html>
