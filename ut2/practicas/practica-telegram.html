@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Nuria">
+    <title>Telegram web</title>
+    <link rel="icon" href="../../img/telegram(32x32).png" sizes="16x16" type="image/png">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        * {
+            box-sizing: border-box; /* padding y border están incluidos en width y height */
+            font-family: Tahoma, sans-serif, Arial, Helvetica;
+            color: #424242;
+        }
+
+        body {
+            height: 100vh;
+            padding: 0 10rem;
+            margin: 0;
+            background: #e7ebf0;
+            overflow: hidden;
+        }
+
+        header {
+            padding: 0;
+            width: 100%;
+            height: 3rem;
+            line-height: 3rem; /* EL mismo valor que height centra verticalemente */
+            background: #5682a3;
+            font-size: 0.875rem;
+        }
+
+        /* Se aplica a todos los hijos de la cabecera */
+        header > * {
+            float: left;
+            height: inherit;
+        }
+
+        /* Se aplica a todos los elementos de la cabecera */
+        header * {
+            top: 50%;
+            color: #fafafa;
+        }
+
+        aside,
+        main {
+            float: left;
+            height: 100vh;
+            background-color: #fafafa;
+            box-shadow: none;
+        }
+
+        aside {
+            width: 31%;
+            max-height: calc( 100% - 4.6rem );
+            padding-bottom: 0.625rem;
+            border-right: 0.125rem solid #d5d6d8;
+        }
+
+        aside ul {
+            height: calc( 100% - 1.625rem );
+            overflow-y: auto;
+        }
+
+        main {
+            width: 69%;
+        }
+
+        main > div {
+            padding: 1.313rem 5.5rem;
+
+        }
+
+        a {
+            text-decoration: none;
+            display: block;
+        }
+
+        a.active {
+            background-color: #6490b1;
+        }
+
+        a.active *:not(img) {
+            color: #f9f9f9;
+        }
+
+        ul {
+            padding-left: 0;
+            list-style-type: none;
+            background-color: #fafafa;
+        }
+
+        li * {
+            color: #5682a3;
+        }
+
+        li:hover {
+            background-color: #b9cfe352;
+        }
+
+        .ham-menu {
+            width: 31%;
+            padding-left: 1.375rem;
+        }
+
+            .ham-menu a {
+                display: inline;
+                margin-right: 2.2rem;
+            }
+
+            .ham-menu i:nth-child(2){
+                display: none;
+            }
+
+        .header-main {
+            width: calc(69% - 6rem);
+            padding-left: 1.2rem;
+        }
+
+            .header-main:hover, .header-btn:hover, .ham-menu:hover  {
+                background-color: #517899;
+            }
+
+        /* Se aplica al primer elemento"a" hijo de la clase header.main */
+        .header-main a:first-child {
+            font-size: 0.8rem;
+        }
+
+            .header-btn {
+                padding: 0 1.188rem;
+                color: #b9cfe3;
+            }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            box-shadow: 0 0.06rem 0.2rem 0 rgba(60, 75, 87, 0.27);
+            z-index: 1;
+        }
+
+        .dropdown-menu li a {
+            padding: 0 1rem;
+        }
+
+        .ham-menu .dropdown-menu {
+            top: 2.2rem;
+            left: 10rem;
+        }
+
+            .ham-menu li a span {
+                padding-left: 1.5rem;
+                font-size: 0.8rem;
+            }
+
+        .search {
+            padding: 0.375rem 1.625rem;
+            margin: 0;
+        }
+
+        .search input {
+            width: 100%;
+            height: 2.125rem;
+            padding: 0.375rem 1.625rem 0.375rem 1.875rem;
+            color: #424242;
+            font-size: 0.75rem;
+            background-color: #f5f5f5;
+            background-image: url(https://web.telegram.org/img/icons/IconsetW.png);
+            background-repeat: no-repeat;
+            background-position: -0.375rem -12.813rem;
+            border: 0.063rem solid #F2F2F2;
+            border-radius: 0.125rem;
+        }
+
+        .header-dropdown:hover .dropdown-menu {
+            display: block;
+            top: 2.2rem;
+            right: 10rem;
+        }
+
+        .header-dropdown li:first-child{
+            border-bottom: 0.06rem solid #d5d6d8;
+        }
+
+        .header-dropdown li a {
+            font-size: 0.8rem;
+        }
+
+        .user-conversation {
+            height: 4rem;
+        }
+
+        .user-conversation a {
+            height: inherit;
+            padding: 0.5rem 1rem;
+            font-size:  0.813rem;
+        }
+
+        .chat-img {
+            float: left;
+            width: 3rem;
+            height: 3rem;
+            margin-right: 0.625rem;
+            object-fit: cover;
+            background-color:#b9cfe3;
+            text-align: center;
+            line-height: 3rem;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 50%;
+        }
+
+        .chat-dialog {
+            float:left;
+            line-height: 1.8;
+        }
+
+        .chat-user {
+            font-weight: bold;
+        }
+
+        .chat-last, .chat-h {
+            color: grey;
+        }
+
+            .chat-last span {
+                color: #3a6d99;
+            }
+
+        .chat-right {
+            float: right;
+            font-size:  0.688rem;
+            line-height: 1.8;
+        }
+
+        .chat-unread {
+            float:right;
+            width: 1.2rem;
+            height: 1.2rem;
+            background-color: rgb(100, 163, 100);
+            border-radius: 50%;
+            text-align: center;
+            color: #fafafa;
+            font-weight: 700;
+        }
+
+        .conversation {
+            height: 70%;
+            overflow-y: auto;
+        }
+
+        .convesation-message img {
+            width: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Menú de hamburguesa -->
+        <div class="ham-menu">
+            <a href="javascript:void(0);" onclick="displayLinks()">
+                <i class="fa fa-bars"></i>
+                <i class="fa fa-times"></i>
+            </a>
+            <strong>Telegram</strong>
+            <ul class="dropdown-menu" id="links">
+                <li><a href="#"><i class="fas fa-users fa-md"></i><span>Nuevo grupo</span></a></li>
+                <li><a href="#"><i class="fas fa-user fa-lg"></i><span>Contactos</span></a></li>
+                <li><a href="#"><i class="fas fa-cog fa-lg"></i><span>Ajustes</span></a></li>
+                <li><a href="#"><i class="fas fa-question-circle fa-lg"></i><span>Preguntas frecuentes</span></a></li>
+                <li><a href="#"><i class="fab fa-telegram fa-lg"></i><span>Acerca de</span></a></li>
+            </ul>
+        </div>
+        <!-- Cuerpo principal de la cabecera -->
+        <div class="header-main">
+            <a class="header-btn" href="#"><strong>User2</strong> últ. vez hace 2 horas</a>
+        </div>
+        <!-- Icono de búsqueda de la cabecera -->
+        <a class="header-btn search-btn" href="#"><i class="fas fa-search"></i></a>
+        <!-- Menú de opciones de la cabecera -->
+        <div class="header-dropdown">
+            <a class="header-btn dropdown-toggle" href="#"></span><i class="fas fa-ellipsis-v"></i></a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Elegir mensajes</a></li>
+                <li><a href="#">Fotos</a></li>
+                <li><a href="#">Vídeos</a></li>
+                <li><a href="#">Audio</a></li>
+                <li><a href="#">Enlaces</a></li>
+                <li><a href="#">Mensajes de voz</a></li>
+                <li><a href="#">Videomensajes</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- Barra lateral: conversaciones abiertas con contactos -->
+    <aside>
+        <div class="search">
+           <input type="search" placeholder="Buscar" autocomplete="off">
+        </div>
+        <ul class="users-conversations">
+            <li class="user-conversation">
+                <a href="#">
+                    <img class="chat-img" src="../../img/bunny.jpg" alt="U1">
+                    <div class="chat-dialog">
+                        <div class="chat-user">User1</div>
+                        <span class="chat-last">Lorem ipsum dolor</span>
+                    </div>
+                    <div class="chat-right">
+                        <div class="chat-h">21:56</div>
+                        <span class="chat-unread">2</span>
+                    </div>
+                </a>
+            </li>
+            <li class="user-conversation">
+                <a class="active" href="#">
+                    <img class="chat-img" src="" alt="U2">
+                    <div class="chat-dialog">
+                        <div class="chat-user">User2</div>
+                        <span class="chat-last">Lorem ipsum dolor</span>
+                    </div>
+                    <div class="chat-right">
+                        <div class="chat-h">21:30</div>
+                    </div>
+                </a>
+            </li>
+            <li class="user-conversation">
+                <a href="#">
+                    <img class="chat-img" src="" alt="U3">
+                    <div class="chat-dialog">
+                        <div class="chat-user">User3</div>
+                        <span class="chat-last">😊</span>
+                    </div>
+                    <div class="chat-right">
+                        <div class="chat-h">sáb.</div>
+                        <span class="chat-unread">3</span>
+                    </div>
+                </a>
+            </li>
+            <li class="user-conversation">
+                <a href="#">
+                    <img class="chat-img" src="" alt="G1">
+                    <div class="chat-dialog">
+                        <div class="chat-user">Group1</div>
+                        <span class="chat-last"><span>User2:</span> Lorem ipsum dolor</span>
+                    </div>
+                    <div class="chat-right">
+                        <div class="chat-h">vie.</div>
+                    </div>
+                </a>
+            </li>
+            <li class="user-conversation">
+                <a href="#">
+                    <img class="chat-img" src="" alt="U4">
+                    <div class="chat-dialog">
+                        <div class="chat-user">User4</div>
+                        <span class="chat-last">https://loremipsum.io/</span>
+                    </div>
+                    <div class="chat-right">
+                        <div class="chat-h">mié.</div>
+                    </div>
+                </a>
+            </li>
+            <li class="user-conversation">
+                <a href="#">
+                    <img class="chat-img" src="" alt="U5">
+                    <div class="chat-dialog">
+                        <div class="chat-user">User5</div>
+                        <span class="chat-last"><span>Tú:</span>Lorem ipsum dolor</span>
+                    </div>
+                    <div class="chat-right">
+                        <div class="chat-h">mié.</div>
+                    </div>
+                </a>
+            </li>
+            <li class="user-conversation">
+                <a href="#">
+                    <img class="chat-img" src="" alt="G2">
+                    <div class="chat-dialog">
+                        <div class="chat-user">Group2</div>
+                        <span class="chat-last"><span>UNO Bot:</span> Uno!</span>
+                    </div>
+                    <div class="chat-right">
+                        <div class="chat-h">lun.</div>
+                    </div>
+                </a>
+            </li>
+            <li class="user-conversation">
+                <a href="#">
+                    <img class="chat-img" src=""  alt="U6">
+                    <div class="chat-dialog">
+                        <div class="chat-user">User6</div>
+                        <span class="chat-last"><span>Tú:</span> Lorem ipsum dolor</span>
+                    </div>
+                    <div class="chat-right">
+                        <div class="chat-h">19/10/20</div>
+                    </div>
+                </a>
+            </li>
+            <li class="user-conversation">
+                <a href="#">
+                    <img class="chat-img" src="" alt="U7">
+                    <div class="chat-dialog">
+                        <div class="chat-user">User7</div>
+                        <span class="chat-last">Lorem ipsum dolor</span>
+                    </div>
+                    <div class="chat-right">
+                        <div class="chat-h">09/09/20</div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <!-- Contenido principal (conversaciones) -->
+    <main>
+        <div class="conversation">
+            <img class="chat-img" src="../../img/bunny.jpg" alt="U1">
+            <div class="user-msg">
+                <span class="user-name">User1</span>
+                <span class="conversation-h">20:30:05</span>
+                <p class="convesation-message">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <img class="chat-img" src="../../img/bunny.jpg" alt="U1">
+            <div class="user-msg">
+                <span class="user-name">User1</span>
+                <span class="conversation-h">20:30:05</span>
+                <p class="convesation-message">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="msg">
+                <p class="convesation-message">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <span class="conversation-h">20:30:05</span>
+            </div>
+            <img class="chat-img" src="../../img/kiri_komori.jpeg" alt="NU">
+            <div class="user-msg">
+                <span class="user-name">Nur</span>
+                <span class="conversation-h">20:30:05</span>
+                <div class="convesation-message"><img src="../../img/go_robot.webp" alt="Unicorn"></div>
+            </div>
+        </div>
+        <div></div>
+        <span>toBottom</span>
+    </main>
+</body>
+
+<script>
+    function displayLinks() {
+      var links = document.getElementById("links");
+      var bars = document.getElementsByTagName("i")[0];
+      var times = document.getElementsByTagName("i")[1];
+      if (links.style.display === "block") {
+        links.style.display = "none";
+        bars.style.display = "inline";
+        times.style.display = "none";
+      } else {
+        links.style.display = "block";
+        bars.style.display = "none";
+        times.style.display = "inline";
+      }
+    }
+</script>
+
+</html>

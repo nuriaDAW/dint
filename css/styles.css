@@ -272,6 +272,12 @@ footer {
 /* Estilos para las imágenes */
 img {
 	max-width: 100%; /* Fija como tamaño máximo de la imagen el del contenedor */
+	/* Si la imagen no cargase, estilos para "alt" */
+	color: var(--primary);
+	text-align: center;
+    font-weight: 600;
+	font-size: 1rem;
+	text-transform: uppercase;
 }
 
 .img-exercises {

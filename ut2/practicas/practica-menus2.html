@@ -6,7 +6,7 @@
     <meta name="author" content="Nuria">
     <title>Práctica menús II</title>
     <link rel="icon" href="../../img/logo.svg" type="image/svg+xml">
-    <link rel="icon" href="../../img/logo.png" sizes="16x16" type="image/png">
+    <link rel="alternate icon" href="../../img/logo(16x16).png" sizes="16x16" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="../../css/styles.css">
@@ -99,6 +99,12 @@
             left: 0;
             background: #527a53;
             }
+
+                .ham-menu a i:nth-child(2){
+                    display: none;
+                    float: right;
+                    right: 0;
+                }
 
                 .ham-menu a.icon:hover {
                     background: #435a43;
@@ -213,6 +219,7 @@
                 </div>
                 <a href="javascript:void(0);" class="icon" onclick="displayLinks()">
                     <i class="fa fa-bars"></i>
+                    <i class="fa fa-times"></i>
                 </a>
             </div>
         </div>
@@ -251,14 +258,20 @@
 
     <script>
         function displayLinks() {
-          var x = document.getElementById("links");
-          var y = document.getElementsByClassName("icon")[0];
-          if (x.style.display === "block") {
-            x.style.display = "none";
-            y.style.width = "auto";
+          var links = document.getElementById("links");
+          var icon = document.getElementsByClassName("icon")[0];
+          var bars = document.getElementsByTagName("i")[2];
+          var times = document.getElementsByTagName("i")[3];
+          if (links.style.display === "block") {
+            links.style.display = "none";
+            icon.style.width = "auto";
+            bars.style.display = "block";
+            times.style.display = "none";
           } else {
-            x.style.display = "block";
-            y.style.width = "100%"; 
+            links.style.display = "block";
+            icon.style.width = "100%";
+            bars.style.display = "none";
+            times.style.display = "block";
           }
         }
     </script>

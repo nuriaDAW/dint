@@ -166,8 +166,12 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
         <loc>https://nuriadaw.github.io/dint/ut2/practicas/practica-visibilidad.html</loc>
         <lastmod>2020-11-06T13:30:26+00:00</lastmod>
     </url>
-        <url>
+    <url>
         <loc>https://nuriadaw.github.io/dint/ut2/practicas/practica-menus2.html</loc>
         <lastmod>2020-11-06T21:06:14+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut2/practicas/practica-telegram.html</loc>
+        <lastmod>2020-11-08T11:14:14+00:00</lastmod>
     </url>
 </urlset>
