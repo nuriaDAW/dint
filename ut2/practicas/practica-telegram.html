@@ -22,6 +22,7 @@
             overflow: hidden;
         }
 
+        /* Estilos generales para la cabecera */
         header {
             padding: 0;
             width: 100%;
@@ -31,17 +32,17 @@
             font-size: 0.875rem;
         }
 
-        /* Se aplica a todos los hijos de la cabecera */
-        header > * {
-            float: left;
-            height: inherit;
-        }
+            /* Se aplica a todos los hijos de la cabecera */
+            header > * {
+                float: left;
+                height: inherit;
+            }
 
-        /* Se aplica a todos los elementos de la cabecera */
-        header * {
-            top: 50%;
-            color: #fafafa;
-        }
+            /* Se aplica a todos los elementos de la cabecera */
+            header * {
+                top: 50%;
+                color: #fafafa;
+            }
 
         aside,
         main {
@@ -51,6 +52,7 @@
             box-shadow: none;
         }
 
+        /* Estilos generales para la barra lateral de chats */
         aside {
             width: 31%;
             max-height: calc( 100% - 4.6rem );
@@ -58,32 +60,39 @@
             border-right: 0.125rem solid #d5d6d8;
         }
 
-        aside ul {
-            height: calc( 100% - 1.625rem );
-            overflow-y: auto;
-        }
+            aside ul {
+                height: calc( 100% - 1.7rem );
+                overflow-y: auto;
+            }
 
+        /* Estilos general para el cuerpo principal */
         main {
             width: 69%;
         }
 
-        main > div {
-            padding: 1.313rem 5.5rem;
+            main > div {
+                padding: 1.313rem 5.5rem;
 
-        }
+            }
 
+        /* Estilos de texto */
         a {
             text-decoration: none;
             display: block;
         }
 
-        a.active {
-            background-color: #6490b1;
-        }
+            a.active {
+                background-color: #6490b1;
+            }
 
-        a.active *:not(img) {
-            color: #f9f9f9;
-        }
+                a.active *:not(img) {
+                    color: #f9f9f9;
+                }
+
+            a.user-name {
+                display: inline;
+                font-weight: bold;
+            }
 
         ul {
             padding-left: 0;
@@ -91,7 +100,7 @@
             background-color: #fafafa;
         }
 
-        li * {
+        li *, .user-name, .conversation-message a, #btn-tobottom i {
             color: #5682a3;
         }
 
@@ -99,6 +108,7 @@
             background-color: #b9cfe352;
         }
 
+        /* Estilos para el menú de hamburguesa */
         .ham-menu {
             width: 31%;
             padding-left: 1.375rem;
@@ -112,26 +122,29 @@
             .ham-menu i:nth-child(2){
                 display: none;
             }
-
+        
+        /* Estilos para el elemento central de la cabecera */
         .header-main {
             width: calc(69% - 6rem);
             padding-left: 1.2rem;
         }
 
-            .header-main:hover, .header-btn:hover, .ham-menu:hover  {
+            .header-main:hover, .header-btn:hover, .ham-menu:hover {
                 background-color: #517899;
             }
 
-        /* Se aplica al primer elemento"a" hijo de la clase header.main */
-        .header-main a:first-child {
-            font-size: 0.8rem;
-        }
-
-            .header-btn {
-                padding: 0 1.188rem;
-                color: #b9cfe3;
+            /* Se aplica al primer elemento"a" hijo de la clase header.main */
+            .header-main a:first-child {
+                font-size: 0.8rem;
             }
 
+        /* Estilos para los botones de la cabecera */
+        .header-btn {
+            padding: 0 1.188rem;
+            color: #b9cfe3;
+        }
+
+        /* Estilos para el menú dropdown */
         .dropdown-menu {
             display: none;
             position: absolute;
@@ -139,9 +152,9 @@
             z-index: 1;
         }
 
-        .dropdown-menu li a {
-            padding: 0 1rem;
-        }
+            .dropdown-menu li a {
+                padding: 0 1rem;
+            }
 
         .ham-menu .dropdown-menu {
             top: 2.2rem;
@@ -153,25 +166,6 @@
                 font-size: 0.8rem;
             }
 
-        .search {
-            padding: 0.375rem 1.625rem;
-            margin: 0;
-        }
-
-        .search input {
-            width: 100%;
-            height: 2.125rem;
-            padding: 0.375rem 1.625rem 0.375rem 1.875rem;
-            color: #424242;
-            font-size: 0.75rem;
-            background-color: #f5f5f5;
-            background-image: url(https://web.telegram.org/img/icons/IconsetW.png);
-            background-repeat: no-repeat;
-            background-position: -0.375rem -12.813rem;
-            border: 0.063rem solid #F2F2F2;
-            border-radius: 0.125rem;
-        }
-
         .header-dropdown:hover .dropdown-menu {
             display: block;
             top: 2.2rem;
@@ -182,19 +176,40 @@
             border-bottom: 0.06rem solid #d5d6d8;
         }
 
-        .header-dropdown li a {
-            font-size: 0.8rem;
+            .header-dropdown li a {
+                font-size: 0.8rem;
+            }
+
+        /* Estilos para la caja de búsqueda de la barra lateral */
+        .search {
+            padding: 0.375rem 1.625rem;
+            margin: 0;
         }
 
+            .search input {
+                width: 100%;
+                height: 2.125rem;
+                padding: 0.375rem 1.625rem 0.375rem 1.875rem;
+                color: #424242;
+                font-size: 0.75rem;
+                background-color: #f5f5f5;
+                background-image: url(https://web.telegram.org/img/icons/IconsetW.png);
+                background-repeat: no-repeat;
+                background-position: -0.375rem -12.813rem;
+                border: 0.063rem solid #F2F2F2;
+                border-radius: 0.125rem;
+            }
+
+        /* Estilos para la lista de conversariones de la barra lateral */
         .user-conversation {
             height: 4rem;
         }
 
-        .user-conversation a {
-            height: inherit;
-            padding: 0.5rem 1rem;
-            font-size:  0.813rem;
-        }
+            .user-conversation a {
+                height: inherit;
+                padding: 0.5rem 1rem;
+                font-size:  0.813rem;
+            }
 
         .chat-img {
             float: left;
@@ -205,6 +220,7 @@
             background-color:#b9cfe3;
             text-align: center;
             line-height: 3rem;
+            color: #5682a3;
             font-weight: 600;
             font-size: 1rem;
             border-radius: 50%;
@@ -219,7 +235,7 @@
             font-weight: bold;
         }
 
-        .chat-last, .chat-h {
+        .chat-last, .chat-h, .conversation-h {
             color: grey;
         }
 
@@ -244,14 +260,89 @@
             font-weight: 700;
         }
 
+        /* Estilos para la conversación del cuerpo principal */
         .conversation {
-            height: 70%;
+            height: 80%;
+            font-size:  0.813rem;
             overflow-y: auto;
         }
 
-        .convesation-message img {
+        .conversation-message img {
             width: 30%;
         }
+
+        .conversation-h {
+            float: right;
+            font-size:  0.75rem;
+        }
+
+        .user-msg .conversation-message {
+            padding-left: 3.6rem;
+        }
+
+        .msg p {
+            float: left;
+            margin-left: 3.6rem;
+        }
+
+        /* Panel de envío de mensajes del cuerpo principal */
+        .pnl-send-msg {
+            height: 20%;
+            padding: 1.5rem 3.5rem;
+        }
+
+        .icon-clip {
+            display: inline-block;
+            width: 1.188rem;
+            height: 1.438rem;
+            vertical-align: text-top;
+            opacity: 0.8;
+            background-image: url("https://web.telegram.org/img/icons/IconsetW.png");
+            background-repeat: no-repeat;
+            background-position: -0.75rem -4.25rem;
+        }
+
+       input[type="text"] {
+            width: calc(100% - 5rem);
+            height: 1.438rem;
+            padding: 1rem 2.5rem 1rem 1rem;
+            margin: 0 0.5rem;
+            background-color: #f5f5f5;
+            background-image: url("https://web.telegram.org/img/icons/IconsetW.png");
+            background-repeat: no-repeat;
+            background-position: right  -47.813rem;
+            border: none;
+            border-radius: 0.125rem;
+        }
+
+            input[type="text"]:focus{
+                border-bottom: #b9cfe3 solid 0.125rem;
+            }
+
+        .icon-micro {
+            display: inline-block;
+            width: 1.188rem;
+            height: 1.438rem;
+            vertical-align: text-top;
+            opacity: 0.8;
+            background-image: url("https://web.telegram.org/img/icons/IconsetW.png");
+            background-repeat: no-repeat;
+            background-position: -0.75rem -17.813rem;
+        }
+
+        /* Botón para ir al final de la conversación */
+        #btn-tobottom {
+            position: fixed;
+            top: 30rem;
+            right: 12rem;
+            background-color: transparent;
+            border: none;
+        }
+
+        #btn-tobottom:hover i {
+            color: #517899;
+        }
+
     </style>
 </head>
 
@@ -300,7 +391,7 @@
         <ul class="users-conversations">
             <li class="user-conversation">
                 <a href="#">
-                    <img class="chat-img" src="../../img/bunny.jpg" alt="U1">
+                    <img class="chat-img" src="../../img/bunny.jpg" alt="US">
                     <div class="chat-dialog">
                         <div class="chat-user">User1</div>
                         <span class="chat-last">Lorem ipsum dolor</span>
@@ -313,7 +404,7 @@
             </li>
             <li class="user-conversation">
                 <a class="active" href="#">
-                    <img class="chat-img" src="" alt="U2">
+                    <img class="chat-img" src="" alt="US">
                     <div class="chat-dialog">
                         <div class="chat-user">User2</div>
                         <span class="chat-last">Lorem ipsum dolor</span>
@@ -325,7 +416,7 @@
             </li>
             <li class="user-conversation">
                 <a href="#">
-                    <img class="chat-img" src="" alt="U3">
+                    <img class="chat-img" src="" alt="US">
                     <div class="chat-dialog">
                         <div class="chat-user">User3</div>
                         <span class="chat-last">😊</span>
@@ -338,7 +429,7 @@
             </li>
             <li class="user-conversation">
                 <a href="#">
-                    <img class="chat-img" src="" alt="G1">
+                    <img class="chat-img" src="" alt="GP">
                     <div class="chat-dialog">
                         <div class="chat-user">Group1</div>
                         <span class="chat-last"><span>User2:</span> Lorem ipsum dolor</span>
@@ -350,7 +441,7 @@
             </li>
             <li class="user-conversation">
                 <a href="#">
-                    <img class="chat-img" src="" alt="U4">
+                    <img class="chat-img" src="" alt="US">
                     <div class="chat-dialog">
                         <div class="chat-user">User4</div>
                         <span class="chat-last">https://loremipsum.io/</span>
@@ -362,7 +453,7 @@
             </li>
             <li class="user-conversation">
                 <a href="#">
-                    <img class="chat-img" src="" alt="U5">
+                    <img class="chat-img" src="" alt="US">
                     <div class="chat-dialog">
                         <div class="chat-user">User5</div>
                         <span class="chat-last"><span>Tú:</span>Lorem ipsum dolor</span>
@@ -374,7 +465,7 @@
             </li>
             <li class="user-conversation">
                 <a href="#">
-                    <img class="chat-img" src="" alt="G2">
+                    <img class="chat-img" src="" alt="GP">
                     <div class="chat-dialog">
                         <div class="chat-user">Group2</div>
                         <span class="chat-last"><span>UNO Bot:</span> Uno!</span>
@@ -386,7 +477,7 @@
             </li>
             <li class="user-conversation">
                 <a href="#">
-                    <img class="chat-img" src=""  alt="U6">
+                    <img class="chat-img" src=""  alt="US">
                     <div class="chat-dialog">
                         <div class="chat-user">User6</div>
                         <span class="chat-last"><span>Tú:</span> Lorem ipsum dolor</span>
@@ -398,7 +489,7 @@
             </li>
             <li class="user-conversation">
                 <a href="#">
-                    <img class="chat-img" src="" alt="U7">
+                    <img class="chat-img" src="" alt="US">
                     <div class="chat-dialog">
                         <div class="chat-user">User7</div>
                         <span class="chat-last">Lorem ipsum dolor</span>
@@ -412,36 +503,46 @@
     </aside>
     <!-- Contenido principal (conversaciones) -->
     <main>
-        <div class="conversation">
-            <img class="chat-img" src="../../img/bunny.jpg" alt="U1">
+        <div class="conversation" id="conversation">
+            <img class="chat-img" src="" alt="US">
             <div class="user-msg">
-                <span class="user-name">User1</span>
+                <a class="user-name" href="#">User2</a>
                 <span class="conversation-h">20:30:05</span>
-                <p class="convesation-message">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            <img class="chat-img" src="../../img/bunny.jpg" alt="U1">
-            <div class="user-msg">
-                <span class="user-name">User1</span>
-                <span class="conversation-h">20:30:05</span>
-                <p class="convesation-message">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="conversation-message"><a href="https://loremipsum.io/" target="_blank">https://loremipsum.io/</a></p>
             </div>
             <div class="msg">
-                <p class="convesation-message">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <span class="conversation-h">20:30:05</span>
+                <p class="convesartion-message">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="msg">
+                <span class="conversation-h">20:30:05</span>
+                <p class="conversation-message">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
             <img class="chat-img" src="../../img/kiri_komori.jpeg" alt="NU">
             <div class="user-msg">
-                <span class="user-name">Nur</span>
+                <a class="user-name" href="#">Nur</a>
                 <span class="conversation-h">20:30:05</span>
-                <div class="convesation-message"><img src="../../img/go_robot.webp" alt="Unicorn"></div>
+                <div class="conversation-message"><img src="../../img/go_robot.webp" alt="Unicorn"></div>
+            </div>
+            <img class="chat-img" src="" alt="US">
+            <div class="user-msg">
+                <a class="user-name" href="#">User2</a>
+                <span class="conversation-h">21:30:05</span>
+                <p class="conversation-message">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla facilisi morbi tempus iaculis urna id volutpat lacus laoreet. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Tristique et egestas quis ipsum. In vitae turpis massa sed elementum tempus egestas sed sed. Id faucibus nisl tincidunt eget. Egestas egestas fringilla phasellus faucibus scelerisque. Rhoncus urna neque viverra justo nec ultrices. Sed vulputate mi sit amet mauris commodo quis imperdiet. Tortor consequat id porta nibh venenatis.</p>
             </div>
         </div>
-        <div></div>
-        <span>toBottom</span>
+        <div class="pnl-send-msg">
+            <i class="icon-clip"></i>
+            <input type="text" placeholder="Escribe un mensaje...">
+            <i class="icon-micro"></i>
+        </div>
     </main>
+    <!-- Botón para ir al final de la conversación -->
+    <button id="btn-tobottom" title="Ir abajo" onclick="bottomFunction()"><i class="fas fa-chevron-circle-down fa-lg"></i></button>
 </body>
 
 <script>
+    // Mostrar contenido del dropdown menu
     function displayLinks() {
       var links = document.getElementById("links");
       var bars = document.getElementsByTagName("i")[0];
@@ -455,6 +556,12 @@
         bars.style.display = "none";
         times.style.display = "inline";
       }
+    }
+
+    // Al pulsar el botón va al final de la conversación
+    function bottomFunction() {
+        var conversation =document.getElementById("conversation");
+        conversation.scrollTop = conversation.scrollHeight;
     }
 </script>
 
