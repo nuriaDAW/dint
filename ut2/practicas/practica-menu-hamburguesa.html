@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Nuria">
+    <title>Menú hamburguesa</title>
+    <link rel="icon" href="../../img/logo.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="../../img/logo(16x16).png" sizes="16x16" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <style>
+        .topnav {
+            position: relative;
+        }
+
+        #hambtn {
+            padding: 0.8rem;
+            background-color: #527a53;
+            color: #fafafa;
+            border: none;
+            z-index: 1002; /* Quedará encima de la cortina al abrirse */
+        }
+
+            #hambtn:hover {
+                background-color: #435a43;
+            }
+
+        /* Cortina (fondo) */
+        .overlay {
+            /* El efecto va a ser de bajada, partirá de altura 0 */   
+            height: 0;
+            width: 100%;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            background-color: rgba(60,60,60, 0.9); /* Black w/opacity */
+            overflow-y: hidden; /* Deshabilita el scroll vertical */
+            transition: 0.5s; /* tiempo de transición */
+        }
+
+            /* Posiciona el contenido dentro de la cortina */
+            .overlay-content {
+                position: relative;
+                top: 16%; 
+                width: 100%; 
+                line-height: 1.5;
+                text-align: center; 
+            }
+
+                /* Enlaces dentro de la cortina */
+                .overlay a {
+                    width: 100%;
+                    padding: 0.5rem;
+                    font-size: 1.5rem;
+                    color: #80a980;
+                    display: block;
+                    transition: 0.3s;
+                }
+
+                    /* Enlaces onhover */
+                    .overlay a:hover {
+                        background-color:  #527a53;
+                        color: #fafafa;
+                    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="../../index.html">
+            <h1>Diseño de Interfaces Web</h1>
+            <a id="sitemap" href="../../sitemap.xml">Sitemap</a>
+        </a>
+    </header>
+    <nav class="topnav">
+        <a href="../../index.html"><i class="fas fa-home"></i></a>
+        <div class="dropdown">
+            <a href="../../ut1/index.html">UT1</a>
+            <div class="dropdown-content">
+                <a href="../../ut1/documentacion/index.html">DOCUMENTACIÓN</a>
+                <a href="../../ut1/index.html">HERRAMIENTAS</a>
+                <a href="../../ut1/practicas/index.html">PRÁCTICAS</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="../index.html">UT2</a>
+            <div class="dropdown-content">
+                <a href="../documentacion/index.html">DOCUMENTACIÓN</a>
+                <a href="../herramientas.html">HERRAMIENTAS</a>
+                <a href="index.html">PRÁCTICAS</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="../../ut3/index.html">UT3</a>
+            <div class="dropdown-content">
+                <a href="../../ut3/documentacion/index.html">DOCUMENTACIÓN</a>
+                <a href="../../ut3/herramientas.html">HERRAMIENTAS</a>
+                <a href="../../ut3/practicas/index.html">PRÁCTICAS</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="../../ut5/index.html">UT5</a>
+            <div class="dropdown-content">
+                <a href="../../ut5/documentacion/index.html">DOCUMENTACIÓN</a>
+                <a href="../../ut5/herramientas.html">HERRAMIENTAS</a>
+                <a href="../../ut5/practicas/index.html">PRÁCTICAS</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="../../ut6/index.html">UT6</a>
+            <div class="dropdown-content">
+                <a href="../../ut6/documentacion/index.html">DOCUMENTACIÓN</a>
+                <a href="../../ut6/herramientas.html">HERRAMIENTAS</a>
+                <a href="../../ut6/practicas/index.html">PRÁCTICAS</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <h1>Práctica: Menú hamburguesa con transiciones</h1>
+        <p>Práctica para realizar un menú de hamburgesa con iconos y transiciones. Similar a: <em><a href="https://www.w3schools.com/howto/howto_js_curtain_menu.asp" target="_blank">How To Create a Curtain Menu</a></em></p>
+        <hr />
+            <!-- Botón para desplegar/cerrar el menú -->
+            <button id="hambtn" onclick="showMenu()"><i class="fas fa-bars fa-lg"></i></button>
+            <!-- Cortina -->
+            <div id="navMenu" class="overlay">
+                <!-- Contenido -->
+                <div class="overlay-content">
+                    <a href="../../index.html"><i class="fas fa-home"></i> Home</a>
+                    <a href="../../ut1/index.html"><i class="fas fa-swatchbook"></i> Tema 1</a>
+                    <a href="../index.html"><i class="fab fa-css3-alt"></i> Tema 2</a>
+                    <a href="../../ut3/index.html"><i class="fas fa-photo-video"></i> Tema 3</a>
+                    <a href="../../ut5/index.html"><i class="fas fa-universal-access"></i> Tema 5</a>
+                    <a href="../../ut6/index.html"><i class="fas fa-clipboard-check"></i> Tema 6</a>
+                </div>
+            </div>
+    </main>
+    <footer>
+        <div class="footer-resources">
+            <a href="index.html"><i class='fas fa-hand-point-left'></i></a>
+            <div>
+                <h2>Recursos de interés</h2>
+                <div class="resources-columns">
+                    <a href="https://www.w3.org" target="_blank">W3C</a>
+                    <a href="https://almanac.httparchive.org/en/2019/" target="_blank">Web Almanac (reporte anual del
+                        estado de la Web)</a>
+                    <a href="../../infografias.html">Infografías sobre diseño de interfaces</a>
+                    <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN webdocs</a>
+                    <a href="https://www.w3schools.com" target="_blank">W3schools</a>
+                    <a href="https://www.eniun.com/diseno-interfaces-web-ciclo-formativo/" target="_blank">Curso
+                        eniun</a>
+                    <a href="https://css-tricks.com" target="_blank">CSS Tricks</a>
+                    <a href="https://codepen.io/" target="_blank">Codepen</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>Nuria Barrios Santos | 2020 <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"> CC BY
+                    4.0</a>.</p>
+            <p>
+                <a
+                    href="https://validator.w3.org/unicorn/check?ucn_uri=https%3A%2F%2Fnuriadaw.github.io%2Fdint&ucn_task=conformance#css3-validator_warning_1">
+                    <img style="border:0;width:88px;height:31px" src="//jigsaw.w3.org/css-validator/images/vcss"
+                        alt="¡CSS Válido!" />
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function showMenu() {
+          var icon = document.getElementById('hambtn');
+          var navMenu = document.getElementById('navMenu');
+
+          if (navMenu.style.height == '80%') {
+            icon.innerHTML = '<i class="fas fa-bars fa-lg"></i>';
+            icon.style.position = 'initial';
+            navMenu.style.height = '0';
+          } else {
+            icon.innerHTML = '<i class="fas fa-times fa-lg"></i>';
+            icon.style.position = 'fixed';
+            icon.style.top = '1.25rem';
+            icon.style.right = '2.813rem';
+            navMenu.style.height = '80%';
+          }
+        }
+    </script>
+</body>
+
+</html>

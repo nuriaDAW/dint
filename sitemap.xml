@@ -174,4 +174,8 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
         <loc>https://nuriadaw.github.io/dint/ut2/practicas/practica-telegram.html</loc>
         <lastmod>2020-11-08T11:14:14+00:00</lastmod>
     </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut2/practicas/practica-menu-hamburguesa.html</loc>
+        <lastmod>2020-11-10T00:49:01+00:00</lastmod>
+    </url>
 </urlset>
