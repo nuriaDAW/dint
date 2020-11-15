@@ -1,6 +1,4 @@
 :root {
-	font-size: 16px;
-
 	--blue:#53527a;
 	--blue-light: #6b699c;
 	--pink-light: #ebe5d9;
@@ -59,25 +57,9 @@ html,body {
 	max-width: 100vw;
 	padding: 0;
 	margin: 0;
+	font-size: 16px;
+	background-color: var(--green-darker);
 }   
-
-/*body {
-	background-image:url("../img/background-hands.jpeg");
-	background-size:  cover;
-	background-position: 0 calc(100% + 15.625rem);
-}
-
-body {
-	background-image:url("../img/background-cat.png");
-	background-size: cover;
-	background-position: 40% 0;
-}*/
-
-body {
-	background-image:url("../img/background-bunnies.png");
-	background-size: 110%;
-	background-position: 100% 0;
-}
 
 /* Estilos de texto */
 h1 {
@@ -131,8 +113,10 @@ body > header h1 {
 
 #sitemap {
 	position: absolute;
-	top: 7rem;
-    right: 0.2rem;
+	top: 0.5rem;
+	right: 0.5rem;
+	color: var(--text-light);
+	font-size: 0.875rem;
 }
 
 /* Estilos para la barra de navegación */
@@ -269,6 +253,10 @@ footer {
 		color: var(--green-light);
 	}
 
+	.footer-copyright a {
+		color: var(--blue-light);
+	}
+
 /* Estilos para las imágenes */
 img {
 	max-width: 100%; /* Fija como tamaño máximo de la imagen el del contenedor */
@@ -289,7 +277,9 @@ img {
 /* Estilos para la galería de imágenes */
 .gallery-container {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
+	line-height: 1.6;
 }
 
 div.gallery {
@@ -307,6 +297,7 @@ div.gallery {
 		width: 15rem;
 		height: 10rem;
 		border-radius: 0.5rem 0.5rem 0 0;
+		cursor: zoom-in;
   	}
 
   	.cover {
@@ -510,6 +501,10 @@ div.gallery {
 
 .home-ut div a img {
 	width: 35%;
+}
+
+.home-ut div a:hover img {
+	filter: drop-shadow(1.2rem 0.2rem 0.3rem #527a53); /* función CSS que aplica sombra a una imagen */
 }
 
 	.home-ut div a:not(:first-child) img{

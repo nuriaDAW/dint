@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Nuria">
+    <title>Galería de imágenes con flex</title>
+    <link rel="icon" href="../../img/logo.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="../../img/logo(16x16).png" sizes="16x16" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet"> 
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <style>
+        .logo, .navbar a {
+            display: none;
+        }
+
+        /* Contenedor flexible */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Elemento flexible */
+        .column {
+            width: 25%;
+            padding: 1rem 0;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+            .column h3 {
+                color: #f5f5f5;
+                margin-top: 0;
+            }
+
+            .column em {
+                color: #1f1e1e;
+            }
+
+        .column:first-child{
+            background-color: #476b48;
+        }
+
+        .column:nth-child(2){
+            background-color: #527a53;
+        }
+
+        .column:nth-child(3){
+            background-color: #5c8a5d;
+        }
+
+        .column:last-child{
+            background-color: #669967;
+        }
+
+        @media screen and (max-width: 850px){
+            html, body {
+                font-size: 14px;
+            }
+
+            header h1 {
+                font-size: 2rem !important;
+            }
+
+            .footer-resources div{
+                display: none;
+            }
+
+            .column{
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 600px){
+            h1 {
+                font-size: 1.5rem !important;
+            }
+
+            #sitemap, .topnav {
+                display: none;
+            }
+
+            section{
+                padding: 0 3rem;
+            }
+
+            .logo {
+                display: block;
+                position: relative;
+                width: 4rem;
+                height: 4rem;
+                padding: 0.6rem 0;
+                margin: -3rem auto -1rem;
+                background-color: #f5f5f5;
+                text-align: center;
+                border-radius: 50%;
+            }
+
+            .logo img {
+                width: 65%;
+            }
+
+            .column{
+                width: 100%;
+            }
+
+            /* Enlaces de la barra de navegación lateral */
+            .navbar a {
+                display: block;
+                position: fixed;
+                left: -8.7rem; /* Posicionados fuera de la pantalla*/
+                transition: 0.3s; /* Añade transición on hover */
+                padding: 1rem;
+                width: 11rem;
+                background-color: #527a53;
+                color: #f5f5f5;
+                text-align: right;
+                border-radius: 0 0.3rem 0.3rem 0;
+            }
+
+                .navbar a:hover {
+                    left: 0;
+                }
+
+            /* Posición de cada enlace */
+            #home {
+                top: 4rem;
+            }
+
+            #ut1 {
+                top: 8rem;
+            }
+
+            #ut2 {
+                top: 12rem;
+            }
+
+            #ut3 {
+                top: 16rem;
+            }
+
+            #ut5 {
+                top: 20rem;
+            }
+
+            #ut6 {
+                top: 24rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="../../index.html">
+            <h1>Diseño de Interfaces Web</h1>
+            <a id="sitemap" href="../../sitemap.xml">Sitemap</a>
+        </a>
+    </header>
+    <nav class="topnav">
+        <a href="../../index.html"><i class="fas fa-home"></i></a>
+        <div class="dropdown">
+            <a href="../../ut1/index.html">UT1</a>
+            <div class="dropdown-content">
+                <a href="../../ut1/documentacion/index.html">DOCUMENTACIÓN</a>
+                <a href="../../ut1/index.html">HERRAMIENTAS</a>
+                <a href="../../ut1/practicas/index.html">PRÁCTICAS</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="../index.html">UT2</a>
+            <div class="dropdown-content">
+                <a href="../documentacion/index.html">DOCUMENTACIÓN</a>
+                <a href="../herramientas.html">HERRAMIENTAS</a>
+                <a href="index.html">PRÁCTICAS</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="../../ut3/index.html">UT3</a>
+            <div class="dropdown-content">
+                <a href="../../ut3/documentacion/index.html">DOCUMENTACIÓN</a>
+                <a href="../../ut3/herramientas.html">HERRAMIENTAS</a>
+                <a href="../../ut3/practicas/index.html">PRÁCTICAS</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="../../ut5/index.html">UT5</a>
+            <div class="dropdown-content">
+                <a href="../../ut5/documentacion/index.html">DOCUMENTACIÓN</a>
+                <a href="../../ut5/herramientas.html">HERRAMIENTAS</a>
+                <a href="../../ut5/practicas/index.html">PRÁCTICAS</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="../../ut6/index.html">UT6</a>
+            <div class="dropdown-content">
+                <a href="../../ut6/documentacion/index.html">DOCUMENTACIÓN</a>
+                <a href="../../ut6/herramientas.html">HERRAMIENTAS</a>
+                <a href="../../ut6/practicas/index.html">PRÁCTICAS</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="logo">
+            <img src="../../img/logo_marca.png" alt="logo" >
+        </div>
+        <div class="navbar">
+            <a id="home" href="../../index.html">Home <i class="fas fa-home"></i></a>
+            <a id="ut1" href="../../ut1/index.html">Planificación <span>  &#x2776;</span></a>
+            <a id="ut2" href="../index.html">Estilos <span>  &#x2777;</span></a>
+            <a id="ut3" href="../../ut3/index.html">Multimedia <span>  &#x2778;</span></a>
+            <a id="ut5" href="../../ut5/index.html">Accesibilidad <span>  &#x277A;</span></a>
+            <a id="ut6" href="../../ut6/index.html">Usabilidad <span>  &#x277B;</span></a>
+        </div>
+        <section>
+            <h1>Galería de imágenes con <em>flex</em> y <em>@media screen</em></h1>
+            <p>Galería de imágenes flexible que varía la disposición según el tamaño de la pantalla.</p>
+            <hr />
+            <h2>Galería de imágenes adaptativa de cuatro columnas</h2>
+            <p><strong>Redimensiona la ventana del navegador para ver el efecto.</strong> En pantallas de 850px o menos,
+                el layout pasará de tener cuatro columnas a dos. Las pantallas de 600px o menos tendrán una única columna.</p>
+            <!-- Contenedor -->
+            <div class="row">
+                <!-- Elemento del contenedor -->
+                <div class="column">
+                    <h3>Imagen 1</h3>
+                    <!-- Imagen -->
+                    <img src="../../img/otoño.jpg" alt="Hojas otoñales" >
+                    <em>Hojas otoñales</em>
+                </div>
+                <div class="column">
+                    <h3>Imagen 2</h3>
+                    <!-- Imagen -->
+                    <img src="../../img/otoño.jpg" alt="Hojas otoñales" >
+                    <em>Hojas otoñales</em>
+                </div>
+                <div class="column">
+                    <h3>Imagen 3</h3>
+                    <!-- Imagen -->
+                    <img src="../../img/otoño.jpg" alt="Hojas otoñales" >
+                    <em>Hojas otoñales</em>
+                </div>
+                <div class="column">
+                    <h3>Imagen 4</h3>
+                    <!-- Imagen -->
+                    <img src="../../img/otoño.jpg" alt="Hojas otoñales" >
+                    <em>Hojas otoñales</em>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+		<div class="footer-resources">
+			<a href="index.html"><i class='fas fa-hand-point-left'></i></a>
+			<div>
+				<h2>Recursos de interés</h2>
+				<div class="resources-columns">
+					<a href="https://www.w3.org" target="_blank">W3C</a>
+					<a href="https://almanac.httparchive.org/en/2019/" target="_blank">Web Almanac (reporte anual del estado de la Web)</a>
+					<a href="../../infografias.html">Infografías sobre diseño de interfaces</a>
+					<a href="https://developer.mozilla.org/en-US/" target="_blank">MDN webdocs</a>
+					<a href="https://www.w3schools.com" target="_blank">W3schools</a>
+					<a href="https://www.eniun.com/diseno-interfaces-web-ciclo-formativo/" target="_blank">Curso eniun</a>
+					<a href="https://css-tricks.com" target="_blank">CSS Tricks</a>
+					<a href="https://codepen.io/" target="_blank">Codepen</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">	
+			<p>Nuria Barrios Santos | 2020 <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"> CC BY 4.0</a>.</p>
+			<p>
+				<a
+					href="https://validator.w3.org/unicorn/check?ucn_uri=https%3A%2F%2Fnuriadaw.github.io%2Fdint&ucn_task=conformance#css3-validator_warning_1">
+					<img style="border:0;width:88px;height:31px" src="//jigsaw.w3.org/css-validator/images/vcss"
+						alt="¡CSS Válido!" />
+				</a>
+			</p>
+		</div>
+	</footer>
+</body>
+
+</html>

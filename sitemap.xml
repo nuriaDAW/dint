@@ -178,4 +178,20 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
         <loc>https://nuriadaw.github.io/dint/ut2/practicas/practica-menu-hamburguesa.html</loc>
         <lastmod>2020-11-10T00:49:01+00:00</lastmod>
     </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut2/practicas/practica-flex.html</loc>
+        <lastmod>2020-11-14T12:30:43+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut2/practicas/galeria-imagenes-flex.html</loc>
+        <lastmod>2020-11-14T13:00:05+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut2/practicas/ejemplo-media-query.html</loc>
+        <lastmod>2020-11-13T17:05:12+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut2/practicas/ejemplo-media-query-flex.html</loc>
+        <lastmod>2020-11-13T18:25:45+00:00</lastmod>
+    </url>
 </urlset>
