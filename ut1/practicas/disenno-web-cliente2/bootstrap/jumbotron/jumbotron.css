@@ -1,0 +1,132 @@
+/* Move down content because we have a fixed navbar that is 3.5rem tall */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Nunito:wght@300&family=Roboto:wght@300&display=swap');
+
+body {
+  margin-top: 0;
+  padding-top: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f6f8;
+}
+
+/* Header */
+header {
+  background-color: #ffc600;
+}
+
+header a {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+.img-logo {
+  max-width: 18%;
+}
+
+.img-header {
+  max-width: 22%;
+  position: absolute;
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .img-header {
+    display: none;
+  }
+
+  .img-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 30%;
+  }
+}
+
+/* Navbar */
+nav {
+  clear: both;
+}
+
+nav, .dropdown-menu, .btn {
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  background-color: #b4cc4e;
+  border: none;
+}
+
+nav *, nav *:hover, .dropdown-item, .btn, .btn:hover, a:hover{
+  color: #4b0c3b;
+}
+
+.nav-link:hover::before {
+  content: url('https://api.iconify.design/zmdi:flower-alt.svg?color=%234b0c3b&height=16&inline=true');
+  vertical-align: -0.125em;
+  padding-right: 0.1em;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+  color: #4b0c3b;
+  background-color: #ffc600;
+  border-bottom: 1px solid #4b0c3b;
+}
+
+.btn:hover {
+  background-color: #ffc600;
+}
+
+.btn:focus, .btn.focus {
+  box-shadow: unset;
+}
+
+/* Container */
+ .container-img, blockquote {
+   padding-top: 2rem;
+   padding-bottom: 3.5rem;
+ }
+
+ .container-img > p{
+   padding-top: 0.75rem;
+   padding-bottom: 0.75rem;
+   color: #6c757d;
+ }
+
+ @media (max-width: 768px) {
+  .cover .col-sm-12:not(:first-child){
+     display: none;
+  }
+}
+
+ /* Text */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Libre Baskerville', serif;
+  color: #277647;
+}
+
+h1 {
+  border-bottom: solid 2px #277647;
+}
+
+a:not(nav *) {
+  color: #277647;
+}
+
+blockquote {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5rem;
+  color: #4b0c3b;
+}
+
+hr {
+  border-top: 1px solid #ffc600;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  blockquote {
+    padding-top: 0;
+    font-size: 1.12rem;
+  }
+}
