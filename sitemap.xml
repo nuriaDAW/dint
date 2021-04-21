@@ -16,7 +16,7 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     </url>
     <url>
         <loc>https://nuriadaw.github.io/dint/ut1/documentacion/index.html</loc>
-        <lastmod>2020-10-18T19:52:25+00:00</lastmod>
+        <lastmod>2021-04-20T23:45:27+00:00</lastmod>
     </url>
     <url>
         <loc>https://nuriadaw.github.io/dint/ut1/documentacion/color_interfaz_usuario.pdf</loc>
@@ -40,11 +40,11 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     </url>
     <url>
         <loc>https://nuriadaw.github.io/dint/ut1/herramientas.html</loc>
-        <lastmod>2020-10-18T19:52:25+00:00</lastmod>
+        <lastmod>2021-04-20T23:45:27+00:00</lastmod>
     </url>
     <url>
         <loc>https://nuriadaw.github.io/dint/ut1/practicas/index.html</loc>
-        <lastmod>2020-10-18T19:52:26+00:00</lastmod>
+        <lastmod>2021-04-21T18:50:45+00:00</lastmod>
     </url>
     <url>
         <loc>https://nuriadaw.github.io/dint/ut1/practicas/p1/index.html</loc>
@@ -79,16 +79,32 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
         <lastmod>2020-10-18T19:52:26+00:00</lastmod>
     </url>
     <url>
-        <loc>https://nuriadaw.github.io/dint/ut1/practicas/disenno-web-cliente/index.html</loc>
+        <loc>https://nuriadaw.github.io/dint/ut1/practicas/disenno-web-cliente1/index.html</loc>
         <lastmod>2020-10-18T19:52:25+00:00</lastmod>
     </url>
     <url>
-        <loc>https://nuriadaw.github.io/dint/ut1/practicas/disenno-web-cliente/seech_guia_estilos.pdf</loc>
+        <loc>https://nuriadaw.github.io/dint/ut1/practicas/disenno-web-cliente1/seech_guia_estilos.pdf</loc>
         <lastmod>2020-10-18T19:52:25+00:00</lastmod>
     </url>
     <url>
-        <loc>https://nuriadaw.github.io/dint/ut1/practicas/disenno-web-cliente/seech.bmpr</loc>
+        <loc>https://nuriadaw.github.io/dint/ut1/practicas/disenno-web-cliente1/seech.bmpr</loc>
         <lastmod>2020-10-18T19:52:26+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut1/practicas/disenno-web-cliente2/index.html</loc>
+        <lastmod>2021-04-21T16:15:08+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut1/practicas/disenno-web-cliente2/cuando_plantares.bmpr</loc>
+        <lastmod>2021-04-21T16:15:08+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut1/practicas/disenno-web-cliente2/bootstrap/jumbotron/index.html</loc>
+        <lastmod>2021-04-21T16:15:08+00:00</lastmod>
+    </url>
+        <url>
+        <loc>https://nuriadaw.github.io/dint/ut1/practicas/disenno-web-cliente2/materialize/index.html</loc>
+        <lastmod>2021-04-21T16:15:08+00:00</lastmod>
     </url>
     <url>
         <loc>https://nuriadaw.github.io/dint/ut1/practicas/practica-balsamiq/index.html</loc>
@@ -100,6 +116,32 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     <url>
         <loc>https://nuriadaw.github.io/dint/ut1/practicas/practica-balsamiq/practica-balsamiq.pdf</loc>
         <lastmod>2020-10-18T19:52:26+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut1/practicas/practica-axure/index.html</loc>
+        <image:image>
+             <image:loc>https://nuriadaw.github.io/dint/img/axure_freak_fandango/ordenador.png"</image:loc>
+        </image:image>´
+        <image:image>
+             <image:loc>https://nuriadaw.github.io/dint/img/axure_freak_fandango/tablet.png"</image:loc>
+        </image:image>
+        <image:image>
+             <image:loc>https://nuriadaw.github.io/dint/img/axure_freak_fandango/movil_principal.png"</image:loc>
+        </image:image>
+        <image:image>
+             <image:loc>https://nuriadaw.github.io/dint/img/axure_freak_fandango/movil_componentes.png"</image:loc>
+        </image:image>
+        <image:image>
+             <image:loc>https://nuriadaw.github.io/dint/img/axure_freak_fandango/movil_historia.png"</image:loc>
+        </image:image>
+        <image:image>
+             <image:loc>https://nuriadaw.github.io/dint/img/axure_freak_fandango/movil_contacto.png"</image:loc>
+        </image:image>
+        <lastmod>2021-04-21T18:26:15+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut1/practicas/practica-axure/guia_estilos_freak_fandago.pdf</loc>
+        <lastmod>2021-04-21T18:30:52:26+00:00</lastmod>
     </url>
     <url>
         <loc>https://nuriadaw.github.io/dint/ut1/practicas/repaso-html.html</loc>
@@ -136,7 +178,7 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     </url>
     <url>
         <loc>https://nuriadaw.github.io/dint/ut2/documentacion/index.html</loc>
-        <lastmod>2020-10-26T22:56:43+00:00</lastmod>
+        <lastmod>2021-04-20T23:45:27+00:00</lastmod>
     </url>
     <url>
         <loc>https://nuriadaw.github.io/dint/ut2/documentacion/menusCSS.pdf</loc>
