@@ -23,8 +23,20 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
         <lastmod>2020-10-18T19:52:25+00:00</lastmod>
     </url>
     <url>
+        <loc>https://nuriadaw.github.io/dint/ut1/documentacion/Tips and Considerations When Choosing a Typeface-Toptal.pdf</loc>
+        <lastmod>2021-04-23T23:10:05+00:00</lastmod>
+    </url>
+    <url>
         <loc>https://nuriadaw.github.io/dint/ut1/documentacion/wireframes.pdf</loc>
         <lastmod>2020-10-18T19:52:25+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut1/documentacion/CheatSheet-Bootstrap-4.pdf</loc>
+        <lastmod>2021-04-23T23:10:05+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut1/documentacion/Cheatsheet-Materialize.pdf</loc>
+        <lastmod>2021-04-23T23:10:05+00:00</lastmod>
     </url>
     <url>
         <loc>https://nuriadaw.github.io/dint/ut1/documentacion/html-div.html</loc>
@@ -178,7 +190,27 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     </url>
     <url>
         <loc>https://nuriadaw.github.io/dint/ut2/documentacion/index.html</loc>
-        <lastmod>2021-04-20T23:45:27+00:00</lastmod>
+        <lastmod>2021-04-25T16:20:23+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut2/documentacion/Sass-for-Web-Designers.pdf</loc>
+        <lastmod>2021-04-25T16:20:23+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut2/documentacion/sass_chearsheet.pdf</loc>
+        <lastmod>2021-04-25T16:20:23+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut2/documentacion/css3-cheatsheet.pdf</loc>
+        <lastmod>2020-10-26T22:56:43+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut2/documentacion/css-handbook.pdf</loc>
+        <lastmod>2020-10-26T22:56:43+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut2/documentacion/CSS3-y-Javascript-Avanzado.pdf</loc>
+        <lastmod>2020-10-26T22:56:43+00:00</lastmod>
     </url>
     <url>
         <loc>https://nuriadaw.github.io/dint/ut2/documentacion/menusCSS.pdf</loc>
@@ -186,7 +218,7 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     </url>
     <url>
         <loc>https://nuriadaw.github.io/dint/ut2/herramientas.html</loc>
-        <lastmod>2020-11-02T15:01:50+00:00</lastmod>
+        <lastmod>2021-04-25T16:25:31+00:00</lastmod>
     </url>
     <url>
         <loc>https://nuriadaw.github.io/dint/ut2/practicas/index.html</loc>
@@ -235,5 +267,17 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     <url>
         <loc>https://nuriadaw.github.io/dint/ut2/practicas/ejemplo-media-query-flex.html</loc>
         <lastmod>2020-11-13T18:25:45+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut2/practicas/introduccion-sass/index.html</loc>
+        <lastmod>2021-04-25T18:09:45+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut2/practicas/introduccion-sass/materialize-sass/index.html</loc>
+        <lastmod>2021-04-29T20:00:50+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut2/practicas/flex-sass/index.html</loc>
+        <lastmod>2021-04-29T21:58:54+00:00</lastmod>
     </url>
 </urlset>

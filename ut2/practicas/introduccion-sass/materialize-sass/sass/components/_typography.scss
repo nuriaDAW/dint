@@ -1,0 +1,125 @@
+// Custom fonts
+@font-face {
+  font-family: Canter;
+  src: url("../fonts/Canter_Light.otf");
+  font-style: normal;
+};
+
+$font-list : (
+   // The directory path to the font from where the compiled CSS's directory
+    font-directory: '../fonts/Montserrat',
+     // Create a map for each font within the 'fonts' map
+     font : (
+      // the name of the font to use as the value in the css font-family attribute
+       font-family: Montserrat,
+        font-variants: (
+          // create a single map for each of the font options
+          // weight       = normal|bold|bolder|lighter|(100->900)
+          // style        = normal|italic|oblique
+           ( file: 'Montserrat-Thin.ttf', weight: '100', style: 'normal' ),
+           ( file: 'Montserrat-ThinItalic.ttf', weight: '100', style: 'italic' ),
+           ( file: 'Montserrat-ExtraLight.ttf', weight: '200', style: 'normal' ),
+           ( file: 'Montserrat-ExtraLightItalic.ttf', weight: '200', style: 'italic' ),
+           ( file: 'Montserrat-Light.ttf', weight: '300', style: 'normal' ),
+           ( file: 'Montserrat-LightItalic.ttf', weight: '300', style: 'italic' ),
+           ( file: 'Montserrat-Regular.ttf', weight: '400', style: 'normal' ),
+           ( file: 'Montserrat-Italic.ttf', weight: '400', style: 'italic' ),
+           ( file: 'Montserrat-Medium.ttf', weight: '500', style: 'normal' ),
+           ( file: 'Montserrat-MediumItalic.ttf', weight: '500', style: 'italic' ),
+           ( file: 'Montserrat-SemiBold.ttf', weight: '600', style: 'normal' ),
+           ( file: 'Montserrat-SemiBoldItalic.ttf', weight: '600', style: 'italic' ),
+           ( file: 'Montserrat-Bold.ttf', weight: '700', style: 'normal' ),
+           ( file: 'Montserrat-BoldItalic.ttf', weight: '700', style: 'italic' ),
+           ( file: 'Montserrat-ExtraBold.ttf', weight: '800', style: 'normal' ),
+           ( file: 'Montserrat-ExtraBoldItalic.ttf', weight: '800', style: 'italic' ),
+           ( file: 'Montserrat-Black.ttf', weight: '900', style: 'normal' ),
+           ( file: 'Montserrat-BlackItalic.ttf', weight: '900', style: 'italic' ),
+       ),
+   ),
+);
+// get all the font variants
+$fonts: map-get( map-get( $font-list, 'font' ), 'font-variants' );
+// get the font-family property that will be used to call the font
+$font-family: map-get( map-get( $font-list, 'font' ), 'font-family' );
+// get the directory from the root, where the fonts are stored
+$font-directory:  map-get( $font-list, 'font-directory' );
+// Build the @font-face
+@each $font-variant in $fonts {
+
+  @font-face {
+    $font-style: map-get( $font-variant, 'style' );
+		$font-weight: map-get( $font-variant, 'weight' );
+		$file: map-get( $font-variant, 'file' );
+
+    // Output
+			font-family: $font-family;
+			font-style: unquote( $font-style );
+			font-weight: unquote( $font-weight );
+      src: url("#{$font-directory}/#{$file}");
+  }
+};
+
+a {
+  text-decoration: none;
+}
+
+html{
+  line-height: 1.5;
+
+  @media only screen and (min-width: 0) {
+    font-size: 14px;
+  }
+
+  @media only screen and (min-width: $medium-screen) {
+    font-size: 14.5px;
+  }
+
+  @media only screen and (min-width: $large-screen) {
+    font-size: 15px;
+  }
+
+  font-family: 'Montserrat', $font-stack;
+  font-weight: normal;
+  color: $off-black;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Canter';
+	line-height: 1.3;
+}
+
+// Header Styles
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+h1 { font-size: $h1-fontsize; line-height: 110%; margin: ($h1-fontsize / 1.5) 0 ($h1-fontsize / 2.5) 0;}
+h2 { font-size: $h2-fontsize; line-height: 110%; margin: ($h2-fontsize / 10.5) 0 ($h2-fontsize / 2.5) 0;}
+h3 { font-size: $h3-fontsize; line-height: 110%; margin: ($h3-fontsize / 10.5) 0 ($h3-fontsize / 2.5) 0;}
+h4 { font-size: $h4-fontsize; line-height: 110%; margin: ($h4-fontsize / 10.5) 0 ($h4-fontsize / 2.5) 0;}
+h5 { font-size: $h5-fontsize; line-height: 110%; margin: ($h5-fontsize / 10.5) 0 ($h5-fontsize / 2.5) 0;}
+h6 { font-size: $h6-fontsize; line-height: 110%; margin: ($h6-fontsize / 10.5) 0 ($h6-fontsize / 2.5) 0;}
+
+// Text Styles
+em { font-style: italic; }
+strong { font-weight: 500; }
+.extra-bold {font-weight: 800;}
+small { font-size: 75%; }
+.big { font-size: 125%; }
+.light { font-weight: 300; }
+.thin { font-weight: 200; }
+
+// Blank space preserve
+.data-pre {white-space: pre;}
+
+
+.flow-text{
+  $i: 0;
+  @while $i <= $intervals {
+    @media only screen and (min-width : 360 + ($i * $interval-size)) {
+      font-size: 1.2rem * (1 + (.02 * $i));
+    }
+    $i: $i + 1;
+  }
+
+  // Handle below 360px screen
+  @media only screen and (max-width: 360px) {
+    font-size: 1.2rem;
+  }
+}

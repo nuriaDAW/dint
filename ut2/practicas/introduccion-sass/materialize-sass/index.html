@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="author" content="Nuria Barrios Santos" />
+    <title>Introducción a Sass con Materialize</title>
+
+    <link rel="icon" href="img/sass-fav.png" sizes="32x32" type="image/png">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+</head>
+
+<body>
+    <!-- Dropdown Structure -->
+    <ul id="dropdown1" class="dropdown-content">
+        <div class="row">
+            <div class="col xl6 l6">
+                <li><a href="#colors">Colores</a></li>
+                <li><a href="#fonts">Fuentes</a></li>
+                <li><a href="#components">Componentes</a></li>
+                <li><a href="#imports">Imports</a></li>
+            </div>
+            <div class="col xl6 l6">
+                <li><a href="#mediaq">Media queries</a></li>
+                <li><a href="#grid">Grid</a></li>
+                <li><a href="#buttons">Botones</a></li>
+                <li><a href="#cards">Cards</a></li>
+            </div>
+        </div>
+    </ul>
+    <!-- Mobile menu -->
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="../../../documentacion/Sass-for-Web-Designers.pdf">Manual</a></li>
+        <li><a href="https://materializecss.com" target="_blank">Materialize</a></li>
+    </ul>
+    <!-- Navbar -->
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="https://sass-lang.com/" class="brand-logo"><img src="img/sass-logo.svg" /></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <!-- Dropdown Trigger -->
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Componentes<i
+                                class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a href="../../../documentacion/Sass-for-Web-Designers.pdf">Manual</a></li>
+                    <li><a href="https://materializecss.com" target="_blank">Materialize</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- Main -->
+    <main>
+        <section id="colors" class="white">
+            <h1>Colores</h1>
+            <p class="extra-bold">_color-variables.scss</p>
+            <p>Colores del tema. Añadidos siguiendo el esquema de clases de color de Materialize.</p>
+            <div class="row">
+                <div class="col xl4 l4 m4 s12">
+                    <div class="row">
+                        <p class="extra-bold">$sandy-brown:</p>
+                        <div class="col xl12 l12 m12 s12 sandy-brown">
+                            <p class="center data-pre">"base": #feae59,</p>
+                        </div>
+                        <div class="col xl12 l12 m12 s12 sandy-brown lighten-3">
+                            <p class="center data-pre">"lighten-3": #ffe9bc,</p>
+                        </div>
+                        <div class="col xl12 l12 m12 s12 sandy-brown lighten-2">
+                            <p class="center data-pre">"lighten-2": #ffd5a8,</p>
+                        </div>
+                        <div class="col xl12 l12 m12 s12 sandy-brown lighten-1">
+                            <p class="center data-pre">"lighten-1": #ffbf7c,</p>
+                        </div>
+                        <div class="col xl12 l12 m12 s12 sandy-brown darken-1">
+                            <p class="center data-pre">"darken-1": #e89033,</p>
+                        </div>
+                        <div class="col xl12 l12 m12 s12 sandy-brown darken-2">
+                            <p class="center data-pre grey-text text-lighten-5">"darken-2": #Be6b14,</p>
+                        </div>
+                        <div class="col xl12 l12 m12 s12 sandy-brown darken-3">
+                            <p class="center data-pre grey-text text-lighten-5">"darken-3": #913e28</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col xl4 l4 m4 s12">
+                    <div class="row">
+                        <p class="extra-bold">$strawberry:</p>
+                        <div class="col xl12 l12 m12 s12 strawberry">
+                            <p class="center data-pre grey-text text-lighten-5">"base": #c8253b,</p>
+                        </div>
+                        <div class="col xl12 l12 m12 s12 strawberry lighten-3">
+                            <p class="center data-pre">"lighten-3": #ffb2c3,</p>
+                        </div>
+                        <div class="col xl12 l12 m12 s12 strawberry lighten-2">
+                            <p class="center data-pre">"lighten-2": #f47bbc,</p>
+                        </div>
+                        <div class="col xl12 l12 m12 s12 strawberry lighten-1">
+                            <p class="center data-pre grey-text text-lighten-5">"lighten-1": #d94c5f,</p>
+                        </div>
+                        <div class="col xl12 l12 m12 s12 strawberry darken-1">
+                            <p class="center data-pre grey-text text-lighten-5">"darken-1": #9f1226,</p>
+                        </div>
+                        <div class="col xl12 l12 m12 s12 strawberry darken-2">
+                            <p class="center data-pre grey-text text-lighten-5">"darken-2": #7a0011,</p>
+                        </div>
+                        <div class="col xl12 l12 m12 s12 strawberry darken-3">
+                            <p class="center data-pre grey-text text-lighten-5">"darken-3": #5c0000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col xl4 l4 m4 s12">
+                    <div class="row">
+                        <p class="extra-bold">$bunting:</p>
+                        <div class="col xl12 l12 m12 s12 bunting">
+                            <p class="center data-pre grey-text text-lighten-5">"base": #131143,</p>
+                        </div>
+                        <div class="col xl12 l12 m12 s12 bunting lighten-3">
+                            <p class="center data-pre grey-text text-lighten-5">"lighten-3": #65639f ,</p>
+                        </div>
+                        <div class="col xl12 l12 m12 s12 bunting lighten-2">
+                            <p class="center data-pre grey-text text-lighten-5">"lighten-2": #3d3b77,</p>
+                        </div>
+                        <div class="col xl12 l12 m12 s12 bunting lighten-1">
+                            <p class="center data-pre grey-text text-lighten-5">"lighten-1": #26245e,</p>
+                        </div>
+                        <div class="col xl12 l12 m12 s12 bunting darken-1">
+                            <p class="center data-pre grey-text text-lighten-5">"darken-1": #07062a,</p>
+                        </div>
+                        <div class="col xl12 l12 m12 s12 bunting darken-2">
+                            <p class="center data-pre grey-text text-lighten-5">"darken-2": #020215,</p>
+                        </div>
+                        <div class="col xl12 l12 m12 s12 bunting darken-3">
+                            <p class="center data-pre grey-text text-lighten-5">"darken-3": #000010</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="fonts" class="container strawberry lighten-1 bunting-text text-darken-1">
+            <h1>Fuentes</h1>
+            <div class="row">
+                <div class="col xl12 l12 m12 s12">
+                    <h2 class="center">Texto general</h2>
+                    <p class="extra-bold">_typography.scss</p>
+                    <p><em>font-family: Montserrat</em></p>
+                    <div class="hide-on-small-and-down">
+                        <code class="block">$font-list : (</code>
+                        <code class="block">font-directory: '../fonts/Montserrat',</code>
+                        <code class="block">font : (</code>
+                        <code class="block">font-family: Montserrat,</code>
+                        <code class="block">font-variants: (</code>
+                        <code class="block">( file: 'Montserrat-Thin.ttf', weight: '100', style: 'normal' ),</code>
+                        <code
+                            class="block">( file: 'Montserrat-ThinItalic.ttf', weight: '100', style: 'italic' ),</code>
+                        <code
+                            class="block">( file: 'Montserrat-ExtraLight.ttf', weight: '200', style: 'normal' ),</code>
+                        <code class="block">[...]</code>
+                        <code class="block">),</code>
+                        <code class="block">),</code>
+                        <code class="block">);</code>
+                        <code class="block">$fonts: map-get( map-get( $font-list, 'font' ), 'font-variants' );</code>
+                        <code
+                            class="block">$font-family: map-get( map-get( $font-list, 'font' ), 'font-family' );</code>
+                        <code class="block">$font-directory: map-get( $font-list, 'font-directory' );</code>
+                        <code class="block">@each $font-variant in $fonts {</code>
+                        <code class="block">@font-face {</code>
+                        <code class="block">$font-style: map-get( $font-variant, 'style' );</code>
+                        <code class="block">$font-weight: map-get( $font-variant, 'weight' );</code>
+                        <code class="block">$file: map-get( $font-variant, 'file' );</code>
+                        <code class="block">font-family: $font-family;</code>
+                        <code class="block">font-style: unquote( $font-style );</code>
+                        <code class="block">font-weight: unquote( $font-weight );</code>
+                        <code class="block">src: url("#{$font-directory}/#{$file}");</code>
+                        <code class="block">}</code>
+                        <code class="block">};</code>
+                    </div>
+                </div>
+                <div class="col xl6 l6 m7 s12">
+                    <h2 class="center">Títulos</h2>
+                    <p class="extra-bold">_typography.scss</p>
+                    <p><em>font-family: Canter</em></p>
+                    <div class="hide-on-small-and-down">
+                        <code class="block">@font-face {</code>
+                        <code class="block">font-family: Canter;</code>
+                        <code class="block">src: url("../fonts/Canter_Light.otf");</code>
+                        <code class="block">font-style: normal;</code>
+                        <code class="block">};</code>
+                    </div>
+                </div>
+                <div class="col xl6 l6 m5 s12">
+                    <h2 class="center">Menús y botones</h2>
+                    <p><span class="extra-bold">_variables.scss</span> (<code>20. Typography</code>)</p>
+                    <p>Fuentes por defecto de Materialize</p>
+                    <div class="hide-on-small-and-down">
+                        <code>$font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !default;
+                    </code>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="components" class="container bunting strawberry-text text-lighten-2">
+            <h1>Componentes</h1>
+            <p>Cada uno de los elementos que forman el framework y/o elementos generales y de normalización.</p>
+            <div class="row">
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_variables.scss</p>
+                    <p>Variables de Materialize a utilizar en el resto de componentes (salvo las que definen los
+                        colores).</p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_color-clases.scss</p>
+                    <p>Clases que definen las variables de colores.</p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_color-variables.scss</p>
+                    <p>Paleta completa de colores organizada en variables.</p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_normalize.scss</p>
+                    <p>Normaliza estilos de un amplio número de elementos html para que sean compatibles con distintos
+                        navegadores.</p>
+                    <p>Basado en el proyecto <a href="https://github.com/necolas/normalize.css"
+                            target="_blank">normalize.css</a>.</p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_global.scss</p>
+                    <p>Estilos por defecto de elementos html y clases generales.</p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_typography.scss</p>
+                    <p>Estilos generales de texto.</p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_grid.scss</p>
+                    <p>Sistema de grillas.</p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_collapsible.scss</p>
+                    <p>Los colapsables son elementos de acordeón que se expanden al hacer clic en ellos.</p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_icons-material-design.scss</p>
+                    <p>Estilos para los iconos de Material.</p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_navbar.scss</p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_sidenav.scss</p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_dropdown.scss</p>
+                    <p>Listas desplegables.</p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_tabs.scss</p>
+                    <p>Lista desordenada de pestañas con hashes correspondientes a los ids de las pestañas.</p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_table_of_contents.scss</p>
+                    <p>Lista de navegación del contenido de una página.</p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_buttons.scss</p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_pulse.scss</p>
+                    <p>Elemento que genera un efecto "latiente" pensado para llamar la atención sobre botones flotantes.
+                    </p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_waves.scss</p>
+                    <p>Biblioteca externa incluida para crear un efecto de tinta.</p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">forms</p>
+                    <ul>
+                        <li>_checkboxes.scss</li>
+                        <li>_file-input.scss</li>
+                        <li>_forms.scss</li>
+                        <li>_input-fields.scss</li>
+                        <li>_radio-buttons.scss</li>
+                        <li>_range.scss</li>
+                        <li>_select.scss</li>
+                        <li>_switches.scss</li>
+                    </ul>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_datepicker.scss</p>
+                    <p>Calendarios interactivos.</p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_timepeciker.scss</p>
+                    <p>Reloj interactivo.</p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_cards.scss</p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_chips.scss</p>
+                    <p>Las <em>chips</em> se pueden usar para presentar trozos pequeños de información. Lo más habitual
+                        es utilizarlas para contactos o etiquetas. </p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_badges.scss</p>
+                    <p>Los <em>badges</em> pueden notificar que hay mensajes o notificaciones nuevas o no leídas.</p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_toast.scss</p>
+                    <p>Alertas.</p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_modal.scss</p>
+                    <p><em>Modal</em> sirve para cuadros de diálogo, mensajes de confirmación u otras llamadas de
+                        contenido.</p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_slider.scss</p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_carousel.scss</p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_materialbox.scss</p>
+                    <p>Material box es una implementación del plugin Lightbox para ampliar imágenes al pulsar sobre
+                        ellas.</p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_tooltip.scss</p>
+                    <p>Los <em>tooltips</em> son pequeñas pistas textuales interactivas principalmente para elementos
+                        gráficos.</p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_tapTarget.scss</p>
+                    <p>Elemento para ampliar información en momentos contextualmente relevantes.</p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_transitions.scss</p>
+                    <p>Estilos para las transiciones.</p>
+                </div>
+                <div class="col xl3 l3 m6 s12">
+                    <p class="extra-bold">_preloader.scss</p>
+                    <p>Indicadores del progreso de carga de elementos que tardan en cargar.</p>
+                </div>
+            </div>
+        </section>
+        <section id="imports" class="container strawberry lighten-1 bunting-text text-darken-1">
+            <h1>Imports</h1>
+            <p class="extra-bold">materialize.scss</p>
+            <p>Archivo que compilará Sass en una hoja de estilos CSS.</p>
+            <p>Incluye todos los <code>@import</code> de los componentes.</p>
+            <p class="bunting darken-1 hide-on-small-and-down"><code
+                    class="strawberry-text text-lighten-3">@import "components/color-variables";</code></p>
+        </section>
+        <section id="mediaq" class="container bunting strawberry-text text-lighten-2">
+            <h1>Media Queries</h1>
+            <p><span class="extra-bold">_variables.scss</span> <code>(11. Global // Media Query Ranges)</code></p>
+            <p>Agrupan los dipositivos en rangos de tamaños de pantalla para la visualización del contenido. Recogido en
+                variables.</p>
+            <div class="row">
+                <div class="col xl6 l6 m12 s12">
+                    <h2>Hasta</h2>
+                    <div class="container-border">
+                        <strong class="underlined upper">TAMAÑO</strong>
+                        <code class="block">$small-screen: 600px !default;</code>
+                        <code class="block">$medium-screen: 992px !default;</code>
+                        <code class="block">$large-screen: 1200px !default;</code>
+                    </div>
+                    <div class="container-border hide-on-small-and-down">
+                        <strong class="underlined upper">MEDIA QUERY</strong>
+                        <code class="block">
+                        $small-and-down: "only screen and (max-width : #{$small-screen})" !default;</code>
+                        <code class="block">
+                        $medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;</code>
+                        <code class="block">
+                        $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;</code>
+                    </div>
+                </div>
+                <div class="col xl6 l6 m12 s12">
+                    <h2>Desde</h2>
+                    <div class="container-border">
+                        <strong class="underlined upper">TAMAÑO</strong>
+                        <code class="block">$small-screen-up: 601px !default;</code>
+                        <code class="block">$medium-screen-up: 993px !default;</code>
+                        <code class="block">$large-screen-up: 1201px !default;</code>
+                    </div>
+                    <div class="container-border hide-on-small-and-down">
+                        <strong class="underlined upper">MEDIA QUERY</strong>
+                        <code
+                            class="block">$medium-and-up: "only screen and (min-width : #{$small-screen-up})" !default;</code>
+                        <code
+                            class="block">$large-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;</code>
+                        <code
+                            class="block">$extra-large-and-up: "only screen and (min-width : #{$large-screen-up})" !default;</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="grid" class="container strawberry lighten-1 bunting-text text-darken-1">
+            <h1>Grid</h1>
+            <p><span class="extra-bold">_variables.scss</span> <code>(12. Grid)</code>, <span
+                    class="extra-bold">_grid.scss</span></p>
+            <p>Materialize utiliza un sistema de 12 columnas. El ancho de cada columna se calcula con la fórmula:</p>
+            <p class="big center extra-bold sandy-brown-text text-lighten-3">(n/12)*100</p>
+            <p class="center"><small>Donde <span class="extra-bold">n</span> es el número de columnas que ocupará la
+                    caja actual y <span class="extra-bold">12</span> es el número total de columnas.</small></p>
+            <div class="row center bunting-text text-darken-3">
+                <div class="col xl1 l1 m1 s1 sandy-brown darken-3">1</div>
+                <div class="col xl1 l1 m1 s1 sandy-brown darken-2">1</div>
+                <div class="col xl1 l1 m1 s1 sandy-brown darken-1">1</div>
+                <div class="col xl1 l1 m1 s1 sandy-brown">1</div>
+                <div class="col xl1 l1 m1 s1 sandy-brown lighten-1">1</div>
+                <div class="col xl1 l1 m1 s1 sandy-brown lighten-2">1</div>
+                <div class="col xl1 l1 m1 s1 sandy-brown lighten-2">1</div>
+                <div class="col xl1 l1 m1 s1 sandy-brown lighten-1">1</div>
+                <div class="col xl1 l1 m1 s1 sandy-brown">1</div>
+                <div class="col xl1 l1 m1 s1 sandy-brown darken-1">1</div>
+                <div class="col xl1 l1 m1 s1 sandy-brown darken-2">1</div>
+                <div class="col xl1 l1 m1 s1 sandy-brown darken-3">1</div>
+            </div>
+            <p>El código a partir del que se compilará el CSS se basa en <code>@mixin</code> para evitar la repetición
+                de código y la utilización de bucles <code>@while</code> para calcular el ancho de las columnas para
+                cada media query.</p>
+            <p>Las capas <code>col</code> van dentro de una capa <code>row</code>.</p>
+            <p>Organiza las columnas mediante floats (<code>float: left;</code>).</p>
+        </section>
+        <section id="buttons" class="container bunting strawberry-text text-lighten-2">
+            <h1>Botones</h1>
+            <p><span class="extra-bold">_variables.scss</span> <code>(3. Buttons)</code>, <span
+                    class="extra-bold">_buttons.scss</span></p>
+            <div class="row">
+                <div class="col xl4 l4 m12 s12">
+                    <h2 class="center">Raised</h2>
+                    <p><a class="waves-effect waves-light btn">button</a>Botón estándar.</p>
+                </div>
+                <div class="col xl4 l4 m12 s12">
+                    <h2 class="center">Floating</h2>
+                    <p><a class="btn-floating waves-effect waves-light"><i class="material-icons">add</i></a>Botón para
+                        funciones importantes.</p>
+                </div>
+                <div class="col xl4 l4 m12 s12">
+                    <h2 class="center">Flat</h2>
+                    <p><a class="waves-effect waves-light btn-flat">Button</a>Botón diseñado para evitar un exceso de
+                        capas en elementos que ya tienen profundidad, como las <em>cards</em>.</p>
+                </div>
+            </div>
+        </section>
+        <section id="cards" class="container strawberry lighten-1 bunting-text text-darken-1">
+            <h1>Cards</h1>
+            <p><span class="extra-bold">_variables.scss</span> <code>(4. Cards)</code>, <span
+                    class="extra-bold">_cards.scss</span></p>
+            <p>Materialize cuenta con varios tipos de <em>cards</em>, los más comunes son: básico, horizontal y con
+                imagen.</p>
+            <p>Utiliza flex para organizar las capas.</p>
+            <div class="row">
+                <div class="col xl6 l6 m6 s12">
+                    <div class="container-border">
+                        <strong class="underlined upper">TAMAÑOS</strong>
+                        <small class="right">Independientes de las media query.</small>
+                        <code class="block">.small{ height: 300px; }</code>
+                        <code class="block">.medium{ height: 400px; };</code>
+                        <code class="block">.large{ height: 500px; };</code>
+                    </div>
+                </div>
+                <div class="col xl6 l6 m6 s12">
+                    <div class="container-border">
+                        <strong class="underlined upper">TIPO DE BOTÓN</strong>
+                        <small class="right">Por defecto usa enlaces <code>&lt;a&gt;</code>.</small>
+                        <code class="block">.card-action { a:not(.btn):not(.btn-large):not(.btn-floating) }</code>
+                    </div>
+                </div>
+                <div class="col xl12 l12 m12"></div>
+                <div class="col xl4 l4 m6 s12">
+                    <h2 class="center">Básico</h2>
+                    <div class="card">
+                        <div class="card-content ">
+                            <span class="card-title">.card-title</span>
+                            <code>.card</code>
+                            <p>Soy una tarjeta muy sencilla. Soy buena para contener pequeños fragmentos de información.
+                                Soy conveniente porque requiero pocas etiquetas para un uso eficaz.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">Enlace</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col xl4 l4 m6 s12">
+                    <h2 class="center">Horizontal</h2>
+                    <div class="card horizontal">
+                        <div class="card-stacked">
+                            <div class="card-content">
+                                <code>.card&.horizontal</code>
+                                <code class="block">.card-stacked {
+                                    flex-direction: column;}</code>
+                            </div>
+                            <div class="card-action">
+                                <a href="#">Enlace</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col xl4 l4 m12 s12">
+                    <h2 class="center">Con imagen</h2>
+                    <div class="card medium">
+                        <div class="card-image">
+                            <img src="img/large-triangles.svg" alt="Triangles SVG"> 
+                            <span class="card-title">.card-title</span>
+                        </div>
+                        <div class="card-content">
+                            <code>.card-image</code>
+                            <code class="block">img { width: 100%; }</code>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">ENLACE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="page-footer">
+        <a href="../index.html"><i class="material-icons left">arrow_back</i>Volver</a>
+        <div class="footer-copyright">
+            <p><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES" target="_blank"><img
+                        src="img/by-sa.svg" alt="Licencia CC BY-SA"></a> Nuria Barrios Santos, 2021.
+                Fondo: <a href="https://vlad.studio/es/wallpapers/" target="_blank" class="hide-on-med-and-down">Vlad
+                    Studio</a>
+                <a href="https://www.svgbackgrounds.com/" target="_blank" class="hide-on-large-only">SVG Backgrounds</a>
+            </p>
+        </div>
+    </footer>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/bin/materialize.min.js"></script>
+    <script src="js/bin/init.js"></script>
+</body>
+
+</html>
