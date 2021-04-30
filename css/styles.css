@@ -213,9 +213,8 @@ footer {
 }
 
 .footer-resources {
-	display: flex;
 	background-color: var(--green-dark);
-	padding: 1rem 0;
+	padding: 1.1rem 0;
 }
 
 	.footer-resources h2 {
@@ -409,7 +408,7 @@ div.gallery {
 		/* Menú oculto */
 		.hidden-bar {
 			position:relative;
-			padding: 0.875rem;
+			padding: 0.9rem;
 			bottom:0;
 			visibility: hidden;
 			color: var(--text-light);

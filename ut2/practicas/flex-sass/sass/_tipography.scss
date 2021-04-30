@@ -1,0 +1,17 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Merriweather&display=swap');
+
+// Font Variables
+$lato: 'Lato', sans-serif;   
+$merriweather: 'Merriweather', serif;
+
+/* Tipography styles */
+html {
+    font-family: $lato;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $merriweather;
+    font-weight: 400;
+}
