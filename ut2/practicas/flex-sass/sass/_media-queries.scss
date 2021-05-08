@@ -1,0 +1,22 @@
+@media screen and (max-width: 700px) {
+    body, nav, footer {   
+      flex-direction: column;
+    }
+
+    header {
+      padding: 1.5rem 0;
+      line-height: 220%;
+    }
+
+    footer {
+      padding-top: 0.5rem;
+
+      .back {
+        align-self: flex-start;
+      }
+
+      .footer-copyrigth{
+        padding-bottom: 1rem;
+      }
+    }
+}

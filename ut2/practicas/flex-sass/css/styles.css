@@ -1,14 +1,153 @@
-/* Google Fonts */
+/* Global styles */
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Merriweather&display=swap");
-/* Tipography styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 html {
+  background-color: #6c757d;
+  color: #f9f9f9;
   font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+/* Layout styles */
+body {
+  display: flex;
+  /* Items wrap in multiple lines */
+  flex-wrap: wrap;
+}
+
+header, footer {
+  width: 100%;
+  background-color: #435a43;
+  color: #f9f9f9;
+  text-align: center;
+}
+header a, footer a {
+  color: inherit;
+}
+
+header {
+  height: 8rem;
+  padding: 3rem 0;
+}
+header h1 {
+  margin: 0;
+}
+
+aside {
+  flex: 30%;
+  padding: 1.2rem;
+}
+aside img {
+  width: 90%;
+  /* Specifing height too may be good for performance */
+  height: auto;
+}
+
+main {
+  flex: 70%;
+  padding: 1.2rem;
+  background-color: #ddd;
+  color: #2c2c2c;
+  min-height: 100vh;
+}
+
+footer {
+  display: flex;
+  /* Vertical align */
+  align-items: center;
+  padding: 2rem 1rem;
+  font-size: 1.15rem;
+}
+footer .footer-copyrigth {
+  flex-grow: 2;
+}
+footer div:not(:nth-child(2)) {
+  font-size: 2rem;
+}
+
+/* Text styles */
+a {
+  color: #527a53;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: dotted;
+}
+
+/* Image styles */
+.round-img {
+  width: 12rem;
+  height: 12rem;
+  object-fit: cover;
+  padding: 0.5rem;
+  border-radius: 50%;
+  border: 2px outset #80a980;
+}
+
+hr {
+  margin: 1.2rem;
+  border: none;
+  border-top: 10px solid #527a53;
+  border-image: url(../img/border.png) 30% round;
+}
+
+/* Google Fonts */
+/* Creative Commons Font */
+@font-face {
+  font-family: "CC-ICONS";
+  font-style: normal;
+  font-weight: normal;
+  src: url("http://mirrors.creativecommons.org/presskit/cc-icons.ttf") format("truetype");
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 1.2rem 0;
+  font-family: "Merriweather", serif;
   font-weight: 400;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Merriweather", serif;
-  font-weight: 400;
+.license {
+  font-family: "CC-ICONS";
+}
+
+@media screen and (max-width: 700px) {
+  body, nav, footer {
+    flex-direction: column;
+  }
+
+  header {
+    padding: 1.5rem 0;
+    line-height: 220%;
+  }
+
+  footer {
+    padding-top: 0.5rem;
+  }
+  footer .back {
+    align-self: flex-start;
+  }
+  footer .footer-copyrigth {
+    padding-bottom: 1rem;
+  }
+}
+nav {
+  display: flex;
+  width: 100%;
+  background-color: #343a40;
+}
+nav a {
+  color: #f9f9f9;
+  padding: 0.75rem 1.2rem;
+  text-align: center;
+}
+nav a:hover {
+  background-color: #ddd;
+  color: #2c2c2c;
 }
 
 /*# sourceMappingURL=styles.css.map */

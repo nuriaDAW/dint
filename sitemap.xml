@@ -272,6 +272,10 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
         <loc>https://nuriadaw.github.io/dint/ut2/practicas/ejemplo-media-query-flex.html</loc>
         <lastmod>2020-11-13T18:25:45+00:00</lastmod>
     </url>
+      <url>
+        <loc>https://nuriadaw.github.io/dint/ut2/practicas/galeria-grid.html</loc>
+        <lastmod>2021-05-05T16:20:40+00:00</lastmod>
+    </url>
     <url>
         <loc>https://nuriadaw.github.io/dint/ut2/practicas/introduccion-sass/index.html</loc>
         <lastmod>2021-04-25T18:09:45+00:00</lastmod>

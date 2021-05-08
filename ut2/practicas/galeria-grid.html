@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de imágenes con grid</title>
+
+    <link rel="icon" type="image/x-icon" href="../../img/galeria_grid/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Elsie&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos generales */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            background-color: lightcoral;
+            color: #003b3b;
+            font-family: 'Elsie', cursive;
+        }
+
+        header {
+            padding: 4rem;
+            text-align: center;
+        }
+
+        footer {
+            clear: both;
+            padding-bottom: 2.5rem;
+            font-size: 1.25rem;
+            text-align: center;
+        }
+
+        /* Estilos de texto */
+        header h1 {
+            font-size: 3rem;
+        }
+
+        header h2 {
+            font-size: 2rem;
+        }
+
+        .quote {
+            padding-top: 1.5rem;
+            font-size: 1.25rem;
+            text-align: center;
+            border-top: 2px solid papayawhip;
+        }
+
+        .quote p:nth-child(2) {
+            width: 70%;
+            text-align: right;
+        }
+
+        .pink-quote {
+            color: #6e0044;
+            font-weight: 900;
+        }
+
+        .more {
+            float: right;
+            margin: 1rem;
+            transition: all .2s ease;
+        }
+
+        .hide-link {
+            display: none;
+            margin-right: -1.5rem;
+            padding: 0.75rem 1.75rem;
+            background-color: #6e0044;
+            color: lightcoral;
+            font-size: 1.15rem;
+            border-radius: 15px 0 0 15px;
+        }
+
+        .more:hover .hide-link {
+            display: inline-block;
+        }
+
+        /* Botones */
+        button {
+            padding: 1rem;
+            background-color: #003b3b;
+            color: lightcoral;
+            font-size: 1.2rem;
+            border: 1.5px solid #6e0044;
+            cursor: pointer;
+        }
+
+        .plus-btn {
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+        }
+
+        /* Estilos de la grilla de imágenes */
+        .grid {
+            display: grid;
+            width: 100vw;
+            height: auto;
+            grid-template-areas: "top top top"
+                "left center right"
+                "bottom bottom bottom";
+
+            grid-template-columns: 1fr 5fr 1fr;
+        }
+
+        .top-area {
+            grid-area: top;
+        }
+
+        .left-area {
+            grid-area: left;
+        }
+
+        .center-area {
+            grid-area: center;
+        }
+
+        .right-area {
+            grid-area: right;
+        }
+
+        .bottom-area {
+            grid-area: bottom;
+        }
+
+
+        /* Estilos de las imágenes */
+        .top-area img,
+        .bottom-area img {
+            width: calc(99.99vw/4);
+            /* Elimina los espacios entre las imágenes */
+            float: left;
+        }
+
+        .left-area img,
+        .right-area img,
+        .center-area img {
+            /* Elimina los espacios entre las imágenes */
+            display: block;
+            width: 100%;
+        }
+
+        /* Animación que amplia y mueve las imágenes en la horizontal */
+        .left-area img,
+        .right-area img {
+            /* Animación */
+            transition: transform .2s;
+        }
+
+        .left-area img:hover,
+        .right-area img:hover {
+            cursor: zoom-in;
+        }
+
+        .left-area img:hover {
+            transform: scale(2.2) translateX(2rem);
+        }
+
+        .right-area img:hover {
+            transform: scale(2.2) translateX(-2rem);
+        }
+
+        @media (max-width: 950px) {
+            html {
+                font-size: 14px;
+            }
+
+            .quote {
+                padding: 2rem 0;
+            }
+
+            .grid {
+                grid-template-areas: "top"
+                    "left"
+                    "center"
+                    "right"
+                    "bottom";
+                grid-template-columns: 1fr;
+
+            }
+
+            .top-area img,
+            .bottom-area img {
+                transition: transform .2s;
+            }
+
+            .top-area img:hover,
+            .bottom-area img:hover,
+            .left-area img:hover,
+            .right-area img:hover {
+                cursor: zoom-in;
+                transform: scale(2.2) translateX(1rem);
+            }
+
+            .top-area img:last-child:hover,
+            .bottom-area img:last-child:hover,
+            .left-area img:last-child:hover,
+            .right-area img:last-child:hover {
+                cursor: zoom-in;
+                transform: scale(2.2) translateX(-1rem);
+            }
+
+            .left-area img,
+            .right-area img {
+                width: calc(99.99vw/4);
+                display: inline;
+                /* Elimina los espacios entre las imágenes */
+                float: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Marta Sorte</h1>
+        <h2>--Ilustradora--</h2>
+    </header>
+    <main>
+        <!-- contenedor -->
+        <div class="grid">
+            <!-- cada uno de los ítems del grid -->
+            <div class="top-area">
+                <img src="../../img/galeria_grid/marta_sorte_inktober_2.jpg">
+                <img src="../../img/galeria_grid/marta_sorte_inktober_3.jpg">
+                <img src="../../img/galeria_grid/marta_sorte_inktober_4.jpg">
+                <img src="../../img/galeria_grid/marta_sorte_inktober_5.jpg">
+            </div>
+            <div class="left-area">
+                <img src="../../img/galeria_grid/marta_sorte_inktober_7.jpg">
+                <img src="../../img/galeria_grid/marta_sorte_inktober_8.jpg">
+                <img src="../../img/galeria_grid/marta_sorte_inktober_9.jpg">
+                <img src="../../img/galeria_grid/marta_sorte_inktober_11.jpg">
+
+            </div>
+            <div class="center-area">
+                <img src="../../img/galeria_grid/wherever_you_go_take_yourself_with_you.jpg">
+                <div class="quote">
+                    <p>"Wherever you go, <soan class="pink-quote">take yourself with you</soan>."</p>
+                    <p>&#9135; Neil Gaiman</p>
+                </div>
+            </div>
+            <div class="right-area">
+                <img src="../../img/galeria_grid/marta_sorte_inktober_13.jpg">
+                <img src="../../img/galeria_grid/marta_sorte_inktober_15.jpg">
+                <img src="../../img/galeria_grid/marta_sorte_inktober_16.jpg">
+                <img src="../../img/galeria_grid/marta_sorte_inktober_22.jpg">
+            </div>
+            <div class="bottom-area">
+                <img src="../../img/galeria_grid/marta_sorte_inktober_23.jpg">
+                <img src="../../img/galeria_grid/marta_sorte_inktober_26.jpg">
+                <img src="../../img/galeria_grid/marta_sorte_inktober_27.jpg">
+                <img src="../../img/galeria_grid/marta_sorte_inktober_29.jpg">
+            </div>
+        </div>
+        <span class="more"><a class="hide-link" href="http://www.martasorte.it/"
+                target="_blank">http://www.martasorte.it/</a><button class="plus-btn">+</button></span>
+    </main>
+    <footer>&#169; Marta Sorté. Inktober, 2017.</footer>
+</body>
+
+</html>

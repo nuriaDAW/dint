@@ -217,6 +217,11 @@ footer {
 	padding: 1.1rem 0;
 }
 
+.footer-resources.row {
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
 	.footer-resources h2 {
 		padding-left: 1rem;
 		text-transform: uppercase;

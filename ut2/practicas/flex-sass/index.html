@@ -1,17 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Nuria Barrios Santos">
     <title>Layout: Sass + Flex</title>
+    <link rel="icon" href="../../../img/logo.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="../../../img/logo(16x16).png" sizes="16x16" type="image/png">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Inconify icons -->
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <base loading='lazy'>
 </head>
+
 <body>
-    <header></header>
-    <aside></aside>
-    <main></main>
-    <footer></footer>
+    <header>
+        <h1><a href="#">Google Lab: Responsive Images</a></h1>
+    </header>
+    <nav>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+    </nav>
+    <aside>
+        <h2>Sobre mí</h2>
+        <picture>
+            <!-- load .webp image if supported -->
+            <source srcset="img/kiri_komori.webp" type="image/webp">
+            <!-- 
+              Fallback if `.webp` images or <picture> tag 
+              not supported by the browser.
+            -->
+            <img class="round-img" src="img/kiri_komori.jpeg" alt="foto personal">
+          </picture> 
+        <p>Estudiante de 2º de DAW.</p>
+        <h2>Lab</h2>
+        <picture>
+            <!-- load .webp image if supported -->
+            <source srcset="img/google_lab.webp" type="image/webp">
+            <!-- 
+              Fallback if `.webp` images or <picture> tag 
+              not supported by the browser.
+            -->
+            <a href="https://developers.google.com/web/ilt/pwa/responsive-images-slides" target="_blank"><img src="img/google_lab.jpg" alt="web fundaments lab"></a>
+          </picture> 
+    </aside>
+    <main>
+        <p>There are two major issues to consider when working with images on the web: performance and responsiveness.</p>
+        <p><mark>Goal lab:</mark> increase perfomace and reduce data cost.</p>
+        <article>
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Dec 7, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Cookies cilantro hearts of palm bananas main course asian pear lemon tahini dressing butternut mix shallots lime dill almonds salad peanut butter lemon red lentil soup banana miso turmeric glazed aubergine fiery fruit apple vinaigrette zesty tofu pad thai lentils one bowl peppermint kimchi mint kung pao pepper smoky maple tempeh glaze.</p>
+        </article>
+        <hr />
+        <article>
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco.</p>
+        </article>
+    </main>
+    <footer>
+        <div class="back"><a href="../index.html"><span class="iconify" data-icon="jam:arrow-circle-left" data-inline="false" title="volver"></span></a></div>
+        <div class="footer-copyrigth"><span class="license"><a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank">cb</a></span> Nuria Barrios Santos, 2021</div>
+        <div class="social"><span class="iconify" data-icon="jam:twitter-circle" data-inline="false" title="twitter"></span><span class="iconify" data-icon="jam:facebook-circle" data-inline="false" title="facebook"></span><span class="iconify" data-icon="jam:instagram" data-inline="false" title="instagram"></span></div>
+    </footer>
 </body>
+
 </html>
