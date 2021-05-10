@@ -104,7 +104,7 @@ footer {
 
 /* Text styles */
 a {
-    color: $primary-color;
+    color: darken($primary-color, 5%);
     text-decoration: none;
     cursor: pointer;
 }
@@ -120,6 +120,26 @@ mark {
     border-radius: 25px;
 }
 
+details {
+    margin-top: 0.5rem;
+
+    summary {
+        font-family: $heading-font;
+        font-size: 1.2rem;
+        color: $green-dark;
+    }
+
+    ul {
+        list-style: decimal;
+        color: darken($primary-color, 5%);
+
+        li:last-child {
+            margin-left: 2.2rem;
+            list-style-type: 'Bonus: ';
+        }
+    }
+}
+
 .code-block {
     display: block;
     @include text-margin($green-darker);
@@ -131,6 +151,10 @@ mark {
 .note {
     @include text-margin($green-light);
     border-left: 5px solid $green-darker;
+
+    a{
+        color: $green-dark;
+    }
 }
 
 .warning {
@@ -159,7 +183,7 @@ img#bird {
     transition: width 0.5s;
     /* Display an image at half the width of the viewport (50vw) */
     max-width: 50vw;
-  }
+}
   
 
 figcaption {

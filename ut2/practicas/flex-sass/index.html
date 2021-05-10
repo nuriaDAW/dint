@@ -41,7 +41,8 @@
         <h2>Lab</h2>
         <picture>
             <!-- load .webp image if supported -->
-            <source srcset="img/google_lab.webp" type="image/webp">
+            <source srcset="img/google_lab.webp" type="image/webp"
+                sizes="(min-width: 450px) and (max-width: 767px) 70vw">
             <!-- 
               Fallback if `.webp` images or <picture> tag 
               not supported by the browser.
@@ -55,7 +56,20 @@
             <strong>rendimiento</strong> y <strong>adaptabilidad</strong>.
         </p>
         <p><mark>Objetivo del lab:</mark> aumentar el rendimiento reduciendo el coste de descarga.</p>
-        <article>
+        <details>
+            <summary>Sumario</summary>
+            <ul>
+                <li><a href="#relative-width"> Establecer ancho relativo</a></li>
+                <li><a href="#attr-srcset"> Usando el atributo srcset</a></li>
+                <li><a href="#attr-sizes"> Usando el atributo sizes</a></li>
+                <li><a href="#media-queries">Usando media queries</a></li>
+                <li><a href="#html-picture"> Opcional: usando los elementos picture y source</a></li>
+                <li><a href="#image-formats"> Otros formatos de imagen: svg y webp</a></li>
+                <li><a href="#performance"> Rendimiento (Firefox y Chrome)</a></li>
+                <li><a href="#bonus">rendimiento CSS min vs CSS</a></li>
+            </ul>
+        </details>
+        <article id="relative-width">
             <h2>1. Establecer ancho relativo</h2>
             <p>Antes de hacer las imágenes adaptativas hay que asegurar que no desborden la pantalla.</p>
             <code class="code-block">img {
@@ -105,7 +119,7 @@
                 Fuente: <a href="https://caniuse.com" target="_blank">Can I Use</a></p>
         </article>
         <hr />
-        <article>
+        <article id="attr-srcset">
             <h2>2. Usando el atributo srcset</h2>
             <p>El objetivo es conseguir que el navegador obtenga la versión de la imagen con las dimensiones más
                 pequeñas posibles, pero mayor que el tamaño de visualización final de la imagen. <code>srcset</code>
@@ -133,7 +147,7 @@
                 soportado
                 cargará por defecto la imagen de <code>src</code>.</p>
             <p class="note"><strong>&#x2605; Nota:</strong> Se puede especificar la densidad de pixels en lugar de la
-                anchura.</p>
+                anchura. (<a href="#html-picture">Ver punto 5</a>)</p>
             <div class="version-grid">
                 <div>Atributo</div>
                 <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" alt="Chrome"
@@ -155,7 +169,7 @@
             </div>
             <p class="table-caption">Primera versión del navegador que soporta totalmente el atributo. Fuente: <a
                     href="https://caniuse.com" target="_blank">Can I Use</a></p>
-        </article>
+        </article id="attr-sizes">
         <hr />
         <article>
             <h2>3. Usando el atributo sizes</h2>
@@ -243,10 +257,11 @@
                     href="https://caniuse.com" target="_blank">Can I Use</a></p>
         </article>
         <hr />
-        <article>
+        <article id="media-queries">
             <h2>4. Usando media queries</h2>
             <p>Se puede usar media queries para redimensionar imágenes en tiempo real en función del ancho del
-                <em>viewport</em>.</p>
+                <em>viewport</em>.
+            </p>
             <code class="code-block">
                 <p><u>HTML</u></p>
             &lt;img id="bird" srcset="img/undraw_happy_music-1600_large.png 1600w, img/undraw_happy_music-1000_large.png
@@ -267,8 +282,10 @@
                 <figcaption>Fuente: <a href="https://undraw.co/" target="_blank">unDraw</a></figcaption>
             </figure>
             <p>La <em>media query</em> comprueba la anchura del <em>viewport</em> de la pantalla, y aplica el CSS si el
-                ancho del <em>viewport</em> es menor de <code>700px</code>. Se puede informar al navegador sobre la <em>media query</em>
-                en el atributo <code>sizes</code> para que obtenga la imagen correcta cuando esta cambie de tamaño.</p>
+                ancho del <em>viewport</em> es menor de <code>700px</code>. Se puede informar al navegador sobre la
+                <em>media query</em>
+                en el atributo <code>sizes</code> para que obtenga la imagen correcta cuando esta cambie de tamaño.
+            </p>
             <div class="version-grid">
                 <div>Regla</div>
                 <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" alt="Chrome"
@@ -292,58 +309,132 @@
                     href="https://caniuse.com" target="_blank">Can I Use</a></p>
         </article>
         <hr />
-        <article>
-            <h2>5. Usando los elementos picture y source</h2>
+        <article id="html-picture">
+            <h2>5. Opcional: usando los elementos picture y source</h2>
+            <p>Se puede usar el elemento &lt;picture&gt; y el elemento &lt;source&gt;, en combinación con
+                media queries, para cambiar la fuente de la imagen a medida que la ventana cambia de tamaño.</p>
+            <code class="code-block">
+                <p>&lt;picture&gt;</p> 
+                <p>&lt;source media="(min-width: 750px)" srcset="img/undraw_happy_music-1600_large.png 2x,
+                img/undraw_happy_music-1000_large.png" /&gt;</p>
+                <p>&lt;source media="(min-width: 500px)" srcset="img/undraw_happy_music-800_medium.png" /&gt;</p>
+                <p>&lt;img src="img/undraw_happy_music-500_small.png" alt="happy music bird" /&gt;</p>
+                &lt;/picture&gt;               
+            </code>
             <!-- Figure: html5 block element -->
-           <figure>
-               <!-- Picture: inline element proposed by Responsive Images Community group -->
-               <picture>
-
-               </picture>
-           </figure> 
-           <div class="version-grid">
-            <div>Elemento/valor</div>
-            <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" alt="Chrome"
-                    title="Chrome"></span></div>
-            <div><span class="iconify" data-icon="cib:microsoft-edge" data-inline="false" alt="Edge"
-                    title="Edge"></span></div>
-            <div><span class="iconify" data-icon="cib:mozilla-firefox" data-inline="false" alt="Firefox"
-                    title="Firefox"></span></div>
-            <div><span class="iconify" data-icon="cib:opera" data-inline="false" alt="Opera" title="Opera"></span>
+            <figure>
+                <!-- Picture: inline element proposed by Responsive Images Community group -->
+                <picture>
+                    <source media="(min-width: 750px)" srcset="img/undraw_happy_music-1600_large.png 2x,
+                    img/undraw_happy_music-1000_large.png" />
+                    <source media="(min-width: 500px)" srcset="img/undraw_happy_music-800_medium.png" />
+                    <img src="img/undraw_happy_music-500_small.png" alt="happy music bird">
+                </picture>
+                <figcaption>Fuente: <a href="https://undraw.co/" target="_blank">unDraw</a></figcaption>
+            </figure>
+            <p>El elemento &lt;picture&gt; permite definir varios archivos fuente mediante la etiqueta &lt;source&gt;.
+                Difiere del uso directo del atributo <code>srcset</code> en la etiqueta &lt;img&gt; en que
+                &lt;source&gt; permite añadir cosas como <em>media queries</em> a cada conjunto de fuentes. En lugar
+                de dar al navegador los tamaños de imagen y dejar que decida cuál usar, permite definir qué imagen
+                usar para cada tamaño de ventana.</p>
+            <p>En el código anterior, a partir de 750px, el navegador obtiene
+                <code>undraw_happy_music-1600_large.png</code>
+                (si el dispositivo tiene una pantalla 2x) o <code>img/undraw_happy_music-1000_large.png</code>. Si la
+                anchura de
+                la ventana es inferior a 750px pero superior a 500px, el navegador obtiene
+                <code>img/undraw_happy_music-800_medium.png</code>. Si el ancho de la ventana es inferior a 500px,
+                el navegador obtiene la imagen de reserva <code>img/undraw_happy_music-500_small.png</code>.
+            </p>
+            <p class="note"><strong>&#x2605; Nota:</strong> Si el navegador no soporta el elemento &lt;picture&gt;,
+                obtiene lo que haya en el elemento &lt;img&gt;. &lt;picture&gt; sirve únicamente para especificar
+                múltiples
+                fuentes para el contenido de &lt;img&gt;. Es el elemento &lt;img&gt; el que muestra la imagen.
+            </p>
+            <div class="version-grid">
+                <div>Elemento/valor</div>
+                <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" alt="Chrome"
+                        title="Chrome"></span></div>
+                <div><span class="iconify" data-icon="cib:microsoft-edge" data-inline="false" alt="Edge"
+                        title="Edge"></span></div>
+                <div><span class="iconify" data-icon="cib:mozilla-firefox" data-inline="false" alt="Firefox"
+                        title="Firefox"></span></div>
+                <div><span class="iconify" data-icon="cib:opera" data-inline="false" alt="Opera" title="Opera"></span>
+                </div>
+                <div><span class="iconify" data-icon="cib:safari" data-inline="false" alt="Safari"
+                        title="Safari"></span></div>
+                <div>figure</div>
+                <div>8.0</div>
+                <div>12.0</div>
+                <div>4.0</div>
+                <div>11.5</div>
+                <div>5.1</div>
+                <div>picture</div>
+                <div>38.0</div>
+                <div>13.0</div>
+                <div>38.0</div>
+                <div>25.0</div>
+                <div>9.1</div>
+                <div>source</div>
+                <div>90.0</div>
+                <div>12.0</div>
+                <div>3.5</div>
+                <div>75.0</div>
+                <div>14.1</div>
+                <div>profundidad de píxel</div>
+                <div>4.0</div>
+                <div>12.0</div>
+                <div>2.0</div>
+                <div>12.1</div>
+                <div>3.1</div>
             </div>
-            <div><span class="iconify" data-icon="cib:safari" data-inline="false" alt="Safari"
-                    title="Safari"></span></div>
-            <div>figure</div>
-            <div>8.0</div>
-            <div>12.0</div>
-            <div>4.0</div>
-            <div>11.5</div>
-            <div>5.1</div>
-            <div>picture</div>
-            <div>38.0</div>
-            <div>13.0</div>
-            <div>38.0</div>
-            <div>25.0</div>
-            <div>9.1</div>
-            <div>source</div>
-            <div>90.0</div>
-            <div>12.0</div>
-            <div>3.5</div>
-            <div>75.0</div>
-            <div>14.1</div>
-            <div>profundidad de píxel</div>
-            <div>4.0</div>
-            <div>12.0</div>
-            <div>2.0</div>
-            <div>12.1</div>
-            <div>3.1</div>
-        </div>
-        <p class="table-caption">Primera versión del navegador que soporta totalmente el elemento o el valor.
-            Fuente: <a href="https://caniuse.com" target="_blank">Can I Use</a></p>
+            <p class="table-caption">Primera versión del navegador que soporta totalmente el elemento o el valor.
+                Fuente: <a href="https://caniuse.com" target="_blank">Can I Use</a></p>
         </article>
         <hr />
-        <article>
+        <article id="image-formats">
             <h2>6. Otros formatos de imagen: svg y webp</h2>
+            <p>Uno de los principales beneficios de <strong>SVG</strong> es que son independientes de la resolución.
+                Esto significa que, a diferencia de los tipos de archivos como jpg o png, los svg conservan la misma
+                calidad sin importar en qué resolución de pantalla o tamaño estén.</p>
+            <p>El uso de svg puede resultar en tamaños de archivo más pequeños que otros tipos de archivos cuando se
+                optimizan correctamente. Esto es útil cuando se trata de pantallas de mayor resolución, ya que los
+                svg no necesitan crearse en tamaños más grandes para adaptarse a la diferencia como lo hacen las
+                imágenes rasterizadas. Al tener un tamaño de archivo más pequeño, y por tanto más ligero, la imagen
+                se cargará más rápido. </p>
+            <code class="code-block">
+                    <p>&lt;picture&gt;</p> 
+                    <p><mark>&lt;source srcset="img/undraw_happy_music.svg" type="image/svg+xml" /&gt;</mark></p>
+                    <p>&lt;img src="img/undraw_happy_music-1600_large.png" alt="happy music bird" /&gt;</p>
+                    &lt;/picture&gt;               
+            </code>
+            <figure>
+                <picture>
+                    <source srcset="img/undraw_happy_music.svg" type="image/svg+xml">
+                    <img src="img/undraw_happy_music-1600_large.png" alt="happy music bird">
+                </picture>
+                <figcaption>Fuente: <a href="https://undraw.co/" target="_blank">unDraw</a></figcaption>
+            </figure>
+            <p>El formato de imagen <strong>WebP</strong> fue desarrollado por Google. Su principal ventaja: permite
+                obtener una excelente
+                definición sin que el archivo sea demasiado pesado. Esto es esencial para la velocidad de carga de las
+                páginas.</p>
+            <p>Reduce el tamaño de las imágenes hasta un 35% para JPEG y un 50% para PNG, obteniendo archivos más
+                ligeros sin perder
+                su calidad original. Además, admite canal de transparencia.</p>
+            <p>Otra ventaja es que, al ser un formato de Google mejora el SEO en su buscador.</p>
+            <code class="code-block">
+                <p>&lt;picture&gt;</p> 
+                <p><mark>&lt;source srcset="img/undraw_happy_music.webp" type="image/webp" /&gt;</mark></p>
+                <p>&lt;img src="img/undraw_happy_music-1600_large.png" alt="happy music bird" /&gt;</p>
+                &lt;/picture&gt;               
+        </code>
+            <figure>
+                <picture>
+                    <source srcset="img/undraw_happy_music.webp" type="image/webp">
+                    <img src="img/undraw_happy_music-1600_large.png" alt="happy music bird">
+                </picture>
+                <figcaption>Fuente: <a href="https://undraw.co/" target="_blank">unDraw</a></figcaption>
+            </figure>
             <div class="version-grid">
                 <div>Formato</div>
                 <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" alt="Chrome"
@@ -373,8 +464,23 @@
                 Fuente: <a href="https://caniuse.com" target="_blank">Can I Use</a></p>
         </article>
         <hr />
-        <article>
-            <h2>7. Performance (Firefox y Chrome)</h2>
+        <article id="performance">
+            <h2>7. Rendimiento (Chrome y Firefox)</h2>
+            <figure>
+                <img class="enlarge-img" srcset="img/performance_chrome.png 1600w, img/performance_chrome-1024.png 1024w"
+                sizes="(min-width: 1024px) 1600px, 1024px" src="img/performance_chrome.png" alt="Network tool in Chrome" />
+                <figcaption>Rendimiento de imágenes (Chrome)</figcaption>
+            </figure>
+            <p>La imagen escogida no es muy pesada, aún así el tiempo de respuesta se reduce ligeramente al escoger un tamaño 
+                de imagen más acorde al dispositivo y/o <em>viewport</em>.<p>
+            <p>El formato más ligero y más rápido en cargar es SVG, seguido de WebP.</p>
+            <p class="note"><strong>&#x2605; Nota:</strong> Los navegadores pueden tener guardadas las imágenes en caché, conviene limpiarlo
+               antes de monitorizar el rendimiento y desactivarlo mientras las herramientas de desarrollador estén abiertas.
+            </p>
+        </article>
+        <hr />
+        <article id="bonus">
+            <h2>Bonus: rendimiento CSS comprimido vs CSS sin comprimir</h2>
         </article>
     </main>
     <footer>
