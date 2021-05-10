@@ -9,7 +9,7 @@
     <title>Layout: Sass + Flex</title>
     <link rel="icon" href="../../../img/logo.svg" type="image/svg+xml">
     <link rel="alternate icon" href="../../../img/logo(16x16).png" sizes="16x16" type="image/png">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.min.css">
     <!-- Inconify icons -->
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <!-- Performance tip. You can use the loading=lazy attribute to defer the loading of the image until the user scrolls to them. -->
@@ -468,11 +468,11 @@
             <h2>7. Rendimiento (Chrome y Firefox)</h2>
             <figure>
                 <img class="enlarge-img" srcset="img/performance_chrome.png 1600w, img/performance_chrome-1024.png 1024w"
-                sizes="(min-width: 1024px) 1600px, 1024px" src="img/performance_chrome.png" alt="Network tool in Chrome" />
+                sizes="(min-width: 1024px) 1600px, 1024px" src="img/performance_chrome.png" alt="Chrome Network tool" />
                 <figcaption>Rendimiento de imágenes en local (Chrome)</figcaption>
             </figure>
             <figure>
-                <img class="enlarge-img"  src="img/performance_firefox.png" alt="Network tool in Firefox" />
+                <img class="enlarge-img"  src="img/performance_firefox.png" alt="Firefox Network tool" />
                 <figcaption>Rendimiento de imágenes en GitHub (Firefox)</figcaption>
             </figure>
             <p>La imagen escogida no es muy pesada, aún así el tiempo de respuesta tiende a reducirse al escoger un tamaño 
@@ -485,6 +485,13 @@
         <hr />
         <article id="bonus">
             <h2>Bonus: rendimiento CSS comprimido vs CSS sin comprimir</h2>
+            <figure>
+                <img class="enlarge-img"  src="img/performance_css.png" alt="Firefox Network tool" />
+                <figcaption>Velocidad de carga del CSS sin comprmir (GitHub)</figcaption>
+            </figure>
+            <p class="note"><strong>&#x2605; Nota:</strong> GitHub bloquea la carga de la fuente de iconos de Creative 
+                Commons. Se visualiza igualmente porque existe una copia en local como fuente alternativa.
+            </p>
         </article>
     </main>
     <footer>
