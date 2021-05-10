@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <!-- Inconify icons -->
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <!-- Performance tip. You can use the loading=lazy attribute to defer the loading of the image until the user scrolls to them. -->
     <base loading='lazy'>
 </head>
 
@@ -35,7 +36,7 @@
               not supported by the browser.
             -->
             <img class="round-img" src="img/kiri_komori.jpeg" alt="foto personal">
-          </picture> 
+        </picture>
         <p>Estudiante de 2º de DAW.</p>
         <h2>Lab</h2>
         <picture>
@@ -45,34 +46,347 @@
               Fallback if `.webp` images or <picture> tag 
               not supported by the browser.
             -->
-            <a href="https://developers.google.com/web/ilt/pwa/responsive-images-slides" target="_blank"><img src="img/google_lab.jpg" alt="web fundaments lab"></a>
-          </picture> 
+            <a href="https://developers.google.com/web/ilt/pwa/responsive-images-slides" target="_blank"><img
+                    src="img/google_lab.jpg" alt="web fundaments lab"></a>
+        </picture>
     </aside>
     <main>
-        <p>There are two major issues to consider when working with images on the web: performance and responsiveness.</p>
-        <p><mark>Goal lab:</mark> increase perfomace and reduce data cost.</p>
+        <p>Hay dos aspectos fundamentales a considerar cuando se trabaja con imágenes en web:
+            <strong>rendimiento</strong> y <strong>adaptabilidad</strong>.
+        </p>
+        <p><mark>Objetivo del lab:</mark> aumentar el rendimiento reduciendo el coste de descarga.</p>
         <article>
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Dec 7, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Cookies cilantro hearts of palm bananas main course asian pear lemon tahini dressing butternut mix shallots lime dill almonds salad peanut butter lemon red lentil soup banana miso turmeric glazed aubergine fiery fruit apple vinaigrette zesty tofu pad thai lentils one bowl peppermint kimchi mint kung pao pepper smoky maple tempeh glaze.</p>
+            <h2>1. Establecer ancho relativo</h2>
+            <p>Antes de hacer las imágenes adaptativas hay que asegurar que no desborden la pantalla.</p>
+            <code class="code-block">img {
+                max-width: 100%;
+              } /* El valor de max-width representa un porcentaje del elemento contenedor.*/
+              </code>
+            <figure>
+                <img src="img/undraw_happy_music-1600_large.png" alt="happy music bird">
+                <figcaption>Fuente: <a href="https://undraw.co/" target="_blank">unDraw</a></figcaption>
+            </figure>
+            <p class="note"><strong>&#x2605; Nota:</strong> El <code>max-width</code> se puede especificar en función
+                del ancho del <em>viewport</em> utilizando las unidades <code>vw</code> (por ejemplo,
+                <code>100vw</code>).
+            </p>
+            <div class="version-grid">
+                <div>Propiedad/valor</div>
+                <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" alt="Chrome"
+                        title="Chrome"></span></div>
+                <div><span class="iconify" data-icon="cib:microsoft-edge" data-inline="false" alt="Edge"
+                        title="Edge"></span></div>
+                <div><span class="iconify" data-icon="cib:mozilla-firefox" data-inline="false" alt="Firefox"
+                        title="Firefox"></span></div>
+                <div><span class="iconify" data-icon="cib:opera" data-inline="false" alt="Opera" title="Opera"></span>
+                </div>
+                <div><span class="iconify" data-icon="cib:safari" data-inline="false" alt="Safari"
+                        title="Safari"></span></div>
+                <div>max-width</div>
+                <div>4.0</div>
+                <div>12.0</div>
+                <div>2.0</div>
+                <div>10.0</div>
+                <div>3.1</div>
+                <div>%</div>
+                <div>1.0</div>
+                <div>3.0</div>
+                <div>1.0</div>
+                <div>3.5</div>
+                <div>1.0</div>
+                <div>vw</div>
+                <div>26.0</div>
+                <div>16.0</div>
+                <div>19.0</div>
+                <div>20.0</div>
+                <div>6.1</div>
+            </div>
+            <p class="table-caption">Primera versión del navegador que soporta totalmente la propiedad o el valor.
+                Fuente: <a href="https://caniuse.com" target="_blank">Can I Use</a></p>
         </article>
         <hr />
         <article>
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco.</p>
+            <h2>2. Usando el atributo srcset</h2>
+            <p>El objetivo es conseguir que el navegador obtenga la versión de la imagen con las dimensiones más
+                pequeñas posibles, pero mayor que el tamaño de visualización final de la imagen. <code>srcset</code>
+                permite listar un conjunto de imágenes con diferentes resoluciones para que el navegador elija al
+                obtener
+                la imagen. La elección del navegador depende de las dimensiones del <em>viewport</em>, el tamaño
+                de la imagen en relación con el <em>viewport</em>, la densidad de píxeles del dispositivo del usuario y
+                las dimensiones del archivo fuente.</p>
+            <code class="code-block">&lt;img srcset="img/undraw_happy_music-1600_large.png 1600w, img/undraw_happy_music-1000_large.png 1000w, img/undraw_happy_music-800_medium.png 800w, img/undraw_happy_music-500_small.png 500w"
+                src="img/undraw_happy_music-1600_large.png" alt="happy music bird" &gt;</code>
+            <figure>
+                <img srcset="img/undraw_happy_music-1600_large.png 1600w, img/undraw_happy_music-1000_large.png 1000w, img/undraw_happy_music-800_medium.png 800w, img/undraw_happy_music-500_small.png 500w"
+                    src="img/undraw_happy_music-1600_large.png" alt="happy music bird">
+                <figcaption>Fuente: <a href="https://undraw.co/" target="_blank">unDraw</a></figcaption>
+            </figure>
+            <p class="warning"><strong>&#9888; Importante:</strong> para la carga adecuada del tamaño de la imagen en
+                función de la anchura <em>viewport</em>
+                hay que indicarle al navegador el tamaño de cada archivo antes de que lo recupere (por ejemplo,
+                <code>1600w</code>).
+            </p>
+            <p>Añadir un descriptor de anchura a cada archivo en el <code>srcset</code>, indica al navegador la anchura
+                de cada imagen en píxeles antes de que la obtenga. El navegador puede entonces utilizar estas anchuras
+                para decidir qué imagen obtener en función del tamaño de su ventana. Obtiene la imagen con la anchura
+                más pequeña que aún es mayor que la anchura del <em>viewport</em>. Si <code>srcset</code> no está
+                soportado
+                cargará por defecto la imagen de <code>src</code>.</p>
+            <p class="note"><strong>&#x2605; Nota:</strong> Se puede especificar la densidad de pixels en lugar de la
+                anchura.</p>
+            <div class="version-grid">
+                <div>Atributo</div>
+                <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" alt="Chrome"
+                        title="Chrome"></span></div>
+                <div><span class="iconify" data-icon="cib:microsoft-edge" data-inline="false" alt="Edge"
+                        title="Edge"></span></div>
+                <div><span class="iconify" data-icon="cib:mozilla-firefox" data-inline="false" alt="Firefox"
+                        title="Firefox"></span></div>
+                <div><span class="iconify" data-icon="cib:opera" data-inline="false" alt="Opera" title="Opera"></span>
+                </div>
+                <div><span class="iconify" data-icon="cib:safari" data-inline="false" alt="Safari"
+                        title="Safari"></span></div>
+                <div>srcset</div>
+                <div>38.0</div>
+                <div>16.0 </div>
+                <div>38.0</div>
+                <div>25.0</div>
+                <div>9.0</div>
+            </div>
+            <p class="table-caption">Primera versión del navegador que soporta totalmente el atributo. Fuente: <a
+                    href="https://caniuse.com" target="_blank">Can I Use</a></p>
+        </article>
+        <hr />
+        <article>
+            <h2>3. Usando el atributo sizes</h2>
+            <code class="code-block"><p><u>HTML</u></p>
+            &lt;img id="bird" srcset="img/undraw_happy_music-1600_large.png 1600w, img/undraw_happy_music-1000_large.png
+            1000w, img/undraw_happy_music-800_medium.png 800w, img/undraw_happy_music-500_small.png 500w"
+            <mark>sizes="50vw"</mark> src="img/undraw_happy_music-1600_large.png" alt="happy music bird" &gt;
+            <p><u>CSS</u></p>
+            <p>
+                img#bird {
+                transition: width 0.5s;
+                max-width: 50vw;
+                } /* Muestra la imagen a la mitad del ancho del viewport */
+            </p>
+            </code>
+            <figure>
+                <img id="bird"
+                    srcset="img/undraw_happy_music-1600_large.png 1600w, img/undraw_happy_music-1000_large.png 1000w, img/undraw_happy_music-800_medium.png 800w, img/undraw_happy_music-500_small.png 500w"
+                    sizes="50vw" src="img/undraw_happy_music-1600_large.png" alt="happy music bird">
+                <figcaption>Fuente: <a href="https://undraw.co/" target="_blank">unDraw</a></figcaption>
+            </figure>
+            <p>El valor del tamaño coincide con el valor del ancho máximo de la imagen en el CSS. Ahora, el navegador
+                tiene
+                todo lo que necesita para escoger la versión correcta de la imagen. El navegador conoce tanto el ancho
+                de su
+                propio <em>viewport</em> como la densidad de píxels del dispositivo del usuario, y le hemos dado las
+                dimensiones
+                de los archivos fuente (mediante el descriptor de anchura) y los tamaños de imagen relativos al
+                <em>viewport</em>
+                (mediante el atributo <code>size</code>).
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Variable</th>
+                        <th>¿Conocido por el autor cuando está escribiendo el código?</th>
+                        <th>¿Conocido por el navegador cuando está cargando la página?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>dimensiones del <em>viewport</em></th>
+                        <td class="red">no</td>
+                        <td class="green">sí</td>
+                    </tr>
+                    <tr>
+                        <th>tamaño de la imagen relativo al <em>viewport</em></th>
+                        <td class="green">sí</td>
+                        <td><s class="red">no</s> <span class="green">¡sí!</span> via <code>sizes</code></td>
+                    </tr>
+                    <tr>
+                        <th>densidad de píxels de la pantalla</th>
+                        <td class="red">no</td>
+                        <td class="green">sí</td>
+                    </tr>
+                    <tr>
+                        <th>tamaño de las imágenes fuente</th>
+                        <td class="green">sí</td>
+                        <td><s class="red">no</s> <span class="green">¡sí!</span> via <code>srcset</code></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="table-caption">¿Quién conoce qué? Fuente: <a
+                    href="https://ericportis.com/posts/2014/srcset-sizes/" target="_blank">Srcset and sizes</a></p>
+            <div class="version-grid">
+                <div>Atributo</div>
+                <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" alt="Chrome"
+                        title="Chrome"></span></div>
+                <div><span class="iconify" data-icon="cib:microsoft-edge" data-inline="false" alt="Edge"
+                        title="Edge"></span></div>
+                <div><span class="iconify" data-icon="cib:mozilla-firefox" data-inline="false" alt="Firefox"
+                        title="Firefox"></span></div>
+                <div><span class="iconify" data-icon="cib:opera" data-inline="false" alt="Opera" title="Opera"></span>
+                </div>
+                <div><span class="iconify" data-icon="cib:safari" data-inline="false" alt="Safari"
+                        title="Safari"></span></div>
+                <div>sizes</div>
+                <div>38.0</div>
+                <div>16.0 </div>
+                <div>38.0</div>
+                <div>25.0</div>
+                <div>9.0</div>
+            </div>
+            <p class="table-caption">Primera versión del navegador que soporta totalmente la propiedad. Fuente: <a
+                    href="https://caniuse.com" target="_blank">Can I Use</a></p>
+        </article>
+        <hr />
+        <article>
+            <h2>4. Usando media queries</h2>
+            <p>Se puede usar media queries para redimensionar imágenes en tiempo real en función del ancho del
+                <em>viewport</em>.</p>
+            <code class="code-block">
+                <p><u>HTML</u></p>
+            &lt;img id="bird" srcset="img/undraw_happy_music-1600_large.png 1600w, img/undraw_happy_music-1000_large.png
+            1000w, img/undraw_happy_music-800_medium.png 800w, img/undraw_happy_music-500_small.png 500w"
+            <mark>sizes="(max-width: 700px) 90vw, 50vw"</mark> src="img/undraw_happy_music-1600_large.png" alt="happy music bird" &gt;
+            <p><u>CSS</u></p>
+                @media screen and (max-width: 700px) {
+                    img#bird {
+                      max-width: 90vw;
+                      width: 90vw;
+                    }
+                  }                  
+            </code>
+            <figure>
+                <img srcset="img/undraw_happy_music-1600_large.png 1600w, img/undraw_happy_music-1000_large.png 1000w, img/undraw_happy_music-800_medium.png 800w, img/undraw_happy_music-500_small.png 500w"
+                    sizes="(max-width: 700px) 90vw, 50vw" src="img/undraw_happy_music-1600_large.png"
+                    alt="happy music bird">
+                <figcaption>Fuente: <a href="https://undraw.co/" target="_blank">unDraw</a></figcaption>
+            </figure>
+            <p>La <em>media query</em> comprueba la anchura del <em>viewport</em> de la pantalla, y aplica el CSS si el
+                ancho del <em>viewport</em> es menor de <code>700px</code>. Se puede informar al navegador sobre la <em>media query</em>
+                en el atributo <code>sizes</code> para que obtenga la imagen correcta cuando esta cambie de tamaño.</p>
+            <div class="version-grid">
+                <div>Regla</div>
+                <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" alt="Chrome"
+                        title="Chrome"></span></div>
+                <div><span class="iconify" data-icon="cib:microsoft-edge" data-inline="false" alt="Edge"
+                        title="Edge"></span></div>
+                <div><span class="iconify" data-icon="cib:mozilla-firefox" data-inline="false" alt="Firefox"
+                        title="Firefox"></span></div>
+                <div><span class="iconify" data-icon="cib:opera" data-inline="false" alt="Opera" title="Opera"></span>
+                </div>
+                <div><span class="iconify" data-icon="cib:safari" data-inline="false" alt="Safari"
+                        title="Safari"></span></div>
+                <div>@media</div>
+                <div>4.0</div>
+                <div>12.0 </div>
+                <div>2.0</div>
+                <div>10.0</div>
+                <div>3.1</div>
+            </div>
+            <p class="table-caption">Primera versión del navegador que soporta totalmente la regla. Fuente: <a
+                    href="https://caniuse.com" target="_blank">Can I Use</a></p>
+        </article>
+        <hr />
+        <article>
+            <h2>5. Usando los elementos picture y source</h2>
+            <!-- Figure: html5 block element -->
+           <figure>
+               <!-- Picture: inline element proposed by Responsive Images Community group -->
+               <picture>
+
+               </picture>
+           </figure> 
+           <div class="version-grid">
+            <div>Elemento/valor</div>
+            <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" alt="Chrome"
+                    title="Chrome"></span></div>
+            <div><span class="iconify" data-icon="cib:microsoft-edge" data-inline="false" alt="Edge"
+                    title="Edge"></span></div>
+            <div><span class="iconify" data-icon="cib:mozilla-firefox" data-inline="false" alt="Firefox"
+                    title="Firefox"></span></div>
+            <div><span class="iconify" data-icon="cib:opera" data-inline="false" alt="Opera" title="Opera"></span>
+            </div>
+            <div><span class="iconify" data-icon="cib:safari" data-inline="false" alt="Safari"
+                    title="Safari"></span></div>
+            <div>figure</div>
+            <div>8.0</div>
+            <div>12.0</div>
+            <div>4.0</div>
+            <div>11.5</div>
+            <div>5.1</div>
+            <div>picture</div>
+            <div>38.0</div>
+            <div>13.0</div>
+            <div>38.0</div>
+            <div>25.0</div>
+            <div>9.1</div>
+            <div>source</div>
+            <div>90.0</div>
+            <div>12.0</div>
+            <div>3.5</div>
+            <div>75.0</div>
+            <div>14.1</div>
+            <div>profundidad de píxel</div>
+            <div>4.0</div>
+            <div>12.0</div>
+            <div>2.0</div>
+            <div>12.1</div>
+            <div>3.1</div>
+        </div>
+        <p class="table-caption">Primera versión del navegador que soporta totalmente el elemento o el valor.
+            Fuente: <a href="https://caniuse.com" target="_blank">Can I Use</a></p>
+        </article>
+        <hr />
+        <article>
+            <h2>6. Otros formatos de imagen: svg y webp</h2>
+            <div class="version-grid">
+                <div>Formato</div>
+                <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" alt="Chrome"
+                        title="Chrome"></span></div>
+                <div><span class="iconify" data-icon="cib:microsoft-edge" data-inline="false" alt="Edge"
+                        title="Edge"></span></div>
+                <div><span class="iconify" data-icon="cib:mozilla-firefox" data-inline="false" alt="Firefox"
+                        title="Firefox"></span></div>
+                <div><span class="iconify" data-icon="cib:opera" data-inline="false" alt="Opera" title="Opera"></span>
+                </div>
+                <div><span class="iconify" data-icon="cib:safari" data-inline="false" alt="Safari"
+                        title="Safari"></span></div>
+                <div>svg</div>
+                <div>28.0</div>
+                <div>12.0</div>
+                <div>4.0</div>
+                <div>10.0</div>
+                <div>9.0</div>
+                <div>webp</div>
+                <div>32.0</div>
+                <div>18.0</div>
+                <div>65.0</div>
+                <div>19.0</div>
+                <div>--</div>
+            </div>
+            <p class="table-caption">Primera versión del navegador que soporta totalmente el formato usando &lt;img&gt;.
+                Fuente: <a href="https://caniuse.com" target="_blank">Can I Use</a></p>
+        </article>
+        <hr />
+        <article>
+            <h2>7. Performance (Firefox y Chrome)</h2>
         </article>
     </main>
     <footer>
-        <div class="back"><a href="../index.html"><span class="iconify" data-icon="jam:arrow-circle-left" data-inline="false" title="volver"></span></a></div>
-        <div class="footer-copyrigth"><span class="license"><a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank">cb</a></span> Nuria Barrios Santos, 2021</div>
-        <div class="social"><span class="iconify" data-icon="jam:twitter-circle" data-inline="false" title="twitter"></span><span class="iconify" data-icon="jam:facebook-circle" data-inline="false" title="facebook"></span><span class="iconify" data-icon="jam:instagram" data-inline="false" title="instagram"></span></div>
+        <div class="back"><a href="../index.html"><span class="iconify" data-icon="jam:arrow-circle-left"
+                    data-inline="false" title="volver"></span></a></div>
+        <div class="footer-copyrigth"><span class="license"><a
+                    href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank">cb</a></span> Nuria
+            Barrios Santos, 2021</div>
+        <div class="social"><span class="iconify" data-icon="jam:twitter-circle" data-inline="false"
+                title="twitter"></span><span class="iconify" data-icon="jam:facebook-circle" data-inline="false"
+                title="facebook"></span><span class="iconify" data-icon="jam:instagram" data-inline="false"
+                title="instagram"></span></div>
     </footer>
 </body>
 

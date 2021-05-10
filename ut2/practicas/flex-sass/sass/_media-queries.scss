@@ -1,4 +1,4 @@
-@media screen and (max-width: 700px) {
+@media screen and (max-width: $small-screen) {
     body, nav, footer {   
       flex-direction: column;
     }
@@ -19,4 +19,30 @@
         padding-bottom: 1rem;
       }
     }
+
+    img#bird {
+      max-width: 90vw;
+      width: 90vw;
+    }
+}
+
+@media screen and (max-width: $small-screen + 67) and (min-width: $extrasmall-screen) {
+  aside img:last-child {
+    max-width: 70vw;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width:  $extrasmall-screen - 1){
+  .version-grid {
+    grid-template-columns: repeat(5, 1fr);
+
+    div:first-child {
+      display: none;
+    }
+
+    div:nth-child(6n+1){
+      grid-column: span 5;
+    }
+  }
 }
