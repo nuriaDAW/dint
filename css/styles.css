@@ -4,6 +4,7 @@
 	--pink-light: #ebe5d9;
 	--red: #f72a2a;
 	--green: #657a52;
+	--green-lighter: #c4f1c4;
 	--green-light: #80a980;
 	--green-dark: #435a43;
 	--green-darker: #101810;
@@ -436,6 +437,7 @@ div.gallery {
 	top:25%;
   	right:-245px;
 	width:280px;
+	z-index: 999;
   }
 
   	#websSidenav:hover{
@@ -477,85 +479,101 @@ div.gallery {
 	  }
 
 /* Menú principal unidades temáticas */
-.home-ut {
-	display:flex;
-	height: 35rem;
+.circle-wrapper {
+	position: relative;
+  	width: 350px;
+  	height: 350px;
+  	border-radius: 50%; /* Convierte el contenedor en un círculo */
+  	overflow: hidden; /* Oculta lo que rebase el contenedor */
 }
 
-.home-ut div {
-	width: 30%;
-	margin: 0 1rem;
-	background-size: 80%;
-	background-repeat: no-repeat;
-	background-position: center;
-}
-
-.ut1 div {
-	background-image: url("../img/web_planning.svg");
-}
-
-.ut2 div {
-	background-image: url("../img/css_styles.svg");
-}
-
-.ut3 div {
-	background-image: url("../img/multimedia.svg");
-}
-
-.ut5 div {
-	background-image: url("../img/accessibility.svg");
-}
-
-.ut6 div {
-	background-image: url("../img/usability.svg");
-}
-
-.home-ut div a img {
-	width: 35%;
-}
-
-.home-ut div a:hover img {
-	filter: drop-shadow(1.2rem 0.2rem 0.3rem #527a53); /* función CSS que aplica sombra a una imagen */
-}
-
-	.home-ut div a:not(:first-child) img{
-		margin-top: 65%;
-	}
-
-	.home-ut div a:first-child img{
+	.circle-wrapper .sector {
 		display: block;
-		margin-left: auto;
-		margin-right: auto;
+  		position: absolute;
+		width: 400px;
+  		height: 400px;
+		left: 50%; /* Posiciona el elemento fuera del contenedor y centrado */
+  		top: 50%;  /* Posiciona el elemento fuera del contenedor y centrado */
+		margin-top: -400px;
+  		margin-left: -400px;
+		color: var(--primary);
+  		background: var(--green-lighter);
+  		border: 1px solid var(--primary);
+		transform-origin: 100% 100%; /* Cambia el punto alrededor del cual se aplica la transformación */
 	}
 
-	.home-ut div a:last-child img{
-		float: right;
+	.circle-wrapper .sector:hover {
+		color: var(--green-light);
+  		background: var(--green-darker);
 	}
 
-	.home-ut section {
-		margin-top: auto;
-		margin-bottom: auto;
+	/* Ángulo base: 360/número segmentos */
+	/* Rotate: ángulo base + nth-child(n-1) */
+	/* Skew: 90 - ángulo base */
+	.circle-wrapper .sector:nth-child(1) {
+		transform: rotate(90deg) skew(-30deg);
 	}
 
-	.home-ut section h1 {
+	.circle-wrapper .sector:nth-child(2) {
+		transform: rotate(210deg) skew(-30deg);
+	}
+
+	.circle-wrapper .sector:nth-child(3) {
+		transform: rotate(330deg) skew(-30deg);
+	}
+
+		.circle-wrapper .sector span{
+			display: block;
+			position: absolute;
+			padding-top: 50px;
+    		top: 240px;
+    		left: 250px;
+			/* Al estar rotados es necesario "corregir" la desviación */
+			/* skew( ángulo base - 90 ) rotate ( ángulo base/2 -90 ) */
+			transform:skew(30deg) rotate(-30deg);
+		}
+
+	.circle-wrapper .center{
+		position: relative;
+		width: 100px;
+		top: 125px;
+		left: 125px;
+		z-index: 1000;
+		line-height: 0; /* Necesario para centrar el texto */
+		background-color: var(--primary);
+		border-radius: 50%;
+	}
+
+	.circle-wrapper .center::after {
+		content: "";
+		display: block;
+		padding-bottom: 100%; /* Hace que la altura sea igual a la anchura */
+  	}
+
+  		.circle-wrapper .center .circle-txt {
+			position: absolute;
+  			bottom: 50%;
+  			width: 100%;
+  			text-align: center;
+			color: var(--text-light);
+			font-size: 2rem;
+			font-weight: 800;
+	  	}
+
+.ut-content {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+	.ut-content h1 {
 		text-align: left;
 	}
 
-		.home-ut section h1 span {
-			display: inline-block;
-			width: 1.75rem;
-			height: 1.75rem;
-			color: var(--text-light);
-			text-align: center;
-			background-color: var(--primary);
-			border-radius: 50%;
-		}
-
-	.home-ut ul {
+	.ut-content ul {
 		list-style: none;
 	  }
 	  
-	.home-ut ul li::before {
+	.ut-content ul li::before {
 		content: "\058E";  /* Añade contenido: \058E es un código unicode CSS */
 		color:var(--primary);
 		display: inline-block; /* Necesario para añadir espacio entre la viñeta y el texto */
@@ -628,7 +646,7 @@ div.gallery {
 .card-container {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: flex-start;
 	line-height: 1.6;
 }
 
@@ -638,7 +656,7 @@ div.gallery {
 	flex-direction: column;
 	width: 18rem;
 	padding-top: 0.5rem;
-	margin-bottom: 2.5rem;
+	margin: 0.5rem 0 2.5rem 1.8rem;
 	background-color: #e0ebe1;
 	border: 1px solid rgba(0,0,0,.125);
 	border-radius: .25rem;
@@ -958,3 +976,21 @@ div.gallery {
 	margin-left: 91.666667%;
   }
   
+/* Index documentación, Index herramientas, Index prácticas */
+.unit-practices {
+	margin: -3rem -1.5rem 2.5rem;
+	padding: 1.5rem 0 0;
+	border-left: var(--green-dark) solid 30px;
+}
+
+.round-number {
+	display: inline-block;
+	width: 3rem;
+	height: 3rem;
+	padding: 0.2rem;
+	color: var(--text-light);
+	text-align: center;
+	background-color: var(--primary);
+	border-radius: 50%;
+}
+

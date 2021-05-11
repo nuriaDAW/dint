@@ -8,7 +8,8 @@
 	<link rel="icon" href="../img/logo.svg" type="image/svg+xml">
 	<link rel="alternate icon" href="../img/logo(16x16).png" sizes="16x16" type="image/png">
 	<link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet"> 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />	<link rel="stylesheet" href="../css/styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />	
+	<link rel="stylesheet" href="../css/styles.css">
 
 </head>
 
@@ -62,17 +63,20 @@
             </div>
         </div>
     </nav>
-	<main class="home-ut ut3">
-		<div>
-			<a href="documentacion/index.html"><img src="../img/documentation.svg" alt="Flying books"
-					title="Documentacion"></a>
-			<a href="herramientas.html"><img src="../img/tools.svg" alt="Tools" title="Herramientas"></a>
-			<a href="practicas/index.html"><img src="../img/practices.svg" alt="Typing" title="Prácticas"></a>
+	<main class="row">
+		<div class="col-5">
+			<div class="circle-wrapper">
+				<a class="sector" href="herramientas.html"><span><i class="fas fa-pencil-ruler fa-2x" title="Herramientas"></i></span></a>
+				<a class="sector" href="practicas/index.html"><span><i class="fa fa-edit fa-2x" title="Prácticas"></i></span></a>
+				<a class="sector" href="documentacion/index.html"><span><i class="fa fa-book fa-2x" title="Documentación"></i></span></a>
+				<div class="center"><div class="circle-txt">3</div></div>
+			</div>
 		</div>
-		<section>
-			<h1><span>3</span> Implantación de contenido multimedia</h1>
+		<section class="col-7 ut-content">
+			<h1>Implantación de contenido multimedia</h1>
 			<ul>
-				<li></li>
+				<li>Imágenes adaptativas.</li>
+				<li>Formtato SVG.</li>
 			</ul>
 		</section>
 	</main>
