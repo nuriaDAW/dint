@@ -130,6 +130,7 @@
                 background-color: #435a43;
                 color: #f5f5f5;
                 border-radius: 0.5em 0 0 0.5em;
+                border-image: none;
             }
 
                 .fixed-menu:hover h2 {
@@ -413,10 +414,10 @@
         </div>
     </nav>
     <main>
-        <h1>Práctica CSS3</h1>
+        <h1><mark>Práctica:</mark> CSS3</h1>
         <p>Práctica para trabajar con <a href="https://www.w3schools.com/howto/howto_css_searchbar.asp"
                 target="_blank">barras de navegación adaptativas con caja de búsqueda</a>, menús ocultos</a> y <a
-                href="https://www.w3schools.com/cssref/pr_class_position.asp" target="_blank">la propiedad position</a>
+                href="https://www.w3schools.com/cssref/pr_class_position.asp" target="_blank">la propiedad <code>position</code></a>
             de CSS3.</p>
         <hr />
 
@@ -441,26 +442,26 @@
         <section id="position">
             <h2>Propiedad position</h2>
             <h3>position: static;</h3>
-            <p>El elemento Parent1 tiene una <em>position: static</em>, y sigue el flujo natural de la página.
+            <p>El elemento Parent1 tiene una <code>position: static</code>, y sigue el flujo natural de la página.
                 NO actúa como punto de anclaje para el elemento Child1, posicionado de manera absoluta.</p>
             <div id="parent1">Parent1: position: static.
                 <div id="child1">Child1: position: absolute, right: 15px, top: 0</div>
             </div>
             <h3>position: relative;</h3>
-            <p>El elemento Parent2 tiene una <em>position: relativa</em>, y sigue el flujo natural de la página.
+            <p>El elemento Parent2 tiene una <code>position: relativa</code>, y sigue el flujo natural de la página.
                 Actúa como punto de anclaje para el elemento Child2, posicionado de manera absoluta:</p>
             <div id="parent2">Parent2: position: relative.
                 <div id="child2">Child2: position: absolute, right: 15px, top: 60px</div>
             </div>
             <h3>position: absolute;</h3>
-            <p>El elemento Parent3 tiene una <em>position: absoluta</em>, y NO sigue el flujo natural de la página.
+            <p>El elemento Parent3 tiene una <code>position: absoluta</code>, y NO sigue el flujo natural de la página.
                 Tomará la posición según el ancestro más cercano.
                 Actúa como punto de anclaje para el elemento Child3, posicionado de manera absoluta.</p>
             <div id="parent3">Parent3: position: absolute, top: 525px, right: 15px.
                 <div id="child3">Child3: position: absolute, right: 15px, top: 60px</div>
             </div>
             <h3>position: fixed;</h3>
-            <p>El elemento Parent4 tiene una <em>position: fixed</em>, y NO sigue el flujo natural de la página.
+            <p>El elemento Parent4 tiene una <code>position: fixed</code>, y NO sigue el flujo natural de la página.
                 Tomará la posición según la ventana virtual (viewport).
                 Actúa como punto de anclaje para el elemento Child4, posicionado de manera absoluta.</p>
             <div id="parent4">Parent4: position: fixed, bottom: 0, left: 0, right: 0.

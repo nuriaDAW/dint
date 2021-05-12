@@ -10,6 +10,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="../../css/styles.css">
+    <style>
+        /* Artículos */
+        article {
+            border: 5px double #527a53;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+        }
+
+        /* Cabecer artículos */
+        article header h1 {
+            padding: 1rem;
+            border: 2px solid;
+        }
+
+        article h2 {
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid;
+        }
+
+        /* Tablas */
+        table, th, td {
+            border: 1px solid;
+        }
+    </style>
 </head>
 
 <body>
@@ -64,8 +89,9 @@
     </nav>
     <main>
         <section>
-            <h1>Práctica: Repaso de HTML</h1>
+            <h1><mark>Práctica:</mark> Repaso de HTML</h1>
             <p>Actividades del punto "1.7. Lenguaje de marcas HTML5" del libro Diseño Web de Interfaces de Garceta.</p>
+        <hr />
         </section>
         <section>
             <article id="enlaces">
@@ -137,18 +163,18 @@
                 <header>
                     <h1>Imágenes (&lt;img&gt;)</h1>
                 </header>
-                <p>Los atributos <em>alt</em>, para mostrar texto alternativo a la imagen, y <em>title</em> son
+                <p>Los atributos <code>alt</code>, para mostrar texto alternativo a la imagen, y <code>title</code> son
                     interesantes para aplicar mejor técnicas de SEO. </p>
-                <p>El atributo <em>crossorigins</em>, válido para imagen y vídeo, permite configurar peticiones a
+                <p>El atributo <code>crossorigins</code>, válido para imagen y vídeo, permite configurar peticiones a
                     otros orígenes con dos posibles valores: </p>
                 <ul>
                     <li>
-                        <em>user-credentials:</em> habilita CORS enviando las credenciales del usuario (envío de
+                        <code>user-credentials:</code> habilita CORS enviando las credenciales del usuario (envío de
                         cookies, certificado o los valores de autenticación básica junto con la petición del recurso
                         solicitado).
                     </li>
                     <li>
-                        <em>anonymous:</em> habilita el soporte para CORS, pero sin enviar credenciales al otro extermo.
+                        <code>anonymous:</code> habilita el soporte para CORS, pero sin enviar credenciales al otro extermo.
                     </li>
                 </ul>
                 <img id="image-1" title="Sample image" alt="Sample image" src="../../img/HTML5_Logo_64.png" />
@@ -223,7 +249,7 @@
                     </fieldset>
                 </form>
                 <h2>Label (&lt;label&gt;)</h2>
-                <p>Una <em>label</em> nos permite etiquetar de manera formal un campo de formulario.</p>
+                <p>Una <code>label</code> nos permite etiquetar de manera formal un campo de formulario.</p>
                 <div>
                     <!-- El atributo for crea un vínculo con el campo. Al hacer click sobre el label se seleciona 
                         el elemento del formulario o toma el foco -->
@@ -235,7 +261,7 @@
                     <input type="checkbox" name="remember" id="remember" value="">
                 </div>
                 <h2>Datalist (&lt;datalist&gt;)</h2>
-                <p>Una <em>datalist</em> genera una lista de datos reutilizable por <em>inputs</em>, como listas.</p>
+                <p>Una <code>datalist</code> genera una lista de datos reutilizable por <em>inputs</em>, como listas.</p>
                 <input list="languageList" id="languages" />
                 <datalist id="languageList">
                     <option value="1">JavaScript</option>
@@ -243,7 +269,7 @@
                     <option value="3">CoffeeScript</option>
                 </datalist>
                 <h2>Input (&lt;input&gt;)</h2>
-                <p>Mediante los <em>input</em> creamos los campos del formulario.</p>
+                <p>Mediante los <code>input</code> creamos los campos del formulario.</p>
                 <label for="login">Login</label>
                 <input id="login" name="login" placeholder="Type your login name" type="text" />
                 <h2>Button</h2>
@@ -354,7 +380,7 @@
                             <p>Hay que anadir el atributo <em>enctype</em> a la etiqueta <em>form</em> para que se
                                 envíen
                                 correctamente. <em>enctype</em> solo se puede usar con el método POST.</p>
-                            <p>&lt;form enctype="multipart/form-data" ...&gt;</p>
+                            <p><code>&lt;form enctype="multipart/form-data" ...&gt;</code></p>
                         </small>
                         <div style="margin:1em;">
                             <label for="file1">Upload</label><br />

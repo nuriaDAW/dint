@@ -288,4 +288,36 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
         <loc>https://nuriadaw.github.io/dint/ut2/practicas/flex-sass/index.html</loc>
         <lastmod>2021-04-29T21:58:54+00:00</lastmod>
     </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut3/index.html</loc>
+        <lastmod>2021-05-11T19:47:09+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut3/herramientas</loc>
+        <lastmod>2021-05-11T20:10:35+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut3/practicas/index.html</loc>
+        <lastmod>2021-05-11T19:47:10+00:00</lastmod>
+    </url>
+        <url>
+        <loc>https://nuriadaw.github.io/dint/ut5/index.html</loc>
+        <lastmod>2021-05-11T20:30:19+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut5/documentación/index.html</loc>
+        <lastmod>2021-05-11T20:45:57+00:00</lastmod>
+    </url>
+        <url>
+        <loc>https://nuriadaw.github.io/dint/ut5/herramientas</loc>
+        <lastmod>2021-05-11T21:05:08+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut6/index.html</loc>
+        <lastmod>2021-05-11T20:30:19+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut6/documentación/index.html</loc>
+        <lastmod>2021-05-11T20:30:19+00:00</lastmod>
+    </url>
 </urlset>

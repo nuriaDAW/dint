@@ -9,8 +9,7 @@
 	<link rel="icon" href="../../img/logo(16x16).png" sizes="16x16" type="image/png">
 	<link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-		crossorigin="anonymous" />
+		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 	<link href="https://cdn.materialdesignicons.com/5.6.55/css/materialdesignicons.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="../../css/styles.css">
 </head>
@@ -72,28 +71,34 @@
 				<input id="ac-1" name="accordion-1" type="checkbox" />
 				<label for="ac-1">SASS</label>
 				<article class="ac">
-					<p>
+					<div class="ac-item">
 						<a href="Sass-for-Web-Designers.pdf">Sass for Web Designers - Dan Cederholm</a>
 						<span class="mdi mdi-pdf-box"></span>
-					</p>
-					<p>
+					</div>
+					<div class="ac-item">
 						<a href="sass_chearsheet.pdf">Sass Cheat Sheet</a>
 						<span class="mdi mdi-pdf-box"></span>
-					</p>
-					<p><a href="https://learnxinyminutes.com/docs/es-es/sass-es/" target="_blank">Learn Sass in Y
+					</div>
+					<div class="ac-item">
+						<a href="https://learnxinyminutes.com/docs/es-es/sass-es/" target="_blank">Learn Sass in Y
 							minutes
-						</a></p>
-					<p>Sass es un lenguaje que extiende CSS y que añade características tales como variables, anidación,
-						mixins y más. Sass (y otros preprocesadores tales como Less) ayudan a los desarrolladores a
-						escribir código mantenible y DRY (Don’t Repeat Yourself).</p>
-					<p><a href="https://codepen.io/Limey_88/pen/oBNoqe" target="_blank">Manage @Fontfaces with SCSS
-						</a></p>
-					<p>Un @mixin para manejar más eficientemente familias tipográficas con Sass en distintos
-						formatos(.ttf, .otf, .woff, .eot y .svg).</p>
-					<p><a href="https://www.developerdrive.com/how-to-easily-use-google-fonts-with-sass/"
-							target="_blank">How to easely use Google Fonts with Sass
-						</a></p>
-					<p>Artículo sobre como importar e implementar fuentes de Google usamdo Sass.</p>
+						</a>
+						<div class="indent">Sass es un lenguaje que extiende CSS y que añade características tales como variables, anidación,
+							mixins y más. Sass (y otros preprocesadores tales como Less) ayudan a los desarrolladores a
+							escribir código mantenible y DRY (Don’t Repeat Yourself).
+						</div>
+					</div>
+					<div class="ac-item">
+						<a href="https://codepen.io/Limey_88/pen/oBNoqe" target="_blank">Manage @Fontfaces with SCSS
+						</a>
+						<div class="indent">Un @mixin para manejar más eficientemente familias tipográficas con Sass en distintos
+							formatos(.ttf, .otf, .woff, .eot y .svg).</div>
+					</div>
+					<div class="ac-item">
+						<a href="https://www.developerdrive.com/how-to-easily-use-google-fonts-with-sass/" target="_blank">How to easely use Google Fonts with Sass
+						</a>
+						<div class="indent">Artículo sobre como importar e implementar fuentes de Google usamdo Sass.</div>
+					</div>
 					<p>
 						<a href="../practicas/introduccion-sass/index.html">Práctica introductoria Sass</a>
 					</p>
@@ -103,68 +108,88 @@
 				<input id="ac-2" name="accordion-1" type="checkbox" />
 				<label for="ac-2">CSS</label>
 				<article class="ac">
-					<p><a href="https://www.w3.org/TR/?title=css" target="_blank">CSS All Standards and Drafts
-						</a></p>
-					<p>Estándares y borradores del W3C para CSS.</p>
-					<p><a href="https://learnxinyminutes.com/docs/css/" target="_blank">Learn CSS in Y minutes
-						</a></p>
-					<p>Resumen rápido de las propiedades de CSS2 y algunas de CSS3.</p>
-					<p><a href="css3-cheatsheet.pdf">CSS3 Cheat Sheet</a><span class="mdi mdi-pdf-box"></span></p>
-					<p><a href="css-handbook.pdf">The CSS Handbook - Flavio Copes</a><span
-							class="mdi mdi-pdf-box"></span> </p>
-					<p>Completo manual de CSS3.</p>
-					<p><a href="CSS3-y-Javascript-Avanzado.pdf">CSS3 y Javascript avanzado - Jordi Collell Puig</a><span
-							class="mdi mdi-pdf-box"></span> </p>
-					<p>Novedades de CSS3, jQuery y canvas. Con ejercicios.</p>
-					<p><a href="https://escss.blogspot.com/2015/03/parent-selector-pure-css.html" target="_blank">Parent
-							Selector</a></p>
-					<p>Artículo sobre cómo remontar el DOM con CSS (los selectores existentes son todos descendentes).
-					</p>
-					<p><a href="https://css-tricks.com/the-shapes-of-css/">The Shapes of CSS </a></p>
-					<p>Conjunto de formas en CSS.</p>
-					<p><a href="menusCSS.pdf">Menús CSS</a><span class="mdi mdi-pdf-box"></span></p>
-					<p>Aspectos básicos de los menús y barras de navegación con CSS y adaptabilidad. Fuente:W3Schools.
-					</p>
-					<p><a href="https://devsnap.me/" target="_blank">Ejemplos de código</a></p>
-					<a href="ejemplos-menus/index.html">Ejemplos de menús CSS</a>
+					<div class="ac-item">
+						<a href="https://www.w3.org/TR/?title=css" target="_blank">CSS All Standards and Drafts</a>
+						<div class="indent">Estándares y borradores del W3C para CSS.</div>
+					</div>
+					<div class="ac-item">
+						<a href="https://learnxinyminutes.com/docs/css/" target="_blank">Learn CSS in Y minutes
+						</a>
+						<div class="indent">Resumen rápido de las propiedades de CSS2 y algunas de CSS3.</div>
+					</div>
+					<div class="ac-item"><a href="css3-cheatsheet.pdf">CSS3 Cheat Sheet</a><span class="mdi mdi-pdf-box"></span></div>
+					<div class="ac-item"><a href="css-handbook.pdf">The CSS Handbook - Flavio Copes</a><span class="mdi mdi-pdf-box"></span>
+						<div class="indent">Completo manual de CSS3.</div>
+					</div>
+					<div class="ac-item">
+						<a href="CSS3-y-Javascript-Avanzado.pdf">CSS3 y Javascript avanzado - Jordi Collell Puig</a><span class="mdi mdi-pdf-box"></span>
+						<div class="indent">Novedades de CSS3, jQuery y canvas. Con ejercicios.</div>
+					</div>
+					<div class="ac-item">
+						<a href="https://escss.blogspot.com/2015/03/parent-selector-pure-css.html" target="_blank">Parent Selector</a>
+						<div class="indent">Artículo sobre cómo remontar el DOM con CSS (los selectores existentes son todos descendentes).</div>
+					</div>
+					<div class="ac-item">
+						<a href="https://css-tricks.com/the-shapes-of-css/">The Shapes of CSS </a>
+						<div class="indent">Conjunto de formas en CSS.</div>
+					</div>
+					<div class="ac-item">
+						<a href="menusCSS.pdf">Menús CSS</a><span class="mdi mdi-pdf-box"></span>
+						<div class="indent">Aspectos básicos de los menús y barras de navegación con CSS y adaptabilidad. Fuente:W3Schools.</div>
+					</div>
+					<div class="ac-item"><a href="https://devsnap.me/" target="_blank">Ejemplos de código</a></div>
+					<div class="ac-item"><a href="ejemplos-menus/index.html">Ejemplos de menús CSS</a></div>
 					<h2>Flexbox</h2>
-					<p><a href="https://www.w3.org/TR/css-flexbox-1/" target="_blank">CSS Flexible Box Layout </a></p>
-					<p>Especificación de W3C para flexbox.</p>
-					<p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">A Complete
-							Guide to Flexbox
-						</a></p>
-					<p>Guía completa y actualizada de flexbox.</p>
-					<p><a href="https://www.samanthaming.com/flexbox30/" target="_blank">Flexbox30</a></p>
-					<p>Flexbox en 30 imágenes.</p>
-					<p><a href="https://www.internetingishard.com/html-and-css/flexbox/" target="_blank">Flexbox. Nº 8.
-							of HTML &
-							CSS Is Hard
-						</a></p>
-					<p>Tutorial amigable para maquetación con flexbox.</p>
-					<p><a href="https://lenguajecss.com/css/maquetacion-y-colocacion/flexbox/" target="_blank">Flexbox
-							CSS</a></p>
-					<p>Tutorial en español con ejemplos interactivos.</p>
-					<p><a href="https://filisantillan.com/blog/el-gran-poder-de-css3-flexbox/" target="_blank">El gran
-							poder de
-							CSS3: FlexBox</a></p>
-					<p>Tutorial en español con ejemplos, notas y advertencias.</p>
-					<p><a href="htps://yoksel.github.io/flex-cheatsheet/" target="_blank">Flex Cheatsheet</a></p>
-					<p>Cheat Sheet interactiva.</p>
+					<div class="ac-item">
+						<a href="https://www.w3.org/TR/css-flexbox-1/" target="_blank">CSS Flexible Box Layout </a>
+						<div class="indent">Especificación de W3C para flexbox.</div>
+					</div>
+					<div class="ac-item">
+						<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">A Complete Guide to Flexbox</a>
+						<div class="indent">Guía completa y actualizada de flexbox.</div>
+					</div>
+					<div class="ac-item">
+						<a href="https://www.samanthaming.com/flexbox30/" target="_blank">Flexbox30</a>
+						<div class="indent">Flexbox en 30 imágenes.</div>
+					</div>
+					<div class="ac-item">
+						<a href="https://www.internetingishard.com/html-and-css/flexbox/" target="_blank">Flexbox. Nº 8. of HTML &
+							CSS Is Hard</a>
+						<div class="indent">Tutorial amigable para maquetación con flexbox.</div>
+					</div>
+					<div class="ac-item">
+						<a href="https://lenguajecss.com/css/maquetacion-y-colocacion/flexbox/" target="_blank">Flexbox CSS</a>
+						<div class="indent">Tutorial en español con ejemplos interactivos.</div>
+					</div>
+					<div class="ac-item">
+						<a href="https://filisantillan.com/blog/el-gran-poder-de-css3-flexbox/" target="_blank">El gran poder de CSS3: FlexBox</a>
+						<div class="indent">Tutorial en español con ejemplos, notas y advertencias.</div>
+					</div>
+					<div class="ac-item">
+						<a href="htps://yoksel.github.io/flex-cheatsheet/" target="_blank">Flex Cheatsheet</a>
+						<div class="indent">Cheat Sheet interactiva.</div>
+					</div>
 					<h2>Grid System</h2>
-					<p><a href="https://medium.com/laboratoria-how-to/cien-por-ciento-divididos-grid-system-y-su-secuaz-el-layout-545e8a90d63e"
-							target="_blank">Cien por ciento divididos : Grid System y su secuaz el Layout</a></p>
-					<p>Artículo explicativo de la adaptación del sistema grillas a la web.</p>
-					<p><a href="https://lenguajecss.com/css/maquetacion-y-colocacion/grid-css/" target="_blank">Grid CSS
-							(Cuadrículas)</a></p>
-					<p>Guía completa de grid css.</p>
-					<p><a href="https://dev.to/joyshaheb/css-grid-cheat-sheet-illustrated-in-2021-1a3"
-							target="_blank">CSS Grid Cheat Sheet Illustrated in 2021</a></p>
-					<p>Cheat Sheet ilustrada y detallada de grid.</p>
-					<p><a href="https://yoksel.github.io/grid-cheatsheet/" target="_blank">Grid Cheatsheet</a></p>
-					<p>Cheat Sheet interactiva.</p>
-					<p><a href="https://grid.malven.co/" target="_blank">Grid: A simple visual cheatsheet for CSS Grid
-							Layout</a></p>
-					<p>Cheat Sheet visual rápida y simple sobre grid.</p>
+					<div class="ac-item">
+						<a href="https://medium.com/laboratoria-how-to/cien-por-ciento-divididos-grid-system-y-su-secuaz-el-layout-545e8a90d63e" target="_blank">Cien por ciento divididos : Grid System
+							y su secuaz el Layout</a>
+						<div class="indent">Artículo explicativo de la adaptación del sistema grillas a la web.</div>
+					</div>
+					<div class="ac-item"><a href="https://lenguajecss.com/css/maquetacion-y-colocacion/grid-css/" target="_blank">Grid CSS (Cuadrículas)</a>
+						<div class="indent">Guía completa de grid css.</div>
+					</div>
+					<div class="ac-item">
+						<a href="https://dev.to/joyshaheb/css-grid-cheat-sheet-illustrated-in-2021-1a3" target="_blank">CSS Grid Cheat Sheet Illustrated in 2021</a>
+						<div class="indent">Cheat Sheet ilustrada y detallada de grid.</div>
+					</div>
+					<div class="ac-item">
+						<a href="https://yoksel.github.io/grid-cheatsheet/" target="_blank">Grid Cheatsheet</a>
+						<div class="indent">Cheat Sheet interactiva.</div>
+					</div>
+					<div class="ac-item">
+					<a href="https://grid.malven.co/" target="_blank">Grid: A simple visual cheatsheet for CSS Grid	Layout</a>
+					<div class="indent">Cheat Sheet visual rápida y simple sobre grid.</div>
+					</div>
 				</article>
 			</div>
 	</main>
@@ -192,10 +217,8 @@
 					4.0</a>. Fondo creado con: <a href="https://www.svgbackgrounds.com/" target="_blank">SVG
 					Backgrounds</a>.</p>
 			<p>
-				<a
-					href="https://validator.w3.org/unicorn/check?ucn_uri=https%3A%2F%2Fnuriadaw.github.io%2Fdint&ucn_task=conformance#css3-validator_warning_1">
-					<img style="border:0;width:88px;height:31px" src="//jigsaw.w3.org/css-validator/images/vcss"
-						alt="¡CSS Válido!" />
+				<a href="https://validator.w3.org/unicorn/check?ucn_uri=https%3A%2F%2Fnuriadaw.github.io%2Fdint&ucn_task=conformance#css3-validator_warning_1">
+					<img style="border:0;width:88px;height:31px" src="//jigsaw.w3.org/css-validator/images/vcss" alt="¡CSS Válido!" />
 				</a>
 			</p>
 		</div>

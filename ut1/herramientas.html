@@ -8,7 +8,8 @@
 	<link rel="icon" href="../img/logo.svg" type="image/svg+xml">
 	<link rel="alternate icon" href="../img/logo(16x16).png" sizes="16x16" type="image/png">
 	<link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 	<link rel="stylesheet" href="../css/styles.css">
 </head>
 
@@ -70,70 +71,88 @@
 				<input id="ac-1" name="accordion-1" type="checkbox" />
 				<label for="ac-1">Herramientas para paleta de colores</label>
 				<article class="ac">
-					<a href="https://material.io/resources/color/#!/?view.left=0&view.right=0" target="_blank">
-						<h3>MATERIAL DESIGN. COLOR TOOL</h3>
-					</a>
-					<p>Herramienta para crear y compartir paletas de colores para la interfaz de usuario.
-						Permite seleccionar un color primario, uno secundario y medir el nivel de accesibilidad de
-						cualquier combinación de los colores de la paleta.
-						<br />
+					<div class="ac-item">
+						<a href="https://material.io/resources/color/#!/?view.left=0&view.right=0" target="_blank">
+							<h3>MATERIAL DESIGN. COLOR TOOL</h3>
+						</a>
+						<div class="indent">Herramienta para crear y compartir paletas de colores para la interfaz de usuario.</div>
+						<div class="indent">Permite seleccionar un color primario, uno secundario y medir el nivel de accesibilidad de
+							cualquier combinación de los colores de la paleta.
+						</div>
+					</div>
+					<div class="ac-item">
+						<a href="https://paletton.com/#uid=12P0u0kavj84UsW7UnycbdtjdbT" target="_blank">
+							<h3>PALETTON</h3>
+						</a>
+						<div class="indent">Generador de paletas de colores muy útil cuando hay un color base definido para realizar
+							combinaciones de hasta cuatro colores.</div>
+						<div class="indent">Provee tablas de color y exportación en distintos formatos (html, css, less, sass, xml y text).
+						</div>
+					</div>
+					<div class="ac-item">
+						<a href="https://hexcolor.co/" target="_blank">
+							<h3>Hex Colors</h3>
+						</a>
+						<div class="indent">Conjunto de herramientas para generar paletas de colores.</div>
+						<div class="indent">Incluye una referencia de la paleta de colores de material.</div>
+					</div>
+					<div class="ac-item">
+						<a href="https://leonardocolor.io" target="_blank">
+							<h3>Leonardo</h3>
+						</a>
+						<div class="indent">Heramienta de código abierto para crear temas de color accesibles basados en el ratio de
+							contraste de los colores.</div>
+						<div class="indent">Muestra ejemplos de elementos, gráficos del contraste de los colores elegidos y modelos de color
+							(HSV, RGB, etc.).
+						</div>
+					</div>
+					<div class="ac-item">
+						<a href="https://htmlcolorcodes.com/" target="_blank">
+							<h3>HTML color codes</h3>
+						</a>
+						<p class="indent">Herramienta de selección de códigos de color html, códigos de color hexadecimales, valores RGB y
+							HSL, carta de colores y nombres de colores HTML.</p>
+					</div>
+					<div class="ac-item">
+						<a href="https://marijohannessen.github.io/color-contrast-checker/" target="_blank">
+							<h3>Color Contrast Checker</h3>
+						</a>
+						<p class="indent">Herramienta sencilla desarrollada por Mari Johannessen para ayudar a los desarrolladores y
+							diseñadores a asegurarse de que sus paletas de colores son accesibles en la web. Basado en los
+							estándares <a href="https://www.w3.org/TR/WCAG20/" target="_blank">WCAG 2.0</a> Nivel AA.</p>
+					</div>
+					<p>
+						<a href="practicas/practica-colores.html#herramientas"><i class="fas fa-plus-square"></i> Más herramientas de esquemas de color</a>
 					</p>
-					<a href="https://paletton.com/#uid=12P0u0kavj84UsW7UnycbdtjdbT" target="_blank">
-						<h3>PALETTON</h3>
-					</a>
-					<p>Generador de paletas de colores muy útil cuando hay un color base definido para realizar
-						combinaciones de hasta cuatro colores.</p>
-					<p>Provee tablas de color y exportación en distintos formatos (html, css, less, sass, xml y text).
-					</p>
-					<a href="https://hexcolor.co/" target="_blank">
-						<h3>Hex Colors</h3>
-					</a>
-					<p>Conjunto de herramientas para generar paletas de colores.</p>
-					<p>Incluye una referencia de la paleta de colores de material.</p>
-					<a href="https://leonardocolor.io" target="_blank">
-						<h3>Leonardo</h3>
-					</a>
-					<p>Heramienta de código abierto para crear temas de color accesibles basados en el ratio de
-						contraste de los colores.</p>
-					<p>Muestra ejemplos de elementos, gráficos del contraste de los colores elegidos y modelos de color
-						(HSV, RGB, etc.).
-					</p>
-					<a href="https://htmlcolorcodes.com/" target="_blank">
-						<h3>HTML color codes</h3>
-					</a>
-					<p>Herramienta de selección de códigos de color html, códigos de color hexadecimales, valores RGB y
-						HSL, carta de colores y nombres de colores HTML.</p>
-					<a href="https://marijohannessen.github.io/color-contrast-checker/" target="_blank">
-						<h3>Color Contrast Checker</h3>
-					</a>
-					<p>Herramienta sencilla desarrollada por Mari Johannessen para ayudar a los desarrolladores y
-						diseñadores a asegurarse de que sus paletas de colores son accesibles en la web. Basado en los
-						estándares <a href="https://www.w3.org/TR/WCAG20/" target="_blank">WCAG 2.0</a> Nivel AA.</p>
-					<a href="practicas/practica-colores.html#herramientas">Más herramientas de esquemas de color</a>
 				</article>
 			</div>
 			<div>
 				<input id="ac-2" name="accordion-1" type="checkbox" />
 				<label for="ac-2">Fuentes</label>
 				<article class="ac">
-					<a href="https://developers.google.com/fonts/" target="_blank">
-						<h3>Google Fonts</h3>
-					</a>
-					<p>Selector de fuentes de Google. Genera un enlace a los estilos de fuente de la API de Google y el
-						css asociado.</p>
-					<a href="https://fontlibrary.org/es" target="_blank">
-						<h3>Font Library</h3>
-					</a>
-					<p>Biblioteca de fuentes libres con opción de descarga o añadir un link en el &lt;head&gt; del html
-						a la app de la web.</p>
-					<a href="https://www.gridlover.net/" target="_blank">
-						<h3>Grid Lover</h3>
-					</a>
-					<p>Provador de fuentes.</p>
+					<div class="ac-item">
+						<a href="https://developers.google.com/fonts/" target="_blank">
+							<h3>Google Fonts</h3>
+						</a>
+						<p class="indent">Selector de fuentes de Google. Genera un enlace a los estilos de fuente de la API de Google y el
+							css asociado.</p>
+					</div>
+					<div class="ac-item">
+						<a href="https://fontlibrary.org/es" target="_blank">
+							<h3>Font Library</h3>
+						</a>
+						<p class="indent">Biblioteca de fuentes libres con opción de descarga o añadir un link en el &lt;head&gt; del html
+							a la app de la web.</p>
+					</div>
+					<div class="ac-item">
+						<a href="https://www.gridlover.net/" target="_blank">
+							<h3>Grid Lover</h3>
+						</a>
+						<p class="indent">Provador de fuentes.</p>
+					</div>
 					<hr />
 					<p>
-						<a href="https://www.enfoquegaussiano.com/ocho-fundiciones-y-repositarios-tipograficos-con-licencia-de-libre-uso/"
-							target="_blank">
+						<a href="https://www.enfoquegaussiano.com/ocho-fundiciones-y-repositarios-tipograficos-con-licencia-de-libre-uso/" target="_blank">
 							<strong>Artículo:</strong> Ocho fundiciones y repositorios tipográficos con licencia de uso
 							libre
 						</a>
@@ -144,30 +163,47 @@
 				<input id="ac-3" name="accordion-1" type="checkbox" />
 				<label for="ac-3">Iconos</label>
 				<article class="ac">
-					<a href="https://material.io/resources/icons/?style=baseline" target="_blank">
-						<h3>Google Icons</h3>
-					</a>
-					<p>Selector de iconos de Google. Genera un enlace a los estilos de icono de la API de Google.</p>
-					<p>También permite la descarga de los iconos en png y svg.</p>
-					<p>El set básico está ampliado con contribuciones de los usuarios en:
-						<a href="https://materialdesignicons.com/" target="_blank">Material Design Icons</a>
-					</p>
-					<a href="https://iconify.design/" target="_blank"><h3>Iconify</h3></a>
-					<p>Framework unificado de iconos. Permite usar iconos de distintas fuentes (incluidos los iconos de
-						Material y Bootstrap) desde una misma aplicación.</p>
-					<p>Permite añadir los iconos en código html, css, svg, react y descargarlos en svg.</p>
-					<a href="https://webkul.github.io/vivid/cheatsheet.html" target="_blank"><h3>Vivid.JS</h3></a>
-					<p>Pequeña biblioteca de iconos SVG personalizables.</p>
-					<a href="https://mariodelvalle.github.io/CaptainIconWeb/" target="_blank"><h3>Captain Icons</h3></a>
-					<p>Colección de iconos vectoriales gratuitos con licencia Creative Commons Compartir Igual.</p>
-					<a href="practicas/practica-iconos/iconos-varias-fuentes.html">Más herramientas de iconos</a>
+					<div class="ac-item">
+						<a href="https://material.io/resources/icons/?style=baseline" target="_blank">
+							<h3>Google Icons</h3>
+						</a>
+						<div class="indent">Selector de iconos de Google. Genera un enlace a los estilos de icono de la API de Google.</div>
+						<div class="indent">También permite la descarga de los iconos en png y svg.</div>
+						<p class="indent">El set básico está ampliado con contribuciones de los usuarios en:
+							<a href="https://materialdesignicons.com/" target="_blank">Material Design Icons</a>
+						</p>
+					</div>
+					<div class="ac-item">
+						<a href="https://iconify.design/" target="_blank">
+							<h3>Iconify</h3>
+						</a>
+						<div class="indent">Framework unificado de iconos. Permite usar iconos de distintas fuentes (incluidos los iconos de
+							Material y Bootstrap) desde una misma aplicación.</div>
+						<div class="indent">Permite añadir los iconos en código html, css, svg, react y descargarlos en svg.</div>
+					</div>
+					<div class="ac-item">
+						<a href="https://webkul.github.io/vivid/cheatsheet.html" target="_blank">
+							<h3>Vivid.JS</h3>
+						</a>
+						<p class="indent">Pequeña biblioteca de iconos SVG personalizables.</p>
+					</div>
+					<div class="ac-item">
+						<a href="https://mariodelvalle.github.io/CaptainIconWeb/" target="_blank">
+							<h3>Captain Icons</h3>
+						</a>
+						<p class="indent">Colección de iconos vectoriales gratuitos con licencia Creative Commons Compartir Igual.</p>
+					</div>
+					<p><a href="practicas/practica-iconos/iconos-varias-fuentes.html"><i class="fas fa-plus-square"></i> Más herramientas de iconos</a></p>
 					<h2>Generadores de fuentes de iconos</h2>
-					<a href="https://fontello.com/" target="_blank"><h3>Fontello</h3></a>
-					<a href="https://icomoon.io/app/#/select" target="_blank"><h3>IconMoon</h3></a>
+					<a href="https://fontello.com/" target="_blank">
+						<h3>Fontello</h3>
+					</a>
+					<a href="https://icomoon.io/app/#/select" target="_blank">
+						<h3>IconMoon</h3>
+					</a>
 					<hr />
 					<p>
-						<a href="https://www.canva.com/es_mx/aprende/49-mejores-sitios-para-encontrar-hermosos-iconos-gratis/"
-							target="_blank">
+						<a href="https://www.canva.com/es_mx/aprende/49-mejores-sitios-para-encontrar-hermosos-iconos-gratis/" target="_blank">
 							<strong>Artículo:</strong> Los mejores 49 sitios para encontrar hermosos y útiles iconos
 							gratis
 						</a>
@@ -178,75 +214,98 @@
 				<input id="ac-4" name="accordion-1" type="checkbox" />
 				<label for="ac-4">Prototipos</label>
 				<article class="ac">
-					<a href="https://balsamiq.com/" target="_blank">
-						<h3>Balsamiq Wireframes</h3>
-					</a>
-					<p>Herramienta para la creación de prototipos o maquetas. Es similar en cuanto a funcionalidad a los
-						editores
-						de imagen, permite arrastrar, soltar, guardar mockups en un archivo, copiar y pegar, deshacer,
-						etc.</p>
-					<p> Incluye una amplia variedad de objetos prediseñados listos para usar y personalizables (hasta
-						cierto punto), como: barras de estado, menús, barras de progreso, etc.</p>
-					<p>Además, permite exportar el diseño que realizes en png, pdf e incluso al portapapeles.</p>
-					<a href="practicas/practica-balsamiq/index.html">Práctica de Balsamiq</a>
-					<a href="https://docs.axure.com/axure-rp/reference/getting-started-video/" target="_blank">
-						<h3>Axure</h3>
-					</a>
-					<p>Herramienta para la creación de prototipos o maquetas. Es similar en cuanto a funcionalidad a los
-						editores de imagen, permite arrastrar, soltar, copiar y pegar, deshacer, etc.</p>
-					<p> Incluye una amplia variedad de objetos prediseñados listos para usar y personalizables, como:
-						barras de estado, menús, barras de progreso, etc. Añade un mayor dinamismo y grado de
-						personalización que Balsamiq.</p>
-					<p>Los prototipos se visualizan directamente en el navegador o dispositivo, dando una idea bastante
-						exacta de cómo quedaría el diseño.</p>
-					<p>Además, permite exportar el diseño que realizes en png u originar el código del proyecto a partir
-						del prototipo.</p>
-					<a href="practicas/practica-axure/index.html">Práctica de Axure</a>
+					<div class="ac-item">
+						<a href="https://balsamiq.com/" target="_blank">
+							<h3>Balsamiq Wireframes</h3>
+						</a>
+						<div class="indent">Herramienta para la creación de prototipos o maquetas. Es similar en cuanto a funcionalidad a los
+							editores
+							de imagen, permite arrastrar, soltar, guardar mockups en un archivo, copiar y pegar, deshacer,
+							etc.</div>
+						<div class="indent">Incluye una amplia variedad de objetos prediseñados listos para usar y personalizables (hasta
+							cierto punto), como: barras de estado, menús, barras de progreso, etc.</div>
+						<div class="indent">Además, permite exportar el diseño que realizes en png, pdf e incluso al portapapeles.</div>
+						<p class="indent"><a href="practicas/practica-balsamiq/index.html">Práctica de Balsamiq</a></p>
+					</div>
+					<div class="ac-item">
+						<a href="https://docs.axure.com/axure-rp/reference/getting-started-video/" target="_blank">
+							<h3>Axure</h3>
+						</a>
+						<div class="indent">Herramienta para la creación de prototipos o maquetas. Es similar en cuanto a funcionalidad a los
+							editores de imagen, permite arrastrar, soltar, copiar y pegar, deshacer, etc.</div>
+						<div class="indent">Incluye una amplia variedad de objetos prediseñados listos para usar y personalizables, como:
+							barras de estado, menús, barras de progreso, etc. Añade un mayor dinamismo y grado de
+							personalización que Balsamiq.</div>
+						<div class="indent">Los prototipos se visualizan directamente en el navegador o dispositivo, dando una idea bastante
+							exacta de cómo quedaría el diseño.</div>
+						<div class="indent">Además, permite exportar el diseño que realizes en png u originar el código del proyecto a partir
+							del prototipo.</div>
+						<p class="indent"><a href="practicas/practica-axure/index.html">Práctica de Axure</a></p>
+					</div>
 				</article>
 			</div>
 			<div>
 				<input id="ac-5" name="accordion-1" type="checkbox" />
 				<label for="ac-5">Otras</label>
 				<article class="ac">
-					<a href="https://unicode-table.com/en/" target="_blank">
-						<h3>Unicode Character Table</h3>
-					</a>
-					<p>Tabla con los códigos unicode extendidos, incluye el código html y css.</p>
-					<h3>Lorem Ipsum</h3>
-					<p>El lorem ipsum, o lipsum, es un texto simulado que se usa para diseñar impresos, gráficos o
-						páginas web. El pasaje se atribuye a un tipógrafo desconocido en el siglo XV se cree que mezcló
-						partes del De
-						Finibus Bonorum et Malorum de Cicerón para su uso en un libro de muestras tipográficas.
-						Por lo general comienza con:<br />
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et dolore magna aliqua."<br />
-						El propósito de lorem ipsum es crear un bloque de texto de aspecto natural (oración, párrafo,
-						página, etc.) que no distraiga del diseño.
-					</p>
-					<strong>Generadores Lorem Ipsum:</strong>
-					<ul style="list-style-type: none;">
-						<li><a href="https://www.lipsum.com/" target="_blank">Lorem Ipsum clásico</a></li>
-						<li><a href="https://loremipsum.io" target="_blank">Lorem Ipsum con generadores de texto de
-								relleno alternativo</a></li>
-						<li><a href="http://www.chiquitoipsum.com/" target="_blank">Chiquito Ipsum</a></li>
-					</ul>
-					<a href="https://www.svgbackgrounds.com/" target="_blank">
-						<h3>SVG Backgrounds</h3>
-					</a>
-					<p>Herramienta de creación de fondos SVG.</p>
+					<div class="ac-item">
+						<a href="https://unicode-table.com/en/" target="_blank">
+							<h3>Unicode Character Table</h3>
+						</a>
+						<p class="indent">Tabla con los códigos unicode extendidos, incluye el código html y css.</p>
+					</div>
+					<div class="ac-item">
+						<h3>Lorem Ipsum</h3>
+						<div class="indent">El lorem ipsum, o lipsum, es un texto simulado que se usa para diseñar impresos, gráficos o
+							páginas web. El pasaje se atribuye a un tipógrafo desconocido en el siglo XV se cree que mezcló
+							partes del De Finibus Bonorum et Malorum de Cicerón para su uso en un libro de muestras tipográficas.
+							Por lo general comienza con:
+						</div>
+						<blockquote>
+							<q>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+								labore et dolore magna aliqua.
+							</q>
+						</blockquote>
+						<div class="indent">
+							El propósito de lorem ipsum es crear un bloque de texto de aspecto natural (oración, párrafo,
+							página, etc.) que no distraiga del diseño.
+						</div>
+						<h4>Generadores Lorem Ipsum</h4>
+						<ul>
+							<li><a href="https://www.lipsum.com/" target="_blank">Lorem Ipsum clásico</a></li>
+							<li><a href="https://loremipsum.io" target="_blank">Lorem Ipsum con generadores de texto de
+									relleno alternativo</a></li>
+							<li><a href="http://www.chiquitoipsum.com/" target="_blank">Chiquito Ipsum</a></li>
+						</ul>
+					</div>
+					<div class="ac-item">
+						<a href="https://www.svgbackgrounds.com/" target="_blank">
+							<h3>SVG Backgrounds</h3>
+						</a>
+						<p class="indent">Herramienta de creación de fondos SVG.</p>
+					</div>
 					<h2>Recursos</h2>
-					<a href="https://www.toptal.com/designers/subtlepatterns/" target="_blank">
-						<h3>Subtle Patterns</h3>
-					</a>
-					<p>Patrones png para fondos.</p>
-					<a href="https://github.com/neutraltone/awesome-stock-resources" target="_blank">
-						<h3>Awesome Stock Resources</h>
-					</a>
-					<p>Completo listado de recursos para web.</p>
-					<a href="https://cdnjs.com/" target="_blank">
-						<h3>&lt;cdnjs&gt;</h>
-					</a>
-					<p>CDN (Content Delivery Network) gratuito y de código abierto construido para facilitar la vida de los desarrolladores que sirve a más del 11% de todos los sitios web, impulsado por Cloudflare.</p>
+					<div class="ac-item">
+						<a href="https://www.toptal.com/designers/subtlepatterns/" target="_blank">
+							<h3>Subtle Patterns</h3>
+						</a>
+						<p class="indent">Patrones png para fondos.</p>
+					</div>
+					<div class="ac-item">
+						<a href="https://github.com/neutraltone/awesome-stock-resources" target="_blank">
+							<h3>Awesome Stock Resources</h3>
+						</a>
+						<p class="indent">Completo listado de recursos para web.</p>
+					</div>
+					<div class="ac-item">
+						<a href="https://cdnjs.com/" target="_blank">
+							<h3>&lt;cdnjs&gt;</h3>
+						</a>
+						<p class="indent">CDN (Content Delivery Network) gratuito y de código abierto construido para facilitar la vida de los desarrolladores que sirve a más del 11% de todos los
+							sitios web,
+							impulsado por Cloudflare.</p>
+					</div>
 				</article>
 			</div>
 		</section>
@@ -275,10 +334,8 @@
 					4.0</a>. Fondo creado con: <a href="https://www.svgbackgrounds.com/" target="_blank">SVG
 					Backgrounds</a>.</p>
 			<p>
-				<a
-					href="https://validator.w3.org/unicorn/check?ucn_uri=https%3A%2F%2Fnuriadaw.github.io%2Fdint&ucn_task=conformance#css3-validator_warning_1">
-					<img style="border:0;width:88px;height:31px" src="//jigsaw.w3.org/css-validator/images/vcss"
-						alt="¡CSS Válido!" />
+				<a href="https://validator.w3.org/unicorn/check?ucn_uri=https%3A%2F%2Fnuriadaw.github.io%2Fdint&ucn_task=conformance#css3-validator_warning_1">
+					<img style="border:0;width:88px;height:31px" src="//jigsaw.w3.org/css-validator/images/vcss" alt="¡CSS Válido!" />
 				</a>
 			</p>
 		</div>
