@@ -1,0 +1,53 @@
+/* Screen 1024px to up */
+@media screen and (min-width: $medium-screen) {
+    .enlarge-img {
+      transition: transform .2s;
+    }
+
+    .enlarge-img:hover {
+      cursor: zoom-in;
+      transform: scale(1.5) translateX(-15%);
+    }
+}
+/* Screen 850px to down */
+@media screen and (max-width: $small-screen) {
+    body, nav, footer {   
+      flex-direction: column;
+    }
+
+    header {
+      padding: 1.5rem 0;
+      line-height: 220%;
+    }
+
+    footer {
+      padding-top: 0.5rem;
+
+      .back {
+        align-self: flex-start;
+      }
+
+      .footer-copyrigth{
+        padding-bottom: 1rem;
+      }
+    }
+
+    img#bird {
+      max-width: 90vw;
+      width: 90vw;
+    }
+}
+/* Screen 449px to down */
+@media screen and (max-width:  $extrasmall-screen - 1){
+  .version-grid {
+    grid-template-columns: repeat(5, 1fr);
+
+    div:first-child {
+      display: none;
+    }
+
+    div:nth-child(6n+1){
+      grid-column: span 5;
+    }
+  }
+}

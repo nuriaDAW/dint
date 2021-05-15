@@ -1,0 +1,43 @@
+// Table of Contents:
+//
+// 1. Colors
+// 2. Tipography
+// 3. Media Queries
+// 4. Symbols
+
+// ------------------------------------------------
+
+// 1. Colors
+$primary-color:  #527a53;
+$secondary-color: #c2c2c2;
+$green: #8eaa76;
+$green-light: #a4d1a4;
+$green-lighter: #f0faf0;
+$green-dark: #435a43;
+$green-darker: #101810;
+$background-gray-light: #ddd;
+$background-gray: #6c757d;
+$background-gray-dark: #343a40;
+$text-dark: #2c2c2c;
+$text-light: #f9f9f9;
+$warning-yellow: #eed202;
+
+// 2. Tipography
+$lato: 'Lato', sans-serif;   
+$merriweather: 'Merriweather', serif;
+
+$body-font: $lato;
+$heading-font: $merriweather;
+
+$small-text: 0.85rem;
+
+// 3. Media Queries
+$medium-screen: 1024px;
+$small-screen: 850px;
+$extrasmall-screen: 450px;
+
+// 4. Symbols
+// CSS Unicode symbols
+$star: '\2605';
+$warning-symbol: '\0026A0';
+$full-moon: '\1F31A';

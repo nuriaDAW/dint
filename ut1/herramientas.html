@@ -8,8 +8,7 @@
 	<link rel="icon" href="../img/logo.svg" type="image/svg+xml">
 	<link rel="alternate icon" href="../img/logo(16x16).png" sizes="16x16" type="image/png">
 	<link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+	<script src="https://kit.fontawesome.com/1636184fa7.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="../css/styles.css">
 </head>
 
@@ -180,6 +179,9 @@
 						<div class="indent">Framework unificado de iconos. Permite usar iconos de distintas fuentes (incluidos los iconos de
 							Material y Bootstrap) desde una misma aplicación.</div>
 						<div class="indent">Permite añadir los iconos en código html, css, svg, react y descargarlos en svg.</div>
+						<div class="indent">Transforma los iconos directamente a svg al cargar la página a través de javascript, lo cual evita
+							que se vea mal si el cliente tiene las fuentes personalizadas desactivadas y ayuda a los lectores de pantalla.</div>
+
 					</div>
 					<div class="ac-item">
 						<a href="https://webkul.github.io/vivid/cheatsheet.html" target="_blank">
@@ -195,12 +197,27 @@
 					</div>
 					<p><a href="practicas/practica-iconos/iconos-varias-fuentes.html"><i class="fas fa-plus-square"></i> Más herramientas de iconos</a></p>
 					<h2>Generadores de fuentes de iconos</h2>
-					<a href="https://fontello.com/" target="_blank">
-						<h3>Fontello</h3>
-					</a>
-					<a href="https://icomoon.io/app/#/select" target="_blank">
-						<h3>IconMoon</h3>
-					</a>
+					<div class="ac-item">
+						<a href="https://fontello.com/" target="_blank">
+							<h3>Fontello</h3>
+						</a>
+						<p class="indent">Permite crear fuentes SVG además de otros formatos a partir de otras fuentes o iconos personalizados. Es una aplicación de código abierto.</p>
+					</div>
+					<div class="ac-item">
+						<a href="https://icomoon.io/app/#/select" target="_blank">
+							<h3>IconMoon</h3>
+						</a>
+						<p class="indent">Permite crear fuentes SVG además de otros formatos a partir de otras fuentes o iconos personalizados. El plan gratuito tiene limitaciones.</p>
+					</div>
+					<div class="ac-item">
+						<a href="https://www.flaticon.es/iconfonts" target="_blank">
+							<h3>Flaticon Iconfonts</h3>
+						</a>
+						<p class="indent">Permite crear fuentes SVG además de otros formatos a partir de otras fuentes o iconos personalizados. Tiene un límite de tres colecciones gratuitas de 256
+							iconos cada una. Requiere registro.</p>
+					</div>
+					<p class="warning"><span class="alert"><i class="fas fa-exclamation-triangle"></i> OJO: </span>La mayoría de los navegadores (inluidos Chrome y Firefox) <a href="https://caniuse.com/svg-fonts" target="_blank" rel="noopener"><span class="alert">NO</span> ofrece
+							soporte</a> para fuentes SVG.</p>
 					<hr />
 					<p>
 						<a href="https://www.canva.com/es_mx/aprende/49-mejores-sitios-para-encontrar-hermosos-iconos-gratis/" target="_blank">
@@ -303,8 +320,7 @@
 							<h3>&lt;cdnjs&gt;</h3>
 						</a>
 						<p class="indent">CDN (Content Delivery Network) gratuito y de código abierto construido para facilitar la vida de los desarrolladores que sirve a más del 11% de todos los
-							sitios web,
-							impulsado por Cloudflare.</p>
+							sitios web, impulsado por Cloudflare.</p>
 					</div>
 				</article>
 			</div>

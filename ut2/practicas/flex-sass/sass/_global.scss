@@ -1,10 +1,16 @@
 // Mixins
 
-// Margin y padding para textos
+// Margin and padding for texts
 @mixin text-margin($bg-color){
     margin: 0.5rem 0;
     padding: 0.5rem;
     background-color: $bg-color;
+}
+
+// Add CSS unicode symbol
+@mixin add-symbol($symbol){
+    content: $symbol;
+    padding-right: 0.3rem;
 }
 
 /* Color styles */
@@ -131,7 +137,7 @@ details {
         color: $green-dark;
     }
 
-    ul {
+    ol {
         list-style: decimal;
         color: darken($primary-color, 5%);
 
@@ -154,6 +160,10 @@ details {
     @include text-margin($green-light);
     border-left: 5px solid $green-darker;
 
+    strong::before {
+        @include add-symbol($star);
+    }
+
     a{
         color: $green-dark;
     }
@@ -166,6 +176,10 @@ details {
     strong {
         color: darken($warning-yellow, 15%);
     }
+
+        strong::before {
+            @include add-symbol($warning-symbol);
+        }
 }
 
 .table-caption {

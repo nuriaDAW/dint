@@ -1,0 +1,317 @@
+// Mixins
+
+// Margin and padding for texts
+@mixin text-margin($bg-color){
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background-color: $bg-color;
+}
+
+// Add CSS unicode symbol
+@mixin add-symbol($symbol){
+    content: $symbol;
+    padding-right: 0.3rem;
+}
+
+/* Color styles */
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+/* Global styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+html {
+    background-color: $background-gray;
+    color: $text-light;
+    font-family: $body-font;
+    font-weight: 400;
+    line-height: 200%;
+}
+
+/* Layout styles */
+
+body {
+    display: flex;
+    /* Items wrap in multiple lines */
+    flex-wrap: wrap;
+}
+
+header, footer {
+    width: 100%;
+    background-color: $green-dark;
+    color: $text-light;
+    text-align: center;
+
+    a {
+        color: inherit;
+    }
+}
+
+header {
+    height: 8rem;
+    padding: 3rem 0;
+
+    h1 {
+        margin: 0;
+    }
+}
+
+aside {
+    flex: 30%;
+    padding: 1.2rem;
+
+    /* All aside 'a' except 'a' inside .flex-col */
+    a :not(.flex-col a) {
+        color: $green-lighter;
+    }
+}
+
+main {
+    flex: 70%;
+    padding: 1.2rem;
+    background-color: $background-gray-light;
+    color: $text-dark;
+    min-height: 100vh;
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+footer {
+    display: flex;
+    /* Vertical align */
+    align-items: center;
+    padding: 2rem 1rem;
+    font-size: 1.15rem;
+
+    .footer-copyrigth {
+        flex-grow: 2;
+    }
+
+    div:not(:nth-child(2)) {
+        font-size: 2rem;
+    }
+}
+
+/* Text styles */
+a {
+    color: darken($primary-color, 5%);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+    main a:hover, aside a:hover{
+        text-decoration: underline dotted;
+    }
+
+strong {
+    color: $green-dark;
+}
+
+mark {
+    padding: 0.2rem 0.5rem;
+    background-color: $green-dark;
+    color: $text-light;
+    border-radius: 25px;
+}
+
+details {
+    margin-top: 0.5rem;
+
+    summary {
+        font-family: $heading-font;
+        font-size: 1.2rem;
+        color: $green-dark;
+    }
+
+    ol {
+        list-style-type: decimal;
+        color: darken($primary-color, 5%);
+
+        li:last-child {
+            margin-left: 2.2rem;
+            list-style-type: 'Bonus: ';
+        }
+    }
+}
+
+.code-block {
+    display: block;
+    @include text-margin($green-darker);
+    color: $green-light;
+}
+
+.note {
+    @include text-margin($green-light);
+    border-left: 5px solid $green-darker;
+
+    strong::before {
+        @include add-symbol($star);
+    }
+
+    a{
+        color: $green-dark;
+    }
+}
+
+.warning {
+    @include text-margin(lighten($warning-yellow, 40%));
+    border-left: 5px solid darken($warning-yellow, 20%);
+
+    strong {
+        color: darken($warning-yellow, 15%);
+    }
+
+        strong::before {
+            @include add-symbol($warning-symbol);
+        }
+}
+
+.versalitas {
+    font-variant: small-caps;
+}
+
+.table-caption {
+    text-align: center;
+    font-style: italic;
+    font-size: $small-text;
+    color: lighten($text-dark, 10%);
+}
+
+/* List styles */
+
+/* List with square bullets */
+.square-style {
+    list-style-type: $full-moon;
+}
+
+/* Image styles */
+img {
+    /* Max size of image = 100% container */
+    max-width: 100%;
+}
+
+img#bird {
+    transition: width 0.5s;
+    /* Display an image at half the width of the viewport (50vw) */
+    max-width: 50vw;
+}
+
+aside .logo {
+    transition: width 0.5s;
+    max-width: 200px;
+}
+
+aside .icon {
+    max-width: 80px;
+    margin-right: 0.5rem;
+}
+
+figcaption {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.round-img {
+    max-width: 60vw;
+    max-height: 60vw;
+    width: 12rem;
+    height: 12rem;
+    object-fit: cover;
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: 2px outset $green-light;
+}
+
+/* hr styles */
+hr {
+    margin: 1.2rem;
+	border: none;
+    border-top: 10px solid $primary-color;
+    border-image: url(../img/border.png) 30% round;
+}
+
+/* Flex */
+.flex-container-col {
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+}
+
+    .flex-container-col .flex-col {
+        @include text-margin($green-lighter);
+        color: $text-dark;
+    }
+
+/* Aling two elements vertically */
+.v-aligned {
+    display: flex;
+    align-items: center;
+    /* Necesario para centrar el texto con respecto a elementos no textuales */
+    line-height: initial;
+}
+
+/* Grid */
+.version-grid {
+    display: grid;
+    grid-template-columns: 2fr repeat(5, 1fr);
+    margin: 1rem 0 0.2rem;
+    text-align: center;
+    border: solid $green-darker;
+    border-width: 0 0 1px 1px;
+
+    div {
+        padding: 0.5rem;
+        border: solid $green-darker;
+        border-width: 1px 1px 0 0;
+    }
+    
+    div:first-child, div:nth-child(6n+1){
+        font-weight: 900;
+        text-align: left;
+        color: $green-dark;
+        background-color: $green-light;
+    }
+}
+
+/* Tables */
+table {
+    margin: 1rem 0 0.5rem;
+    text-align: center;
+    font-size: $small-text;
+    line-height: 1.8;
+    border-collapse: collapse;
+}
+
+tr {
+    border-bottom: 1px solid $green-darker;
+}
+
+thead th {
+    padding: 0 0.5rem;
+    font-family: $heading-font;
+    font-weight: normal;
+    font-variant: small-caps;
+}
+
+tbody th {
+    padding-left: 0.25rem;
+    font-weight: normal;
+    text-align: left;
+}
+
+td {
+    padding: 0.5rem 0;
+}

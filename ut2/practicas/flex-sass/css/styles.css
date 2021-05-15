@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Color styles */
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Merriweather&display=swap");
 .red {
@@ -113,11 +114,11 @@ details summary {
   font-size: 1.2rem;
   color: #435a43;
 }
-details ul {
+details ol {
   list-style: decimal;
   color: #486b49;
 }
-details ul li:last-child {
+details ol li:last-child {
   margin-left: 2.2rem;
   list-style-type: "Bonus: ";
 }
@@ -136,6 +137,10 @@ details ul li:last-child {
   background-color: #a4d1a4;
   border-left: 5px solid #101810;
 }
+.note strong::before {
+  content: "★";
+  padding-right: 0.3rem;
+}
 .note a {
   color: #435a43;
 }
@@ -148,6 +153,10 @@ details ul li:last-child {
 }
 .warning strong {
   color: #a28f01;
+}
+.warning strong::before {
+  content: "⚠";
+  padding-right: 0.3rem;
 }
 
 .table-caption {

@@ -8,6 +8,7 @@
 	--purple-darker: #3d3442;
 	--pink-light: #ebe5d9;
 	--red: #f72a2a;
+	--red-light: #f8afaf;
 	--green: #657a52;
 	--green-lighter: #c4f1c4;
 	--green-light: #80a980;
@@ -77,7 +78,7 @@ h1, strong {
 	color: var(--primary);
 }
 
-.infographic h1, main h2 {
+.infographic h1, main.examples h1, main h2 {
 	color: var(--primary);
 	background-color: rgba(196, 241, 196,.6);
 	border: 10px solid transparent;
@@ -137,7 +138,7 @@ a, details {
 		text-decoration: none;
 	}
 
-.altert {
+.alert {
 	color:var(--danger);
 	font-weight: bold;
 }
@@ -152,6 +153,16 @@ a, details {
 	border-left: 5px solid var(--primary);
 }
 
+.warning {
+	padding: 0.85rem 0.5rem;
+	background-color: var(--red-light);
+	border-left: 5px solid var(--red);
+}
+
+.sucess {
+	color: green;
+}
+
 figcaption {
 	padding-top: 0.5rem;
 	font-style: italic;
@@ -159,7 +170,7 @@ figcaption {
 }
 
 /* Estilos de listas */
-ul.practices {
+ul.practices, ul.examples {
 	list-style-type: '\2727';
 	line-height: 150%;
 	color: var(--gray-blue);

@@ -21,10 +21,9 @@
         <h1><a href="#">Google Lab: Responsive Images</a></h1>
     </header>
     <nav>
-        <a href="#">Link</a>
-        <a href="#">Link</a>
-        <a href="#">Link</a>
-        <a href="#">Link</a>
+        <a href="../../../tercera-eval.html">Home</a>
+        <a href="#">Imagen</a>
+        <a href="../../../ut3/practicas/lab-videos/index.html">Video</a>
     </nav>
     <aside>
         <h2>Sobre mí</h2>
@@ -58,7 +57,7 @@
         <p><mark>Objetivo del lab:</mark> aumentar el rendimiento reduciendo el coste de descarga.</p>
         <details>
             <summary>Sumario</summary>
-            <ul>
+            <ol>
                 <li><a href="#relative-width"> Establecer ancho relativo</a></li>
                 <li><a href="#attr-srcset"> Usando el atributo srcset</a></li>
                 <li><a href="#attr-sizes"> Usando el atributo sizes</a></li>
@@ -67,7 +66,7 @@
                 <li><a href="#image-formats"> Otros formatos de imagen: svg y webp</a></li>
                 <li><a href="#performance"> Rendimiento (Firefox y Chrome)</a></li>
                 <li><a href="#bonus">rendimiento CSS min vs CSS</a></li>
-            </ul>
+            </ol>
         </details>
         <article id="relative-width">
             <h2>1. Establecer ancho relativo</h2>
@@ -80,7 +79,7 @@
                 <img src="img/undraw_happy_music-1600_large.png" alt="happy music bird">
                 <figcaption>Fuente: <a href="https://undraw.co/" target="_blank">unDraw</a></figcaption>
             </figure>
-            <p class="note"><strong>&#x2605; Nota:</strong> El <code>max-width</code> se puede especificar en función
+            <p class="note"><strong>Nota:</strong> El <code>max-width</code> se puede especificar en función
                 del ancho del <em>viewport</em> utilizando las unidades <code>vw</code> (por ejemplo,
                 <code>100vw</code>).
             </p>
@@ -135,7 +134,7 @@
                     src="img/undraw_happy_music-1600_large.png" alt="happy music bird">
                 <figcaption>Fuente: <a href="https://undraw.co/" target="_blank">unDraw</a></figcaption>
             </figure>
-            <p class="warning"><strong>&#9888; Importante:</strong> para la carga adecuada del tamaño de la imagen en
+            <p class="warning"><strong>Importante:</strong> para la carga adecuada del tamaño de la imagen en
                 función de la anchura <em>viewport</em>
                 hay que indicarle al navegador el tamaño de cada archivo antes de que lo recupere (por ejemplo,
                 <code>1600w</code>).
@@ -146,7 +145,7 @@
                 más pequeña que aún es mayor que la anchura del <em>viewport</em>. Si <code>srcset</code> no está
                 soportado
                 cargará por defecto la imagen de <code>src</code>.</p>
-            <p class="note"><strong>&#x2605; Nota:</strong> Se puede especificar la densidad de pixels en lugar de la
+            <p class="note"><strong>Nota:</strong> Se puede especificar la densidad de pixels en lugar de la
                 anchura. (<a href="#html-picture">Ver punto 5</a>)</p>
             <div class="version-grid">
                 <div>Atributo</div>
@@ -169,9 +168,9 @@
             </div>
             <p class="table-caption">Primera versión del navegador que soporta totalmente el atributo. Fuente: <a
                     href="https://caniuse.com" target="_blank">Can I Use</a></p>
-        </article id="attr-sizes">
+        </article>
         <hr />
-        <article>
+        <article id="attr-sizes">
             <h2>3. Usando el atributo sizes</h2>
             <code class="code-block"><p><u>HTML</u></p>
             &lt;img id="bird" srcset="img/undraw_happy_music-1600_large.png 1600w, img/undraw_happy_music-1000_large.png
@@ -345,7 +344,7 @@
                 <code>img/undraw_happy_music-800_medium.png</code>. Si el ancho de la ventana es inferior a 500px,
                 el navegador obtiene la imagen de reserva <code>img/undraw_happy_music-500_small.png</code>.
             </p>
-            <p class="note"><strong>&#x2605; Nota:</strong> Si el navegador no soporta el elemento &lt;picture&gt;,
+            <p class="note"><strong>Nota:</strong> Si el navegador no soporta el elemento &lt;picture&gt;,
                 obtiene lo que haya en el elemento &lt;img&gt;. &lt;picture&gt; sirve únicamente para especificar
                 múltiples
                 fuentes para el contenido de &lt;img&gt;. Es el elemento &lt;img&gt; el que muestra la imagen.
@@ -478,7 +477,7 @@
             <p>La imagen escogida no es muy pesada, aún así el tiempo de respuesta tiende a reducirse al escoger un tamaño 
                 de imagen más acorde al dispositivo y/o <em>viewport</em>.<p>
             <p>El formato más ligero y más rápido en cargar es SVG, seguido de WebP.</p>
-            <p class="note"><strong>&#x2605; Nota:</strong> Los navegadores pueden tener guardadas las imágenes en caché, conviene limpiarlo
+            <p class="note"><strong>Nota:</strong> Los navegadores pueden tener guardadas las imágenes en caché, conviene limpiarlo
                antes de monitorizar el rendimiento y desactivarlo mientras las herramientas de desarrollador estén abiertas.
             </p>
         </article>
@@ -496,7 +495,7 @@
             <p>Pese a ser un CSS corto y sencillo hay una diferencia en el tiempo de carga de 9 milisegundos entre ambas
                 versiones y realiza una solicitud menos.
             </p>
-            <p class="note"><strong>&#x2605; Nota:</strong> GitHub bloquea la carga de la fuente de iconos de Creative 
+            <p class="note"><strong>Nota:</strong> GitHub bloquea la carga de la fuente de iconos de Creative 
                 Commons. Se visualiza igualmente porque existe una copia en local como fuente alternativa.
             </p>
         </article>

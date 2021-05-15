@@ -3,6 +3,7 @@
 // 1. Colors
 // 2. Tipography
 // 3. Media Queries
+// 4. Symbols
 
 // ------------------------------------------------
 
@@ -34,3 +35,8 @@ $small-text: 0.85rem;
 $medium-screen: 1024px;
 $small-screen: 700px;
 $extrasmall-screen: 450px;
+
+// 4. Symbols
+// CSS Unicode symbols
+$star: '\2605';
+$warning-symbol: '\0026A0' ;
