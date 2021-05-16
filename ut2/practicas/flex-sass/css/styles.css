@@ -51,6 +51,7 @@ header h1 {
 }
 
 aside {
+  width: 100%;
   flex: 30%;
   padding: 1.2rem;
 }
@@ -61,6 +62,7 @@ aside img {
 }
 
 main {
+  width: 100%;
   flex: 70%;
   padding: 1.2rem;
   background-color: #ddd;
@@ -272,6 +274,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "CC-ICONS";
 }
 
+/* Screen 1024px to up */
 @media screen and (min-width: 1024px) {
   .enlarge-img {
     transition: transform 0.2s;
@@ -282,6 +285,7 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(1.5) translateX(-15%);
   }
 }
+/* Screen 770px to down */
 @media screen and (max-width: 700px) {
   body, nav, footer {
     flex-direction: column;
@@ -307,13 +311,23 @@ h1, h2, h3, h4, h5, h6 {
     width: 90vw;
   }
 }
+/* Screen 450px to 767px */
 @media screen and (max-width: 767px) and (min-width: 450px) {
   aside img:last-child {
     max-width: 70vw;
     margin-bottom: 1rem;
   }
 }
+/* Screen 449px to down */
 @media screen and (max-width: 449px) {
+  main {
+    text-align: justify;
+  }
+
+  main h1, main h2, .code-block {
+    text-align: left;
+  }
+
   .version-grid {
     grid-template-columns: repeat(5, 1fr);
   }

@@ -29,8 +29,16 @@
     }
 }
 
-/* Screen 474px to down */
+/* Screen 449px to down */
 @media screen and (max-width: $extrasmall-screen - 1){
+  main {
+    text-align: justify;
+  }
+
+  main h1, main h2, .code-block {
+    text-align: left;
+  }
+
   .version-grid {
     grid-template-columns: repeat(5, 1fr);
 
@@ -41,5 +49,10 @@
     div:nth-child(6n+1){
       grid-column: span 5;
     }
+  }
+
+  .table-left-align th, .table-left-align td  {
+    padding-left: initial;
+    padding-right: 0.5rem;
   }
 }

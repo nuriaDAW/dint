@@ -1,3 +1,4 @@
+/* Screen 1024px to up */
 @media screen and (min-width: $medium-screen) {
     .enlarge-img {
       transition: transform .2s;
@@ -9,6 +10,7 @@
     }
 }
 
+/* Screen 770px to down */
 @media screen and (max-width: $small-screen) {
     body, nav, footer {   
       flex-direction: column;
@@ -37,6 +39,7 @@
     }
 }
 
+/* Screen 450px to 767px */
 @media screen and (max-width: $small-screen + 67) and (min-width: $extrasmall-screen) {
   aside img:last-child {
     max-width: 70vw;
@@ -44,7 +47,16 @@
   }
 }
 
+/* Screen 449px to down */
 @media screen and (max-width:  $extrasmall-screen - 1){
+ main {
+    text-align: justify;
+  }
+
+  main h1, main h2, .code-block {
+    text-align: left;
+  }
+
   .version-grid {
     grid-template-columns: repeat(5, 1fr);
 

@@ -30,6 +30,8 @@ body {
   display: flex;
   /* Items wrap in multiple lines */
   flex-wrap: wrap;
+  /* allows long words to be able to be broken and wrap onto the next line. */
+  word-wrap: break-word;
 }
 
 header, footer {
@@ -51,6 +53,7 @@ header h1 {
 }
 
 aside {
+  width: 100%;
   flex: 30%;
   padding: 1.2rem;
   /* All aside 'a' except 'a' inside .flex-col */
@@ -60,6 +63,7 @@ aside a :not(.flex-col a) {
 }
 
 main {
+  width: 100%;
   flex: 70%;
   padding: 1.2rem;
   background-color: #ddd;
@@ -228,6 +232,13 @@ figcaption {
   border: 2px outset #a4d1a4;
 }
 
+/* Video styles */
+/* Avoid container overflow */
+video {
+  max-width: 100%;
+  height: auto;
+}
+
 /* hr styles */
 hr {
   margin: 1.2rem;
@@ -367,11 +378,6 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
   }
 
-  header {
-    padding: 1.5rem 0;
-    line-height: 220%;
-  }
-
   footer {
     padding-top: 0.5rem;
   }
@@ -381,14 +387,17 @@ h1, h2, h3, h4, h5, h6 {
   footer .footer-copyrigth {
     padding-bottom: 1rem;
   }
-
-  img#bird {
-    max-width: 90vw;
-    width: 90vw;
-  }
 }
 /* Screen 449px to down */
 @media screen and (max-width: 449px) {
+  main {
+    text-align: justify;
+  }
+
+  main h1, main h2, .code-block {
+    text-align: left;
+  }
+
   .version-grid {
     grid-template-columns: repeat(5, 1fr);
   }
@@ -397,6 +406,11 @@ h1, h2, h3, h4, h5, h6 {
   }
   .version-grid div:nth-child(6n+1) {
     grid-column: span 5;
+  }
+
+  .table-left-align th, .table-left-align td {
+    padding-left: initial;
+    padding-right: 0.5rem;
   }
 }
 nav {

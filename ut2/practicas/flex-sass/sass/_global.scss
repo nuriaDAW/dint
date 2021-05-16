@@ -67,6 +67,7 @@ header {
 }
 
 aside {
+    width: 100%;
     flex: 30%;
     padding: 1.2rem;
 
@@ -78,6 +79,7 @@ aside {
 }
 
 main {
+    width: 100%;
     flex: 70%;
     padding: 1.2rem;
     background-color: $background-gray-light;
