@@ -1,6 +1,8 @@
 @charset "UTF-8";
-/* Color styles */
+/* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Merriweather&display=swap");
+/* ------------ */
+/* Color styles */
 .red {
   color: red;
 }
@@ -118,7 +120,7 @@ details ol {
   list-style: decimal;
   color: #486b49;
 }
-details ol li:last-child {
+details ol li.bonus {
   margin-left: 2.2rem;
   list-style-type: "Bonus: ";
 }
@@ -253,7 +255,6 @@ td {
   padding: 0.5rem 0;
 }
 
-/* Google Fonts */
 /* Creative Commons Font */
 @font-face {
   font-family: "CC-ICONS";

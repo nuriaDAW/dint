@@ -1,6 +1,8 @@
 @charset "UTF-8";
-/* Color styles */
+/* Google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Merriweather&display=swap");
+/* ------------ */
+/* Color styles */
 .red {
   color: red;
 }
@@ -100,6 +102,7 @@ strong {
 }
 
 mark {
+  margin-right: 0.3rem;
   padding: 0.2rem 0.5rem;
   background-color: #435a43;
   color: #f9f9f9;
@@ -118,9 +121,17 @@ details ol {
   list-style-type: decimal;
   color: #486b49;
 }
-details ol li:last-child {
-  margin-left: 2.2rem;
-  list-style-type: "Bonus: ";
+
+blockquote {
+  margin: 0 1.5rem;
+  text-align: justify;
+  color: #53527a;
+}
+
+.quote-author {
+  margin: 0 1.5rem;
+  font-style: italic;
+  color: #7a5279;
 }
 
 .code-block {
@@ -163,6 +174,10 @@ details ol li:last-child {
   font-variant: small-caps;
 }
 
+.to-uppercase {
+  text-transform: uppercase;
+}
+
 .table-caption {
   text-align: center;
   font-style: italic;
@@ -171,21 +186,20 @@ details ol li:last-child {
 }
 
 /* List styles */
-/* List with square bullets */
-.square-style {
+/* List with moon bullets */
+.moon-style {
   list-style-type: "🌚";
+}
+
+/* List with cross mark bullets */
+.donot-style {
+  list-style-type: "❌";
 }
 
 /* Image styles */
 img {
   /* Max size of image = 100% container */
   max-width: 100%;
-}
-
-img#bird {
-  transition: width 0.5s;
-  /* Display an image at half the width of the viewport (50vw) */
-  max-width: 50vw;
 }
 
 aside .logo {
@@ -214,14 +228,6 @@ figcaption {
   border: 2px outset #a4d1a4;
 }
 
-/* Video styles */
-video {
-  display: block; /* Allows center video*/
-  max-width: 100%;
-  height: auto;
-  margin: 1rem auto; /* Video horizontal centering */
-}
-
 /* hr styles */
 hr {
   margin: 1.2rem;
@@ -231,6 +237,7 @@ hr {
 }
 
 /* Flex */
+/* Flex in columns */
 .flex-container-col {
   width: 98%;
   display: flex;
@@ -242,6 +249,18 @@ hr {
   padding: 0.5rem;
   background-color: #f0faf0;
   color: #2c2c2c;
+}
+
+/* Flex in rows with wrap */
+.flex-container-row {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-container-row .flex-row {
+  padding: 0.5rem;
 }
 
 /* Aling two elements vertically */
@@ -275,6 +294,7 @@ hr {
 
 /* Tables */
 table {
+  width: 100%;
   margin: 1rem 0 0.5rem;
   text-align: center;
   font-size: 0.85rem;
@@ -282,12 +302,15 @@ table {
   border-collapse: collapse;
 }
 
+caption {
+  font-weight: 900;
+}
+
 tr {
   border-bottom: 1px solid #101810;
 }
 
 thead th {
-  padding: 0 0.5rem;
   font-family: "Merriweather", serif;
   font-weight: normal;
   font-variant: small-caps;
@@ -303,7 +326,24 @@ td {
   padding: 0.5rem 0;
 }
 
-/* Google Fonts */
+.table-left-align th, .table-left-align td {
+  text-align: left;
+  padding-left: 0.5rem;
+}
+
+.table-left-align td {
+  padding-right: 2rem;
+}
+
+tbody.sub-table {
+  border-bottom: 1px solid #101810;
+}
+
+tbody.sub-table tr {
+  border: none;
+}
+
+/* Heading styles */
 h1, h2, h3, h4, h5, h6 {
   margin: 1.2rem 0;
   font-family: "Merriweather", serif;

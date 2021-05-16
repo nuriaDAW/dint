@@ -9,7 +9,7 @@
     <title>Video HTML5</title>
     <link rel="icon" href="../../../img/logo.svg" type="image/svg+xml">
     <link rel="alternate icon" href="../../../img/logo(16x16).png" sizes="16x16" type="image/png">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.min.css">
     <!-- Inconify icons -->
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <!-- Performance tip. You can use the loading=lazy attribute to defer the loading of the image until the user scrolls to them. -->
@@ -69,20 +69,19 @@
     </aside>
     <main>
         <p>Video HTML5:</p>
-        <ul class="square-style">
+        <ul class="moon-style">
             <li>Adaptativo.</li>
             <li>Con varios formatos para distintos navegadores.</li>
             <li>Con póster.</li>
             <li>Con subtítulos.</li>
         </ul>
-        Faltan los subtítulos
         <p class="versalitas"><strong>Resultado:</strong></p>
         <div class="flex-container-row">
             <div class="flex-row">
-                <video controls preload="metadata" poster="img/la_voz_del_arbol_screenshot.png" width="640" height="360" title="La voz del árbol (booktrailer)">
+                <video controls preload="metadata" width="426" height="240" poster="img/la_voz_del_arbol_screenshot.png" title="La voz del árbol (booktrailer)">
                     <source src="video/la_voz_del_arbol_booktrailer_720p.webm" type="video/webm">
                     <source src="video/la_voz_del_arbol_booktrailer_720p.mp4" type="video/mp4">
-                    <track src="video/subs/tree_voice-subs_es.vtt" kind="subtitles" srclang="es" label="Español" default>
+                    <track src="video/subs/tree_voice-subs_es.vtt" kind="subtitles" srclang="es" label="Espa&ntilde;ol" default>
                     <track src="video/subs/tree_voice-subs_en.vtt" kind="subtitles" srclang="en" label="English">
                     <p>Tu navegador no puede reproducir el vídeo. ¡Lo puedes <a href="video/la_voz_del_arbol_booktrailer_720p.mp4">descargar</a>
                         y ver con tu reproductor de video favorito!</p>
@@ -90,7 +89,21 @@
                 <p><strong>Título: </strong><span>title</span></p>
                 <p><strong>Formato: </strong>type</p>
                 <p><strong>Dimensiones: </strong><span>widthxheigth</span></p>
-                <p><strong>Duracción: </strong><span></span></p>
+                <p><strong>Duración: </strong><span></span></p>
+            </div>
+            <div class="flex-row">
+                <video controls preload="metadata" width="426" height="240" poster="img/la_voz_del_arbol_screenshot.png" title="La voz del árbol (booktrailer)">
+                    <source src="video/la_voz_del_arbol_booktrailer_720p.mp4" type="video/mp4">
+                    <source src="video/la_voz_del_arbol_booktrailer_720p.webm" type="video/webm">
+                    <track src="video/subs/tree_voice-subs_es.vtt" kind="subtitles" srclang="es" label="Espa&ntilde;ol" default>
+                    <track src="video/subs/tree_voice-subs_en.vtt" kind="subtitles" srclang="en" label="English">
+                    <p>Tu navegador no puede reproducir el vídeo. ¡Lo puedes <a href="video/la_voz_del_arbol_booktrailer_720p.mp4">descargar</a>
+                        y ver con tu reproductor de video favorito!</p>
+                </video>
+                <p><strong>Título: </strong><span>title</span></p>
+                <p><strong>Formato: </strong>type</p>
+                <p><strong>Dimensiones: </strong><span>widthxheigth</span></p>
+                <p><strong>Duración: </strong><span></span></p>
             </div>
         </div>
         <details>
@@ -98,29 +111,74 @@
             <ol>
                 <li><a href="#video-formats">Elegir formatos y resolución</a></li>
                 <li><a href="#add-video">Añadir el video</a></li>
-                <li><a href="#responsive-video">Hacer el video adaptativo</a></li>
-                <li><a href="#media-queries"> Añadir controles</a></li>
-                <li><a href="#html-picture"> Opcional: establecer anchura y altura</a></li>
-                <li><a href="#html-picture"> Opcional: otros atributos (preload)</a></li>
-                <li><a href="#image-formats"> Añadir póster</a></li>
-                <li><a href="#performance"> Añadir subtítulos</a></li>
+                <li><a href="#responsive-video"> Hacer el video adaptativo</a></li>
+                <li><a href="#add-controls"> Añadir controles</a></li>
+                <li><a href="#video-dimensions"> Recomendado: establecer anchura y altura</a></li>
+                <li><a href="#extra-attr"> Opcional: otros atributos</a></li>
+                <li><a href="#add-poster"> Añadir póster</a></li>
+                <li><a href="#add-subs"> Añadir subtítulos</a></li>
             </ol>
         </details>
         <article id="video-formats">
             <h2>1. Elegir formatos y resolución</h2>
-            <p>Antes de hacer las imágenes adaptativas hay que asegurar que no desborden la pantalla.</p>
-            <code class="code-block">img {
-                max-width: 100%;
-              } /* El valor de max-width representa un porcentaje del elemento contenedor.*/
-              </code>
-            <figure>
-                <img src="img/undraw_happy_music-1600_large.png" alt="happy music bird">
-                <figcaption>Fuente: <a href="https://undraw.co/" target="_blank">unDraw</a></figcaption>
-            </figure>
-            <p class="note"><strong>&#x2605; Nota:</strong> El <code>max-width</code> se puede especificar en función
-                del ancho del <em>viewport</em> utilizando las unidades <code>vw</code> (por ejemplo,
-                <code>100vw</code>).
+            <p>Los formatos de video más utilizados en web son WebM, MP4 y OGG. Con los dos primeros ya quedan cubiertos la mayoría de los navegadores y dispositivos utilizados. OGG se usa menos y
+                tiene un soporte menor que los dos anteriores.</p>
+            <p><strong>MP4</strong> (MPEG-4 Parte 14), desarrollado por ISO (<em>International Organization for Standardization</em>), es un formato contenedor multimedia, puede almacenar video, audio
+                y
+                datos de subtítulos. En el mismo contenedor se utilizan los códecs de vídeo H.264 y H.265, así como los códecs de audio ACC y MP3. MP4 puede proporcionar una salida en
+                alta calidad, igual a la del DVD en una relación de compresión de 4 MB por minuto. Es un formato compatible con la mayoría de los reproductores multimedia y el más utilizado en
+                dispositivos inteligentes.</p>
+            <p><strong>WebM</strong>, desarrollado por Google, es un formato contenedor (con extensión *.webm) para archivos multimedia, es decir, para vídeos y archivos de audio. En el mismo
+                contenedor se utilizan los códecs de vídeo VP8 y VP9, así como los códecs de audio Vorbis y Opus. WebM está ideado para su uso con HTML5. Los códecs VP8 y VP9 están concebidos para que
+                en aquellos casos en los que deba llevarse a cabo una compresión considerable, la extracción pueda producirse aún con poca potencia de cálculo. El objetivo de este diseño es permitir
+                la reproducción de vídeos de Internet en prácticamente cualquier dispositivo (sin importar si se trata de un ordenador de sobremesa, una tablet, un smartphone o un dispositivo
+                multimedia como una Smart TV). Por lo general el tamaño de los archivos es más pequeño que en MP4.</p>
+            <p>La <strong>resolución</strong> es la cantidad de información que contiene un solo fotograma de vídeo, expresada en número de píxeles lógicos en cada dimensión. Por ejemplo, una
+                resolución de 1920 por 1080 equivale a 1080 líneas horizontales apiladas, cada una de las cuales tiene un píxel lógico de alto y 1920 píxeles lógicos de ancho. Esta resolución se suele
+                abreviar como 1080p porque técnicamente la anchura puede variar. Las dimensiones de 1080 por 1920 producen una relación de aspecto de 16:9, que es la relación de las pantallas de cine
+                y los televisores modernos. Esta es la resolución definida como Full HD.
             </p>
+            <table>
+                <caption>Relación de aspecto: 16:9</caption>
+                <thead>
+                    <tr>
+                        <th>Resolución</th>
+                        <th>Dimensiones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2160p</td>
+                        <td>3840 x 2160</td>
+                    </tr>
+                    <tr>
+                        <td>1440p</td>
+                        <td>2560 x 1440</td>
+                    </tr>
+                    <tr>
+                        <td>1080p</td>
+                        <td>1920 x 1080</td>
+                    </tr>
+                    <tr>
+                        <td>720p</td>
+                        <td>1280 x 720</td>
+                    </tr>
+                    <tr>
+                        <td>480p</td>
+                        <td>854 x 480</td>
+                    </tr>
+                    <tr>
+                        <td>360p</td>
+                        <td>640 x 360</td>
+                    </tr>
+                    <tr>
+                        <td>240p</td>
+                        <td>426 x 240</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="table-caption">Resoluciones de video recomendadas por Youtube. Fuente: <a href="https://web.dev/resolution/" rel="noopener" target="_blank">Resolution</a></p>
+            <p><mark>Resolución escogida:</mark><strong>720p</strong>. No es tan pesada como las más altas, pero mantiene una calidad aceptable para visualizar el vídeo en pantallas grandes.</p>
             <div class="version-grid">
                 <div>Formato</div>
                 <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" alt="Chrome" title="Chrome"></span></div>
@@ -143,347 +201,416 @@
                 <div>--</div>
             </div>
             <p class="table-caption">Primera versión del navegador que soporta totalmente el formato de video.
-                Fuente: <a href="https://caniuse.com" target="_blank">Can I Use</a></p>
+                Fuente: <a href="https://caniuse.com" target="_blank" rel="noopener">Can I Use</a></p>
         </article>
         <hr />
         <article id="add-video">
             <h2>2. Añadir video</h2>
-            <p>El objetivo es conseguir que el navegador obtenga la versión de la imagen con las dimensiones más
-                pequeñas posibles, pero mayor que el tamaño de visualización final de la imagen. <code>srcset</code>
-                permite listar un conjunto de imágenes con diferentes resoluciones para que el navegador elija al
-                obtener
-                la imagen. La elección del navegador depende de las dimensiones del <em>viewport</em>, el tamaño
-                de la imagen en relación con el <em>viewport</em>, la densidad de píxeles del dispositivo del usuario y
-                las dimensiones del archivo fuente.</p>
-            <code class="code-block">&lt;img srcset="img/undraw_happy_music-1600_large.png 1600w, img/undraw_happy_music-1000_large.png 1000w, img/undraw_happy_music-800_medium.png 800w, img/undraw_happy_music-500_small.png 500w"
-                src="img/undraw_happy_music-1600_large.png" alt="happy music bird" &gt;</code>
-            <figure>
-                <img srcset="img/undraw_happy_music-1600_large.png 1600w, img/undraw_happy_music-1000_large.png 1000w, img/undraw_happy_music-800_medium.png 800w, img/undraw_happy_music-500_small.png 500w"
-                    src="img/undraw_happy_music-1600_large.png" alt="happy music bird">
-                <figcaption>Fuente: <a href="https://undraw.co/" target="_blank">unDraw</a></figcaption>
-            </figure>
-            <p class="warning"><strong>&#9888; Importante:</strong> para la carga adecuada del tamaño de la imagen en
-                función de la anchura <em>viewport</em>
-                hay que indicarle al navegador el tamaño de cada archivo antes de que lo recupere (por ejemplo,
-                <code>1600w</code>).
-            </p>
-            <p>Añadir un descriptor de anchura a cada archivo en el <code>srcset</code>, indica al navegador la anchura
-                de cada imagen en píxeles antes de que la obtenga. El navegador puede entonces utilizar estas anchuras
-                para decidir qué imagen obtener en función del tamaño de su ventana. Obtiene la imagen con la anchura
-                más pequeña que aún es mayor que la anchura del <em>viewport</em>. Si <code>srcset</code> no está
-                soportado
-                cargará por defecto la imagen de <code>src</code>.</p>
-            <p class="note"><strong>&#x2605; Nota:</strong> Se puede especificar la densidad de pixels en lugar de la
-                anchura. (<a href="#html-picture">Ver punto 5</a>)</p>
-            <div class="version-grid">
-                <div>Atributo</div>
-                <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" alt="Chrome" title="Chrome"></span></div>
-                <div><span class="iconify" data-icon="cib:microsoft-edge" data-inline="false" alt="Edge" title="Edge"></span></div>
-                <div><span class="iconify" data-icon="cib:mozilla-firefox" data-inline="false" alt="Firefox" title="Firefox"></span></div>
-                <div><span class="iconify" data-icon="cib:opera" data-inline="false" alt="Opera" title="Opera"></span>
-                </div>
-                <div><span class="iconify" data-icon="cib:safari" data-inline="false" alt="Safari" title="Safari"></span></div>
-                <div>srcset</div>
-                <div>38.0</div>
-                <div>16.0 </div>
-                <div>38.0</div>
-                <div>25.0</div>
-                <div>9.0</div>
-            </div>
-            <p class="table-caption">Primera versión del navegador que soporta totalmente el atributo. Fuente: <a href="https://caniuse.com" target="_blank">Can I Use</a></p>
-        </article>
-        <hr />
-        <article id="responsive-video">
-            <h2>3. Hacer el video adaptativo</h2>
-            <code class="code-block"><p><u>HTML</u></p>
-            &lt;img id="bird" srcset="img/undraw_happy_music-1600_large.png 1600w, img/undraw_happy_music-1000_large.png
-            1000w, img/undraw_happy_music-800_medium.png 800w, img/undraw_happy_music-500_small.png 500w"
-            <mark>sizes="50vw"</mark> src="img/undraw_happy_music-1600_large.png" alt="happy music bird" &gt;
-            <p><u>CSS</u></p>
-            <p>
-                img#bird {
-                transition: width 0.5s;
-                max-width: 50vw;
-                } /* Muestra la imagen a la mitad del ancho del viewport */
-            </p>
+            <p>Para añadir vídeo a una página web se utiliza la etiqueta <code>&lt;video&gt;</code>. Se puede especificar varias fuentes de video con la etiqueta <code>&lt;source&gt;</code>.</p>
+            <p>Aunque no es lo recomendable, se puede añadir la fuente de video directamente en el elemento <code>&lt;video&gt;</code>.</p>
+            <code class="code-block">
+                <p>&lt;video src="video/la_voz_del_arbol_booktrailer_720p.webm" type="video/webm"&gt;</p>
+                    <p>&lt;p&gt;Tu navegador no puede reproducir el vídeo. ¡Lo puedes &lt;a href="video/la_voz_del_arbol_booktrailer_720p.mp4"&gt;descargar&lt;/a&gt;
+                       y ver con tu reproductor de video favorito!&lt;p&gt;</p>
+                <p>&lt;/video&gt;</p>
             </code>
-            <figure>
-                <img id="bird"
-                    srcset="img/undraw_happy_music-1600_large.png 1600w, img/undraw_happy_music-1000_large.png 1000w, img/undraw_happy_music-800_medium.png 800w, img/undraw_happy_music-500_small.png 500w"
-                    sizes="50vw" src="img/undraw_happy_music-1600_large.png" alt="happy music bird">
-                <figcaption>Fuente: <a href="https://undraw.co/" target="_blank">unDraw</a></figcaption>
-            </figure>
-            <p>El valor del tamaño coincide con el valor del ancho máximo de la imagen en el CSS. Ahora, el navegador
-                tiene
-                todo lo que necesita para escoger la versión correcta de la imagen. El navegador conoce tanto el ancho
-                de su
-                propio <em>viewport</em> como la densidad de píxels del dispositivo del usuario, y le hemos dado las
-                dimensiones
-                de los archivos fuente (mediante el descriptor de anchura) y los tamaños de imagen relativos al
-                <em>viewport</em>
-                (mediante el atributo <code>size</code>).
+            <p class="note"><strong>Consejo:</strong> Aunque el navegador lo reconozca igual, es recomendable usar siempre el atributo <code>type</code>. El navegador utiliza esto para determinar si
+                puede reproducir el archivo de vídeo proporcionado sin tenerlo que cargar. Si no puede, se muestra el texto alternativo indicado entre las etiquetas <code>&lt;video&gt;</code> y
+                <code>&lt;/video&gt;</code>.
             </p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Variable</th>
-                        <th>¿Conocido por el autor cuando está escribiendo el código?</th>
-                        <th>¿Conocido por el navegador cuando está cargando la página?</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>dimensiones del <em>viewport</em></th>
-                        <td class="red">no</td>
-                        <td class="green">sí</td>
-                    </tr>
-                    <tr>
-                        <th>tamaño de la imagen relativo al <em>viewport</em></th>
-                        <td class="green">sí</td>
-                        <td><s class="red">no</s> <span class="green">¡sí!</span> via <code>sizes</code></td>
-                    </tr>
-                    <tr>
-                        <th>densidad de píxels de la pantalla</th>
-                        <td class="red">no</td>
-                        <td class="green">sí</td>
-                    </tr>
-                    <tr>
-                        <th>tamaño de las imágenes fuente</th>
-                        <td class="green">sí</td>
-                        <td><s class="red">no</s> <span class="green">¡sí!</span> via <code>srcset</code></td>
-                    </tr>
-                </tbody>
-            </table>
-            <p class="table-caption">¿Quién conoce qué? Fuente: <a href="https://ericportis.com/posts/2014/srcset-sizes/" target="_blank">Srcset and sizes</a></p>
-            <div class="version-grid">
-                <div>Atributo</div>
-                <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" alt="Chrome" title="Chrome"></span></div>
-                <div><span class="iconify" data-icon="cib:microsoft-edge" data-inline="false" alt="Edge" title="Edge"></span></div>
-                <div><span class="iconify" data-icon="cib:mozilla-firefox" data-inline="false" alt="Firefox" title="Firefox"></span></div>
-                <div><span class="iconify" data-icon="cib:opera" data-inline="false" alt="Opera" title="Opera"></span>
-                </div>
-                <div><span class="iconify" data-icon="cib:safari" data-inline="false" alt="Safari" title="Safari"></span></div>
-                <div>sizes</div>
-                <div>38.0</div>
-                <div>16.0 </div>
-                <div>38.0</div>
-                <div>25.0</div>
-                <div>9.0</div>
-            </div>
-            <p class="table-caption">Primera versión del navegador que soporta totalmente la propiedad. Fuente: <a href="https://caniuse.com" target="_blank">Can I Use</a></p>
-        </article>
-        <hr />
-        <article id="media-queries">
-            <h2>4. Usando media queries</h2>
-            <p>Se puede usar media queries para redimensionar imágenes en tiempo real en función del ancho del
-                <em>viewport</em>.
+            <p>No todos los navegadores admiten los mismos formatos de vídeo. El elemento <code>&lt;source&gt;</code> permite especificar varios formatos como alternativa en caso de que el navegador
+                del usuario no admita uno de ellos. El navegador recorrerá las fuentes de forma secuencial y reproducirá el primer archivo fuente que soporte.
             </p>
             <code class="code-block">
-                <p><u>HTML</u></p>
-            &lt;img id="bird" srcset="img/undraw_happy_music-1600_large.png 1600w, img/undraw_happy_music-1000_large.png
-            1000w, img/undraw_happy_music-800_medium.png 800w, img/undraw_happy_music-500_small.png 500w"
-            <mark>sizes="(max-width: 700px) 90vw, 50vw"</mark> src="img/undraw_happy_music-1600_large.png" alt="happy music bird" &gt;
-            <p><u>CSS</u></p>
-                @media screen and (max-width: 700px) {
-                    img#bird {
-                      max-width: 90vw;
-                      width: 90vw;
-                    }
-                  }                  
+                <p>&lt;video&gt;</p>
+                    <p><mark>&lt;source src="video/la_voz_del_arbol_booktrailer_720p.webm" type="video/webm"&gt;</mark></p>
+                    <p><mark>&lt;source src="video/la_voz_del_arbol_booktrailer_720p.mp4" type="video/mp4"&gt;</mark></p>
+                    <p>&lt;p&gt;Tu navegador no puede reproducir el vídeo. ¡Lo puedes &lt;a href="video/la_voz_del_arbol_booktrailer_720p.mp4"&gt;descargar&lt;/a&gt;
+                       y ver con tu reproductor de video favorito!&lt;p&gt;</p>
+                <p>&lt;/video&gt;</p>
             </code>
-            <figure>
-                <img srcset="img/undraw_happy_music-1600_large.png 1600w, img/undraw_happy_music-1000_large.png 1000w, img/undraw_happy_music-800_medium.png 800w, img/undraw_happy_music-500_small.png 500w"
-                    sizes="(max-width: 700px) 90vw, 50vw" src="img/undraw_happy_music-1600_large.png" alt="happy music bird">
-                <figcaption>Fuente: <a href="https://undraw.co/" target="_blank">unDraw</a></figcaption>
-            </figure>
-            <p>La <em>media query</em> comprueba la anchura del <em>viewport</em> de la pantalla, y aplica el CSS si el
-                ancho del <em>viewport</em> es menor de <code>700px</code>. Se puede informar al navegador sobre la
-                <em>media query</em>
-                en el atributo <code>sizes</code> para que obtenga la imagen correcta cuando esta cambie de tamaño.
-            </p>
+            <p class="note"><strong>Nota:</strong> De nuevo, es recomendable usar siempre el atributo <code>type</code> dentro de <code>&lt;source&gt;</code>. Esto garantiza que el navegador descargue únicamente
+                el archivo que es capaz de reproducir.</p>
             <div class="version-grid">
-                <div>Regla</div>
+                <div>Elemento</div>
                 <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" alt="Chrome" title="Chrome"></span></div>
                 <div><span class="iconify" data-icon="cib:microsoft-edge" data-inline="false" alt="Edge" title="Edge"></span></div>
                 <div><span class="iconify" data-icon="cib:mozilla-firefox" data-inline="false" alt="Firefox" title="Firefox"></span></div>
                 <div><span class="iconify" data-icon="cib:opera" data-inline="false" alt="Opera" title="Opera"></span>
                 </div>
                 <div><span class="iconify" data-icon="cib:safari" data-inline="false" alt="Safari" title="Safari"></span></div>
-                <div>@media</div>
+                <div>video</div>
                 <div>4.0</div>
                 <div>12.0 </div>
-                <div>2.0</div>
-                <div>10.0</div>
-                <div>3.1</div>
-            </div>
-            <p class="table-caption">Primera versión del navegador que soporta totalmente la regla. Fuente: <a href="https://caniuse.com" target="_blank">Can I Use</a></p>
-        </article>
-        <hr />
-        <article id="html-picture">
-            <h2>5. Opcional: usando los elementos picture y source</h2>
-            <p>Se puede usar el elemento &lt;picture&gt; y el elemento &lt;source&gt;, en combinación con
-                media queries, para cambiar la fuente de la imagen a medida que la ventana cambia de tamaño.</p>
-            <code class="code-block">
-                <p>&lt;picture&gt;</p> 
-                <p>&lt;source media="(min-width: 750px)" srcset="img/undraw_happy_music-1600_large.png 2x,
-                img/undraw_happy_music-1000_large.png" /&gt;</p>
-                <p>&lt;source media="(min-width: 500px)" srcset="img/undraw_happy_music-800_medium.png" /&gt;</p>
-                <p>&lt;img src="img/undraw_happy_music-500_small.png" alt="happy music bird" /&gt;</p>
-                &lt;/picture&gt;               
-            </code>
-            <!-- Figure: html5 block element -->
-            <figure>
-                <!-- Picture: inline element proposed by Responsive Images Community group -->
-                <picture>
-                    <source media="(min-width: 750px)" srcset="img/undraw_happy_music-1600_large.png 2x,
-                    img/undraw_happy_music-1000_large.png" />
-                    <source media="(min-width: 500px)" srcset="img/undraw_happy_music-800_medium.png" />
-                    <img src="img/undraw_happy_music-500_small.png" alt="happy music bird">
-                </picture>
-                <figcaption>Fuente: <a href="https://undraw.co/" target="_blank">unDraw</a></figcaption>
-            </figure>
-            <p>El elemento &lt;picture&gt; permite definir varios archivos fuente mediante la etiqueta &lt;source&gt;.
-                Difiere del uso directo del atributo <code>srcset</code> en la etiqueta &lt;img&gt; en que
-                &lt;source&gt; permite añadir cosas como <em>media queries</em> a cada conjunto de fuentes. En lugar
-                de dar al navegador los tamaños de imagen y dejar que decida cuál usar, permite definir qué imagen
-                usar para cada tamaño de ventana.</p>
-            <p>En el código anterior, a partir de 750px, el navegador obtiene
-                <code>undraw_happy_music-1600_large.png</code>
-                (si el dispositivo tiene una pantalla 2x) o <code>img/undraw_happy_music-1000_large.png</code>. Si la
-                anchura de
-                la ventana es inferior a 750px pero superior a 500px, el navegador obtiene
-                <code>img/undraw_happy_music-800_medium.png</code>. Si el ancho de la ventana es inferior a 500px,
-                el navegador obtiene la imagen de reserva <code>img/undraw_happy_music-500_small.png</code>.
-            </p>
-            <p class="note"><strong>&#x2605; Nota:</strong> Si el navegador no soporta el elemento &lt;picture&gt;,
-                obtiene lo que haya en el elemento &lt;img&gt;. &lt;picture&gt; sirve únicamente para especificar
-                múltiples
-                fuentes para el contenido de &lt;img&gt;. Es el elemento &lt;img&gt; el que muestra la imagen.
-            </p>
-            <div class="version-grid">
-                <div>Elemento/valor</div>
-                <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" alt="Chrome" title="Chrome"></span></div>
-                <div><span class="iconify" data-icon="cib:microsoft-edge" data-inline="false" alt="Edge" title="Edge"></span></div>
-                <div><span class="iconify" data-icon="cib:mozilla-firefox" data-inline="false" alt="Firefox" title="Firefox"></span></div>
-                <div><span class="iconify" data-icon="cib:opera" data-inline="false" alt="Opera" title="Opera"></span>
-                </div>
-                <div><span class="iconify" data-icon="cib:safari" data-inline="false" alt="Safari" title="Safari"></span></div>
-                <div>figure</div>
-                <div>8.0</div>
-                <div>12.0</div>
-                <div>4.0</div>
+                <div>20.0</div>
                 <div>11.5</div>
-                <div>5.1</div>
-                <div>picture</div>
-                <div>38.0</div>
-                <div>13.0</div>
-                <div>38.0</div>
-                <div>25.0</div>
-                <div>9.1</div>
+                <div>4.0</div>
                 <div>source</div>
                 <div>90.0</div>
                 <div>12.0</div>
                 <div>3.5</div>
                 <div>75.0</div>
                 <div>14.1</div>
-                <div>profundidad de píxel</div>
+            </div>
+            <p class="table-caption">Primera versión del navegador que soporta totalmente el elemento. Fuente: <a href="https://caniuse.com" target="_blank" rel="noopener">Can I Use</a></p>
+        </article>
+        <hr />
+        <article id="responsive-video">
+            <h2>3. Hacer el video adaptativo</h2>
+            <p>Se pueden variar las dimensiones del video o indicar que no se muestre el video en dispositivos pequeños a través de CSS, pero lo más sencillo y básico es indicar que el
+                video no rebase el contenedor:</p>
+            <code class="code-block">
+                video {
+                max-width: 100%;
+                height: auto;
+                } 
+            </code>
+            <div class="version-grid">
+                <div>Propiedad</div>
+                <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" alt="Chrome" title="Chrome"></span></div>
+                <div><span class="iconify" data-icon="cib:microsoft-edge" data-inline="false" alt="Edge" title="Edge"></span></div>
+                <div><span class="iconify" data-icon="cib:mozilla-firefox" data-inline="false" alt="Firefox" title="Firefox"></span></div>
+                <div><span class="iconify" data-icon="cib:opera" data-inline="false" alt="Opera" title="Opera"></span>
+                </div>
+                <div><span class="iconify" data-icon="cib:safari" data-inline="false" alt="Safari" title="Safari"></span></div>
+                <div>max-width</div>
                 <div>4.0</div>
-                <div>12.0</div>
+                <div>12.0 </div>
                 <div>2.0</div>
-                <div>12.1</div>
+                <div>10.0</div>
+                <div>3.1</div>
+                <div>height</div>
+                <div>4.0</div>
+                <div>12.0 </div>
+                <div>2.0</div>
+                <div>10.0</div>
                 <div>3.1</div>
             </div>
-            <p class="table-caption">Primera versión del navegador que soporta totalmente el elemento o el valor.
-                Fuente: <a href="https://caniuse.com" target="_blank">Can I Use</a></p>
+            <p class="table-caption">Primera versión del navegador que soporta totalmente la propiedad. Fuente: <a href="https://caniuse.com" target="_blank" rel="noopener">Can I Use</a></p>
         </article>
         <hr />
-        <article id="image-formats">
-            <h2>6. Otros formatos de imagen: svg y webp</h2>
-            <p>Uno de los principales beneficios de <strong>SVG</strong> es que son independientes de la resolución.
-                Esto significa que, a diferencia de los tipos de archivos como jpg o png, los svg conservan la misma
-                calidad sin importar en qué resolución de pantalla o tamaño estén.</p>
-            <p>El uso de svg puede resultar en tamaños de archivo más pequeños que otros tipos de archivos cuando se
-                optimizan correctamente. Esto es útil cuando se trata de pantallas de mayor resolución, ya que los
-                svg no necesitan crearse en tamaños más grandes para adaptarse a la diferencia como lo hacen las
-                imágenes rasterizadas. Al tener un tamaño de archivo más pequeño, y por tanto más ligero, la imagen
-                se cargará más rápido. </p>
+        <article id="add-controls">
+            <h2>4. Añadir controles</h2>
+            <p>Si el atributo <code>controls</code> está presente, el navegador ofrecerá controles para permitir al usuario controlar la reproducción de vídeo, incluyendo el volumen, la búsqueda y la
+                pausa/reanudación de la reproducción.</p>
             <code class="code-block">
-                    <p>&lt;picture&gt;</p> 
-                    <p><mark>&lt;source srcset="img/undraw_happy_music.svg" type="image/svg+xml" /&gt;</mark></p>
-                    <p>&lt;img src="img/undraw_happy_music-1600_large.png" alt="happy music bird" /&gt;</p>
-                    &lt;/picture&gt;               
+                <p>&lt;video controls ...&gt;</p>
+                <p>...</p>
+                <p>&lt;/video&gt;</p>                  
             </code>
-            <figure>
-                <picture>
-                    <source srcset="img/undraw_happy_music.svg" type="image/svg+xml">
-                    <img src="img/undraw_happy_music-1600_large.png" alt="happy music bird">
-                </picture>
-                <figcaption>Fuente: <a href="https://undraw.co/" target="_blank">unDraw</a></figcaption>
-            </figure>
-            <p>El formato de imagen <strong>WebP</strong> fue desarrollado por Google. Su principal ventaja: permite
-                obtener una excelente
-                definición sin que el archivo sea demasiado pesado. Esto es esencial para la velocidad de carga de las
-                páginas.</p>
-            <p>Reduce el tamaño de las imágenes hasta un 35% para JPEG y un 50% para PNG, obteniendo archivos más
-                ligeros sin perder
-                su calidad original. Además, admite canal de transparencia.</p>
-            <p>Otra ventaja es que, al ser un formato de Google mejora el SEO en su buscador.</p>
+            <div class="version-grid">
+                <div>Atributo</div>
+                <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" alt="Chrome" title="Chrome"></span></div>
+                <div><span class="iconify" data-icon="cib:microsoft-edge" data-inline="false" alt="Edge" title="Edge"></span></div>
+                <div><span class="iconify" data-icon="cib:mozilla-firefox" data-inline="false" alt="Firefox" title="Firefox"></span></div>
+                <div><span class="iconify" data-icon="cib:opera" data-inline="false" alt="Opera" title="Opera"></span>
+                </div>
+                <div><span class="iconify" data-icon="cib:safari" data-inline="false" alt="Safari" title="Safari"></span></div>
+                <div>controls</div>
+                <div>4.0</div>
+                <div>12.0 </div>
+                <div>3.5</div>
+                <div>11.5</div>
+                <div>3.1</div>
+            </div>
+            <p class="table-caption">Primera versión del navegador que soporta totalmente el atributo. Fuente: <a href="https://caniuse.com" target="_blank" rel="noopener">Can I Use</a></p>
+        </article>
+        <hr />
+        <article id="video-dimensions">
+            <h2>5. Recomendado: establecer anchura y altura</h2>
+            <p>Es una buena idea incluir siempre los atributos de altura y anchura para que el navegador pueda asignar el ancho de banda necesario sin trabajo adicional. Si no se establecen, la página
+                podría parpadear y desplazarse mientras se carga el vídeo.</p>
+            <p>Los valores se asignan en píxeles.</p>
             <code class="code-block">
-                <p>&lt;picture&gt;</p> 
-                <p><mark>&lt;source srcset="img/undraw_happy_music.webp" type="image/webp" /&gt;</mark></p>
-                <p>&lt;img src="img/undraw_happy_music-1600_large.png" alt="happy music bird" /&gt;</p>
-                &lt;/picture&gt;               
-        </code>
-            <figure>
-                <picture>
-                    <source srcset="img/undraw_happy_music.webp" type="image/webp">
-                    <img src="img/undraw_happy_music-1600_large.png" alt="happy music bird">
-                </picture>
-                <figcaption>Fuente: <a href="https://undraw.co/" target="_blank">unDraw</a></figcaption>
-            </figure>
+                <p>&lt;video width="426" height="240" ...&gt;</p>
+                <p>...</p>
+                <p>&lt;/video&gt;</p>                  
+            </code>
+            <div class="version-grid">
+                <div>Atributo</div>
+                <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" alt="Chrome" title="Chrome"></span></div>
+                <div><span class="iconify" data-icon="cib:microsoft-edge" data-inline="false" alt="Edge" title="Edge"></span></div>
+                <div><span class="iconify" data-icon="cib:mozilla-firefox" data-inline="false" alt="Firefox" title="Firefox"></span></div>
+                <div><span class="iconify" data-icon="cib:opera" data-inline="false" alt="Opera" title="Opera"></span>
+                </div>
+                <div><span class="iconify" data-icon="cib:safari" data-inline="false" alt="Safari" title="Safari"></span></div>
+                <div>width/height</div>
+                <div>79.0</div>
+                <div>79.0</div>
+                <div>79.0</div>
+                <div>66.0</div>
+                <div>14.0</div>
+            </div>
+            <p class="table-caption">Primera versión del navegador que soporta totalmente el atributo.
+                Fuente: <a href="https://caniuse.com" target="_blank" rel="noopener">Can I Use</a></p>
         </article>
         <hr />
-        <article id="performance">
-            <h2>7. Rendimiento (Chrome y Firefox)</h2>
-            <figure>
-                <img class="enlarge-img" srcset="img/performance_chrome.png 1600w, img/performance_chrome-1024.png 1024w" sizes="(min-width: 1024px) 1600px, 1024px" src="img/performance_chrome.png"
-                    alt="Chrome Network tool" />
-                <figcaption>Rendimiento de imágenes en local (Chrome)</figcaption>
-            </figure>
-            <figure>
-                <img class="enlarge-img" src="img/performance_firefox.png" alt="Firefox Network tool" />
-                <figcaption>Rendimiento de imágenes en GitHub (Firefox)</figcaption>
-            </figure>
-            <p>La imagen escogida no es muy pesada, aún así el tiempo de respuesta tiende a reducirse al escoger un tamaño
-                de imagen más acorde al dispositivo y/o <em>viewport</em>.
-            <p>
-            <p>El formato más ligero y más rápido en cargar es SVG, seguido de WebP.</p>
-            <p class="note"><strong>&#x2605; Nota:</strong> Los navegadores pueden tener guardadas las imágenes en caché, conviene limpiarlo
-                antes de monitorizar el rendimiento y desactivarlo mientras las herramientas de desarrollador estén abiertas.
+        <article id="extra-attr">
+            <h2>6. Opcional: otros atributos</h2>
+            <p>El atributo <code>preload</code> da pistas al navegador sobre cuánta información o contenido precargar.</p>
+            <table class="table-left-align">
+                <thead>
+                    <tr>
+                        <th>Valor</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>none</code></td>
+                        <td>El usuario puede elegir no ver el video, entonces no se precarga nada.</td>
+                    </tr>
+                    <tr>
+                        <td><code>metadata</code></td>
+                        <td>Los metadatos (duración, dimensiones, pistas de texto) se cargan con la página. En Chrome es el valor por defecto.</td>
+                    </tr>
+                    <tr>
+                        <td><code>auto</code></td>
+                        <td>Se considera deseable que se descargue el vídeo completo de inmediato. Una cadena vacía produce el mismo resultado.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="table-caption">Posibles valores de preload. Fuente: <a href="https://web.dev/video-and-source-tags/" rel="noopener" target="_blank">The &lt;video&gt; and &lt;source&gt; tags</a>
             </p>
+            <p>El valor recomendado por la <a href="https://html.spec.whatwg.org/#attr-media-preload" target="_blank" rel="noopener">especificación del W3C (<em>World Wide Web Consortium</em>)</a> es
+                <code>metadata</code>:
+            </p>
+            <blockquote>
+                <q>
+                    El valor por defecto del atributo lo define el agente de usuario, aunque se sugiere el estado de metadatos como un compromiso entre la reducción de la carga del servidor y la
+                    provisión de una experiencia óptima para el usuario.
+                    El atributo <code>preload</code> está pensado para proporcionar una pista al agente de usuario sobre lo que el autor cree que conducirá a la mejor experiencia de usuario. El
+                    atributo puede ser ignorado por completo, por ejemplo, basándose en las preferencias explícitas del usuario o en la conectividad disponible.
+                </q>
+            </blockquote>
+            <p class="warning"><strong>Importante: </strong> El navegador ignorará el atriburo <code>preload</code> si está presente <code>autoplay</code> (ya que si los medios se reproducen, tienen
+                que almacenarse en el búfer primero, independientemente del valor del atributo de precarga). Sin embargo, incluir ambos no es un error.</p>
+            <p>El atributo <code>autoplay</code> controla si el navegador descarga y reproduce un vídeo automáticamente. El funcionamiento exacto depende de la plataforma y del navegador.</p>
+            <p>Razones para <span class="red to-uppercase">no</span> activar la reproducción automática:</p>
+            <ul class="donot-style">
+                <li>Uso de datos excesivo.</li>
+                <li>Reproducir medios antes de que el usuario lo desee puede acaparar el ancho de banda y la CPU y, por tanto, retrasar la carga de la página.</li>
+                <li>Los usuarios pueden estar en un contexto donde reproducir audio o video resulte molesto.</li>
+            </ul>
+            <p>El atributo <code>muted</code> se puede utilizar cuando el audio se considera innecesario o que pueda resultar molesto. Es un atributo boleano. Cuando está presente, indica que la
+                salida
+                de audio del video debe estar silenciada.</p>
+            <p>El atributo global (puede utilizarse en cualquier elemento html) <code>tittle</code> permite ofrecer información adicional sobre un elemento. La información suele mostrarse como una
+                descripción emergente cuando el ratón pasa sobre el elemento.</p>
+            <div class="version-grid">
+                <div>Atributo</div>
+                <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" alt="Chrome" title="Chrome"></span></div>
+                <div><span class="iconify" data-icon="cib:microsoft-edge" data-inline="false" alt="Edge" title="Edge"></span></div>
+                <div><span class="iconify" data-icon="cib:mozilla-firefox" data-inline="false" alt="Firefox" title="Firefox"></span></div>
+                <div><span class="iconify" data-icon="cib:opera" data-inline="false" alt="Opera" title="Opera"></span>
+                </div>
+                <div><span class="iconify" data-icon="cib:safari" data-inline="false" alt="Safari" title="Safari"></span></div>
+                <div>preload</div>
+                <div>4.0</div>
+                <div>12.0</div>
+                <div>4.0</div>
+                <div>75.0</div>
+                <div>3.1</div>
+                <div>autoplay</div>
+                <div>4.0</div>
+                <div>12.0</div>
+                <div>3.5</div>
+                <div>11.5</div>
+                <div>3.1</div>
+                <div>muted</div>
+                <div>30.0</div>
+                <div>12.0</div>
+                <div>11.0</div>
+                <div>75.0</div>
+                <div>5.0</div>
+                <div>title</div>
+                <div>90.0</div>
+                <div>12.0</div>
+                <div>88.0</div>
+                <div>75.0</div>
+                <div>14.1</div>
+            </div>
+            <p class="table-caption">Primera versión del navegador que soporta totalmente el atributo.
+                Fuente: <a href="https://caniuse.com" target="_blank" rel="noopener">Can I Use</a></p>
         </article>
         <hr />
-        <article id="bonus">
-            <h2>Bonus: rendimiento CSS comprimido vs CSS sin comprimir</h2>
-            <figure>
-                <img class="enlarge-img" src="img/performance_css.png" alt="Firefox Network tool" />
-                <figcaption>Velocidad de carga y número de solicitudes del CSS sin comprmir (GitHub)</figcaption>
-            </figure>
-            <figure>
-                <img class="enlarge-img" src="img/performance_min_css.png" alt="Firefox Network tool" />
-                <figcaption>Velocidad de carga y número de solicitudes del CSS comprimido (GitHub)</figcaption>
-            </figure>
-            <p>Pese a ser un CSS corto y sencillo hay una diferencia en el tiempo de carga de 9 milisegundos entre ambas
-                versiones y realiza una solicitud menos.
+        <article id="add-poster">
+            <h2>7. Añadir póster</h2>
+            <p>Añadiendo el atributo <code>poster</code> al elemento de video los visitantes pueden hacerse una idea del contenido en cuanto se cargue el elemento, sin necesidad de descargar el vídeo
+                o iniciar la reproducción.</p>
+            <code class="code-block">
+                <p>&lt;video <mark>poster="img/la_voz_del_arbol_screenshot.png"</mark> ...&gt;</p>
+                <p>...</p>
+                <p>&lt;video&gt;</p>
+            </code>
+            <p>Un póster también puede ser un recurso si el <code>src</code> del vídeo está roto o si no se admite ninguno de los formatos de vídeo suministrados. La única desventaja de las imágenes
+                de póster es la petición de un archivo adicional, que consume algo de ancho de banda y requiere renderización. Es recomendable utilizar un formato comprimido como PNG o WebP.</p>
+            <div class="version-grid">
+                <div>Atributo</div>
+                <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" alt="Chrome" title="Chrome"></span></div>
+                <div><span class="iconify" data-icon="cib:microsoft-edge" data-inline="false" alt="Edge" title="Edge"></span></div>
+                <div><span class="iconify" data-icon="cib:mozilla-firefox" data-inline="false" alt="Firefox" title="Firefox"></span></div>
+                <div><span class="iconify" data-icon="cib:opera" data-inline="false" alt="Opera" title="Opera"></span>
+                </div>
+                <div><span class="iconify" data-icon="cib:safari" data-inline="false" alt="Safari" title="Safari"></span></div>
+                <div>poster</div>
+                <div>4.0</div>
+                <div>12.0</div>
+                <div>3.6</div>
+                <div>11.5</div>
+                <div>3.1</div>
+            </div>
+            <p class="table-caption">Primera versión del navegador que soporta totalmente el atributo.
+                Fuente: <a href="https://caniuse.com" target="_blank" rel="noopener">Can I Use</a></p>
+        </article>
+        <hr />
+        <article id="add-subs">
+            <h2>8. Añadir subtítulos</h2>
+            <p>Los subtitulos están directamente relacionados con la accesibilidad.</p>
+            <blockquote>
+                <q>
+                    The power of the web is in its universality. Access by everyone regardless of disability is an essential aspect.
+                </q>
+            </blockquote>
+            <p class="quote-author">–- Tim Berners-Lee</p>
+            <p>El contenido del video por sí solo no es lo suficientemente accesible para usuarios con discapacidades auditivas o cognitivas, o incluso para usuarios que puedan estar en situaciones
+                temporalmente desfavorables, por ejemplo, un entorno ruidoso o un lugar de silencio, como una biblioteca. La accesibilidad puede mejorarse para estos usuarios proporcionando pistas de
+                texto temporizadas, como subtítulos o descripciones, junto al video.
             </p>
-            <p class="note"><strong>&#x2605; Nota:</strong> GitHub bloquea la carga de la fuente de iconos de Creative
-                Commons. Se visualiza igualmente porque existe una copia en local como fuente alternativa.
+            <p>Los vídeos deben proporcionar tanto subtítulos como transcripciones que describan con precisión su contenido. Los subtítulos permiten a las personas con pérdida de audición entender el
+                contenido de audio de un vídeo mientras se reproduce, mientras que las transcripciones permiten a las personas que necesitan más tiempo poder revisar el contenido de audio a un ritmo y
+                formato que les resulte cómodo. Además de los diálogos hablados, los subtítulos y transcripciones deben identificar la música y los efectos de sonido que comunican información
+                importante.
+                Esto incluye la emoción y el tono.</p>
+            <p>En algunas jurisdicciones, los subtítulos incluso son obligatorios por ley o por normativa.</p>
+            <p>Para añadir subtítulos o descripciones para lectores de pantalla a un vídeo web, se añade la etiqueta <code>&lt;track&gt;</code> a una etiqueta <code>&lt;video&gt;</code>. Además de los
+                subtítulos y las descripciones para el lector de pantalla, las etiquetas también pueden utilizarse para secciones y títulos de capítulos. Y pueden ayudar a los motores de búsqueda a
+                entender
+                lo que hay en un vídeo.</p>
+            <table class="table-left-align">
+                <thead>
+                    <tr>
+                        <th>Atributo</th>
+                        <th>Valor</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>default</code></td>
+                        <td><code>default</code></td>
+                        <td>Indica que la pista de texto debe habilitarse automáticamente cuando el video empiece a reproducirse.</td>
+                    </tr>
+                    <tr>
+                        <td><code>srclang</code></td>
+                        <td><code><em>language_code</em></code></td>
+                        <td>Especifica el idioma de la pista de texto (requerido si <code>kind = "subtitles"</code>).</td>
+                    </tr>
+                </tbody>
+                <tbody class="sub-table">
+                    <tr>
+                        <th colspan="2"><code>kind</code></th>
+                        <td>Especifica el tipo de pista de texto. Posibles valores:</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><code>subtitles</code></td>
+                        <td>Superpone al vídeo traducciones escritas de los diálogos y otros contenidos del video (por ejemplo, texto o imágenes). Suele estar pensada para personas oyentes que no
+                            entienden el idioma original utilizado en el audio.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><code>captions</code></td>
+                        <td>Superpone al vídeo la transcripción del audio. Difieren de los subtítulos en que suelen estar en el mismo idioma que el audio y son más descriptivos, mostrando a veces
+                            pistas no verbales como efectos de sonido o el nombre del orador actual. Están pensados para personas con discapacidades auditivas, que ven el vídeo en un lugar ruidoso o
+                            con el audio silenciado.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><code>descriptions</code></td>
+                        <td>Superpone una descripción de audio completa de todo el contenido del vídeo, desde el diálogo hasta la acción, los efectos de sonido y las pistas. Destinado a personas
+                            ciegas o que no pueden ver el vídeo. </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><code>chapters</code></td>
+                        <td>Incluye títulos para diferentes porciones (por ejemplo, secciones o episodios) del contenido del vídeo. A veces, los capítulos se muestran como una lista interactiva en la
+                            interfaz del navegador para facilitar la navegación por las diferentes secciones del vídeo.</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td><code>src</code></td>
+                        <td><code><em>url</em></code></td>
+                        <td><strong>Requerido</strong>. Especifica la url de la pista de texto.</td>
+                    </tr>
+                    <tr>
+                        <td><code>label</code></td>
+                        <td><code><em>text</em></code></td>
+                        <td>Define el título de la pista de texto. En el caso de los subtítulos, debe indicar para qué idioma es el conjunto de subtítulos, por ejemplo, inglés o francés. Las etiquetas
+                            aparecerán en la interfaz de usuario para que los usuarios puedan seleccionar fácilmente el idioma de los subtítulos que desean ver.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="table-caption">Atributos de track. Fuente: <a href="https://bitmovin.com/html5-video-tag-guide/" rel="noopener" target="_blank">Guide to the HTML5 Video Tag</a></p>
+            <p>La tecnología para lograr esto en la web se conoce como <em>Web Video Text Tracks</em>, o WebVTT. Se trata de un formato (.vtt) para mostrar pistas de texto temporizadas junto con el
+                vídeo
+                utilizando el elemento html <code>&lt;track&gt;</code>.</p>
+            <p class="warning"><strong>Importante: </strong>El archivo .vtt debe llevar como primera palabra en la primera línea la palabra clave 'WEBVTT' (sin comillas y en mayúsculas) sin ningún
+                espacio a la izquierda para que la
+                pista funcione en web.</p>
+            <code class="code-block">
+                <p>&lt;video controls preload="metadata" width="426" height="240" poster="img/la_voz_del_arbol_screenshot.png" title="La voz del árbol (booktrailer)"&gt;</p>
+                    <p>&lt;source src="video/la_voz_del_arbol_booktrailer_720p.webm" type="video/webm"&gt;</p>
+                    <p>&lt;source src="video/la_voz_del_arbol_booktrailer_720p.mp4" type="video/mp4"&gt;</p>
+                    <p><mark>&lt;track src="video/subs/tree_voice-subs_es.vtt" kind="subtitles" srclang="es" label="Espa&ntilde;ol" default&gt;</mark></p>
+                    <p><mark>&lt;track src="video/subs/tree_voice-subs_en.vtt" kind="subtitles" srclang="en" label="English"&gt;</mark></p>
+                    <p>&lt;p&gt;Tu navegador no puede reproducir el vídeo. ¡Lo puedes &lt;a href="video/la_voz_del_arbol_booktrailer_720p.mp4"&gt;descargar&lt;/a&gt;
+                       y ver con tu reproductor de video favorito!&lt;p&gt;</p>
+                <p>&lt;/video&gt;</p>
+            </code>
+            <p>La etiqueta <code>&lt;track&gt;</code> es similar al elemento <code>&lt;source&gt;</code> en que ambos tienen un atributo <code>src</code> que apunta al contenido referenciado.
+                En el caso de la etiqueta <code>&lt;track&gt;</code>, apunta a un archivo WebVTT. El atributo <code>kind</code> determina el tipo de pista, subtítulos en este caso.
+                Cada pista de idioma irá en un elemento <code>&lt;track&gt;</code> distinto, con el idioma indicado mediante el atributo <code>srclang</code>, con el código de idioma correspondiente
+                como valor.
+                El atributo <code>label</code> especifica cómo se identificará una pista de texto concreta en la interfaz.
+                Por último, el atributo <code>default</code> indica qué pista de idioma es la predeterminada.
             </p>
+            <p class="warning"><strong>Importante: </strong> El atributo <code>srclang</code> indica el idioma de la pista de texto. <span class="to-uppercase">Debe</span> ser un código de idioma <a
+                    href="https://www.rfc-editor.org/info/bcp47" target="_blank" rel="noreferrer">BCP 47</a> válido. Es obligatorio cuando el valor del atributo <code>kind</code> es
+                <code>subtitles</code>.
+                Si el elemento <code>&lt;track&gt;</code> tiene un atributo <code>srclang</code> cuyo valor no es una cadena de texto vacía y es un código válido, el idoma de la pista será el valor
+                del atributo. De lo contrario, el elemento no tendrá pista de idioma.
+            </p>
+            <div class="version-grid">
+                <div>Elemento/formato</div>
+                <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" alt="Chrome" title="Chrome"></span></div>
+                <div><span class="iconify" data-icon="cib:microsoft-edge" data-inline="false" alt="Edge" title="Edge"></span></div>
+                <div><span class="iconify" data-icon="cib:mozilla-firefox" data-inline="false" alt="Firefox" title="Firefox"></span></div>
+                <div><span class="iconify" data-icon="cib:opera" data-inline="false" alt="Opera" title="Opera"></span>
+                </div>
+                <div><span class="iconify" data-icon="cib:safari" data-inline="false" alt="Safari" title="Safari"></span></div>
+                <div>track</div>
+                <div>23.0</div>
+                <div>12.0</div>
+                <div>31.0</div>
+                <div>12.1</div>
+                <div>6.0</div>
+                <div>webvtt</div>
+                <div>18.0</div>
+                <div>12.0</div>
+                <div>31.0</div>
+                <div>15.0</div>
+                <div>6.0</div>
+            </div>
+            <p class="table-caption">Primera versión del navegador que soporta totalmente el elemento o el formato.
+                Fuente: <a href="https://caniuse.com" target="_blank" rel="noopener">Can I Use</a></p>
         </article>
     </main>
     <footer>
         <div class="back"><a href="javascript:window.history.back();"><span class="iconify" data-icon="jam:arrow-circle-left" data-inline="false" title="volver"></span></a></div>
-        <div class="footer-copyrigth"><a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank"><span class="iconify" data-icon="cib:creative-commons" data-inline="true"></span>
+        <div class="footer-copyrigth"><a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank" rel="noopener"><span class="iconify" data-icon="cib:creative-commons"
+                    data-inline="true"></span>
                 <span class="iconify" data-icon="cib:creative-commons-by" data-inline="true"></span></a> Nuria
             Barrios Santos, 2021</div>
         <div class="social"><span class="iconify" data-icon="jam:twitter-circle" data-inline="false" title="twitter"></span><span class="iconify" data-icon="jam:facebook-circle" data-inline="false"

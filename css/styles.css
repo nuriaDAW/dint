@@ -148,12 +148,14 @@ a, details {
 }
 
 .tip {
+	margin: 1.5rem 0;
 	padding: 0.85rem 0.5rem;
 	background-color: var(--lighter);
 	border-left: 5px solid var(--primary);
 }
 
 .warning {
+	margin: 1.5rem 0;
 	padding: 0.85rem 0.5rem;
 	background-color: var(--red-light);
 	border-left: 5px solid var(--red);

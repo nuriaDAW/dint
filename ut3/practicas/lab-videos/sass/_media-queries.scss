@@ -9,15 +9,11 @@
       transform: scale(1.5) translateX(-15%);
     }
 }
+
 /* Screen 850px to down */
 @media screen and (max-width: $small-screen) {
     body, nav, footer {   
       flex-direction: column;
-    }
-
-    header {
-      padding: 1.5rem 0;
-      line-height: 220%;
     }
 
     footer {
@@ -31,14 +27,10 @@
         padding-bottom: 1rem;
       }
     }
-
-    img#bird {
-      max-width: 90vw;
-      width: 90vw;
-    }
 }
-/* Screen 449px to down */
-@media screen and (max-width:  $extrasmall-screen - 1){
+
+/* Screen 474px to down */
+@media screen and (max-width: $extrasmall-screen - 1){
   .version-grid {
     grid-template-columns: repeat(5, 1fr);
 

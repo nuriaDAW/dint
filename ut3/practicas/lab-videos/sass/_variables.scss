@@ -15,6 +15,8 @@ $green-light: #a4d1a4;
 $green-lighter: #f0faf0;
 $green-dark: #435a43;
 $green-darker: #101810;
+$blue:#53527a;
+$purple: #7a5279;
 $background-gray-light: #ddd;
 $background-gray: #6c757d;
 $background-gray-dark: #343a40;
@@ -34,10 +36,11 @@ $small-text: 0.85rem;
 // 3. Media Queries
 $medium-screen: 1024px;
 $small-screen: 850px;
-$extrasmall-screen: 450px;
+$extrasmall-screen: 575px;
 
 // 4. Symbols
 // CSS Unicode symbols
 $star: '\2605';
 $warning-symbol: '\0026A0';
 $full-moon: '\1F31A';
+$cross-mark: '\274C'
