@@ -86,10 +86,7 @@
                     <p>Tu navegador no puede reproducir el vídeo. ¡Lo puedes <a href="video/la_voz_del_arbol_booktrailer_720p.mp4">descargar</a>
                         y ver con tu reproductor de video favorito!</p>
                 </video>
-                <p><strong>Título: </strong><span>title</span></p>
-                <p><strong>Formato: </strong>type</p>
-                <p><strong>Dimensiones: </strong><span>widthxheigth</span></p>
-                <p><strong>Duración: </strong><span></span></p>
+                <div></div>
             </div>
             <div class="flex-row">
                 <video controls preload="metadata" width="426" height="240" poster="img/la_voz_del_arbol_screenshot.png" title="La voz del árbol (booktrailer)">
@@ -100,10 +97,7 @@
                     <p>Tu navegador no puede reproducir el vídeo. ¡Lo puedes <a href="video/la_voz_del_arbol_booktrailer_720p.mp4">descargar</a>
                         y ver con tu reproductor de video favorito!</p>
                 </video>
-                <p><strong>Título: </strong><span>title</span></p>
-                <p><strong>Formato: </strong>type</p>
-                <p><strong>Dimensiones: </strong><span>widthxheigth</span></p>
-                <p><strong>Duración: </strong><span></span></p>
+                <div></div>
             </div>
         </div>
         <details>
@@ -612,6 +606,13 @@
         <div class="social"><span class="iconify" data-icon="jam:twitter-circle" data-inline="false" title="twitter"></span><span class="iconify" data-icon="jam:facebook-circle" data-inline="false"
                 title="facebook"></span><span class="iconify" data-icon="jam:instagram" data-inline="false" title="instagram"></span></div>
     </footer>
+    <!-- Scripts -->
+    <script src='js/script.js'></script>
+    <script>
+        window.addEventListener('load', (e) => {
+            videoInfo(document.getElementsByTagName('video'));
+        });
+    </script>
 </body>
 
 </html>
