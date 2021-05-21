@@ -24,7 +24,7 @@
 		<a id="sitemap" href="../../sitemap.xml">Sitemap</a>
 	</header>
 	<nav class="topnav">
-		<a href="../../index.html"><i class="fas fa-home"></i></a>
+		<a href="../../index.html" aria-label="home"><i class="fas fa-home" aria-hidden="true" alt="home"></i></a>
 		<div class="dropdown">
 			<a href="../../ut1/index.html">UT1</a>
 			<div class="dropdown-content">
@@ -71,7 +71,20 @@
 		<section class="ac-container">
 			<div>
 				<input id="ac-1" name="accordion-1" type="checkbox" />
-				<label for="ac-1">Sostenibilidad</label>
+				<label for="ac-1">Usabilidad</label>
+				<article class="ac">
+					<div class="ac-item">
+						<details>
+							<summary>Nielsen´s Usability Heuristics <span class="mdi mdi-image-area" alt="imagen"></span></summary>
+							<img src="../../img/principios-usabilidad.png" alt="Nielsen´s Usability Heuristics" title="Nielsen´s Usability Heuristics">
+						</details>
+						<p class="indent">Imagen de los 10 <a href="https://trazos.net/10-principios-de-usabilidad-que-debes-conocer/" target="_blank" rel="noopener">prinicipios de usabilidad de Jakob Nielsen</a>.</p>
+					</div>
+				</article>
+			</div>
+			<div>
+				<input id="ac-2" name="accordion-1" type="checkbox" />
+				<label for="ac-2">Sostenibilidad</label>
 				<article class="ac">
 					<div class="ac-item">
 						<a href="https://nbadiola.com/consejos-hacer-web-mas-sostenible/" target="_blank">3 consejos para hacer tu web más sostenible</a>
@@ -83,7 +96,7 @@
 	</main>
 	<footer>
 		<div class="footer-resources row">
-			<a class="col-1" href="../index.html"><i class='fas fa-hand-point-left'></i></a>
+			<a class="col-1" href="../index.html" aria-label="volver"><i class='fas fa-hand-point-left' aria-hidden="true" alt="volver"></i></a>
 			<div class="col-11">
 				<h2>Recursos de interés</h2>
 				<div class="resources-columns">

@@ -87,7 +87,7 @@ nav *, nav *:hover, .dropdown-item, .btn, .btn:hover, a:hover{
  .container-img > p{
    padding-top: 0.75rem;
    padding-bottom: 0.75rem;
-   color: #6c757d;
+   color: #5f666d;
  }
 
  @media (max-width: 768px) {

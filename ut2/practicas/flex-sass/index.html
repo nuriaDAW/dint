@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Nuria Barrios Santos">
-    <title>Layout: Sass + Flex</title>
+    <title>Google Lab: Responsive Image</title>
     <link rel="icon" href="../../../img/logo.svg" type="image/svg+xml">
     <link rel="alternate icon" href="../../../img/logo(16x16).png" sizes="16x16" type="image/png">
     <link rel="stylesheet" href="css/styles.min.css">
@@ -40,14 +40,13 @@
         <h2>Lab</h2>
         <picture>
             <!-- load .webp image if supported -->
-            <source srcset="img/google_lab.webp" type="image/webp"
-                sizes="(min-width: 450px) and (max-width: 767px) 70vw">
+            <source srcset="img/google_lab.webp" type="image/webp" sizes="(min-width: 450px) and (max-width: 767px) 70vw">
             <!-- 
               Fallback if `.webp` images or <picture> tag 
               not supported by the browser.
             -->
-            <a href="https://developers.google.com/web/ilt/pwa/responsive-images-slides" target="_blank"><img
-                    src="img/google_lab.jpg" alt="web fundaments lab"></a>
+            <a href="https://developers.google.com/web/ilt/pwa/responsive-images-slides" target="_blank" aria-label="Google Lab Responsive Images"><img src="img/google_lab.jpg"
+                    alt="web fundaments lab" aria-hidden="true"></a>
         </picture>
     </aside>
     <main>
@@ -85,16 +84,12 @@
             </p>
             <div class="version-grid">
                 <div>Propiedad/valor</div>
-                <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" alt="Chrome"
-                        title="Chrome"></span></div>
-                <div><span class="iconify" data-icon="cib:microsoft-edge" data-inline="false" alt="Edge"
-                        title="Edge"></span></div>
-                <div><span class="iconify" data-icon="cib:mozilla-firefox" data-inline="false" alt="Firefox"
-                        title="Firefox"></span></div>
-                <div><span class="iconify" data-icon="cib:opera" data-inline="false" alt="Opera" title="Opera"></span>
+                <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" aria-hidden="true" alt="Chrome" title="Chrome"></span></div>
+                <div><span class="iconify" data-icon="cib:microsoft-edge" data-inline="false" aria-hidden="true" alt="Edge" title="Edge"></span></div>
+                <div><span class="iconify" data-icon="cib:mozilla-firefox" data-inline="false" aria-hidden="true" alt="Firefox" title="Firefox"></span></div>
+                <div><span class="iconify" data-icon="cib:opera" data-inline="false" aria-hidden="true" alt="Opera" title="Opera"></span>
                 </div>
-                <div><span class="iconify" data-icon="cib:safari" data-inline="false" alt="Safari"
-                        title="Safari"></span></div>
+                <div><span class="iconify" data-icon="cib:safari" data-inline="false" aria-hidden="true" alt="Safari" title="Safari"></span></div>
                 <div>max-width</div>
                 <div>4.0</div>
                 <div>12.0</div>
@@ -149,16 +144,12 @@
                 anchura. (<a href="#html-picture">Ver punto 5</a>)</p>
             <div class="version-grid">
                 <div>Atributo</div>
-                <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" alt="Chrome"
-                        title="Chrome"></span></div>
-                <div><span class="iconify" data-icon="cib:microsoft-edge" data-inline="false" alt="Edge"
-                        title="Edge"></span></div>
-                <div><span class="iconify" data-icon="cib:mozilla-firefox" data-inline="false" alt="Firefox"
-                        title="Firefox"></span></div>
-                <div><span class="iconify" data-icon="cib:opera" data-inline="false" alt="Opera" title="Opera"></span>
+                <div><span class="iconify" data-icon="cib:google-chrome" aria-hidden="true" data-inline="false" alt="Chrome" title="Chrome"></span></div>
+                <div><span class="iconify" data-icon="cib:microsoft-edge" aria-hidden="true" data-inline="false" alt="Edge" title="Edge"></span></div>
+                <div><span class="iconify" data-icon="cib:mozilla-firefox" aria-hidden="true" data-inline="false" alt="Firefox" title="Firefox"></span></div>
+                <div><span class="iconify" data-icon="cib:opera" aria-hidden="true" data-inline="false" alt="Opera" title="Opera"></span>
                 </div>
-                <div><span class="iconify" data-icon="cib:safari" data-inline="false" alt="Safari"
-                        title="Safari"></span></div>
+                <div><span class="iconify" data-icon="cib:safari" aria-hidden="true" data-inline="false" alt="Safari" title="Safari"></span></div>
                 <div>srcset</div>
                 <div>38.0</div>
                 <div>16.0 </div>
@@ -166,8 +157,7 @@
                 <div>25.0</div>
                 <div>9.0</div>
             </div>
-            <p class="table-caption">Primera versión del navegador que soporta totalmente el atributo. Fuente: <a
-                    href="https://caniuse.com" target="_blank">Can I Use</a></p>
+            <p class="table-caption">Primera versión del navegador que soporta totalmente el atributo. Fuente: <a href="https://caniuse.com" target="_blank">Can I Use</a></p>
         </article>
         <hr />
         <article id="attr-sizes">
@@ -231,20 +221,15 @@
                     </tr>
                 </tbody>
             </table>
-            <p class="table-caption">¿Quién conoce qué? Fuente: <a
-                    href="https://ericportis.com/posts/2014/srcset-sizes/" target="_blank">Srcset and sizes</a></p>
+            <p class="table-caption">¿Quién conoce qué? Fuente: <a href="https://ericportis.com/posts/2014/srcset-sizes/" target="_blank">Srcset and sizes</a></p>
             <div class="version-grid">
                 <div>Atributo</div>
-                <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" alt="Chrome"
-                        title="Chrome"></span></div>
-                <div><span class="iconify" data-icon="cib:microsoft-edge" data-inline="false" alt="Edge"
-                        title="Edge"></span></div>
-                <div><span class="iconify" data-icon="cib:mozilla-firefox" data-inline="false" alt="Firefox"
-                        title="Firefox"></span></div>
-                <div><span class="iconify" data-icon="cib:opera" data-inline="false" alt="Opera" title="Opera"></span>
+                <div><span class="iconify" data-icon="cib:google-chrome" aria-hidden="true" data-inline="false" alt="Chrome" title="Chrome"></span></div>
+                <div><span class="iconify" data-icon="cib:microsoft-edge" aria-hidden="true" data-inline="false" alt="Edge" title="Edge"></span></div>
+                <div><span class="iconify" data-icon="cib:mozilla-firefox" aria-hidden="true" data-inline="false" alt="Firefox" title="Firefox"></span></div>
+                <div><span class="iconify" data-icon="cib:opera" aria-hidden="true" data-inline="false" alt="Opera" title="Opera"></span>
                 </div>
-                <div><span class="iconify" data-icon="cib:safari" data-inline="false" alt="Safari"
-                        title="Safari"></span></div>
+                <div><span class="iconify" data-icon="cib:safari" aria-hidden="true" data-inline="false" alt="Safari" title="Safari"></span></div>
                 <div>sizes</div>
                 <div>38.0</div>
                 <div>16.0 </div>
@@ -252,8 +237,7 @@
                 <div>25.0</div>
                 <div>9.0</div>
             </div>
-            <p class="table-caption">Primera versión del navegador que soporta totalmente la propiedad. Fuente: <a
-                    href="https://caniuse.com" target="_blank">Can I Use</a></p>
+            <p class="table-caption">Primera versión del navegador que soporta totalmente la propiedad. Fuente: <a href="https://caniuse.com" target="_blank">Can I Use</a></p>
         </article>
         <hr />
         <article id="media-queries">
@@ -276,8 +260,7 @@
             </code>
             <figure>
                 <img srcset="img/undraw_happy_music-1600_large.png 1600w, img/undraw_happy_music-1000_large.png 1000w, img/undraw_happy_music-800_medium.png 800w, img/undraw_happy_music-500_small.png 500w"
-                    sizes="(max-width: 700px) 90vw, 50vw" src="img/undraw_happy_music-1600_large.png"
-                    alt="happy music bird">
+                    sizes="(max-width: 700px) 90vw, 50vw" src="img/undraw_happy_music-1600_large.png" alt="happy music bird">
                 <figcaption>Fuente: <a href="https://undraw.co/" target="_blank">unDraw</a></figcaption>
             </figure>
             <p>La <em>media query</em> comprueba la anchura del <em>viewport</em> de la pantalla, y aplica el CSS si el
@@ -287,16 +270,12 @@
             </p>
             <div class="version-grid">
                 <div>Regla</div>
-                <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" alt="Chrome"
-                        title="Chrome"></span></div>
-                <div><span class="iconify" data-icon="cib:microsoft-edge" data-inline="false" alt="Edge"
-                        title="Edge"></span></div>
-                <div><span class="iconify" data-icon="cib:mozilla-firefox" data-inline="false" alt="Firefox"
-                        title="Firefox"></span></div>
-                <div><span class="iconify" data-icon="cib:opera" data-inline="false" alt="Opera" title="Opera"></span>
+                <div><span class="iconify" data-icon="cib:google-chrome" aria-hidden="true" data-inline="false" alt="Chrome" title="Chrome"></span></div>
+                <div><span class="iconify" data-icon="cib:microsoft-edge" aria-hidden="true" data-inline="false" alt="Edge" title="Edge"></span></div>
+                <div><span class="iconify" data-icon="cib:mozilla-firefox" aria-hidden="true" data-inline="false" alt="Firefox" title="Firefox"></span></div>
+                <div><span class="iconify" data-icon="cib:opera" aria-hidden="true" data-inline="false" alt="Opera" title="Opera"></span>
                 </div>
-                <div><span class="iconify" data-icon="cib:safari" data-inline="false" alt="Safari"
-                        title="Safari"></span></div>
+                <div><span class="iconify" data-icon="cib:safari" aria-hidden="true" data-inline="false" alt="Safari" title="Safari"></span></div>
                 <div>@media</div>
                 <div>4.0</div>
                 <div>12.0 </div>
@@ -304,8 +283,7 @@
                 <div>10.0</div>
                 <div>3.1</div>
             </div>
-            <p class="table-caption">Primera versión del navegador que soporta totalmente la regla. Fuente: <a
-                    href="https://caniuse.com" target="_blank">Can I Use</a></p>
+            <p class="table-caption">Primera versión del navegador que soporta totalmente la regla. Fuente: <a href="https://caniuse.com" target="_blank">Can I Use</a></p>
         </article>
         <hr />
         <article id="html-picture">
@@ -351,16 +329,12 @@
             </p>
             <div class="version-grid">
                 <div>Elemento/valor</div>
-                <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" alt="Chrome"
-                        title="Chrome"></span></div>
-                <div><span class="iconify" data-icon="cib:microsoft-edge" data-inline="false" alt="Edge"
-                        title="Edge"></span></div>
-                <div><span class="iconify" data-icon="cib:mozilla-firefox" data-inline="false" alt="Firefox"
-                        title="Firefox"></span></div>
-                <div><span class="iconify" data-icon="cib:opera" data-inline="false" alt="Opera" title="Opera"></span>
+                <div><span class="iconify" data-icon="cib:google-chrome" aria-hidden="true" data-inline="false" alt="Chrome" title="Chrome"></span></div>
+                <div><span class="iconify" data-icon="cib:microsoft-edge" aria-hidden="true" data-inline="false" alt="Edge" title="Edge"></span></div>
+                <div><span class="iconify" data-icon="cib:mozilla-firefox" aria-hidden="true" data-inline="false" alt="Firefox" title="Firefox"></span></div>
+                <div><span class="iconify" data-icon="cib:opera" aria-hidden="true" data-inline="false" alt="Opera" title="Opera"></span>
                 </div>
-                <div><span class="iconify" data-icon="cib:safari" data-inline="false" alt="Safari"
-                        title="Safari"></span></div>
+                <div><span class="iconify" data-icon="cib:safari" aria-hidden="true" data-inline="false" alt="Safari" title="Safari"></span></div>
                 <div>figure</div>
                 <div>8.0</div>
                 <div>12.0</div>
@@ -436,16 +410,12 @@
             </figure>
             <div class="version-grid">
                 <div>Formato</div>
-                <div><span class="iconify" data-icon="cib:google-chrome" data-inline="false" alt="Chrome"
-                        title="Chrome"></span></div>
-                <div><span class="iconify" data-icon="cib:microsoft-edge" data-inline="false" alt="Edge"
-                        title="Edge"></span></div>
-                <div><span class="iconify" data-icon="cib:mozilla-firefox" data-inline="false" alt="Firefox"
-                        title="Firefox"></span></div>
-                <div><span class="iconify" data-icon="cib:opera" data-inline="false" alt="Opera" title="Opera"></span>
+                <div><span class="iconify" data-icon="cib:google-chrome" aria-hidden="true" data-inline="false" alt="Chrome" title="Chrome"></span></div>
+                <div><span class="iconify" data-icon="cib:microsoft-edge" aria-hidden="true" data-inline="false" alt="Edge" title="Edge"></span></div>
+                <div><span class="iconify" data-icon="cib:mozilla-firefox" aria-hidden="true" data-inline="false" alt="Firefox" title="Firefox"></span></div>
+                <div><span class="iconify" data-icon="cib:opera" aria-hidden="true" data-inline="false" alt="Opera" title="Opera"></span>
                 </div>
-                <div><span class="iconify" data-icon="cib:safari" data-inline="false" alt="Safari"
-                        title="Safari"></span></div>
+                <div><span class="iconify" data-icon="cib:safari" aria-hidden="true" data-inline="false" alt="Safari" title="Safari"></span></div>
                 <div>svg</div>
                 <div>28.0</div>
                 <div>12.0</div>
@@ -466,50 +436,54 @@
         <article id="performance">
             <h2>7. Rendimiento (Chrome y Firefox)</h2>
             <figure>
-                <img class="enlarge-img" srcset="img/performance_chrome.png 1600w, img/performance_chrome-1024.png 1024w"
-                sizes="(min-width: 1024px) 1600px, 1024px" src="img/performance_chrome.png" alt="Chrome Network tool" />
+                <img class="enlarge-img" srcset="img/performance_chrome.png 1600w, img/performance_chrome-1024.png 1024w" sizes="(min-width: 1024px) 1600px, 1024px" src="img/performance_chrome.png"
+                    alt="Chrome Network tool" />
                 <figcaption>Rendimiento de imágenes en local (Chrome)</figcaption>
             </figure>
             <figure>
-                <img class="enlarge-img"  src="img/performance_firefox.png" alt="Firefox Network tool" />
+                <img class="enlarge-img" src="img/performance_firefox.png" alt="Firefox Network tool" />
                 <figcaption>Rendimiento de imágenes en GitHub (Firefox)</figcaption>
             </figure>
-            <p>La imagen escogida no es muy pesada, aún así el tiempo de respuesta tiende a reducirse al escoger un tamaño 
-                de imagen más acorde al dispositivo y/o <em>viewport</em>.<p>
+            <p>La imagen escogida no es muy pesada, aún así el tiempo de respuesta tiende a reducirse al escoger un tamaño
+                de imagen más acorde al dispositivo y/o <em>viewport</em>.
+            <p>
             <p>El formato más ligero y más rápido en cargar es SVG, seguido de WebP.</p>
             <p class="note"><strong>Nota:</strong> Los navegadores pueden tener guardadas las imágenes en caché, conviene limpiarlo
-               antes de monitorizar el rendimiento y desactivarlo mientras las herramientas de desarrollador estén abiertas.
+                antes de monitorizar el rendimiento y desactivarlo mientras las herramientas de desarrollador estén abiertas.
             </p>
         </article>
         <hr />
         <article id="bonus">
             <h2>Bonus: rendimiento CSS comprimido vs CSS sin comprimir</h2>
             <figure>
-                <img class="enlarge-img"  src="img/performance_css.png" alt="Firefox Network tool" />
+                <img class="enlarge-img" src="img/performance_css.png" alt="Firefox Network tool" />
                 <figcaption>Velocidad de carga y número de solicitudes del CSS sin comprmir (GitHub)</figcaption>
             </figure>
             <figure>
-                <img class="enlarge-img"  src="img/performance_min_css.png" alt="Firefox Network tool" />
+                <img class="enlarge-img" src="img/performance_min_css.png" alt="Firefox Network tool" />
                 <figcaption>Velocidad de carga y número de solicitudes del CSS comprimido (GitHub)</figcaption>
             </figure>
             <p>Pese a ser un CSS corto y sencillo hay una diferencia en el tiempo de carga de 9 milisegundos entre ambas
                 versiones y realiza una solicitud menos.
             </p>
-            <p class="note"><strong>Nota:</strong> GitHub bloquea la carga de la fuente de iconos de Creative 
+            <p class="note"><strong>Nota:</strong> GitHub bloquea la carga de la fuente de iconos de Creative
                 Commons. Se visualiza igualmente porque existe una copia en local como fuente alternativa.
             </p>
         </article>
     </main>
     <footer>
-        <div class="back"><a href="javascript:window.history.back();"><span class="iconify" data-icon="jam:arrow-circle-left"
-                    data-inline="false" title="volver"></span></a></div>
-        <div class="footer-copyrigth"><span class="license"><a
-                    href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank">cb</a></span> Nuria
-            Barrios Santos, 2021</div>
-        <div class="social"><span class="iconify" data-icon="jam:twitter-circle" data-inline="false"
-                title="twitter"></span><span class="iconify" data-icon="jam:facebook-circle" data-inline="false"
-                title="facebook"></span><span class="iconify" data-icon="jam:instagram" data-inline="false"
-                title="instagram"></span></div>
+        <div class="back">
+            <a href="javascript:window.history.back();" aria-label="volver"><span class="iconify" data-icon="jam:arrow-circle-left" data-inline="false" aria-hiddern="true" alt="volver"></span></a>
+        </div>
+        <div class="footer-copyrigth">
+            <span class="license"><a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank" aria-label="Licencia Creative Commons Atribución">cb</a></span> Nuria
+            Barrios Santos, 2021
+        </div>
+        <div class="social">
+            <span class="iconify" data-icon="jam:twitter-circle" aria-hidden="true" data-inline="false" title="twitter" alt="twitter"></span>
+            <span class="iconify" data-icon="jam:facebook-circle" aria-hidden="true" data-inline="false" title="facebook" alt="facebook"></span>
+            <span class="iconify" data-icon="jam:instagram" aria-hidden="true" data-inline="false" title="instagram" alt="instagram"></span>
+        </div>
     </footer>
 </body>
 

@@ -1,6 +1,7 @@
 :root {
 	--blue:#53527a;
-	--blue-light: #6b699c;
+	--blue-light: #7f7db0;
+	--blue-lighter: #a3a1da;
 	--purple-lighter: #d6c4d6;
 	--purple-light: #bc9ebb;
 	--purple: #7a5279;
@@ -10,7 +11,7 @@
 	--red: #f72a2a;
 	--red-light: #f8afaf;
 	--green: #657a52;
-	--green-lighter: #c4f1c4;
+	--green-lighter: #bde2bd;
 	--green-light: #80a980;
 	--green-dark: #435a43;
 	--green-darker: #101810;
@@ -23,7 +24,7 @@
 	--success: #28a745;
 	--info: #17a2b8;
 	--warning: #ffc107;
-	--danger: #e91111;
+	--danger: #d81111;
 	--light: #f5f5f5;
 	--lighter: #fdf9f9;
 	--text-light: #f9f9f9;
@@ -302,7 +303,7 @@ footer {
 	.footer-resources h2 {
 		padding-left: 1rem;
 		text-transform: uppercase;
-		color:var(--green-light);
+		color:var(--green-lighter);
 	}
 
 	.footer-resources > a {
@@ -321,7 +322,7 @@ footer {
 
 	.resources-columns a{
 		padding-left: 2.5rem;
-		color: var(--secondary);
+		color: var(--text-light);
 		font-size: 1rem;
 	}
 
@@ -334,6 +335,7 @@ footer {
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 1rem;
+	background-color: var(--green-darker);
 }
 
 	.footer-copyright p:first-child{
@@ -342,7 +344,7 @@ footer {
 	}
 
 	.footer-copyright a {
-		color: var(--blue-light);
+		color: var(--blue-lighter);
 	}
 
 /* Estilos para las imágenes */
@@ -540,7 +542,7 @@ div.gallery {
 	}
 
 		#websSidenav a:hover{
-			color: var(--blue-light);
+			color: var(--blue);
 			text-decoration: none;
 		}
 	

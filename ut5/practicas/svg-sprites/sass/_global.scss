@@ -1,0 +1,155 @@
+/* Default styles */
+
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  width: 100%;
+  color: $text-dark-gray;
+  background-color: $background-light-pink;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  height: 15rem;
+
+  a {
+    /* Make a flex for allow horizontal centering */
+    display: flex;
+    /* Make a tag take full width */
+    flex-basis: 100%;
+    justify-content: center;
+    text-align: right;
+    color: $text-dark-gray;
+    text-decoration: none;
+  }
+
+  .icon-header {
+    width: $h1-fontsize; 
+    height: $h1-fontsize;
+    fill: currentColor;
+  }
+
+  p {
+    font-size: $h5-fontsize;
+    text-shadow: 2px 2px .5px $soft-gray;
+  }
+}
+
+/* Text styles */
+a {
+  color: $text-links;
+  cursor: pointer;
+}
+
+mark {
+  padding: .3rem .5rem;
+  color: $text-highlights;
+  text-shadow: 1px 1px $soft-gray;
+  background-color: $soft-purple;
+}
+
+/* Icon styles */
+
+.icon { 
+  width: 40px; 
+  height: 40px;
+  margin: .5em;
+  fill: red;
+}
+
+.icon-1 { 
+  width: 40px; 
+  height: 40px;
+  margin: .5em;
+  fill: blue;
+}
+
+/* Flexbox */
+.flex-container-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.compatibility  .flex-column {
+		display: flex;
+		border-top: 1px solid;
+		border-left: 1px solid;
+}
+
+.compatibility  .flex-column div {
+		width: calc(100%/7);
+		padding: .5rem 0;
+		text-align: center;
+		border-right: 1px solid;
+		border-bottom: 1px solid;
+}
+
+/*******************
+  Utility Classes
+*******************/
+
+.hide {
+  display: none !important;
+}
+
+// Text Align
+.left-align {
+  text-align: left;
+}
+.right-align {
+  text-align: right;
+}
+.center, .center-align {
+  text-align: center;
+}
+
+.left {
+  float: left !important;
+}
+.right {
+  float: right !important;
+}
+
+/* Text Resalt */
+.underlined {
+  text-decoration: underline;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+/* No Text Select */
+.no-select {
+  user-select: none;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.block {
+  display: block;
+}
+
+.truncate {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.no-padding {
+  padding: 0 !important;
+}

@@ -1,0 +1,809 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+/* Default styles */
+html, body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  color: #333333;
+  background-color: #ffdbff;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  height: 15rem;
+}
+header a {
+  /* Make a flex for allow horizontal centering */
+  display: flex;
+  /* Make a tag take full width */
+  flex-basis: 100%;
+  justify-content: center;
+  text-align: right;
+  color: #333333;
+  text-decoration: none;
+}
+header .icon-header {
+  width: 4.2rem;
+  height: 4.2rem;
+  fill: currentColor;
+}
+header p {
+  font-size: 1.64rem;
+  text-shadow: 2px 2px 0.5px #CCCCCC;
+}
+
+/* Text styles */
+a {
+  color: #006600;
+  cursor: pointer;
+}
+
+mark {
+  padding: 0.3rem 0.5rem;
+  color: #4d0099;
+  text-shadow: 1px 1px #CCCCCC;
+  background-color: #CC99FF;
+}
+
+/* Icon styles */
+.icon {
+  width: 40px;
+  height: 40px;
+  margin: 0.5em;
+  fill: red;
+}
+
+.icon-1 {
+  width: 40px;
+  height: 40px;
+  margin: 0.5em;
+  fill: blue;
+}
+
+/* Flexbox */
+.flex-container-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.compatibility .flex-column {
+  display: flex;
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+
+.compatibility .flex-column div {
+  width: calc(100%/7);
+  padding: 0.5rem 0;
+  text-align: center;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+
+/*******************
+  Utility Classes
+*******************/
+.hide {
+  display: none !important;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.center, .center-align {
+  text-align: center;
+}
+
+.left {
+  float: left !important;
+}
+
+.right {
+  float: right !important;
+}
+
+/* Text Resalt */
+.underlined {
+  text-decoration: underline;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+/* No Text Select */
+.no-select {
+  user-select: none;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.block {
+  display: block;
+}
+
+.truncate {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+@font-face {
+  font-family: Abel;
+  src: url("../fonts/Abel/Abel-Regular.ttf");
+  font-style: normal;
+}
+@font-face {
+  font-family: AmaticSC;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/AmaticSC/AmaticSC-Regular.ttf");
+}
+@font-face {
+  font-family: AmaticSC;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/AmaticSC/AmaticSC-Bold.ttf");
+}
+body {
+  font-family: "Abel", Tahoma, Geneva, sans-serif;
+}
+
+/* Header Styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "AmaticSC", cursive, Impact, Charcoal, sans-serif;
+  color: #4d0099;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  font-weight: inherit;
+}
+
+h1 {
+  font-size: 4.2rem;
+  line-height: 110%;
+  margin: 2.8rem 0 1.68rem 0;
+}
+
+h2 {
+  font-size: 3.56rem;
+  line-height: 110%;
+  margin: 2.3733333333rem 0 1.424rem 0;
+}
+
+h3 {
+  font-size: 2.92rem;
+  line-height: 110%;
+  margin: 1.9466666667rem 0 1.168rem 0;
+}
+
+h4 {
+  font-size: 2.28rem;
+  line-height: 110%;
+  margin: 1.52rem 0 0.912rem 0;
+}
+
+h5 {
+  font-size: 1.64rem;
+  line-height: 110%;
+  margin: 1.0933333333rem 0 0.656rem 0;
+}
+
+h6 {
+  font-size: 1.15rem;
+  line-height: 110%;
+  margin: 0.7666666667rem 0 0.46rem 0;
+}
+
+@media only screen and (min-width : 481px) {
+  header h1 {
+    font-size: 5.46rem;
+  }
+}
+/* Hide/SHow classes */
+@media only screen and (max-width : 480px) {
+  .hide-on-small-only, .hide-on-small-and-down {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width : 768px) {
+  .hide-on-med-and-down {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width : 769px) {
+  .hide-on-med-and-up {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .hide-on-med-only {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width : 1025px) {
+  .hide-on-large-only {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width : 1201px) {
+  .hide-on-extra-large-only {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width : 1201px) {
+  .show-on-extra-large {
+    display: block !important;
+  }
+}
+
+@media only screen and (min-width : 1025px) {
+  .show-on-large {
+    display: block !important;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .show-on-medium {
+    display: block !important;
+  }
+}
+
+@media only screen and (max-width : 480px) {
+  .show-on-small {
+    display: block !important;
+  }
+}
+
+@media only screen and (min-width : 769px) {
+  .show-on-medium-and-up {
+    display: block !important;
+  }
+}
+
+@media only screen and (max-width : 768px) {
+  .show-on-medium-and-down {
+    display: block !important;
+  }
+}
+
+@media only screen and (min-width : 769px) {
+  .navbar {
+    width: 100%;
+    margin: 3rem auto 4rem;
+  }
+  .navbar ul {
+    padding: 0;
+    text-align: center;
+    list-style: none;
+  }
+  .navbar li {
+    display: inline;
+    padding-right: 1rem;
+    font-family: "AmaticSC", cursive, Impact, Charcoal, sans-serif;
+    font-size: 2.4rem;
+  }
+  .navbar a {
+    color: #4d0099;
+    text-align: center;
+    text-decoration: none;
+  }
+  .navbar a:hover {
+    text-decoration: overline wavy;
+  }
+}
+/**
+* -- Movil navbar --
+* Movil navigation menu
+* Original code Andrew Myers (https://codepen.io/maskedcoder/pen/zqgpr)
+*/
+@media only screen and (max-width : 768px) {
+  .navbar {
+    position: relative;
+    background: #4d0099;
+    width: 3em;
+    height: 3em;
+    border-radius: 5em;
+    margin: auto;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    cursor: pointer;
+    border: 1em solid #CC99FF;
+  }
+  .navbar:after {
+    content: "";
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    width: 1em;
+    height: 0.2em;
+    border-top: 0.6em double #ffdbff;
+    border-bottom: 0.2em solid #ffdbff;
+  }
+  .navbar ul {
+    list-style: none;
+    padding: 0;
+    transform: rotate(180deg) translateY(-2em);
+    transition: 1s all;
+  }
+  .navbar:hover ul {
+    transform: rotate(0deg) translateY(-1em);
+    /**
+    * Add a pseudo element to cover the space
+    * between the links. This is so the menu
+    * does not lose :hover focus and disappear
+    */
+  }
+  .navbar:hover ul::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    left: 50%;
+    top: -5em;
+    /**
+    * The pseudo-element is a semi-circle
+    * created with CSS. Top, bottom, and right
+    * borders are 6.5em (left being 0), and then
+    * a border-radius is added to the two corners
+    * on the right.
+    */
+    border-width: 6.5em;
+    border-radius: 0 7.5em 7.5em 0;
+    border-left: 0;
+    border-style: solid;
+    /**
+    * Have to have a border color for the border
+    * to be hoverable. I'm using a very light one
+    * so that it looks invisible.
+    */
+    border-color: rgba(0, 0, 0, 0.01);
+    /**
+    * Put the psuedo-element behind the links
+    * (So they can be clicked on)
+    */
+    z-index: -1;
+    /**
+    * Make the cursor default so it looks like
+    * nothing is there
+    */
+    cursor: default;
+  }
+  .navbar li {
+    width: 7em;
+    height: 1.4em;
+    padding: 0.2em;
+    margin-top: 0.2em;
+    text-align: center;
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    transition: all 1s;
+    background: #CC99FF;
+    opacity: 0;
+    z-index: -1;
+  }
+  .navbar li:hover {
+    background: #4d0099;
+    z-index: 10;
+  }
+  .navbar li:hover a {
+    color: #ffdbff;
+  }
+  .navbar li:nth-of-type(1) {
+    transform: rotate(-90deg);
+    position: absolute;
+    left: -2.2em;
+    top: -5.2em;
+  }
+  .navbar li:nth-of-type(2) {
+    transform: rotate(-45deg);
+    position: absolute;
+    left: 1.8em;
+    top: -3.6em;
+  }
+  .navbar li:nth-of-type(3) {
+    position: absolute;
+    left: 3.4em;
+    top: 0.3em;
+  }
+  .navbar li:nth-of-type(4) {
+    transform: rotate(45deg);
+    position: absolute;
+    left: 1.8em;
+    top: 4.3em;
+  }
+  .navbar li:nth-of-type(5) {
+    transform: rotate(90deg);
+    position: absolute;
+    left: -2.2em;
+    top: 6em;
+  }
+  .navbar:hover li {
+    opacity: 1;
+  }
+  .navbar a {
+    color: #4d0099;
+    font-family: "Abel", sans-serif;
+    text-decoration: none;
+    /**
+    * This is to vertically center the text on the
+    * little tab-like things that the text is on.
+    */
+    line-height: 1.5em;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .navbar {
+    margin-left: 0;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

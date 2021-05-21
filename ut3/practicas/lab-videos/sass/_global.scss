@@ -16,11 +16,11 @@
 /* ------------ */
 /* Color styles */
 .red {
-    color: red;
+    color: darkred;
 }
 
 .green {
-    color: green;
+    color: darkgreen;
 }
 
 /* Global styles */
@@ -105,19 +105,28 @@ footer {
         flex-grow: 2;
     }
 
-    div:not(:nth-child(2)) {
+    div:not(:nth-child(2), :nth-child(3)) {
         font-size: 2rem;
+    }
+
+    .docs {
+        margin-top: 1rem;
+        line-height: initial;
+
+        a {
+            color: lighten($primary-color, 35%);
+        }
     }
 }
 
 /* Text styles */
 a {
-    color: darken($primary-color, 5%);
+    color: darken($primary-color, 6%);
     text-decoration: none;
     cursor: pointer;
 }
 
-    main a:hover, aside a:hover{
+    main a:hover, aside a:hover, .docs a:hover{
         text-decoration: underline dotted;
     }
 

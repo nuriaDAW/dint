@@ -4,11 +4,11 @@
 /* ------------ */
 /* Color styles */
 .red {
-  color: red;
+  color: darkred;
 }
 
 .green {
-  color: green;
+  color: darkgreen;
 }
 
 /* Global styles */
@@ -19,7 +19,7 @@
 
 html {
   background-color: #6c757d;
-  color: #f9f9f9;
+  color: #fdfbfb;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 200%;
@@ -34,8 +34,8 @@ body {
 
 header, footer {
   width: 100%;
-  background-color: #435a43;
-  color: #f9f9f9;
+  background-color: #3f533f;
+  color: #fdfbfb;
   text-align: center;
 }
 header a, footer a {
@@ -94,19 +94,19 @@ footer div:not(:nth-child(2)) {
 
 /* Text styles */
 a {
-  color: #486b49;
+  color: #446544;
   text-decoration: none;
   cursor: pointer;
 }
 
 strong {
-  color: #435a43;
+  color: #3f533f;
 }
 
 mark {
   padding: 0.2rem 0.5rem;
-  background-color: #435a43;
-  color: #f9f9f9;
+  background-color: #3f533f;
+  color: #fdfbfb;
   border-radius: 25px;
 }
 
@@ -116,7 +116,7 @@ details {
 details summary {
   font-family: "Merriweather", serif;
   font-size: 1.2rem;
-  color: #435a43;
+  color: #3f533f;
 }
 details ol {
   list-style: decimal;
@@ -146,17 +146,17 @@ details ol li.bonus {
   padding-right: 0.3rem;
 }
 .note a {
-  color: #435a43;
+  color: #3f533f;
 }
 
 .warning {
   margin: 0.5rem 0;
   padding: 0.5rem;
-  background-color: #fef7be;
-  border-left: 5px solid #897901;
+  background-color: #fef295;
+  border-left: 5px solid #605501;
 }
 .warning strong {
-  color: #a28f01;
+  color: #796b01;
 }
 .warning strong::before {
   content: "⚠";
@@ -223,7 +223,7 @@ hr {
 .version-grid div:first-child, .version-grid div:nth-child(6n+1) {
   font-weight: 900;
   text-align: left;
-  color: #435a43;
+  color: #3f533f;
   background-color: #a4d1a4;
 }
 
@@ -344,7 +344,7 @@ nav {
   background-color: #343a40;
 }
 nav a {
-  color: #f9f9f9;
+  color: #fdfbfb;
   padding: 0.75rem 1.2rem;
   text-align: center;
 }

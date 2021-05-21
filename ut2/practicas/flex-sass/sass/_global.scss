@@ -16,11 +16,11 @@
 /* ------------ */
 /* Color styles */
 .red {
-    color: red;
+    color: darkred;
 }
 
 .green {
-    color: green;
+    color: darkgreen;
 }
 
 /* Global styles */
@@ -115,7 +115,7 @@ footer {
 
 /* Text styles */
 a {
-    color: darken($primary-color, 5%);
+    color: darken($primary-color, 7%);
     text-decoration: none;
     cursor: pointer;
 }

@@ -1,0 +1,61 @@
+// Custom fonts
+@font-face {
+  font-family: Abel;
+  src: url("../fonts/Abel/Abel-Regular.ttf");
+  font-style: normal;
+};
+
+$font-list : (
+   // The directory path to the font from where the compiled CSS's directory
+    font-directory: '../fonts/AmaticSC',
+     // Create a map for each font within the 'fonts' map
+     font : (
+      // the name of the font to use as the value in the css font-family attribute
+       font-family: AmaticSC,
+        font-variants: (
+          // create a single map for each of the font options
+          // weight       = normal|bold|bolder|lighter|(100->900)
+          // style        = normal|italic|oblique
+           ( file: 'AmaticSC-Regular.ttf', weight: '400', style: 'normal' ),
+           ( file: 'AmaticSC-Bold.ttf', weight: '700', style: 'normal' ),
+       ),
+   ),
+);
+// get all the font variants
+$fonts: map-get( map-get( $font-list, 'font' ), 'font-variants' );
+// get the font-family property that will be used to call the font
+$font-family: map-get( map-get( $font-list, 'font' ), 'font-family' );
+// get the directory from the root, where the fonts are stored
+$font-directory:  map-get( $font-list, 'font-directory' );
+// Build the @font-face
+@each $font-variant in $fonts {
+
+  @font-face {
+    $font-style: map-get( $font-variant, 'style' );
+		$font-weight: map-get( $font-variant, 'weight' );
+		$file: map-get( $font-variant, 'file' );
+
+    // Output
+			font-family: $font-family;
+			font-style: unquote( $font-style );
+			font-weight: unquote( $font-weight );
+      src: url("#{$font-directory}/#{$file}");
+  }
+};
+
+body {
+    font-family: $body-font;
+}
+/* Header Styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font;
+    color: $text-highlights;
+    }
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+h1 { font-size: $h1-fontsize; line-height: 110%; margin: ($h1-fontsize / 1.5) 0 ($h1-fontsize / 2.5) 0;}
+h2 { font-size: $h2-fontsize; line-height: 110%; margin: ($h2-fontsize / 1.5) 0 ($h2-fontsize / 2.5) 0;}
+h3 { font-size: $h3-fontsize; line-height: 110%; margin: ($h3-fontsize / 1.5) 0 ($h3-fontsize / 2.5) 0;}
+h4 { font-size: $h4-fontsize; line-height: 110%; margin: ($h4-fontsize / 1.5) 0 ($h4-fontsize / 2.5) 0;}
+h5 { font-size: $h5-fontsize; line-height: 110%; margin: ($h5-fontsize / 1.5) 0 ($h5-fontsize / 2.5) 0;}
+h6 { font-size: $h6-fontsize; line-height: 110%; margin: ($h6-fontsize / 1.5) 0 ($h6-fontsize / 2.5) 0;}

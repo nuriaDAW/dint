@@ -2084,11 +2084,11 @@
 }
 
 .grey-custom-medium {
-  background-color: #6c757d;
+  background-color: #5f666d;
 }
 
 .grey-text.text-custom-medium {
-  color: #6c757d;
+  color: #5f666d;
 }
 
 .grey.lighten-5 {
@@ -2409,7 +2409,7 @@ img {
 .caption-cover {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  color: #6c757d;
+  color: #5f666d;
   font-style: italic;
   text-align: center;
 }
