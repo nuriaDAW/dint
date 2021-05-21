@@ -2037,11 +2037,11 @@
 }
 
 .grey {
-    background-color: #9e9e9e !important;
+    background-color: #8b8b8b !important;
 }
 
 .grey-text {
-    color: #9e9e9e !important;
+    color: #8b8b8b !important;
 }
 
 .grey.lighten-5 {
@@ -3013,7 +3013,7 @@ ul.staggered-list li {
 }
 
 .footer-copyright a {
-    color: #b3b3cc;
+    color: #d0c1f8;
 }
 
 .footer-copyright .container > span {

@@ -18,13 +18,14 @@
 <body>
     <header>
         <a href="#">
-        <div>
-            <h1>
-                <svg class="icon-header hide-on-med-and-down">
-                    <use xlink:href="icons/sprite.svg#pencil"></use>
-                </svg> Captain icons
-            </h1>
-            <p>+350 <mark>SVG Sprite</mark></p>
+            <div>
+                <h1>
+                    <svg class="icon-header hide-on-med-and-down" aria-hidden="true">
+                        <title>Pencil</title>
+                        <use xlink:href="icons/sprite.svg#pencil"></use>
+                    </svg> Captain icons
+                </h1>
+                <p>+350 <mark>SVG Sprite</mark></p>
             </div>
         </a>
     </header>
@@ -32,7 +33,7 @@
         <ul>
             <li><a href="#">Iconos</a></li>
             <li><a href="#">Descargar</a></li>
-            <li><a href="#">Compatibilidad</a></li>
+            <li><a href="#compatibility">Compatibilidad</a></li>
             <li><a href="#">Recursos</a></li>
             <li><a href="#">Sobre nosotros</a></li>
         </ul>
@@ -45,6 +46,72 @@
         </svg><svg class="icon-1">
             <use xlink:href="icons/sprite.svg#zeppelin"></use>
         </svg>
+        <section id="compatibility">
+            <h1>Compatibilidad</h1>
+            <div class="compatibility flex-container-column">
+                <div class="flex-column">
+                    <div>
+                        <picture>
+                            <source srcset="icons/browsers/explorer.svg" type="image/svg+xml" />
+                            <img class="icons-browser" src="icons/browsers/explorer.png" title="Internet Explorer" alt="Internet Explorer" />
+                        </picture>
+                    </div>
+                    <div>
+                        <picture>
+                            <source srcset="icons/browsers/edge.svg" type="image/svg+xml" />
+                            <img class="icons-browser" src="icons/browsers/edge.png" title="Edge" alt="Edge" />
+                        </picture>
+                    </div>
+                    <div>
+                        <picture>
+                            <source srcset="icons/browsers/firefox.svg" type="image/svg+xml" />
+                            <img class="icons-browser" src="icons/browsers/firefox.png" title="Firefox" alt="Firefox" />
+                        </picture>
+                    </div>
+                    <div>
+                        <picture>
+                            <source srcset="icons/browsers/chrome.svg" type="image/svg+xml" />
+                            <img class="icons-browser" src="icons/browsers/chrome.png" title="Chrome" alt="Chrome" />
+                        </picture>
+                    </div>
+                    <div>
+                        <picture>
+                            <source srcset="icons/browsers/safari.svg" type="image/svg+xml" />
+                            <img class="icons-browser" src="icons/browsers/safari.png" title="Safari" alt="Safari" />
+                        </picture>
+                    </div>
+                    <div>
+                        <picture>
+                            <source srcset="icons/browsers/opera.svg" type="image/svg+xml" />
+                            <img class="icons-browser" src="icons/browsers/opera.png" title="Opera" alt="Opera" />
+                        </picture>
+                    </div>
+                    <div>
+                        <picture>
+                            <source srcset="icons/browsers/android.svg" type="image/svg+xml" />
+                            <img class="icons-browser" src="icons/browsers/android.png" title="Android Browser" alt="Android Browser" />
+                        </picture>
+                    </div>
+                </div>
+                <div class="flex-column">
+                    <div class="partial-support">9.0
+                        <sup>
+                            <svg class="icon-info" aria-hidden="true">
+                                <title>No soporta SVG Sprites externos.</title>
+                                <use xlink:href="icons/sprite.svg#info-circle"></use>
+                            </svg>
+                        </sup>
+                    </div>
+                    <div class="full-support">12.0</div>
+                    <div class="full-support">15.0</div>
+                    <div class="full-support">50.0</div>
+                    <div class="full-support">11.1</div>
+                    <div class="full-support">37.0</div>
+                    <div class="full-support">90.0</div>
+                </div>
+            </div>
+            Para más información Can I Use (nueva pestaña)
+        </section>
     </main>
     <footer>
         <div class="back"><a href="javascript:window.history.back();"><span class="iconify" data-icon="jam:arrow-circle-left" data-inline="false" title="volver"></span></a></div>

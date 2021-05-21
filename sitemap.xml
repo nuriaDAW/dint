@@ -309,6 +309,10 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
         <lastmod>2021-05-17T22:17:39+00:00</lastmod>
     </url>
     <url>
+        <loc>https://nuriadaw.github.io/dint/ut3/practicas/lab-videos/docs/html5_video-uso-red.pdf</loc>
+        <lastmod>2021-05-20T18:30:14+00:00</lastmod>
+    </url>
+    <url>
         <loc>https://nuriadaw.github.io/dint/ut5/index.html</loc>
         <lastmod>2021-05-11T20:30:19+00:00</lastmod>
     </url>
@@ -316,7 +320,15 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
         <loc>https://nuriadaw.github.io/dint/ut5/documentación/index.html</loc>
         <lastmod>2021-05-11T20:45:57+00:00</lastmod>
     </url>
-        <url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut5/documentacion/Guide-to-Web-Typography-Toptal.pdf</loc>
+        <lastmod>2021-05-18T20:50:42+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://nuriadaw.github.io/dint/ut5/documentacion/Resumen-Web-Content-Accessibility-Guidelines-2.pdf</loc>
+        <lastmod>2021-05-22T01:53:26+00:00</lastmod>
+    </url>
+    <url>
         <loc>https://nuriadaw.github.io/dint/ut5/herramientas</loc>
         <lastmod>2021-05-11T21:05:08+00:00</lastmod>
     </url>

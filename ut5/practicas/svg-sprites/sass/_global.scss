@@ -69,24 +69,47 @@ mark {
   fill: blue;
 }
 
+.icons-browser {
+  width: 3rem;
+  height: auto;
+}
+
+.icon-info {
+  width: .9rem;
+  height: .9rem;
+  fill: currentColor;
+}
+
 /* Flexbox */
 .flex-container-column{
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  margin: 0 auto;
 }
 
 .compatibility  .flex-column {
-		display: flex;
-		border-top: 1px solid;
-		border-left: 1px solid;
-}
+	display: flex;
+	border-top: 1px solid;
+	border-left: 1px solid;
+ 
+  div {
+	  width: calc(100%/7);
+	  padding: .5rem 0;
+	  text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+	  border-right: 1px solid;
+	  border-bottom: 1px solid;
+  }
 
-.compatibility  .flex-column div {
-		width: calc(100%/7);
-		padding: .5rem 0;
-		text-align: center;
-		border-right: 1px solid;
-		border-bottom: 1px solid;
+  .partial-support {
+    background-color: lighten($yellow-badge, 20%);
+  }
+
+  .full-support {
+    background-color: lighten($green-badge, 30%);
+  }
 }
 
 /*******************

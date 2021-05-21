@@ -403,10 +403,23 @@ mark {
   fill: blue;
 }
 
+.icons-browser {
+  width: 3rem;
+  height: auto;
+}
+
+.icon-info {
+  width: 0.9rem;
+  height: 0.9rem;
+  fill: currentColor;
+}
+
 /* Flexbox */
 .flex-container-column {
   display: flex;
   flex-direction: column;
+  width: 80vw;
+  margin: 0 auto;
 }
 
 .compatibility .flex-column {
@@ -414,13 +427,20 @@ mark {
   border-top: 1px solid;
   border-left: 1px solid;
 }
-
 .compatibility .flex-column div {
   width: calc(100%/7);
   padding: 0.5rem 0;
   text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
   border-right: 1px solid;
   border-bottom: 1px solid;
+}
+.compatibility .flex-column .partial-support {
+  background-color: #ffe699;
+}
+.compatibility .flex-column .full-support {
+  background-color: #bbff33;
 }
 
 /*******************
@@ -559,6 +579,25 @@ h6 {
 @media only screen and (min-width : 481px) {
   header h1 {
     font-size: 5.46rem;
+  }
+}
+@media only screen and (max-width : 768px) {
+  .compatibility {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .compatibility .flex-column {
+    padding-right: 1rem;
+    flex-basis: 10%;
+    flex-direction: column;
+  }
+  .compatibility .flex-column div {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding-right: inherit;
+    justify-content: end;
+    align-items: center;
   }
 }
 /* Hide/SHow classes */

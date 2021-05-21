@@ -184,6 +184,16 @@ details > ul {
 	color:var(--gray-blue);
 }
 
+.thrid-eval {
+	list-style-type: none;
+	line-height: 150%;
+}
+
+.thrid-eval a {
+	color: var(--text-light);
+	font-size: 1rem;
+}
+
 /* Estilos header */
 header  {
 	padding: 0.5%;
