@@ -2,52 +2,39 @@
 /* Abel Regular - Latin */
 @font-face {
   font-family: Abel;
+  font-style: normal;
+  font-weight: 400;
   src: url("../fonts/Abel/Abel-Regular.eot");
   src: url('../fonts/Abel/Abel-Regular.eot?#iefix') format('embedded-opentype'),
        url('../fonts/Abel/Abel-Regular.woff2') format('woff2'), 
        url('../fonts/Abel/Abel-Regular.woff') format('woff'),
        url("../fonts/Abel/Abel-Regular.ttf") format('truetype'),
        url('../fonts/Abel/Abel-Regular.svg#Abel') format('svg');
-  font-style: normal;
 };
 
 /* AmaticSC- Latin */
-$font-list : (
-   // The directory path to the font from where the compiled CSS's directory
-    font-directory: '../fonts/AmaticSC',
-     // Create a map for each font within the 'fonts' map
-     font : (
-      // the name of the font to use as the value in the css font-family attribute
-       font-family: AmaticSC,
-        font-variants: (
-          // create a single map for each of the font options
-          // weight       = normal|bold|bolder|lighter|(100->900)
-          // style        = normal|italic|oblique
-           ( file-1: 'AmaticSC-Regular.ttf', weight: '400', style: 'normal' ),
-           ( file-1: 'AmaticSC-Bold.ttf', weight: '700', style: 'normal' ),
-       ),
-   ),
-);
-// get all the font variants
-$fonts: map-get( map-get( $font-list, 'font' ), 'font-variants' );
-// get the font-family property that will be used to call the font
-$font-family: map-get( map-get( $font-list, 'font' ), 'font-family' );
-// get the directory from the root, where the fonts are stored
-$font-directory:  map-get( $font-list, 'font-directory' );
-// Build the @font-face
-@each $font-variant in $fonts {
+@font-face {
+  font-family: AmaticSC;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/AmaticSC/AmaticSC-Regular.eot");
+  src: url('../fonts/AmaticSC/AmaticSC-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/AmaticSC/AmaticSC-Regular.woff2') format('woff2'), 
+       url('../fonts/AmaticSC/AmaticSC-Regular.woff') format('woff'),
+       url("../fonts/AmaticSC/AmaticSC-Regular.ttf") format('truetype'),
+       url('../fonts/AmaticSC/AmaticSC-Regular.svg#AmaticSC') format('svg');
+};
 
-  @font-face {
-    $font-style: map-get( $font-variant, 'style' );
-		$font-weight: map-get( $font-variant, 'weight' );
-		$file-1: map-get( $font-variant, 'file-1' );
-
-    // Output
-			font-family: $font-family;
-			font-style: unquote( $font-style );
-			font-weight: unquote( $font-weight );
-      src: url("#{$font-directory}/#{$file-1}");
-  }
+@font-face {
+  font-family: AmaticSC;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/AmaticSC/AmaticSC-Bold.eot");
+  src: url('../fonts/AmaticSC/AmaticSC-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/AmaticSC/AmaticSC-Bold.woff2') format('woff2'), 
+       url('../fonts/AmaticSC/AmaticSC-Bold.woff') format('woff'),
+       url("../fonts/AmaticSC/AmaticSC-Bold.ttf") format('truetype'),
+       url('../fonts/AmaticSC/AmaticSC-Bold.svg#AmaticSC') format('svg');
 };
 
 body {

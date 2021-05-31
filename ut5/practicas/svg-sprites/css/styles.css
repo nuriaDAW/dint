@@ -975,22 +975,25 @@ label {
 /* Abel Regular - Latin */
 @font-face {
   font-family: Abel;
+  font-style: normal;
+  font-weight: 400;
   src: url("../fonts/Abel/Abel-Regular.eot");
   src: url("../fonts/Abel/Abel-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Abel/Abel-Regular.woff2") format("woff2"), url("../fonts/Abel/Abel-Regular.woff") format("woff"), url("../fonts/Abel/Abel-Regular.ttf") format("truetype"), url("../fonts/Abel/Abel-Regular.svg#Abel") format("svg");
-  font-style: normal;
 }
 /* AmaticSC- Latin */
 @font-face {
   font-family: AmaticSC;
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/AmaticSC/AmaticSC-Regular.ttf");
+  src: url("../fonts/AmaticSC/AmaticSC-Regular.eot");
+  src: url("../fonts/AmaticSC/AmaticSC-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/AmaticSC/AmaticSC-Regular.woff2") format("woff2"), url("../fonts/AmaticSC/AmaticSC-Regular.woff") format("woff"), url("../fonts/AmaticSC/AmaticSC-Regular.ttf") format("truetype"), url("../fonts/AmaticSC/AmaticSC-Regular.svg#AmaticSC") format("svg");
 }
 @font-face {
   font-family: AmaticSC;
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/AmaticSC/AmaticSC-Bold.ttf");
+  src: url("../fonts/AmaticSC/AmaticSC-Bold.eot");
+  src: url("../fonts/AmaticSC/AmaticSC-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/AmaticSC/AmaticSC-Bold.woff2") format("woff2"), url("../fonts/AmaticSC/AmaticSC-Bold.woff") format("woff"), url("../fonts/AmaticSC/AmaticSC-Bold.ttf") format("truetype"), url("../fonts/AmaticSC/AmaticSC-Bold.svg#AmaticSC") format("svg");
 }
 body {
   font-family: "Abel", Tahoma, Geneva, sans-serif;

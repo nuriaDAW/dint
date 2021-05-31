@@ -6,15 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Nuria Barrios Santos">
+    <meta name="description" content="Recursos para aprender a crear, mantener y usar gráficos y sprites SVG" />
     <title>Captain icons - Recursos</title>
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="alternate icon" href="img/favicon(16x16).png" type="image/png">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.min.css">
     <!-- Performance tip. You can use the loading=lazy attribute to defer the loading of the image until the user scrolls to them. -->
     <base loading='lazy'>
 </head>
 
 <body>
+    <!-- Skip to content for screen readers -->
+    <a class="skip-to-content-link" href="#main">
+        Saltar al contenido principal
+    </a>
     <header id="top">
         <a href="index.html">
             <div>
@@ -38,7 +43,7 @@
             <li><a href="index.html#contact">Contacto</a></li>
         </ul>
     </nav>
-    <main>
+    <main id="main">
         <h1>Recursos de aprendizaje sobre SVG y SVG sprites</h1>
         <div class="grid-col-xl3 grid-col-xxl3">
             <div class="grid-col-gap-span2 srcintro-text">
@@ -46,7 +51,7 @@
                 <p class="margin-collapse">Comienza a utilizar <mark>SVG desde la base</mark> hasta convertirte en un maestro a través de videos, audios, manuales en pdf o sitios web.</p>
                 <p class="margin-collapse">Crea tus SVG y <em>sprites</em> "a mano" o apóyate en herramientas. ¡Tú eliges!</p>
                 <details class="top-margin summary-gray">
-                    <summary>Sumario de recursos</summary>
+                    <summary role="navigation">Sumario de recursos</summary>
                     <ol>
                         <li class="hide-on-extra-small-and-down"><a href="#steps">Pasos para crear y utilizar tu propio <em>stripe SVG</em></a></li>
                         <li><a href="#tools">Herramientas</a></li>
@@ -276,7 +281,7 @@
             <h1>Videotutoriales</h1>
             <p>Curso y tutoriales en video sobre cómo crear y utilizar <em>sprites</em> SVG.</p>
             <div class="video-list-wrapper grid-col-xxl3 grid-col-xl3">
-                <div class="video grid-col-gap-span2" role="group" aria-label="Using SVG Sprites: Introduction">
+                <div class="video grid-col-gap-span2" role="group" aria-label="Using SVG Sprites: Introduction" tabindex="0">
                     <p class="big">Using SVG Sprites: Introduction (subtítulos en español)</p>
                     <hr />
                     <div class="video-container">
@@ -341,7 +346,7 @@
         <section id="audio">
             <h1>Podcasts</h1>
             <p>Programas que resolverán todas tus dudas sobre SVG. ¿Qué son? ¿Cuáles son sus ventajas? ¿Me complicarán la existencia?...</p>
-            <div class="podcast" role="group" aria-label="Audio: Scalable Vector Graphics">
+            <div class="podcast" role="group" aria-label="Audio: Scalable Vector Graphics" tabindex="0">
                 <p class="big">Scalable Vector Graphics (inglés)</p>
                 <hr />
                 <audio controls>
@@ -361,7 +366,7 @@
                     <p>[...]</p>
                 </details>
             </div>
-            <div class="podcast" role="group" aria-label="Audio: What Is SVG Animation? with Cassie Evans">
+            <div class="podcast" role="group" aria-label="Audio: What Is SVG Animation? with Cassie Evans" tabindex="0">
                 <p class="big">What Is SVG Animation? with Cassie Evans (inglés)</p>
                 <hr />
                 <audio controls>
@@ -456,7 +461,8 @@
     <footer class="resources-footer">
         <div class="legal-conditions">
             <p><strong>Nuria Barrios Santos, 2021.</strong>
-                <a class="license" aria-label="Licencia Creative Commons Atribución" href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="external" title="Licencia Creative Commons Atribución">
+                <a class="license" aria-label="Licencia Creative Commons Atribución" href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="external"
+                    title="Licencia Creative Commons Atribución">
                     <picture>
                         <source srcset="img/by.svg" type="image/svg+xml">
                         <img src="img/by.png" alt="Licencia Creative Commons Atribución" width="120" height="42">

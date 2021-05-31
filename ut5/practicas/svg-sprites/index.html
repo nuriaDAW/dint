@@ -6,15 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Nuria Barrios Santos">
+    <meta name="description" content="Portada del sprite SVG Captain icons" />
     <title>Captain icons</title>
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="alternate icon" href="img/favicon(16x16).png" type="image/png">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.min.css">
     <!-- Performance tip. You can use the loading=lazy attribute to defer the loading of the image until the user scrolls to them. -->
     <base loading='lazy'>
 </head>
 
 <body>
+    <!-- Skip to content for screen readers -->
+    <a class="skip-to-content-link" href="#main">
+        Saltar al contenido principal
+    </a>
     <header id="top">
         <a href="#">
             <div>
@@ -260,49 +265,49 @@
                     <caption>Soporte para los identificadores de fragmentos SVG <span class="hide-on-med-and-down">en los navegadores principales</span></caption>
                     <thead>
                         <tr>
-                            <th>
+                            <th aria-label="Internet Explorer">
                                 <svg class="icon" role="img">
                                     <title>Internet Explorer</title>
                                     <use xlink:href="icons/sprite-browsers.svg#explorer"></use>
                                     Internet Explorer
                                 </svg>
                             </th>
-                            <th>
+                            <th aria-label="Edge">
                                 <svg class="icon" role="img">
                                     <title>Edge</title>
                                     <use xlink:href="icons/sprite-browsers.svg#edge"></use>
                                     Edge
                                 </svg>
                             </th>
-                            <th>
+                            <th aria-label="Firefox">
                                 <svg class="icon" role="img">
                                     <title>Firefox</title>
                                     <use xlink:href="icons/sprite-browsers.svg#firefox"></use>
                                     Firefox
                                 </svg>
                             </th>
-                            <th>
+                            <th aria-label="Chrome">
                                 <svg class="icon" role="img">
                                     <title>Chrome</title>
                                     <use xlink:href="icons/sprite-browsers.svg#chrome"></use>
                                     Chrome
                                 </svg>
                             </th>
-                            <th>
+                            <th aria-label="Safari">
                                 <svg class="icon" role="img">
                                     <title>Safari</title>
                                     <use xlink:href="icons/sprite-browsers.svg#safari"></use>
                                     Safari
                                 </svg>
                             </th>
-                            <th>
+                            <th aria-label="Opera">
                                 <svg class="icon" role="img">
                                     <title>Opera</title>
                                     <use xlink:href="icons/sprite-browsers.svg#opera"></use>
                                     Opera
                                 </svg>
                             </th>
-                            <th>
+                            <th aria-label="Android Browser">
                                 <svg class="icon" role="img">
                                     <title>Android Browser</title>
                                     <use xlink:href="icons/sprite-browsers.svg#android"></use>
@@ -315,7 +320,7 @@
                         <tr>
                             <td class="partial-support">
                                 9.0
-                                <sup>
+                                <sup role="tooltip">
                                     <svg class="icon-info" role="img">
                                         <title>No soporta SVG Sprites externos.</title>
                                         <use xlink:href="icons/sprite-captain_icons.svg#info-circle"></use>

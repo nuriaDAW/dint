@@ -511,6 +511,20 @@ label {
   margin-bottom: 0;
 }
 
+/* Skip to content link */
+.skip-to-content-link {
+  position: absolute;
+  height: 30px;
+  left: 50%;
+  padding: 8px;
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+}
+
+.skip-to-content-link:focus {
+  transform: translateY(0%);
+}
+
 /* Back to top link */
 .back-to-top-wrapper {
   position: absolute;
