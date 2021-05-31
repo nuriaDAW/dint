@@ -10,117 +10,510 @@
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="alternate icon" href="img/favicon(16x16).png" type="image/png">
     <link rel="stylesheet" href="css/styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,800' rel='stylesheet' type='text/css'>
     <!-- Performance tip. You can use the loading=lazy attribute to defer the loading of the image until the user scrolls to them. -->
     <base loading='lazy'>
 </head>
 
 <body>
-    <header>
+    <header id="top">
         <a href="#">
             <div>
                 <h1>
-                    <svg class="icon-header hide-on-med-and-down" aria-hidden="true">
-                        <title>Pencil</title>
-                        <use xlink:href="icons/sprite.svg#pencil"></use>
+                    <svg class="icon-header hide-on-med-and-down" role="img" aria-hidden="true">
+                        <title></title>
+                        <use xlink:href="icons/sprite-captain_icons.svg#pencil"></use>
                     </svg> Captain icons
                 </h1>
                 <p>+350 <mark>SVG Sprite</mark></p>
             </div>
         </a>
     </header>
+    <div class="top-switcher"><a class="upper" href="#">es</a> | <a class="upper" href="">en</a></div>
     <nav class="navbar">
         <ul>
-            <li><a href="#">Iconos</a></li>
-            <li><a href="#">Descargar</a></li>
-            <li><a href="#compatibility">Compatibilidad</a></li>
-            <li><a href="#">Recursos</a></li>
-            <li><a href="#">Sobre nosotros</a></li>
+            <li><a href="icon-set.html">Iconos</a></li>
+            <li><a href="#download">Descargar</a></li>
+            <li><a href="resources.html">Recursos</a></li>
+            <li><a href="#about">Sobre nosotros</a></li>
+            <li><a href="#contact">Contacto</a></li>
         </ul>
     </nav>
     <main>
-        Deben ser servidos los sprites svg externos al html NO se ven en local.
-        </svg><svg class="icon">
-            <use xlink:href="icons/sprite.svg#zoom-out"></use>
-        </svg>
-        </svg><svg class="icon-1">
-            <use xlink:href="icons/sprite.svg#zeppelin"></use>
-        </svg>
-        <section id="compatibility">
-            <h1>Compatibilidad</h1>
-            <div class="compatibility flex-container-column">
-                <div class="flex-column">
-                    <div>
-                        <picture>
-                            <source srcset="icons/browsers/explorer.svg" type="image/svg+xml" />
-                            <img class="icons-browser" src="icons/browsers/explorer.png" title="Internet Explorer" alt="Internet Explorer" />
-                        </picture>
+        <section>
+            <div class="hero">
+                <p class="big">Olvida las <span class="red">fuentes de iconos</span> y los engorrosos <em class="red">sprites PNG</em>.</p>
+                <p class="bigger">¡<span class="small-caps">Pásate</span> a <mark>SVG</mark>!</p>
+                <p class="right-align">
+                    <a href="resources.html#audio">Cuéntame más sobre SVG
+                        <svg class="icon" role="img" aria-hidden="true">
+                            <title></title>
+                            <use xlink:href="icons/sprite-captain_icons.svg#arrow-to-right"></use>
+                        </svg>
+                    </a>
+                </p>
+            </div>
+            <article>
+                <h1>SVG Sprites</h1>
+                <p>En líneas generales, un <em>sprite</em> de imagen es una imagen individual que contiene otras imágenes. <em>SVG (Scalable Vector Graphics)</em> es un formato de imagen vectorial
+                    basado en XML con soporte extendido para la animación y el coloreado.</p>
+                <p class="big center"><em>Sprite</em> + SVG = <em>SVG Sprite</em></p>
+                <p>Un <em>sprite</em> de imagen SVG es un archivo SVG que contiene varias imágenes (por ejemplo, iconos). Cada imagen SVG puede ser referenciada por un ID o una posición. Lo más común
+                    es definir cada SVG dentro del elemento <code class="inline-code-gray">&lt;symbol&gt;</code>. Los <em>sprites</em> pueden utilizarse todas las veces que se quiera a lo largo de una
+                    o
+                    varias páginas web mediante el elemento
+                    SVG <code class="inline-code-gray">&lt;use&gt;</code>. A diferencia de los símbolos SVG, las imágenes incluidas en un <em>sprite SVG</em> se distribuyen en una cuadrícula.</p>
+                <p class="big center">¡Todo el "sabor" de <mark>SVG en una sola imagen</mark>!</p>
+                <div class="container grid-wrapper-md">
+                    <div class="flip-card grid-col">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front rounded">
+                                <p class="upper"><strong>Accesible</strong></p>
+                                <svg class="icon" role="img" aria-hidden="true">
+                                    <title></title>
+                                    <use xlink:href="icons/sprite-captain_icons.svg#sunglasses"></use>
+                                </svg>
+                            </div>
+                            <div class="flip-card-back rounded">
+                                <p>SVG cuenta con elementos nativos accesibles (<code class="inline-code-gray">title</code>, <code class="inline-code-gray">desc</code> y <code
+                                        class="inline-code-gray">text</code>) y
+                                    es compatible con los atributos WAI-ARIA.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <picture>
-                            <source srcset="icons/browsers/edge.svg" type="image/svg+xml" />
-                            <img class="icons-browser" src="icons/browsers/edge.png" title="Edge" alt="Edge" />
-                        </picture>
+                    <div class="flip-card grid-col">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front rounded">
+                                <p class="upper"><strong>Semántico</strong></p>
+                                <svg class="icon" role="img" aria-hidden="true">
+                                    <title></title>
+                                    <use xlink:href="icons/sprite-captain_icons.svg#speech-balloon"></use>
+                                </svg>
+                            </div>
+                            <div class="flip-card-back rounded">
+                                <p>La semántica de la etiqueta <code class="inline-code-gray">&lt;svg&gt;</code> por defecto indica que es una imagen. Sus elementos también son semánticos.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <picture>
-                            <source srcset="icons/browsers/firefox.svg" type="image/svg+xml" />
-                            <img class="icons-browser" src="icons/browsers/firefox.png" title="Firefox" alt="Firefox" />
-                        </picture>
+                    <div class="flip-card grid-col">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front rounded">
+                                <p class="upper"><strong>Escalable</strong></p>
+                                <svg class="icon" role="img" aria-hidden="true">
+                                    <title></title>
+                                    <use xlink:href="icons/sprite-captain_icons.svg#scale"></use>
+                                </svg>
+                            </div>
+                            <div class="flip-card-back rounded">
+                                <p>Escala el icono como quieras, seguirá siendo nítido sin importar el tamaño ni la resolución de la pantalla.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <picture>
-                            <source srcset="icons/browsers/chrome.svg" type="image/svg+xml" />
-                            <img class="icons-browser" src="icons/browsers/chrome.png" title="Chrome" alt="Chrome" />
-                        </picture>
+                    <div class="flip-card grid-col">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front rounded">
+                                <p class="upper"><strong>Multicolor</strong></p>
+                                <svg class="icon" role="img" aria-hidden="true">
+                                    <title></title>
+                                    <use xlink:href="icons/sprite-captain_icons.svg#bucket"></use>
+                                </svg>
+                            </div>
+                            <div class="flip-card-back rounded">
+                                <p>Los iconos SVG pueden tener varios colores y se les pueden aplicar filtros y degradados.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <picture>
-                            <source srcset="icons/browsers/safari.svg" type="image/svg+xml" />
-                            <img class="icons-browser" src="icons/browsers/safari.png" title="Safari" alt="Safari" />
-                        </picture>
+                    <div class="flip-card grid-col">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front rounded">
+                                <p class="upper"><strong>Animable</strong></p>
+                                <svg class="icon" role="img" aria-hidden="true">
+                                    <title></title>
+                                    <use xlink:href="icons/sprite-captain_icons.svg#wand"></use>
+                                </svg>
+                            </div>
+                            <div class="flip-card-back rounded">
+                                <p>Los SVG se pueden animar a través de CSS o Javascript.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <picture>
-                            <source srcset="icons/browsers/opera.svg" type="image/svg+xml" />
-                            <img class="icons-browser" src="icons/browsers/opera.png" title="Opera" alt="Opera" />
-                        </picture>
+                    <div class="flip-card grid-col">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front rounded">
+                                <p class="upper"><strong>Compatible</strong></p>
+                                <svg class="icon" role="img" aria-hidden="true">
+                                    <title></title>
+                                    <use xlink:href="icons/sprite-captain_icons.svg#globe"></use>
+                                </svg>
+                            </div>
+                            <div class="flip-card-back rounded">
+                                <p>Soportado por la mayoría de los navegadores modernos. Hay mútiples opciones de respaldo si fueran necesarias.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <picture>
-                            <source srcset="icons/browsers/android.svg" type="image/svg+xml" />
-                            <img class="icons-browser" src="icons/browsers/android.png" title="Android Browser" alt="Android Browser" />
-                        </picture>
+                    <div class="flip-card grid-col">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front rounded">
+                                <p class="upper"><strong>No más emojis</strong></p>
+                                <svg class="icon" role="img" aria-hidden="true">
+                                    <title></title>
+                                    <use class="icon-forbiden" xlink:href="icons/sprite-captain_icons.svg#forbiden"></use>
+                                    <use xlink:href="icons/sprite-captain_icons.svg#monster-smiling"></use>
+                                </svg>
+                            </div>
+                            <div class="flip-card-back rounded">
+                                <p>Algunos navegadores móviles muestran emojis en lugar de iconos cuando las fuentes no se cargan.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card grid-col">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front rounded">
+                                <p class="upper"><strong>Rendimiento</strong></p>
+                                <svg class="icon" role="img" aria-hidden="true">
+                                    <title></title>
+                                    <use xlink:href="icons/sprite-captain_icons.svg#speedometer"></use>
+                                </svg>
+                            </div>
+                            <div class="flip-card-back rounded">
+                                <p>El coste de conseguir todas las imágenes será de una sola petición HTTP (o ninguna). La combinación con SVG resulta en una carga muy rápida.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card grid-col">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front rounded">
+                                <p class="upper"><strong>Tamaño</strong></p>
+                                <svg class="icon" role="img" aria-hidden="true">
+                                    <title></title>
+                                    <use xlink:href="icons/sprite-captain_icons.svg#feather"></use>
+                                </svg>
+                            </div>
+                            <div class="flip-card-back rounded">
+                                <p>En comparación con fuentes de iconos y gráficos PNG son muy ligeras.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card grid-col">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front rounded">
+                                <p class="upper"><strong>Fácil manejo</strong></p>
+                                <svg class="icon" role="img" aria-hidden="true">
+                                    <title></title>
+                                    <use xlink:href="icons/sprite-captain_icons.svg#hand"></use>
+                                </svg>
+                            </div>
+                            <div class="flip-card-back rounded">
+                                <p>Es fácil de usar, controlar y posicionar en todos los navegadores y dispositivos de manera homogénea.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card grid-col">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front rounded">
+                                <p class="upper"><strong>Ampliable</strong></p>
+                                <svg class="icon" role="img" aria-hidden="true">
+                                    <title></title>
+                                    <use xlink:href="icons/sprite-captain_icons.svg#memo"></use>
+                                </svg>
+                            </div>
+                            <div class="flip-card-back rounded">
+                                <p>Es muy fácil mantener y ampliar el <em>sprite</em>.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card grid-col">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front rounded">
+                                <p class="upper"><strong>Ordenado</strong></p>
+                                <svg class="icon" role="img" aria-hidden="true">
+                                    <title></title>
+                                    <use xlink:href="icons/sprite-captain_icons.svg#shelf"></use>
+                                </svg>
+                            </div>
+                            <div class="flip-card-back rounded">
+                                <p>No más montones de imagenes o <em>sprites PNG</em> engorrosos. ¡Basta de perder el tiempo!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card grid-col">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front rounded">
+                                <p class="upper"><strong>Múltiples estilos</strong></p>
+                                <svg class="icon" role="img" aria-hidden="true">
+                                    <title></title>
+                                    <use xlink:href="icons/sprite-captain_icons.svg#stars"></use>
+                                </svg>
+                            </div>
+                            <div class="flip-card-back rounded">
+                                <p>Permite incluir iconos con diferentes estilos dentro del mismo archivo; es decir, puede tener iconos duotono junto con iconos jeroglíficos.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="flex-column">
-                    <div class="partial-support">9.0
-                        <sup>
-                            <svg class="icon-info" aria-hidden="true">
-                                <title>No soporta SVG Sprites externos.</title>
-                                <use xlink:href="icons/sprite.svg#info-circle"></use>
+            </article>
+            <article>
+                <h1>Compatibilidad</h1>
+                <p>El método para utilizar los <em>sprites SVG</em> son los identificadores de fragmentos SVG. Con ellos se visualiza una parte del archivo SVG enlazando
+                    con una parte del SVG con ID propio utilizando los atributos de <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/use#browser_compatibility">XLink</a> o cambiando
+                    el valor del atributo <code class="inline-code-gray">viewbox</code> para crear una "vista" de la imagen.</p>
+                <table class="table-compatibility">
+                    <caption>Soporte para los identificadores de fragmentos SVG <span class="hide-on-med-and-down">en los navegadores principales</span></caption>
+                    <thead>
+                        <tr>
+                            <th>
+                                <svg class="icon" role="img">
+                                    <title>Internet Explorer</title>
+                                    <use xlink:href="icons/sprite-browsers.svg#explorer"></use>
+                                </svg>
+                            </th>
+                            <th>
+                                <svg class="icon" role="img">
+                                    <title>Edge</title>
+                                    <use xlink:href="icons/sprite-browsers.svg#edge"></use>
+                                </svg>
+                            </th>
+                            <th>
+                                <svg class="icon" role="img">
+                                    <title>Firefox</title>
+                                    <use xlink:href="icons/sprite-browsers.svg#firefox"></use>
+                                </svg>
+                            </th>
+                            <th>
+                                <svg class="icon" role="img">
+                                    <title>Chrome</title>
+                                    <use xlink:href="icons/sprite-browsers.svg#chrome"></use>
+                                </svg>
+                            </th>
+                            <th>
+                                <svg class="icon" role="img">
+                                    <title>Safari</title>
+                                    <use xlink:href="icons/sprite-browsers.svg#safari"></use>
+                                </svg>
+                            </th>
+                            <th>
+                                <svg class="icon" role="img">
+                                    <title>Opera</title>
+                                    <use xlink:href="icons/sprite-browsers.svg#opera"></use>
+                                </svg>
+                            </th>
+                            <th>
+                                <svg class="icon" role="img">
+                                    <title>Android Browser</title>
+                                    <use xlink:href="icons/sprite-browsers.svg#android"></use>
+                                </svg>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="partial-support">
+                                9.0
+                                <sup>
+                                    <svg class="icon-info" role="img">
+                                        <title>No soporta SVG Sprites externos.</title>
+                                        <use xlink:href="icons/sprite-captain_icons.svg#info-circle"></use>
+                                    </svg>
+                                </sup>
+                            </td>
+                            <td class="full-support">
+                                12.0
+                            </td>
+                            <td class="full-support">
+                                15.0
+                            </td>
+                            <td class="full-support">
+                                50.0
+                            </td>
+                            <td class="full-support">
+                                11.1
+                            </td>
+                            <td class="full-support">
+                                37.0
+                            </td>
+                            <td class="full-support">
+                                90.0
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="7">Para más información visita: <a lang="en" href="https://caniuse.com/?search=svg%20fragments" target="_blank" rel="external noopener noreferrer">Can I Use (abre una
+                                    nueva pestaña)</a></td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <p class="note">
+                    <strong>
+                        <svg class="icon" role="img" aria-hidden="true">
+                            <title></title>
+                            <use xlink:href="icons/sprite-captain_icons.svg#note"></use>
+                        </svg>
+                        Nota:</strong> las imágenes de <em>sprite</em> <span class="underlined">necesitan ser servidas</span> desde el mismo dominio que sirve la página real para que funcionen.
+                    Algunos navegadores (como Firefox y Chrome) <span class="upper">no</span> muestran los iconos de <em>sprites SVG</em> externos al html, por razones de seguridad, a menos que el
+                    sitio web se ejecute en un servidor web.
+                </p>
+            </article>
+        </section>
+        <section id="download" class="gray-background skewed-background">
+            <article class="content">
+                <h1>Descarga</h1>
+                <p>El <em>sprite SVG</em> de Captain Icons contiene un total de <mark>372 iconos SVG</mark> de estilo cómic, divertidos y originales, del conjunto de iconos SVG creado por <a
+                        href="https://mariodelvalle.github.io/CaptainIconWeb/">Mario del Valle</a>. El <em>sprite</em> ha sido generado con la herramienta <a href="https://svgsprit.es/">SVG
+                        Spreact</a>. Ambos, tanto el conjunto de iconos original como el <em>sprite</em>, están bajo licencia <a
+                        href="https://creativecommons.org/licenses/by-sa/4.0/legalcode.es">Creative
+                        Commons Atribución-CompartirIgual</a>.
+                </p>
+                <div class="center corner-button-wrapper-2x">
+                    <a class="btn corner-button-l-gray" href="resources/captainicons-sprite.zip" download>
+                        <span>Descargar
+                            <svg class="icon" role="img" aria-hidden="true">
+                                <title></title>
+                                <use xlink:href="icons/sprite-captain_icons.svg#download"></use>
                             </svg>
-                        </sup>
-                    </div>
-                    <div class="full-support">12.0</div>
-                    <div class="full-support">15.0</div>
-                    <div class="full-support">50.0</div>
-                    <div class="full-support">11.1</div>
-                    <div class="full-support">37.0</div>
-                    <div class="full-support">90.0</div>
+                        </span>
+                    </a>
+                </div>
+                <h2>Cómo usar los iconos</h2>
+                <p class="how-to rounded">
+                    <svg class="icon-circle" rol="img" height="30" width="30" aria-label="1">
+                        <circle cx="20" cy="20" r="10" fill="currentColor" />
+                        <text x="65%" y="70%" text-anchor="middle" fill="white" font-size=".85rem" font-weight="bold" dy=".3em">1</text>
+                    </svg>
+                    Añadirlos al HTML
+                </p>
+                <pre class="highligth-dark">
+&lt;<code class="tag">svg</code> <code class="attr-name">class</code>="<code class="attr-value">icon</code>"&gt;
+    [&lt;<code class="tag">title</code>&gt;Breve descripción del contenido&lt;/<code class="tag">title</code>&gt;]
+    [&lt;<code class="tag">desc</code>&gt;Descripción en profundidad del contenido&lt;/<code class="tag">desc</code>&gt;]
+    &lt;<code class="tag">use</code> <code class="attr-name">xlink:href</code>="<code class="attr-value">[path/]sprite.svg#icon-id</code>"&gt;&lt;/<code class="tag">use</code>&gt;
+&lt;/<code class="tag">svg</code>&gt;</pre>
+                <p>Se pueden añadir varios <code class="inline-code-pink">&lt;use&gt;</code> dentro del mismo <code class="inline-code-pink">&lt;svg&gt;</code> para hacer combinaciones de iconos. </p>
+                <p class="note">
+                    <strong>
+                        <svg class="icon" role="img" aria-hidden="true">
+                            <title></title>
+                            <use xlink:href="icons/sprite-captain_icons.svg#note"></use>
+                        </svg>
+                        Nota:</strong> <code class="inline-code-gray">xlink:href</code> se puede utilizar por razones de retrocompatibilidad, aunque SVG 2 eliminó la necesidad del espacio de nombres
+                    xlink, por lo que, en su lugar, es recomendable utilizar <code class="inline-code-gray">href</code>.
+                </p>
+                <p class="how-to rounded">
+                    <svg class="icon-circle" rol="img" height="30" width="30" aria-label="2">
+                        <circle cx="20" cy="20" r="10" fill="currentColor" />
+                        <text x="65%" y="70%" text-anchor="middle" fill="white" font-size=".85rem" font-weight="bold" dy=".3em">2</text>
+                    </svg>
+                    Darles estilo (CSS)
+                </p>
+                <pre class="highligth-dark">
+<code class="class-name">.icon</code> {
+    <code class="property-name">width</code>: 1rem;
+    <code class="property-name">height</code>: 1rem;
+    <code class="property-name">fill</code>: currentColor;
+    <code class="property-name">stroke</code>: currentColor;
+    [...]
+}</pre>
+                <p class="margin-collapse">Admite cualquier estilo o animación CSS compatible con SVG.</p>
+                <p class="margin-collapse">También se pueden aplicar clases a la etiqueta <code class="inline-code-pink">&lt;use&gt;</code>.</p>
+                <p class="how-to rounded">
+                    <svg class="icon-circle" rol="img" height="30" width="30" aria-label="3">
+                        <circle cx="20" cy="20" r="10" fill="currentColor" />
+                        <text x="65%" y="70%" text-anchor="middle" fill="white" font-size=".85rem" font-weight="bold" dy=".3em">3</text>
+                    </svg>
+                    Asegurar la compatibilidad con Internet Explorer (opcional)
+                </p>
+                <p><a lang="en" href="https://jonneal.dev/svg4everybody/">svgforeverybody</a> es un polyfill —fragmento de código (generalmente JavaScript en la Web) que se utiliza para proporcionar
+                    una funcionalidad moderna en navegadores antiguos que no lo
+                    admiten de forma nativa— creado por Jonathan Neal que añade soporte de contenido externo SVG para todos los navegadores. Entrará en juego cuando el navegador no sea capaz de
+                    renderizar las imágenes. Para poder utilizarlo, simplemente hay que subir el script al servidor y agregar el siguiente código al HTML con la ruta donde está alojado el script:
+                </p>
+                <pre class="highligth-dark">
+&lt;!-- Incluye el script --&gt;
+&lt;<code class="tag">script</code> <code class="attr-name">src</code>="<code class="attr-value">/path/to/svg4everybody.js</code>"&gt;&lt;/<code class="tag">script</code>&gt;
+&lt;!-- Ejecuta el script --&gt;
+&lt;<code class="tag">script</code>&gt;<code class="js-code">svg4everybody();</code>&lt;/<code class="tag">script</code>&gt;</pre>
+                <p>Para ampliar el soporte a Internet Explorer 6-8, incluye el script <em>legacy</em> dentro del <code class="inline-code-pink">&lt;head&gt;</code>: </p>
+                <pre class="highligth-dark">
+&lt;<code class="tag">head</code>&gt;
+    &lt;!-- Contenido del &lt;head&gt; --&gt;
+    &lt;<code class="tag">script</code> <code class="attr-name">src</code>="<code class="attr-value">/path/to/svg4everybody.legacy.js</code>"&gt;&lt;/<code class="tag">script</code>&gt;
+&lt;/<code class="tag">head</code>&gt;
+&lt;<code class="tag">body</code>&gt;
+    &lt;!-- Contenido del &lt;body&gt; --&gt;
+    &lt;<code class="tag">script</code>&gt;<code class="js-code">svg4everybody();</code>&lt;/<code class="tag">script</code>&gt;
+ &lt;/<code class="tag">body</code>&gt;</pre>
+                <p class="note">
+                    <strong>
+                        <svg class="icon" role="img" aria-hidden="true">
+                            <title></title>
+                            <use xlink:href="icons/sprite-captain_icons.svg#note"></use>
+                        </svg>
+                        Nota:</strong> con el fin de obtener los mejores resultados en Internet Explorer, establece X-UA-Compatible a <code class="inline-code-gray">ie=edge</code>. Puede hacerse con
+                    una cabecera de respuesta del servidor o con el siguiente HTML en el <code class="inline-code-gray">&lt;head&gt;</code>:
+                    <code class="inline-code highligth-dark">&lt;<code class="tag">meta</code> <code class="attr-name">http-equiv</code>="<code class="attr-value">x-ua-compatible</code>" <code
+                        class="attr-name">content</code>="<code class="attr-value">ie=edge</code>"&gt;</code>
+                </p>
+                <p class="right-align right-margin">
+                    <a href="icon-set.html">Ver referencias de los iconos en el <em>sprite</em>
+                        <svg class="icon" role="img" aria-hidden="true">
+                            <title></title>
+                            <use xlink:href="icons/sprite-captain_icons.svg#arrow-to-right"></use>
+                        </svg>
+                    </a>
+                </p>
+            </article>
+        </section>
+        <section id="about">
+            <h1>Sobre nosotros</h1>
+            <div class="container grid-col-xl3 grid-col-xxl3">
+                <div class="about-image">
+                </div>
+                <div class="grid-col-gap-span2 about-text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet, velit in mollis luctus, massa risus sollicitudin ipsum, nec interdum orci dolor tempus justo. Nulla
+                        dapibus varius lectus a dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce ultricies rhoncus tortor luctus mattis.
+                        Proin purus ante, commodo sollicitudin cursus vitae, molestie sed mi. Donec fringilla vehicula dapibus. In eget urna efficitur, dapibus mi vel, posuere lectus. Vestibulum
+                        egestas urna massa, imperdiet tristique ex efficitur placerat. Quisque a orci risus. Pellentesque consectetur felis sit amet sapien imperdiet, vel tristique leo suscipit.
+                        Mauris et nibh fermentum, rutrum lacus vitae, commodo massa. Cras luctus convallis neque, quis eleifend nisi dictum in. Nam in interdum purus. In vel tempor tortor, nec sodales
+                        turpis. Pellentesque erat felis, ultricies ac ante a, scelerisque porta magna. Donec rhoncus nisl ac metus vehicula, eget fringilla risus interdum.</p>
                 </div>
             </div>
-            Para más información Can I Use (nueva pestaña)
         </section>
+        <section id="contact">
+            <h1 class="right-align right-margin">Contacta con nosotros</h1>
+            <form id="contact-form" aria-label="Envía una consulta" action="" method="post">
+                <label id="subjectLabel" for="subject">Asunto</label>
+                <input type="text" id="subject" name="subject" aria-labelledby="subjectLabel">
+                <label id="nameLabel" for="name">Nombre<sup class="red" aria-hidden="true">*</sup></label>
+                <input type="text" id="name" name="name" aria-labelledby="nameLabel" aria-describedby="nameDesc" autocomplete="name" required aria-required="true">
+                <p id="nameDesc">p.ej. John Doe</p>
+                <label id="emailLabel" for="email">Email<sup class="red" aria-hidden="true">*</sup></label>
+                <input type="email" id="email" name="email" aria-labelledby="emailLabel" aria-describedby="emailDesc" autocomplete="email" autocapitalize="off" required aria-required="true">
+                <p id="emailDesc">p.ej. john@example.com</p>
+                <label id="queryLabel" for="query">Cuéntanos algo:<sup class="red" aria-hidden="true">*</sup></label>
+                <textarea id="query" name="query" aria-labelledby="queryLabel" required aria-required="true"></textarea>
+                <p>*Campos obligatorios</p>
+                <p class="privacy-policity">Si quieres conocer el tratamiento de los datos puedes leer nuestra <a href="privacy-policy.html" target="_blank">Política de privacidad (abre una nueva pestaña)</a>.</p>
+                <input class="btn btn-form-pink" type="submit" value="Enviar consulta">
+            </form>
+        </section>
+        <!-- Back to Top link -->
+        <div class="back-to-top-wrapper">
+            <a href="#top" class="back-to-top-link">
+                <svg class="icon" role="img" aria-hidden="true">
+                    <title></title>
+                    <use xlink:href="icons/sprite-captain_icons.svg#arrow-to-top"></use>
+                </svg>
+                <span class="upper">Volver arriba</span>
+            </a>
+        </div>
     </main>
     <footer>
-        <div class="back"><a href="javascript:window.history.back();"><span class="iconify" data-icon="jam:arrow-circle-left" data-inline="false" title="volver"></span></a></div>
-        <div class="footer-copyrigth"><a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank" rel="noopener"><span class="iconify" data-icon="cib:creative-commons"
-                    data-inline="true"></span>
-                <span class="iconify" data-icon="cib:creative-commons-by" data-inline="true"></span></a> Nuria
+        <div>Nuria
             Barrios Santos, 2021</div>
         <div class="social">Texto legal/condiciones</div>
     </footer>
+    <!-- Scripts -->
+    <script src="js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
 </body>
 
 </html>

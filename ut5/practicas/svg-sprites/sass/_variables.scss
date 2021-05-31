@@ -3,6 +3,7 @@
 // 1. Colors
 // 2. Typography
 // 3. Media Queries Ranges
+// 4. Global
 
 // ------------------------------------------------
 
@@ -15,17 +16,32 @@ $soft-gray: #CCCCCC !default;    // Secundary
 $soft-purple: #CC99FF !default;  // Highlights
 $soft-green: #CCFFCC !default;   // Links
 
+//***** Light theme *****//
 $text-light-pink: lighten($soft-pink, 3%) !default;
+$text-dark-pink: darken($soft-pink, 60%) !default;
 $background-light-pink: lighten($soft-pink, 3%) !default;
+$text-light-gray: lighten($soft-gray, 7%) !default;
 $text-dark-gray: darken($soft-gray, 60%) !default;
+$background-light-gray: lighten($soft-gray, 7%) !default;
+// Highlights
 $text-highlights: darken($soft-purple, 50%) !default;
 $background-purple: darken($soft-purple, 50%) !default;
-$text-links: darken($soft-green, 70%);
+$border-purple: darken($soft-purple, 50%) !default;
+// Links
+$text-links: darken($soft-green, 70%) !default;
 
 // Badges
 $red-badge: #CC0000 !default;    // Red
 $yellow-badge: #FFCC33 !default; // Yellow
 $green-badge: #669900 !default;  // Green
+
+// Code block
+$tag: #FF9966;
+$property-name: #FF9966;
+$attr-name: #bcd988;
+$class-name: #bcd988;
+$attr-value:  #FFC300;
+$js-code: #ff7474;
 
 // 2. Typography
 // ================================================
@@ -63,7 +79,7 @@ $extra-large-and-up: "only screen and (min-width : #{$extra-large-screen-up})" !
 $extra-small-and-down: "only screen and (max-width : #{$extra-small-screen})" !default;
 $small-and-down: "only screen and (max-width : #{$small-screen})" !default;
 $medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
-$large-and-down: "only screen and (max-width : #{large-screen})" !default;
+$large-and-down: "only screen and (max-width : #{$large-screen})" !default;
 // Mobile devices (320px — 480px)
 $mobile-only: "only screen and (min-width : #{$extra-small-screen-up}) and (max-width : #{$small-screen})" !default;
 // iPads, Tablets (481px — 768px)
@@ -73,3 +89,7 @@ $laptop-only: "only screen and (min-width : #{$medium-screen-up}) and (max-width
 // Desktops, large screens (1025px — 1200px)
 $desktop-only: "only screen and (min-width : #{$large-screen-up}) and (max-width : #{$extra-large-screen})" !default;
 
+// 4. Global
+// ================================================
+// How far of a scroll travel within <main> prior to the link to top appearing
+$scrollLength: 100vh;

@@ -1,0 +1,125 @@
+WEBVTT - Usando sprites SVG: introducción
+
+1
+00:00:00.310 --> 00:00:04.149 
+Hola y bienvenido a usando sprites SVG.
+
+2
+00:00:04.150 --> 00:00:06.399
+Mi nombre es Craig Campbell y seré
+
+3
+00:00:06.400 --> 00:00:08.649
+tu profesor en este curso. En este 
+
+4
+00:00:08.650 --> 00:00:10.718
+pequeño curso te voy a enseñar
+
+5
+00:00:10.719 --> 00:00:12.878
+varios métodos diferentes para usar
+
+6
+00:00:12.879 -->00:00:18.369
+sprites SVG en HTML. SVG son las siglas para
+
+7
+00:00:18.370 --> 00:00:21.669
+Scalable Vector Graphic y un archivo SVG
+
+8
+00:00:21.670 --> 00:00:25.029
+es un gráfico basado en XML que, como su
+
+9
+00:00:25.030 --> 00:00:27.939
+nombre indica, puede escalarse sin afectar la
+
+10
+00:00:27.940 --> 00:00:30.939
+calidad. Si tomamos un gráfico de mapa de bits
+
+11
+00:00:30.940 --> 00:00:34.328
+como un archivo PNG o un archivo JPG e intentamos
+
+12
+00:00:34.329 --> 00:00:38.319
+agrandarlo, podemos ver como pierde algo
+
+13
+00:00:38.320 --> 00:00:40.119
+de calidad. Sus bordes se
+
+14
+00:00:40.120 --> 00:00:43.029
+pixelan y se vuelven borrosos. Por otra parte,
+
+15
+00:00:43.030 --> 00:00:46.479
+si echamos un vistazo a un archivo SVG, podemos
+
+16
+00:00:46.480 --> 00:00:48.849
+coger el gráfico y agrandarlo tanto como
+
+17
+00:00:48.850 --> 00:00:51.068
+queramos y, como puedes ver,
+
+18
+00:00:51.069 --> 00:00:54.248
+mantiene sus bordes perfectamente definidos. Esto supone
+
+19
+00:00:54.249 --> 00:00:57.518
+una gran ventaja al usar SVG en lugar
+
+20
+00:00:57.519 --> 00:01:00.939
+de JPEG o PNG si las circuntancias lo
+
+21
+00:01:00.940 --> 00:01:03.189
+permiten. En este curso voy a
+
+22
+00:01:03.190 --> 00:01:05.438
+mostrarte un par de técnicas para
+
+23
+00:01:05.439 --> 00:01:08.589
+combinar múltiples gráficos vectoriales en
+
+24
+00:01:08.590 --> 00:01:11.709
+un solo objeto SVG. Y después veremos
+
+25
+00:01:11.710 --> 00:01:13.539
+cómo mostrar esas formas o
+
+26
+00:01:13.540 --> 00:01:16.959
+imágenes una a una llamándolas desde ese
+
+27
+00:01:16.960 --> 00:01:19.898
+objeto SVG.  Así que tenemos mucho que aprender
+
+28
+00:01:19.899 --> 00:01:22.059
+en poco tiempo. En la
+
+29
+00:01:22.060 --> 00:01:22.688
+próxima lección
+
+30
+00:01:22.689 --> 00:01:24.819
+empezamos. Gracias por ver el video
+
+31
+00:01:24.820 --> 00:01:27.570
+y nos vemos pronto.

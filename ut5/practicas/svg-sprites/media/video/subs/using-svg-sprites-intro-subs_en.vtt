@@ -1,0 +1,125 @@
+WEBVTT - Using SVG Sprites: Introduction
+
+1
+00:00:00.310 --> 00:00:04.149
+Hello and welcome to using SVG sprites.
+
+2
+00:00:04.150 --> 00:00:06.399
+My name is Craig Campbell and I will be
+
+3
+00:00:06.400 --> 00:00:08.649
+your instructor for this course. In this
+
+4
+00:00:08.650 --> 00:00:10.718
+short course I'm going to teach you a
+
+5
+00:00:10.719 --> 00:00:12.878
+couple of different methods for using
+
+6
+00:00:12.879 -->00:00:18.369
+SVG sprites in HTML. Now SVG stands for
+
+7
+00:00:18.370 --> 00:00:21.669
+Scalable Vector Graphic and an SVG file
+
+8
+00:00:21.670 --> 00:00:25.029
+is an XML based graphic which, as its
+
+9
+00:00:25.030 --> 00:00:27.939
+name implies, can be scaled without using
+
+10
+00:00:27.940 --> 00:00:30.939
+quality. If we take a bitmap graphic such
+
+11
+00:00:30.940 --> 00:00:34.328
+as a PNG file or a JPG file and try to
+
+12
+00:00:34.329 --> 00:00:38.319
+scale it up, as you can see it loses some
+
+13
+00:00:38.320 --> 00:00:40.119
+of its quality. Its edges become
+
+14
+00:00:40.120 --> 00:00:43.029
+pixelated and blurry. On the other hand
+
+15
+00:00:43.030 --> 00:00:46.479
+if we take a look at an SVG file, we can
+
+16
+00:00:46.480 --> 00:00:48.849
+take this graphic and scale it up as
+
+17
+00:00:48.850 --> 00:00:51.068
+much as we want to, and as you can see, it
+
+18
+00:00:51.069 --> 00:00:54.248
+keeps its nice crisp edges. So there's a
+
+19
+00:00:54.249 --> 00:00:57.518
+great advantage to using SVG's over
+
+20
+00:00:57.519 --> 00:01:00.939
+JPEGs or PNGs if the circumstances call
+
+21
+00:01:00.940 --> 00:01:03.189
+for it. So in this course I'm going to
+
+22
+00:01:03.190 --> 00:01:05.438
+show you a couple of techniques for
+
+23
+00:01:05.439 --> 00:01:08.589
+combining multiple vector graphics into
+
+24
+00:01:08.590 --> 00:01:11.709
+a single SVG object. And then we'll look
+
+25
+00:01:11.710 --> 00:01:13.539
+at how to display those shapes or
+
+26
+00:01:13.540 --> 00:01:16.959
+sprites one at a time by calling on that
+
+27
+00:01:16.960 --> 00:01:19.898
+SVG object. So we've got a lot to learn
+
+28
+00:01:19.899 --> 00:01:22.059
+in a short amount of time. And in the
+
+29
+00:01:22.060 --> 00:01:22.688
+next lesson
+
+30
+00:01:22.689 --> 00:01:24.819
+we'll get started. Thank you for watching
+
+31
+00:01:24.820 --> 00:01:27.570
+and I'll see you then.

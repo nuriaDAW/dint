@@ -1,0 +1,274 @@
+.container {
+  margin: 1rem auto;
+  max-width: 90%;
+}
+
+.grid-col {
+    margin: 1rem;
+}
+
+/***********************
+     Flexbox fallback
+*************************/
+
+@supports not (display: grid){
+.grid{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid-col-1{
+    @extend .grid;
+    flex-direction: column;
+}
+
+@for $num-col from 2 through 12 {
+  .grid-col-#{$num-col} {
+    @extend .grid;
+  }
+
+  .grid-col-#{$num-col} > * {
+    flex-basis: calc(100%/#{$num-col});
+  }
+}
+
+/* Smallest screens grid fallback */
+@media #{$extra-small-and-down}{
+@for $num-col from 2 through 12 {
+  .grid-col-xs#{$num-col} {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .grid-col-xs#{$num-col} > * {
+    flex-basis: calc(100%/#{$num-col});
+  }
+}
+}
+
+/* Mobile grid fallback */
+@media #{$mobile-only}{
+@for $num-col from 2 through 12 {
+  .grid-col-s#{$num-col} {
+    display: flex;
+    flex-wrap: wrap;
+    }
+  .grid-col-s#{$num-col} > * {
+    margin: .75rem;
+    flex-basis: calc(100%/#{$num-col} - 1.5rem);
+  }
+}
+}
+
+/* Tablet grid fallback */
+@media #{$tablet-only}{
+@for $num-col from 2 through 12 {
+  .grid-col-m#{$num-col} {
+    display: flex;
+    flex-wrap: wrap;
+     }
+  .grid-col-m#{$num-col} > * {
+    margin: .75rem;
+    flex-basis: calc(100%/#{$num-col} - 1.5rem);
+  }
+}
+}
+
+/* Laptop grid fallback */
+@media #{$laptop-only}{
+@for $num-col from 2 through 12 {
+  .grid-col-l#{$num-col} {
+    display: flex;
+    flex-wrap: wrap;
+     }
+  .grid-col-l#{$num-col} > * {
+    margin: .75rem;
+    flex-basis: calc(100%/#{$num-col} - 1.5rem);
+  }
+}
+}
+
+/* Desktop grid fallback */
+@media #{$desktop-only}{
+@for $num-col from 2 through 12 {
+  .grid-col-xl#{$num-col} {
+    display: flex;
+    flex-wrap: wrap;
+     }
+  .grid-col-xl#{$num-col} > * {
+    margin: .75rem;
+    flex-basis: calc(100%/#{$num-col} - 1.5rem);
+  }
+}
+}
+
+/* Extra large screens grid fallback */
+@media #{$extra-large-and-up}{
+@for $num-col from 2 through 12 {
+  .grid-col-xxl#{$num-col} {
+    display: flex;
+    flex-wrap: wrap;
+     }
+  .grid-col-xxl#{$num-col} > * {
+    margin: .75rem;
+    flex-basis: calc(100%/#{$num-col} - 1.5rem);
+  }
+}
+}
+
+/* Auto wrapper grid fallback */
+@mixin grid-wrapper($min-width){
+  @extend .grid;
+  flex-direction: row;
+  justify-content: space-between;
+
+    .grid-col {
+        margin: .75rem;
+        min-width: $min-width;
+    }
+}
+
+.grid-wrapper-lg{
+    width: 98%;
+    @include grid-wrapper(16em);
+}
+
+.grid-wrapper-md{
+    @include grid-wrapper(12em);
+}
+
+.grid-wrapper-s{
+    @include grid-wrapper(8em);
+}
+
+/* Grid column span fallback */ 
+@for $num-col from 2 through 12 {
+  /* Grid #{$num-col} */
+  @for $num from 2 through $num-col {
+    .grid-col-span#{$num} {
+      flex-basis: calc(100%/#{$num-col}*#{$num});
+    }
+  }
+}
+
+/* Grid column span with margin fallback */ 
+@for $num-col from 2 through 12 {
+  /* Grid #{$num-col} */
+  @for $num from 2 through $num-col {
+    .grid-col-gap-span#{$num} {
+      flex-basis: calc(100%/#{$num-col}*#{$num} - 1.5rem);
+    }
+  }
+}
+
+}
+
+/* 1-12 columns grid */
+@supports (display: grid) {
+.grid, .grid-col-1 {
+    display: grid;
+}
+
+@for $num-col from 2 through 12 {
+  .grid-col-#{$num-col} {
+    @extend .grid;
+    grid-template-columns: repeat($num-col, 1fr);
+  }
+}
+
+/* Grid for smallest devices */
+@media #{$extra-small-and-down}{
+@for $num-col from 2 through 12 {
+  .grid-col-xs#{$num-col} {
+    display: grid;
+    grid-template-columns: repeat($num-col, 1fr);
+  }
+}
+}
+
+/* Grid for mobile */
+@media #{$mobile-only}{
+@for $num-col from 2 through 12 {
+  .grid-col-s#{$num-col} {
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat($num-col, 1fr);
+  }
+}
+}
+
+/* Grid for tablet */
+@media #{$tablet-only}{
+@for $num-col from 2 through 12 {
+  .grid-col-m#{$num-col} {
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat($num-col, 1fr);
+  }
+}
+}
+
+/* Grid for laptop */
+@media #{$laptop-only}{
+@for $num-col from 2 through 12 {
+  .grid-col-l#{$num-col} {
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat($num-col, 1fr);
+  }
+}
+}
+
+/* Grid for desktop */
+@media #{$desktop-only}{
+@for $num-col from 2 through 12 {
+  .grid-col-xl#{$num-col} {
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat($num-col, 1fr);
+  }
+}
+}
+
+/* Grid for extra large screens */
+@media #{$extra-large-and-up}{
+@for $num-col from 2 through 12 {
+  .grid-col-xxl#{$num-col} {
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat($num-col, 1fr);
+  }
+}
+}
+
+/* Auto wrapper grid */
+@mixin grid-wrapper($min-width){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+    grid-gap: 1.5rem;
+    justify-items: center;
+
+    .grid-col{
+        margin: 0;
+    }
+}
+
+.grid-wrapper-lg{
+    width: 98%;
+    @include grid-wrapper(16em);
+}
+
+.grid-wrapper-md{
+    @include grid-wrapper(12em);
+}
+
+.grid-wrapper-sm{
+    @include grid-wrapper(8em);
+}
+
+/* Grid span */
+@for $num-col from 2 through 12 {
+  .grid-col-span#{$num-col},  .grid-col-gap-span#{$num-col} {
+    grid-column: span $num-col;
+  }
+}
+}

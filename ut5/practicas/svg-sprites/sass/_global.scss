@@ -1,3 +1,9 @@
+// Mixins
+@mixin icon($width, $height){
+  width: $width;
+  height: $height;
+}
+
 /* Default styles */
 
 html, body {
@@ -17,6 +23,10 @@ header {
   align-items: center;
   height: 15rem;
 
+  h1 {
+    color: $text-highlights;
+  }
+
   a {
     /* Make a flex for allow horizontal centering */
     display: flex;
@@ -35,15 +45,47 @@ header {
   }
 
   p {
-    font-size: $h5-fontsize;
     text-shadow: 2px 2px .5px $soft-gray;
   }
 }
 
+main {
+  /* required to make sure the `absolute` positioning of back to top
+   * the anchor wrapper is indeed `relative` to this element vs. the body
+   */
+  position: relative;
+  padding: 0 3rem;
+}
+
 /* Text styles */
+p {
+  line-height: 1.5;
+}
+
+p.privacy-policity {
+  font-size: 1rem;
+  font-style: normal;
+}
+
+ details{
+    text-align: left;
+}
+
 a {
   color: $text-links;
   cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline dotted;
+}
+
+a.corner-button-l-gray, .back-to-top-link:hover, header a:hover {
+  text-decoration: none;
+}
+
+.resource-link {
+  font-size: 1.5rem;
 }
 
 mark {
@@ -53,54 +95,308 @@ mark {
   background-color: $soft-purple;
 }
 
-/* Icon styles */
-
-.icon { 
-  width: 40px; 
-  height: 40px;
-  margin: .5em;
-  fill: red;
+pre {
+  padding: 1rem;
+  /* Wrap text if overflows screen */
+  word-wrap: break-word;
+  white-space: pre-wrap; 
 }
 
-.icon-1 { 
-  width: 40px; 
-  height: 40px;
-  margin: .5em;
-  fill: blue;
+.hero {
+  .big {
+    padding-top: 1.5rem;
+    margin-bottom: -1.2rem;
+  }
 }
 
-.icons-browser {
-  width: 3rem;
+.big {
+  font-size: 2rem;
+}
+
+.bigger {
+  font-size: 3rem;
+  font-weight: 900;
+  color: $text-highlights;
+  text-align: center;
+}
+
+.how-to, .summary-pink, .summary-gray {
+  padding: .15rem .3rem .3rem;
+  font-size: 1.3rem;
+}
+
+.how-to {
+  background-color: $background-light-pink;
+}
+
+.summary-gray {
+  background-color: $background-light-gray;
+  summary {
+    color: $text-dark-pink;
+  }
+}
+
+.summary-pink {
+  background-color: $background-light-pink;
+}
+
+.inline-code {
+  padding: .2rem;
+  color: $text-dark-gray;
+}
+
+.inline-code-gray {
+  @extend .inline-code;
+  background-color: $background-light-gray;
+}
+
+.inline-code-pink {
+  @extend .inline-code;
+  background-color: $background-light-pink;
+}
+
+.note {
+  margin: 1rem;
+  padding: .5rem;
+  color: $text-dark-gray;
+  background-color: lighten($soft-purple, 10%);
+  border-left: 10px solid transparent;
+  border-image: url(../img/border.png) 30 round;
+
+  strong {
+    color: $text-highlights;
+  }
+}
+
+/* List styles */
+ul.video-list {
+  max-height: 42rem;
+  list-style-type: none;
+  overflow-y: scroll;
+
+  a {
+    text-decoration: none;
+    color: $text-dark-gray;
+  }
+
+  img {
+    width: 97%;
+    margin-top: 1rem;
+    margin-bottom: -.85rem;
+  }
+
+  p:not(.video-title, .video-author) {
+    margin: 0;
+    margin-right: 1.2rem;
+    text-align: justify;
+    /* Ellipsis block */
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    height: 2.6em; /* Fallback for non-webkit, line-height * 2 */
+    line-height: 1.3em;
+    -webkit-line-clamp: 2; /* if you change this, make sure to change the fallback line-height and height */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .video-title{
+    max-width: 90%;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    /* Text overflow ellipsis */
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .video-author {
+    margin: 0;
+    font-size: .9rem;
+    font-style: italic;
+  }
+}
+
+/* Color styles */
+.red {
+  color: $red-badge;
+}
+
+.purple, .podcast summary, .video summary {
+    color: $text-highlights;
+  }
+
+.gray-background {
+  color: $text-dark-pink;
+  background-color: $background-light-gray;
+}
+
+.highligth-ligth{
+  background-color: $soft-purple;
+  color: $text-highlights;
+}
+
+.highligth-dark{
+  background-color: $text-highlights;
+  color: $soft-purple;
+}
+
+/* Code block */
+.tag, .property-name{
+  color: $tag;
+}
+
+.attr-name, .class-name {
+  color: $attr-name;
+}
+
+.attr-value {
+  color: $attr-value;
+}
+
+.js-code {
+  color: $js-code;
+}
+
+/* Global */
+.skewed-background {
+  margin: 4rem -3rem; 
+  padding: 0 4rem 3rem 3rem;
+  transform: skew(0deg, 3deg);
+}
+
+.skewed-background .content {
+  transform: skew(0deg, -3deg);
+}
+
+.about-text, .srcintro-text {
+  text-align: justify;
+}
+
+.top-switcher {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  margin-right: .85rem;
+  text-align: right;
+  z-index: 999;
+}
+
+/* Image styles */
+img {
+  max-width: 100%;
   height: auto;
 }
 
-.icon-info {
-  width: .9rem;
-  height: .9rem;
+img.logo {
+  vertical-align: bottom;
+}
+
+/* Audio styles */
+audio {
+  width: 100%;
+  background-color: rgba($border-purple, .4);
+}
+
+.podcast {
+  .big{
+    margin-bottom: 0 !important;
+  }
+
+  hr {
+    border-top: 4px ridge;
+  }
+}
+
+/* Video styles */
+video {
+  max-width: 100%;
+  background-color: rgba($border-purple, .4);
+}
+
+.video {
+  .big{
+    margin-bottom: 0 !important;
+  }
+
+  hr {
+    border-top: 4px ridge;
+  }
+}
+
+/* Icon styles */
+.icon { 
+  @include icon(1rem, 1rem);
   fill: currentColor;
 }
 
-/* Flexbox */
-.flex-container-column{
-  display: flex;
-  flex-direction: column;
-  width: 80vw;
-  margin: 0 auto;
+.icon-md { 
+  @include icon(2.5rem, 2.5rem);
+  fill: $text-highlights;
 }
 
-.compatibility  .flex-column {
-	display: flex;
-	border-top: 1px solid;
-	border-left: 1px solid;
- 
-  div {
-	  width: calc(100%/7);
-	  padding: .5rem 0;
-	  text-align: center;
-    font-weight: bold;
-    font-size: 1.2rem;
-	  border-right: 1px solid;
-	  border-bottom: 1px solid;
+table .icon { 
+  @include icon(3rem, 3rem);
+}
+
+.flip-card .icon{
+  @include icon(4rem, 4rem);
+}
+
+.card-lg .icon {
+  padding-top: 1rem;
+  @include icon(5rem, 5rem);
+}
+
+.corner-button-l-gray .icon, .corner-button-l-pink .icon {
+  @include icon(2rem, 2rem);
+}
+
+.icon-info {
+  @include icon(.9rem, .9rem);
+  fill: currentColor;
+}
+
+.icon-forbiden{
+  fill: rgb(204, 0, 0);
+}
+
+.icon-circle {
+  margin-bottom: -0.125em;
+}
+
+/* Tables */
+table, th, td {
+  border-collapse: collapse;
+  border: 1px solid $border-purple;
+}
+
+table caption {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: $text-highlights;
+}
+
+thead th, caption {
+  padding: 1rem 0 .5rem;
+}
+
+tbody td {
+  padding: 1rem 0;
+}
+
+tfoot td {
+  padding: .75rem;
+}
+
+.table-compatibility {
+  margin: 1rem auto;
+  width: 85%;
+
+  tbody {
+    text-align: center;
+    font-size: 1.3rem;
   }
 
   .partial-support {
@@ -108,8 +404,89 @@ mark {
   }
 
   .full-support {
-    background-color: lighten($green-badge, 30%);
+    background-color: lighten($green-badge, 40%);
   }
+}
+
+/* Forms */
+form {
+  width: 90%;
+  margin: 0 auto;
+}
+
+form p {
+  margin-top: .2rem;
+  font-size: .85rem;
+  font-style: italic;
+  text-align: right;
+}
+
+input, textarea {
+  margin: .3rem 0 1rem;
+  background-color: $background-light-gray;
+  border: none;
+}
+
+input[type=text], input[type=email] {
+  width: calc(100% - 1rem);
+  padding: .5rem;
+  border-bottom: 4px solid $border-purple;
+}
+
+textarea {
+  width: calc(100% - (8px + 1rem));
+  height: 15rem;
+  padding: .5rem;
+  resize: none;
+  border-width: 0px 8px 8px 0px;
+  border-style: solid;
+  border-image: url(../img/border-form.png) 40 round;
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+#contact-form #name, #contact-form #email, #contact-form #query {
+  margin-bottom: 0;
+}
+
+/* Back to top link */
+.back-to-top-wrapper {
+  position: absolute;
+  top: $scrollLength;
+  right: 0.25rem;
+  bottom: 0;
+  /* Required for best support in browsers not supporting `sticky` */
+  width: 3em;
+  /* Disable interaction with this element */
+  pointer-events: none;
+}
+
+.back-to-top-link {
+/* `fixed` is fallback when `sticky` not supported */
+  position: fixed;
+  /* preferred positioning, requires prefixing for most support, and not supported on Safari
+   * @link https://caniuse.com/#search=position%3A%20sticky 
+   */
+  position: sticky;
+  /* achieves desired positioning within the viewport */
+  top: calc(100vh - 5rem);
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  text-decoration: none;
+  text-align: center;
+  transition: all ease 2s;
+  /* reinstate clicks */
+  pointer-events: all;
+}
+
+.back-to-top-link:hover .icon {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap:"round";
 }
 
 /*******************
@@ -118,6 +495,10 @@ mark {
 
 .hide {
   display: none !important;
+}
+
+.rounded {
+  border-radius: 10px;
 }
 
 // Text Align
@@ -131,11 +512,34 @@ mark {
   text-align: center;
 }
 
+.justify {
+  text-align: justify;
+}
+
 .left {
   float: left !important;
 }
 .right {
   float: right !important;
+}
+
+/* Margins */
+.right-margin {
+  margin-right: 1.5rem;
+} 
+
+.top-margin {
+  margin-top: 1.5rem;
+}
+
+.margin-collapse, .less-margin p {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+/* Text indent */
+.left-indent {
+  padding-left: 1.2rem;
 }
 
 /* Text Resalt */
@@ -145,6 +549,10 @@ mark {
 
 .upper {
   text-transform: uppercase;
+}
+
+.small-caps {
+  font-variant: small-caps;
 }
 
 /* No Text Select */
@@ -175,4 +583,16 @@ mark {
 
 .no-padding {
   padding: 0 !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-margin-top {
+  margin-top: 0 !important;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0 !important;
 }

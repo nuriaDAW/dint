@@ -1,0 +1,224 @@
+button, .btn {
+  cursor: pointer;
+}
+
+.btn-all-width{
+  width: 100%;
+}
+
+.btn-category {
+  width: 10rem;
+}
+
+/* Código original: https://codepen.io/liamj/pen/yrEXNx */
+$border-width-l: .5rem;
+$border-width-m: .3rem;
+$border-width-s: .2rem;
+$corner-size-l: 2rem;
+$corner-size-m: 1.5rem;
+$corner-size-s: 1rem;
+$dur: .3s;
+
+.corner-button-wrapper {
+    margin: 2rem auto;  
+}
+
+.corner-button-wrapper-2x {
+    margin: 4rem auto 2rem;
+}
+
+@mixin corner-button-l($background-color) {
+  position: relative;
+  margin: 1rem;
+  padding: .75rem 1.25rem;
+  letter-spacing: .02rem;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  color: $text-highlights;
+  background: transparent;
+  border: $border-width-l solid currentColor;
+  transition: color $dur;
+  
+  &:hover {
+    color: $text-links;
+    &::before { width: 0; }
+    &::after { height: 0; }
+  }
+  &:active {
+    border-width: $border-width-l / 2;
+  }
+
+  span {
+    position: relative;
+    z-index: 2;
+  }
+  &::before, &::after {
+    position: absolute;
+    content: '';
+    background: $background-color;
+    z-index: 1;
+    transition: all $dur;
+  }
+  //the 101% is because of a pixel rounding issue in firefox
+  &::before {
+    width: calc(100% - #{$corner-size-l});
+    height: calc(101% + #{$border-width-l * 2});
+    top: -$border-width-l;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &::after {
+    height: calc(100% - #{$corner-size-l});
+    width: calc(101% + #{$border-width-l * 2});
+    left: -$border-width-l;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@mixin corner-button-m($background-color) {
+  position: relative;
+  margin: .5rem;
+  padding: .5rem 1rem;
+  letter-spacing: .02rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: $text-highlights;
+  background: transparent;
+  border: $border-width-m solid currentColor;
+  transition: color $dur;
+  
+  &:hover {
+    color: $text-links;
+    &::before { width: 0; }
+    &::after { height: 0; }
+  }
+  &:active {
+    border-width: $border-width-m / 2;
+  }
+
+  span {
+    position: relative;
+    z-index: 2;
+  }
+  &::before, &::after {
+    position: absolute;
+    content: '';
+    background: $background-color;
+    z-index: 1;
+    transition: all $dur;
+  }
+  //the 101% is because of a pixel rounding issue in firefox
+  &::before {
+    width: calc(100% - #{$corner-size-m});
+    height: calc(101% + #{$border-width-m * 2});
+    top: -$border-width-m;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &::after {
+    height: calc(100% - #{$corner-size-m});
+    width: calc(101% + #{$border-width-m * 2});
+    left: -$border-width-m;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@mixin corner-button-s($background-color) {
+  position: relative;
+  margin: .5rem;
+  padding: .25rem .5rem;
+  letter-spacing: .02rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: $text-highlights;
+  background: transparent;
+  border: $border-width-s solid currentColor;
+  transition: color $dur;
+  
+  &:hover {
+    color: $text-links;
+    &::before { width: 0; }
+    &::after { height: 0; }
+  }
+  &:active {
+    border-width: $border-width-s / 2;
+  }
+
+  span {
+    position: relative;
+    z-index: 2;
+  }
+  &::before, &::after {
+    position: absolute;
+    content: '';
+    background: $background-color;
+    z-index: 1;
+    transition: all $dur;
+  }
+  //the 101% is because of a pixel rounding issue in firefox
+  &::before {
+    width: calc(100% - #{$corner-size-s});
+    height: calc(101% + #{$border-width-s * 2});
+    top: -$border-width-s;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &::after {
+    height: calc(100% - #{$corner-size-s});
+    width: calc(101% + #{$border-width-s * 2});
+    left: -$border-width-s;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.corner-button-l-gray {
+    @include corner-button-l($background-light-gray);
+}
+
+.corner-button-m-gray {
+    @include corner-button-m($background-light-gray);
+}
+
+.corner-button-s-gray {
+    @include corner-button-s($background-light-gray);
+}
+
+.corner-button-l-pink {
+    @include corner-button-l($background-light-pink);
+}
+
+.corner-button-m-pink {
+    @include corner-button-m($background-light-pink);
+}
+
+.corner-button-s-pink {
+    @include corner-button-s($background-light-pink);
+}
+
+/* Form buttons */ 
+$font-size: 1.2rem;
+@mixin btn-form-hover($color) {
+  box-shadow: 0 0 0 5px $color inset;
+}
+
+.btn-form-gray, .btn-form-pink {
+  margin-right: .5rem;
+  padding: $font-size;
+  font-size: $font-size;
+  text-transform: uppercase;
+  color: $soft-purple;
+  background-color: $text-highlights;
+  border: 5px solid $text-highlights;
+  box-shadow: 0 0 0 5px $text-highlights inset;
+}
+
+.btn-form-gray:hover {
+  @include btn-form-hover($background-light-gray);
+}
+
+.btn-form-pink:hover {
+  @include btn-form-hover($background-light-pink);
+}
