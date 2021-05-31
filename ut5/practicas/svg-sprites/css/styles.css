@@ -398,6 +398,9 @@ footer {
 footer:not(footer.resources-footer) {
   margin-top: 4rem;
 }
+footer a {
+  color: #26004d;
+}
 footer .legal-conditions {
   position: relative;
   align-self: stretch;
@@ -410,9 +413,6 @@ footer .legal-conditions a.license {
 footer .legal-conditions p:last-child {
   position: absolute;
   bottom: 0;
-}
-footer .legal-conditions p:last-child a {
-  color: #26004d;
 }
 footer .social a {
   margin-right: 0.3rem;
@@ -430,11 +430,13 @@ footer .validators {
   text-align: center;
 }
 footer .validators .test {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
   padding: 0.5rem 0;
   background-color: rgba(255, 219, 255, 0.8);
 }
-footer .validators a {
-  color: #26004d;
+footer .validators .test a {
+  display: block;
 }
 
 /* Text styles */

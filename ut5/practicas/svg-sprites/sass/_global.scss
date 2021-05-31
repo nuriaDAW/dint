@@ -69,6 +69,9 @@ footer {
   &:not(footer.resources-footer){
     margin-top: 4rem;
   }
+  a{
+    color: darken($text-highlights, 15%);
+  }
 
   .legal-conditions {
     position: relative;
@@ -82,9 +85,6 @@ footer {
     p:last-child {
       position: absolute;
       bottom: 0;
-      a{
-        color: darken($text-highlights, 15%);
-      }
     }
   }
 
@@ -109,13 +109,15 @@ footer {
     text-align: center;
 
     .test{
+      margin-top: .3rem;
+      margin-bottom: .3rem;
       padding: .5rem 0;
       background-color: rgba($background-light-pink, .8);
-    }
 
-    a{
-        color: darken($text-highlights, 15%);
+      a {
+        display: block;
       }
+    }
   }
 }
 
