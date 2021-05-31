@@ -57,6 +57,55 @@ main {
   padding: 0 3rem;
 }
 
+/* Footer */
+footer {
+  display: flex;
+  height: 15rem;
+  background: url("../img/city.svg") bottom repeat-x;
+  justify-content: space-around;
+  font-size: 1.3rem;
+  color: $text-dark-pink;
+
+  &:not(footer.resources-footer){
+    margin-top: 4rem;
+  }
+
+  .legal-conditions {
+    position: relative;
+    align-self: stretch;
+    a.license{
+      display: block;
+      margin-top: .5rem;
+      text-align: center;
+    }
+
+    p:last-child {
+      position: absolute;
+      bottom: 0;
+      a{
+        color: darken($text-highlights, 15%);
+      }
+    }
+  }
+
+  .social {
+  a {
+    margin-right: .3rem;
+    text-decoration: none;
+  }
+  .icon-md {
+    fill: $text-dark-pink;
+    transition: all .5s ease;
+
+    &:hover {
+      fill: $text-highlights;
+      transform: scale(1.2);
+    }
+  }
+
+  }
+}
+
 /* Text styles */
 p {
   line-height: 1.5;
@@ -281,6 +330,12 @@ ul.video-list {
   margin-right: .85rem;
   text-align: right;
   z-index: 999;
+}
+
+.footer-separator {
+  width: 30%;
+  margin-top: 4rem;
+  color: $text-dark-pink;
 }
 
 /* Image styles */

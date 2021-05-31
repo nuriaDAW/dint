@@ -1,10 +1,17 @@
 // Custom fonts
+/* Abel Regular - Latin */
 @font-face {
   font-family: Abel;
-  src: url("../fonts/Abel/Abel-Regular.ttf");
+  src: url("../fonts/Abel/Abel-Regular.eot");
+  src: url('../fonts/Abel/Abel-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Abel/Abel-Regular.woff2') format('woff2'), 
+       url('../fonts/Abel/Abel-Regular.woff') format('woff'),
+       url("../fonts/Abel/Abel-Regular.ttf") format('truetype'),
+       url('../fonts/Abel/Abel-Regular.svg#Abel') format('svg');
   font-style: normal;
 };
 
+/* AmaticSC- Latin */
 $font-list : (
    // The directory path to the font from where the compiled CSS's directory
     font-directory: '../fonts/AmaticSC',
@@ -16,8 +23,8 @@ $font-list : (
           // create a single map for each of the font options
           // weight       = normal|bold|bolder|lighter|(100->900)
           // style        = normal|italic|oblique
-           ( file: 'AmaticSC-Regular.ttf', weight: '400', style: 'normal' ),
-           ( file: 'AmaticSC-Bold.ttf', weight: '700', style: 'normal' ),
+           ( file-1: 'AmaticSC-Regular.ttf', weight: '400', style: 'normal' ),
+           ( file-1: 'AmaticSC-Bold.ttf', weight: '700', style: 'normal' ),
        ),
    ),
 );
@@ -33,13 +40,13 @@ $font-directory:  map-get( $font-list, 'font-directory' );
   @font-face {
     $font-style: map-get( $font-variant, 'style' );
 		$font-weight: map-get( $font-variant, 'weight' );
-		$file: map-get( $font-variant, 'file' );
+		$file-1: map-get( $font-variant, 'file-1' );
 
     // Output
 			font-family: $font-family;
 			font-style: unquote( $font-style );
 			font-weight: unquote( $font-weight );
-      src: url("#{$font-directory}/#{$file}");
+      src: url("#{$font-directory}/#{$file-1}");
   }
 };
 

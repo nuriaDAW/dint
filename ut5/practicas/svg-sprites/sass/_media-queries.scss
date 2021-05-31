@@ -28,6 +28,13 @@
     background-position: 55% 50%;
     background-size: cover;
    }
+
+   footer {
+    .social {
+      flex-basis: 20%;
+      justify-self: center;
+    }
+   }
 }
 
 @media only screen and (min-width : #{$large-screen}) and (max-width : #{$large-screen + 100}){
@@ -82,6 +89,21 @@
     background-color: darken($text-links, 5%);
     border-radius: 10px;
   }
+
+  footer {
+    height: 100%;
+    flex-wrap: wrap;
+
+    & > *{
+      padding: 0 1rem;
+    }
+
+    .legal-conditions {
+      p:last-child {
+        position: relative;
+      }
+    }
+  }
 }
 
 @media #{$small-and-down} {
@@ -109,6 +131,22 @@
     tfoot td {
       padding: 0;
     }
+  }
+
+  ul.video-list {
+    margin-left: -1rem;
+  }
+
+  footer {
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    .legal-conditions {
+      text-align: center;
+      p:last-child {
+        position: relative;
+    }
+  }
   }
 }
 
