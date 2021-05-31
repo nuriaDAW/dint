@@ -535,7 +535,7 @@ pre {
 
 /* List styles */
 ul.video-list {
-  max-height: 42rem;
+  max-height: 49rem;
   list-style-type: none;
   overflow-y: scroll;
 }
@@ -633,7 +633,7 @@ ul.video-list .video-author {
   transform: skew(0deg, -3deg);
 }
 
-.about-text, .srcintro-text {
+.srcintro-text {
   text-align: justify;
 }
 
@@ -665,7 +665,6 @@ img.logo {
 /* Audio styles */
 audio {
   width: 100%;
-  background-color: rgba(77, 0, 153, 0.4);
 }
 
 .podcast {
@@ -681,7 +680,6 @@ audio {
 /* Video styles */
 video {
   max-width: 100%;
-  background-color: rgba(77, 0, 153, 0.4);
 }
 
 .video .big {
@@ -693,6 +691,12 @@ video {
 
 .video-list-wrapper {
   width: 98%;
+}
+
+.video-transcripction {
+  height: 9rem;
+  padding: 0 0.5rem;
+  overflow-y: auto;
 }
 
 /* Icon styles */
@@ -825,6 +829,20 @@ label {
   margin-bottom: 0;
 }
 
+/* Skip to content link */
+.skip-to-content-link {
+  position: absolute;
+  height: 30px;
+  left: 50%;
+  padding: 8px;
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+}
+
+.skip-to-content-link:focus {
+  transform: translateY(0%);
+}
+
 /* Back to top link */
 .back-to-top-wrapper {
   position: absolute;
@@ -918,10 +936,6 @@ label {
 }
 
 /* Text Resalt */
-.underlined {
-  text-decoration: underline;
-}
-
 .upper {
   text-transform: uppercase;
 }

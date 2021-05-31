@@ -17,43 +17,45 @@
 
 <body>
     <!-- Skip to content for screen readers -->
-    <a class="skip-to-content-link" href="#main">
-        Saltar al contenido principal
-    </a>
-    <header id="top">
+    <div role="complementary">
+        <a class="skip-to-content-link" href="#main">
+            Saltar al contenido principal
+        </a>
+    </div>
+    <header id="top" role="banner">
         <a href="index.html">
             <div>
-                <h1>
+                <h1 tabindex="0">
                     <svg class="icon-header hide-on-med-and-down" role="img" aria-hidden="true">
                         <title></title>
                         <use xlink:href="icons/sprite-captain_icons.svg#pencil"></use>
                     </svg> Captain icons
                 </h1>
-                <p>+350 <mark>SVG Sprite</mark></p>
+                <p tabindex="0">+350 <mark>SVG Sprite</mark></p>
             </div>
         </a>
     </header>
-    <div class="top-switcher"><a class="upper" href="#">es</a> | <a class="upper" href="#">en</a></div>
-    <nav class="navbar">
+    <div class="top-switcher" role="tablist"><a class="upper" href="#">es</a> <span tabindex="-1">|</span> <a class="upper" href="#">en</a></div>
+    <nav role="navigation" class="navbar">
         <ul>
             <li><a href="icon-set.html">Iconos</a></li>
-            <li><a href="index.html#download">Descargar</a></li>
+            <li><a href="index.html#download">Descarga</a></li>
             <li><a href="#">Recursos</a></li>
             <li><a href="index.html#about">Sobre nosotros</a></li>
             <li><a href="index.html#contact">Contacto</a></li>
         </ul>
     </nav>
-    <main id="main">
-        <h1>Recursos de aprendizaje sobre SVG y SVG sprites</h1>
+    <main role="main" id="main">
+        <h1 tabindex="0">Recursos de aprendizaje sobre SVG y SVG sprites</h1>
         <div class="grid-col-xl3 grid-col-xxl3">
             <div class="grid-col-gap-span2 srcintro-text">
-                <p class="big">Aprende todo lo que necesitas saber sobre SVG y <em>SVG sprites</em> con nuestros recursos.</p>
+                <p tabindex="0" class="big">Aprende todo lo que necesitas saber sobre SVG y <em>SVG sprites</em> con nuestros recursos.</p>
                 <p class="margin-collapse">Comienza a utilizar <mark>SVG desde la base</mark> hasta convertirte en un maestro a través de videos, audios, manuales en pdf o sitios web.</p>
                 <p class="margin-collapse">Crea tus SVG y <em>sprites</em> "a mano" o apóyate en herramientas. ¡Tú eliges!</p>
-                <details class="top-margin summary-gray">
-                    <summary role="navigation">Sumario de recursos</summary>
+                <details role="navigation" class="top-margin summary-gray">
+                    <summary tabindex="0" role="button">Sumario de recursos</summary>
                     <ol>
-                        <li class="hide-on-extra-small-and-down"><a href="#steps">Pasos para crear y utilizar tu propio <em>stripe SVG</em></a></li>
+                        <li tabindex="-1" class="hide-on-extra-small-and-down"><a href="#steps">Pasos para crear y utilizar tu propio <em>stripe SVG</em></a></li>
                         <li><a href="#tools">Herramientas</a></li>
                         <li><a href="#video">Videotutoriales</a></li>
                         <li><a href="#audio">Podcasts</a></li>
@@ -166,7 +168,7 @@
             </div>
         </section>
         <section id="tools">
-            <h1>Herramientas</h1>
+            <h1 tabindex="0">Herramientas</h1>
             <p>Hay muchas herramientas tanto gratuitas como de pago que te pueden ayudar a crear SVG y generar y mantener tus <em>sprites</em> SVG. Estas son nuestras recomendaciones:</p>
             <div class="justify container grid-col-xxl3 grid-col-xl3 grid-col-l2 grid-col-m2">
                 <div>
@@ -179,7 +181,7 @@
                             Adobe Illustrator
                         </a>
                     </p>
-                    <p>El archiconocido editor de gráficos escalables de Adobe sigue siendo la opción por excelencia de los diseñadores. De pago.</p>
+                    <p tabindex="0">El archiconocido editor de gráficos escalables de Adobe sigue siendo la opción por excelencia de los diseñadores. De pago.</p>
                 </div>
                 <div>
                     <p>
@@ -191,7 +193,7 @@
                             Inkscape
                         </a>
                     </p>
-                    <p>Excelente alternativa de código abierto para la creación y manipulación de gráficos escalables. De interfaz sencilla pero potente.</p>
+                    <p tabindex="0">Excelente alternativa de código abierto para la creación y manipulación de gráficos escalables. De interfaz sencilla pero potente.</p>
                 </div>
                 <div>
                     <p>
@@ -200,7 +202,7 @@
                             Vectr
                         </a>
                     </p>
-                    <p>Herramienta gratuita en línea con las utilidades básicas para crear vectores y diseños basados en vectores.</p>
+                    <p tabindex="0">Herramienta gratuita en línea con las utilidades básicas para crear vectores y diseños basados en vectores.</p>
                 </div>
                 <div>
                     <p>
@@ -212,7 +214,7 @@
                             SVG-edit
                         </a>
                     </p>
-                    <p>Veloz editor de gráficos SVG basado en Javascript. Se usa a través del navegador desde localhost.</p>
+                    <p tabindex="0">Veloz editor de gráficos SVG basado en Javascript. Se usa a través del navegador desde localhost.</p>
                 </div>
                 <div>
                     <p id="icomoon">
@@ -224,7 +226,7 @@
                             IcoMoon
                         </a>
                     </p>
-                    <p>Ofrece un paquete de iconos vectoriales, junto con una aplicación HTML5 gratuita para crear fuentes de iconos personalizadas o sprites SVG.</p>
+                    <p tabindex="0">Ofrece un paquete de iconos vectoriales, junto con una aplicación HTML5 gratuita para crear fuentes de iconos personalizadas o sprites SVG.</p>
                 </div>
                 <div>
                     <p>
@@ -236,7 +238,7 @@
                             svg spreact
                         </a>
                     </p>
-                    <p>Herramienta web para crear <em>sprites</em> SVG optimizados arrastrando o cargando imágenes SVG.</p>
+                    <p tabindex="0">Herramienta web para crear <em>sprites</em> SVG optimizados arrastrando o cargando imágenes SVG.</p>
                 </div>
                 <div>
                     <p>
@@ -248,7 +250,7 @@
                             Grunt
                         </a>
                     </p>
-                    <p>Plugin de Grunt, un automatizador de tareas en Javascript, para crear <em>sprites</em> SVG. De los más conocidos y utlizados.</p>
+                    <p tabindex="0">Plugin de Grunt, un automatizador de tareas en Javascript, para crear <em>sprites</em> SVG. De los más conocidos y utlizados.</p>
                 </div>
                 <div>
                     <p>
@@ -260,7 +262,7 @@
                             Gulp
                         </a>
                     </p>
-                    <p>Plugin de Gulp, otro automatizador de tareas en Javascript, para crear <em>sprites</em> SVG. De los más conocidos y utlizados.</p>
+                    <p tabindex="0">Plugin de Gulp, otro automatizador de tareas en Javascript, para crear <em>sprites</em> SVG. De los más conocidos y utlizados.</p>
                 </div>
                 <div>
                     <p id="svgsprite">
@@ -272,20 +274,20 @@
                             svg-sprite
                         </a>
                     </p>
-                    <p>Módulo de <a lang="es" href="https://nodejs.org/es/">Node.js</a> para crear <em>sprites</em> y <em>stacks</em> SVG junto con hojas de estilo adecuadas (por ejemplo, CSS, Sass,
+                    <p tabindex="0">Módulo de <a lang="es" href="https://nodejs.org/es/">Node.js</a> para crear <em>sprites</em> y <em>stacks</em> SVG junto con hojas de estilo adecuadas (por ejemplo, CSS, Sass,
                         LESS, Stylus, etc.).</p>
                 </div>
             </div>
         </section>
         <section id="video">
-            <h1>Videotutoriales</h1>
-            <p>Curso y tutoriales en video sobre cómo crear y utilizar <em>sprites</em> SVG.</p>
+            <h1 tabindex="0">Videotutoriales</h1>
+            <p tabindex="0">Curso y tutoriales en video sobre cómo crear y utilizar <em>sprites</em> SVG.</p>
             <div class="video-list-wrapper grid-col-xxl3 grid-col-xl3">
                 <div class="video grid-col-gap-span2" role="group" aria-label="Using SVG Sprites: Introduction" tabindex="0">
-                    <p class="big">Using SVG Sprites: Introduction (subtítulos en español)</p>
+                    <p tabindex="0" class="big">Using SVG Sprites: Introduction (subtítulos en español)</p>
                     <hr />
                     <div class="video-container">
-                        <video controls preload="metadata" poster="img/using-svg-sprites-intro-800px.jpg" title="Using SVG Sprites: Introduction">
+                        <video tabindex="0" controls preload="metadata" poster="img/using-svg-sprites-intro-800px.jpg" title="Using SVG Sprites: Introduction">
                             <source src="media/video/using-svg-sprites-intro_720p.mp4" type="video/mp4">
                             <source src="media/video/using-svg-sprites-intro_720p.webm" type="video/webm">
                             <track src="media/video/subs/using-svg-sprites-intro-subs_es.vtt" kind="subtitles" srclang="es" label="Espa&ntilde;ol" default>
@@ -294,22 +296,24 @@
                                     video</a> y reproducirlo con tu reproductor favorito</p>.
                         </video>
                     </div>
-                    <p class="margin-collapse"><strong class="purple">Autor:</strong> <a lang="en" href="https://tutsplus.com/authors/craig-campbell">Craig Campbell</a></p>
-                    <p class="margin-collapse"><strong class="purple">Descripción:</strong> Introducción de un curso sobre cómo crear SVG y <em>sprites</em> SVG en ocho entregas de video.</p>
-                    <details class="less-margin">
-                        <summary><strong>Transcripción (español)</strong></summary>
-                        <p>Hola y bienvenido a usando sprites SVG. Mi nombre es Craig Campbell y seré tu profesor en este curso.</p>
-                        <p>En este pequeño curso te voy a enseñar varios métodos diferentes para usar sprites SVG en HTML.</p>
-                        <p>SVG son las siglas para Scalable Vector Graphic y un archivo SVG es un gráfico basado en XML que, como su nombre indica, puede escalarse sin afectar la calidad.</p>
-                        <p>Si tomamos un gráfico de mapa de bits como un archivo PNG o un archivo JPG e intentamos agrandarlo, podemos ver como pierde algo de calidad. Sus bordes se pixelan y se
-                            vuelven borrosos.</p>
-                        <p>Por otra parte, si echamos un vistazo a un archivo SVG, podemos coger el gráfico y agrandarlo tanto como queramos y, como puedes ver, mantiene sus bordes perfectamente
-                            definidos.</p>
-                        <p>Esto supone una gran ventaja al usar SVG en lugar de JPEG o PNG si las circuntancias lo permiten.</p>
-                        <p>En este curso voy a mostrarte un par de técnicas para combinar múltiples gráficos vectoriales en un solo objeto SVG.</p>
-                        <p>Y después veremos cómo mostrar esas formas o imágenes una a una llamándolas desde ese objeto SVG.</p>
-                        <p>Así que tenemos mucho que aprender en poco tiempo. En la próxima lección emepezamos.</p>
-                        <p>Gracias por ver el video y nos vemos pronto.</p>
+                    <p class="margin-collapse"><strong tabindex="0" class="purple">Autor:</strong> <a lang="en" href="https://tutsplus.com/authors/craig-campbell">Craig Campbell</a></p>
+                    <p tabindex="0" class="margin-collapse"><strong class="purple">Descripción:</strong> Introducción de un curso sobre cómo crear SVG y <em>sprites</em> SVG en ocho entregas de video.</p>
+                    <details class="less-margin" open="open">
+                        <summary tabindex="0" role="button" aria-expanded="true"><strong>Transcripción (español)</strong></summary>
+                        <div class="video-transcripction" tabindex="0" aria-expanded="true">
+                            <p tabindex="0">Hola y bienvenido a usando sprites SVG. Mi nombre es Craig Campbell y seré tu profesor en este curso.</p>
+                            <p tabindex="0">En este pequeño curso te voy a enseñar varios métodos diferentes para usar sprites SVG en HTML.</p>
+                            <p tabindex="0">SVG son las siglas para Scalable Vector Graphic y un archivo SVG es un gráfico basado en XML que, como su nombre indica, puede escalarse sin afectar la calidad.</p>
+                            <p tabindex="0">Si tomamos un gráfico de mapa de bits como un archivo PNG o un archivo JPG e intentamos agrandarlo, podemos ver como pierde algo de calidad. Sus bordes se pixelan y se
+                                vuelven borrosos.</p>
+                            <p tabindex="0">Por otra parte, si echamos un vistazo a un archivo SVG, podemos coger el gráfico y agrandarlo tanto como queramos y, como puedes ver, mantiene sus bordes perfectamente
+                                definidos.</p>
+                            <p tabindex="0">Esto supone una gran ventaja al usar SVG en lugar de JPEG o PNG si las circuntancias lo permiten.</p>
+                            <p tabindex="0">En este curso voy a mostrarte un par de técnicas para combinar múltiples gráficos vectoriales en un solo objeto SVG.</p>
+                            <p tabindex="0">Y después veremos cómo mostrar esas formas o imágenes una a una llamándolas desde ese objeto SVG.</p>
+                            <p tabindex="0">Así que tenemos mucho que aprender en poco tiempo. En la próxima lección emepezamos.</p>
+                            <p tabindex="0">Gracias por ver el video y nos vemos pronto.</p>
+                        </div>
                     </details>
                 </div>
                 <ul class="video-list">
@@ -344,10 +348,10 @@
             </div>
         </section>
         <section id="audio">
-            <h1>Podcasts</h1>
-            <p>Programas que resolverán todas tus dudas sobre SVG. ¿Qué son? ¿Cuáles son sus ventajas? ¿Me complicarán la existencia?...</p>
+            <h1 tabindex="0">Podcasts</h1>
+            <p tabindex="0">Programas que resolverán todas tus dudas sobre SVG. ¿Qué son? ¿Cuáles son sus ventajas? ¿Me complicarán la existencia?...</p>
             <div class="podcast" role="group" aria-label="Audio: Scalable Vector Graphics" tabindex="0">
-                <p class="big">Scalable Vector Graphics (inglés)</p>
+                <p tabindex="0" class="big">Scalable Vector Graphics (inglés)</p>
                 <hr />
                 <audio controls>
                     <source src="media/audio/scalable-vector-graphics.mp3" type="audio/mpeg">
@@ -355,19 +359,19 @@
                     <p>Tu navegador no soporta audio html5. Puedes <a herf="media/audio/scalable-vector-graphics.mp3" download="Scalable Vector Graphics.mp3">descargar el audio</a> y escucharlo con tu
                         reproductor favorito</p>.
                 </audio>
-                <p class="margin-collapse"><strong class="purple">Autor:</strong> <a lang="en" href="https://landtiser.com/">Chris Landtiser</a></p>
-                <p class="margin-collapse"><strong class="purple">Descripción:</strong> ¿Cuál es la diferencia entre una imagen escalable y una tradicional? ¿Son difíciles de usar?</p>
+                <p class="margin-collapse"><strong tabindex="0" class="purple">Autor:</strong> <a lang="en" href="https://landtiser.com/">Chris Landtiser</a></p>
+                <p tabindex="0" class="margin-collapse"><strong class="purple">Descripción:</strong> ¿Cuál es la diferencia entre una imagen escalable y una tradicional? ¿Son difíciles de usar?</p>
                 <details class="less-margin">
                     <summary><strong>Transcripción (español)</strong></summary>
-                    <p>Hola a todos y bienvenidos a Front and Center.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p>Phasellus mattis mollis nisi nec faucibus. Integer interdum dignissim venenatis. Donec eget suscipit libero. Maecenas sit amet metus varius nulla bibendum imperdiet quis sit
+                    <p tabindex="0">Hola a todos y bienvenidos a Front and Center.</p>
+                    <p tabindex="0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p tabindex="0">Phasellus mattis mollis nisi nec faucibus. Integer interdum dignissim venenatis. Donec eget suscipit libero. Maecenas sit amet metus varius nulla bibendum imperdiet quis sit
                         amet mi.</p>
-                    <p>[...]</p>
+                    <p tabindex="0">[...]</p>
                 </details>
             </div>
             <div class="podcast" role="group" aria-label="Audio: What Is SVG Animation? with Cassie Evans" tabindex="0">
-                <p class="big">What Is SVG Animation? with Cassie Evans (inglés)</p>
+                <p tabindex="0" class="big">What Is SVG Animation? with Cassie Evans (inglés)</p>
                 <hr />
                 <audio controls>
                     <source src="media/audio/what-is-svg-animation-with-cassie-evans.mp3" type="audio/mpeg">
@@ -375,74 +379,75 @@
                     <p>Tu navegador no soporta audio html5. Puedes <a herf="media/audio/what-is-svg-animation-with-cassie-evans.mp3" download="Scalable Vector Graphics.mp3">descargar el audio</a> y
                         escucharlo con tu reproductor favorito</p>.
                 </audio>
-                <p class="margin-collapse"><strong class="purple">Autor:</strong> <a lang="en" href="https://www.smashingmagazine.com/author/drew-mclellan/">Drew McLellan</a></p>
-                <p class="margin-collapse"><strong class="purple">Descripción:</strong> Charla sobre animación SVG. ¿Cómo pueden trabajar juntos las imágenes vectoriales, JavaScript y CSS para ofrecer
+                <p class="margin-collapse"><strong tabindex="0" class="purple">Autor:</strong> <a lang="en" href="https://www.smashingmagazine.com/author/drew-mclellan/">Drew McLellan</a></p>
+                <p tabindex="0" class="margin-collapse"><strong class="purple">Descripción:</strong> Charla sobre animación SVG. ¿Cómo pueden trabajar juntos las imágenes vectoriales, JavaScript y CSS para ofrecer
                     atractivos gráficos en movimiento? Drew McLellan habla con la experta en SVG Cassie Evans para averiguarlo.</p>
                 <details>
                     <summary><strong>Transcripción (español)</strong></summary>
-                    <p><mark class="upper">Drew McLellan:</mark> Desarrolladora de front-end y conferenciante con experiencia en diseño gráfico y <em>motion design</em>. Empezó a programar en los
+                    <div>
+                    <p tabindex="0"><mark class="upper">Drew McLellan:</mark> Desarrolladora de front-end y conferenciante con experiencia en diseño gráfico y <em>motion design</em>. Empezó a programar en los
                         tiempos de MySpace y Neopets y tiene la misión de volver a hacer la web más caprichosa. En la actualidad trabaja en Clearleft, en Brighton, Reino Unido, y se la puede encontrar
                         jugando con SVGs en CodePen. Sabemos que es una experta en SVG y en desarrollo, pero ¿sabías que ha sido campeona nacional en la modalidad junior de la <a lang="en"
                             href="https://www.aerobility.com/wingwalk"><em>Wing Walk</em></a> durante tres años consecutivos? Amigos, demos la bienvenida a Cassie Evans. Hola Cassie. ¿Cómo estás?</p>
-                    <p><mark class="upper">Cassie Evans:</mark> Estoy estupenda, gracias.</p>
-                    <p><mark class="upper">Drew:</mark> Hoy quería hablar contigo sobre una de tus pasiones, que es el SVG, y en particular el aspecto de la animación. Creo que la mayoría de las
+                    <p tabindex="0"><mark class="upper">Cassie Evans:</mark> Estoy estupenda, gracias.</p>
+                    <p tabindex="0"><mark class="upper">Drew:</mark> Hoy quería hablar contigo sobre una de tus pasiones, que es el SVG, y en particular el aspecto de la animación. Creo que la mayoría de las
                         personas que escuchan este podcast habrán oído hablar de los gráficos vectoriales escalables de alguna forma. Sé que los he utilizado mucho en cosas como logotipos e iconos en
                         los últimos años, pero no demos nada por supuesto. Así que, para quien no esté al tanto de los SVG, ¿qué los diferencia de otras formas de añadir gráficos a una página web?</p>
-                    <p><mark class="upper">Cassie:</mark> La mayor pista está en el nombre, por supuesto. SVG significa "Scalable Vector Graphic". Así que, para empezar, son imágenes que pueden ser de
+                    <p tabindex="0"><mark class="upper">Cassie:</mark> La mayor pista está en el nombre, por supuesto. SVG significa "Scalable Vector Graphic". Así que, para empezar, son imágenes que pueden ser de
                         cualquier tamaño. Puedes hacerlas muy, muy pequeñas o muy, muy grandes, y mantendrán la calidad de la imagen y sin pixelarse como los JPEG o los PNG.</p>
-                    <p><mark class="upper">Cassie:</mark> También puedes hacerlos muy, muy pequeños en tamaño de archivo. Todo el mundo ha añadido un PNG de un millón de megabytes a su
+                    <p tabindex="0"><mark class="upper">Cassie:</mark> También puedes hacerlos muy, muy pequeños en tamaño de archivo. Todo el mundo ha añadido un PNG de un millón de megabytes a su
                         sitio web y ha visto lo que eso supone para la carga de la página. De esta forma puedes añadir todo tipo de ilustraciones y cosas geniales a tu sitio sin afectar demasiado al
                         rendimiento, y también puedes animarlas, y esa es la parte más emocionante. Con los JPEG o los PNG, si quieres animarlos o mover partes de ellos, tendrías que cortarlos
                         en pequeños trozos o superponerlos, mientras que con los SVG tienes elementos reales en el SVG. Tiene una estructura DOM igual que la de HTML.</p>
-                    <p><mark class="upper">Drew:</mark> Así que, supongo que en un mundo de dispositivos móviles con diferentes tamaños de pantalla y diferentes densidades de píxeles y conexiones
+                    <p tabindex="0"><mark class="upper">Drew:</mark> Así que, supongo que en un mundo de dispositivos móviles con diferentes tamaños de pantalla y diferentes densidades de píxeles y conexiones
                         de datos limitadas, SVG es realmente un formato que se adapta mejor a la web moderna que los antiguos estilos gráficos. ¿Es así?</p>
-                    <p><mark class="upper">Cassie:</mark> Sí, denitivamente sí.</p>
+                    <p tabindex="0"><mark class="upper">Cassie:</mark> Sí, denitivamente sí.</p>
                     <p>[...]</p>
-                    <p><em>La conversación es más larga, pero como es un ejercicio de clase esto sirve como ejemplo. <a lang="en"
+                    <p tabindex="0"><em>La conversación es más larga, pero como es un ejercicio de clase esto sirve como ejemplo. <a lang="en"
                                 href="https://www.smashingmagazine.com/2020/09/smashing-podcast-episode-24/">Transcripción completa (inglés)</a>.</em></p>
                 </details>
             </div>
         </section>
         <section id="manuals" class="gray-background skewed-background">
             <article class="content">
-                <h1>Enlaces externos y manuales</h1>
+                <h1 tabindex="0">Enlaces externos y manuales</h1>
                 <p>Selección de recursos web y/o pdf con distintas formas de crear e implementar <em>sprites</em> y gráficos SVG y mejorar su accesibilidad en la web.</p>
                 <a lang="en" class="resource-link" href="https://www.w3.org/Graphics/SVG/">W3C SVG Working Group</a>
-                <p class="left-indent">Sitio web oficial del grupo de trabajo del World Wide Web Consortium (W3C) dedicado a SVG. Recoge los estándares de SVG para web y algunos manuales.</p>
+                <p tabindex="0" class="left-indent">Sitio web oficial del grupo de trabajo del World Wide Web Consortium (W3C) dedicado a SVG. Recoge los estándares de SVG para web y algunos manuales.</p>
                 <a class="resource-link" href="https://octuweb.com/sprites-con-svg/">Sprites con SVG</a>
-                <p class="left-indent">Breve explicación sobre cómo crear <em>sprites</em> SVG y añadirlos a tu web. Incluye al final una comparativa del rendimiento.</p>
+                <p tabindex="0" class="left-indent">Breve explicación sobre cómo crear <em>sprites</em> SVG y añadirlos a tu web. Incluye al final una comparativa del rendimiento.</p>
                 <a lang="en" class="resource-link" href="https://www.creativebloq.com/features/the-complete-guide-to-svg/6">The power of sprites</a>
-                <p class="left-indent">Última parte de la guía sobre SVG de Steven Roberts. Explica de forma concisa y clara cómo crear y utilizar un <em>stripe</em> SVG en pocos pasos.</p>
+                <p tabindex="0" class="left-indent">Última parte de la guía sobre SVG de Steven Roberts. Explica de forma concisa y clara cómo crear y utilizar un <em>stripe</em> SVG en pocos pasos.</p>
                 <a lang="en" class="resource-link" href="https://w3bits.com/svg-sprites/">A Guide to Create and Use SVG Sprites</a>
-                <p class="left-indent">Breve explicación sobre cómo crear una plantilla básica para un <em>sprite</em> SVG y añadirlo a tu web. Incluye cómo crear un <em>sprite</em> con <a
+                <p tabindex="0" class="left-indent">Breve explicación sobre cómo crear una plantilla básica para un <em>sprite</em> SVG y añadirlo a tu web. Incluye cómo crear un <em>sprite</em> con <a
                         href="#icomoon">IcoMoon</a> a
                     partir de fuentes de iconos y demos.</p>
                 <a lang="en" class="resource-link" href="https://ishadeed.com/article/using-svg-icons/">Using SVG for the Icongraphy #SVGFTW</a>
-                <p class="left-indent">Razones para usar SVG y cómo crear y usar SVG y <em>sprites</em>. Incluye una guía para crear <em>sprites</em> con <a href="#icomoon">IcoMoon</a>.</p>
+                <p tabindex="0" class="left-indent">Razones para usar SVG y cómo crear y usar SVG y <em>sprites</em>. Incluye una guía para crear <em>sprites</em> con <a href="#icomoon">IcoMoon</a>.</p>
                 <a lang="en" class="resource-link" href="https://www.sitepoint.com/use-svg-image-sprites/">How to Use SVG Image Sprites</a>
-                <p class="left-indent">Qué son los <em>sprite</em> SVG, guía de uso y cómo crear <em>SVG Sprite Stacks</em> para poder utlizar los <em>sprites</em> SVG en <code
+                <p tabindex="0" class="left-indent">Qué son los <em>sprite</em> SVG, guía de uso y cómo crear <em>SVG Sprite Stacks</em> para poder utlizar los <em>sprites</em> SVG en <code
                         class="inline-code-pink">&lt;img&gt;</code>, <code class="inline-code-pink">&lt;iframe&gt;</code>, <code class="inline-code-pink">&lt;object&gt;</code> o como <em>CSS
                         background</em>.</p>
                 <a lang="en" class="resource-link" href="https://www.mediasuite.co.nz/blog/generating-svg-sprites-the-easy-way/">Generating SVG sprites (the easy way…)</a>
-                <p class="left-indent">Explicación rápida sobre cómo usar el paquete de Javascript <a href="#svgsprite">svg-sprite</a> para crear <em>sprites</em> SVG.</p>
-                <h2>SVG (Scalable Vector Graphics)</h2>
+                <p tabindex="0" class="left-indent">Explicación rápida sobre cómo usar el paquete de Javascript <a href="#svgsprite">svg-sprite</a> para crear <em>sprites</em> SVG.</p>
+                <h2 tabindex="0">SVG (Scalable Vector Graphics)</h2>
                 <a lang="en" class="resource-link" href="docs/SVG-Essentials-2nd-Edition.pdf">SVG Essentials. Producting Scalable Vector Graphics with XML (2<sup>nd</sup> Edition)</a><sup
-                    class="red">PDF</sup>
-                <p class="left-indent">Completo manual sobre SVG. Incluye uso en la web y manipulación a través del DOM con JavaScript.</p>
+                    tabindex="0" class="red">PDF</sup>
+                <p tabindex="0" class="left-indent">Completo manual sobre SVG. Incluye uso en la web y manipulación a través del DOM con JavaScript.</p>
                 <a class="resource-link" href="http://w3.unpocodetodo.info/svg/introduccion.php">SVG</a>
-                <p class="left-indent">Guía sobre todo lo referente a SVG.</p>
+                <p tabindex="0" class="left-indent">Guía sobre todo lo referente a SVG.</p>
                 <a lang="en" class="resource-link" href="https://svgontheweb.com/">SVG on the web — A Practical Guide</a>
-                <p class="left-indent">Guía práctica y rápida sobre SVG en la web. Al final recopila recursos y enlace útiles.</p>
+                <p tabindex="0" class="left-indent">Guía práctica y rápida sobre SVG en la web. Al final recopila recursos y enlace útiles.</p>
                 <a lang="en" class="resource-link" href="https://learn-the-web.algonquindesign.ca/topics/advanced-svg">Advanced SVG</a>
-                <p class="left-indent">Completa guía sobre SVG y técnicas avanzadas de SVG. Incluye un apartado <em>sprites</em>, pinceladas sobre accesibilidad. Disponible en video.</p>
-                <h2>Accesibilidad SVG</h2>
+                <p tabindex="0" class="left-indent">Completa guía sobre SVG y técnicas avanzadas de SVG. Incluye un apartado <em>sprites</em>, pinceladas sobre accesibilidad. Disponible en video.</p>
+                <h2 tabindex="0">Accesibilidad SVG</h2>
                 <a lang="en" class="resource-link" href="https://css-tricks.com/accessible-svgs/">Accessible SVGs</a>
-                <p class="left-indent">Completa guía para accesibilidad SVG según el uso. Con ejemplos. Puede estar un poco desactualizada (última actualización 28 de agosto de 2016).</p>
+                <p tabindex="0" class="left-indent">Completa guía para accesibilidad SVG según el uso. Con ejemplos. Puede estar un poco desactualizada (última actualización 28 de agosto de 2016).</p>
                 <a lang="en" class="resource-link" href="https://www.sitepoint.com/tips-accessible-svg/">Tips for Creating Accessible SVG</a>
-                <p class="left-indent">Consejos para crear SVG accesibles. Puede estar un poco desactualizada (última actualización 6 de mayo de 2014). En su mayoría siguen siendo válidos como
+                <p tabindex="0" class="left-indent">Consejos para crear SVG accesibles. Puede estar un poco desactualizada (última actualización 6 de mayo de 2014). En su mayoría siguen siendo válidos como
                     consejos generales básicos.</p>
                 <a lang="en" class="resource-link" href="https://www.tpgi.com/using-aria-enhance-svg-accessibility/">Using ARIA to enhance SVG accessibility</a>
-                <p class="left-indent">El soporte para la accesibilidad en SVG1.1 es limitado en navegadores y lectores de pantalla, aunque se puede mejorar utilizando <a
+                <p tabindex="0" class="left-indent">El soporte para la accesibilidad en SVG1.1 es limitado en navegadores y lectores de pantalla, aunque se puede mejorar utilizando <a
                         href="https://www.w3.org/TR/wai-aria-1.2/">WAI-ARIA</a>. En SVG2 el soporte mejora, pero sigue siendo recomendable añadirlo por razones de retrocompatibilidad. Puede estar un
                     poco desactualizada (última actualización 19 de diciembre de 2013), aunque las recomendaciones de ARIA siguen vigentes.</p>
             </article>
@@ -458,9 +463,9 @@
             </a>
         </div>
     </main>
-    <footer class="resources-footer">
+    <footer role="contentinfo">
         <div class="legal-conditions">
-            <p><strong>Nuria Barrios Santos, 2021.</strong>
+            <p tabindex="0"><strong>Nuria Barrios Santos, 2021.</strong>
                 <a class="license" aria-label="Licencia Creative Commons Atribución" href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="external"
                     title="Licencia Creative Commons Atribución">
                     <picture>

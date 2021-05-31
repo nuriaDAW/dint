@@ -219,7 +219,7 @@ pre {
 
 /* List styles */
 ul.video-list {
-  max-height: 42rem;
+  max-height: 49rem;
   list-style-type: none;
   overflow-y: scroll;
 
@@ -319,7 +319,7 @@ ul.video-list {
   transform: skew(0deg, -3deg);
 }
 
-.about-text, .srcintro-text {
+.srcintro-text {
   text-align: justify;
 }
 
@@ -351,7 +351,6 @@ img.logo {
 /* Audio styles */
 audio {
   width: 100%;
-  background-color: rgba($border-purple, .4);
 }
 
 .podcast {
@@ -368,7 +367,6 @@ audio {
 /* Video styles */
 video {
   max-width: 100%;
-  background-color: rgba($border-purple, .4);
 }
 
 .video {
@@ -383,6 +381,12 @@ video {
 
 .video-list-wrapper {
   width: 98%;
+}
+
+.video-transcripction {
+  height: 9rem;
+  padding: 0 .5rem;
+  overflow-y: auto;
 }
 
 /* Icon styles */
@@ -617,10 +621,6 @@ label {
 }
 
 /* Text Resalt */
-.underlined {
-  text-decoration: underline;
-}
-
 .upper {
   text-transform: uppercase;
 }

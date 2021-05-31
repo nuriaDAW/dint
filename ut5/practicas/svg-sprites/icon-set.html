@@ -17,34 +17,36 @@
 
 <body>
     <!-- Skip to content for screen readers -->
-    <a class="skip-to-content-link" href="#main">
-        Saltar al contenido principal
-    </a>
-    <header id="top">
+    <div role="complementary">
+        <a class="skip-to-content-link" href="#main">
+            Saltar al contenido principal
+        </a>
+    </div>
+    <header id="top" role="banner">
         <a href="index.html">
             <div>
-                <h1>
+                <h1 tabindex="0">
                     <svg class="icon-header hide-on-med-and-down" role="img" aria-hidden="true">
                         <title></title>
                         <use xlink:href="icons/sprite-captain_icons.svg#pencil"></use>
                     </svg> Captain icons
                 </h1>
-                <p>+350 <mark>SVG Sprite</mark></p>
+                <p tabindex="0">+350 <mark>SVG Sprite</mark></p>
             </div>
         </a>
     </header>
-    <div class="top-switcher"><a class="upper" href="#">es</a> | <a class="upper" href="">en</a></div>
-    <nav class="navbar">
+    <div class="top-switcher" role="tablist"><a class="upper" href="#">es</a> <span tabindex="-1">|</span> <a class="upper" href="#">en</a></div>
+    <nav role="navigation" class="navbar">
         <ul>
             <li><a href="#">Iconos</a></li>
-            <li><a href="index.html#download">Descargar</a></li>
+            <li><a href="index.html#download">Descarga</a></li>
             <li><a href="resources.html">Recursos</a></li>
             <li><a href="index.html#about">Sobre nosotros</a></li>
             <li><a href="index.html#contact">Contacto</a></li>
         </ul>
     </nav>
-    <main>
-        <p class="big">Conjunto de <mark>iconos (372)</mark> con sus referencias.</p>
+    <main role="main" id="main">
+        <p tabindex="0" class="big">Conjunto de <mark>iconos (372)</mark> con sus referencias.</p>
         <div class="center corner-button-wrapper" aria-label="Categorías">
             <button class="btn btn-category corner-button-m-pink">
                 <span>Comida</span>
@@ -104,13 +106,13 @@
         <div class="container grid-wrapper-sm">
             <div>
                 <!-- aria-labelledby has better screen-reader support than aria-describedby -->
-                <svg class="center-block icon-md" role="img" aria-labelledby="title desc">
-                    <title id="title">Youtube logo</title>
-                    <desc id="desc">YouTube (pronunciación AFI [ˈjuːtjuːb]) es un sitio web de origen estadounidense dedicado a compartir videos.</desc>
+                <svg tabindex="0" class="center-block icon-md" role="img" aria-labelledby="title desc">
+                    <title tabindex="0" id="title">Youtube logo</title>
+                    <desc tabindex="0" id="desc">YouTube (pronunciación AFI [ˈjuːtjuːb]) es un sitio web de origen estadounidense dedicado a compartir videos.</desc>
                     <use xlink:href="icons/sprite-captain_icons.svg#youtube"></use>
                 </svg>
                 <p>
-                    <code class="inline-code-gray">youtube</code>
+                    <code tabindex="0" class="inline-code-gray">youtube</code>
                 </p>
             </div>
             <div>
@@ -3837,10 +3839,11 @@
         </div>
         <hr class="footer-separator" />
     </main>
-    <footer>
+    <footer role="contentinfo">
         <div class="legal-conditions">
-            <p><strong>Nuria Barrios Santos, 2021.</strong>
-                <a class="license" aria-label="Licencia Creative Commons Atribución" href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="external" title="Licencia Creative Commons Atribución">
+            <p><strong tabindex="0">Nuria Barrios Santos, 2021.</strong>
+                <a class="license" aria-label="Licencia Creative Commons Atribución" href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="external"
+                    title="Licencia Creative Commons Atribución">
                     <picture>
                         <source srcset="img/by.svg" type="image/svg+xml">
                         <img src="img/by.png" alt="Licencia Creative Commons Atribución" width="120" height="42">
