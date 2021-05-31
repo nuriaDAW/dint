@@ -621,6 +621,9 @@ audio {
   background-color: rgba(77, 0, 153, 0.4);
 }
 
+.podcast {
+  width: 98%;
+}
 .podcast .big {
   margin-bottom: 0 !important;
 }
@@ -639,6 +642,10 @@ video {
 }
 .video hr {
   border-top: 4px ridge;
+}
+
+.video-list-wrapper {
+  width: 98%;
 }
 
 /* Icon styles */
@@ -3404,6 +3411,11 @@ button, .btn {
   box-shadow: 0 0 0 5px #ffdbff inset;
 }
 
+@media only screen and (min-width : 1201px) {
+  .about-image {
+    background-position: 65% 50%;
+  }
+}
 @media only screen and (min-width : 1025px) {
   .hero {
     height: 22rem;
@@ -3426,11 +3438,6 @@ button, .btn {
     background-size: cover;
   }
 }
-@media only screen and (min-width : 1201px) {
-  .about-image {
-    background-position: 65% 50%;
-  }
-}
 @media only screen and (min-width: 1024px) and (max-width: 1124px) {
   .hero p:last-child {
     margin-right: 7.5rem;
@@ -3443,6 +3450,11 @@ button, .btn {
 }
 @media only screen and (min-width : 481px) and (max-width : 768px) {
   .table-compatibility {
+    width: 90%;
+  }
+}
+@media only screen and (max-width : 1024px) {
+  ul.video-list {
     width: 90%;
   }
 }

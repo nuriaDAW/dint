@@ -300,6 +300,7 @@ audio {
 }
 
 .podcast {
+  width: 98%;
   .big{
     margin-bottom: 0 !important;
   }
@@ -323,6 +324,10 @@ video {
   hr {
     border-top: 4px ridge;
   }
+}
+
+.video-list-wrapper {
+  width: 98%;
 }
 
 /* Icon styles */

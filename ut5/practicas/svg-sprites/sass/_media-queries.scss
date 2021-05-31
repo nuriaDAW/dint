@@ -1,3 +1,9 @@
+@media #{$extra-large-and-up}{
+  .about-image{
+    background-position: 65% 50%;
+  }
+}
+
 @media #{$large-and-up}{
   .hero{
     height: 22rem;
@@ -24,12 +30,6 @@
    }
 }
 
-@media #{$extra-large-and-up}{
-  .about-image{
-    background-position: 65% 50%;
-  }
-}
-
 @media only screen and (min-width : #{$large-screen}) and (max-width : #{$large-screen + 100}){
   .hero {
     p:last-child {
@@ -50,6 +50,12 @@
 	.table-compatibility {
     width: 90%;
   }
+}
+
+@media #{$large-and-down} {
+    ul.video-list {
+      width: 90%;
+    }
 }
 
 @media #{$medium-and-down} {
