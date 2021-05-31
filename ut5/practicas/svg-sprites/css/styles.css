@@ -637,15 +637,6 @@ ul.video-list .video-author {
   text-align: justify;
 }
 
-.top-switcher {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  margin-right: 0.85rem;
-  text-align: right;
-  z-index: 999;
-}
-
 .footer-separator {
   width: 30%;
   margin-top: 4rem;
