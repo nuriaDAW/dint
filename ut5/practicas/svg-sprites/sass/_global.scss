@@ -104,6 +104,19 @@ footer {
   }
 
   }
+
+  .validators {
+    text-align: center;
+
+    .test{
+      padding: .5rem 0;
+      background-color: rgba($background-light-pink, .8);
+    }
+
+    a{
+        color: darken($text-highlights, 15%);
+      }
+  }
 }
 
 /* Text styles */

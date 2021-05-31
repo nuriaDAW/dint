@@ -32,19 +32,6 @@
   }
 }
 
-/* Smallest screens grid fallback */
-@media #{$extra-small-and-down}{
-@for $num-col from 2 through 12 {
-  .grid-col-xs#{$num-col} {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .grid-col-xs#{$num-col} > * {
-    flex-basis: calc(100%/#{$num-col});
-  }
-}
-}
-
 /* Mobile grid fallback */
 @media #{$mobile-only}{
 @for $num-col from 2 through 12 {
@@ -173,16 +160,6 @@
     @extend .grid;
     grid-template-columns: repeat($num-col, 1fr);
   }
-}
-
-/* Grid for smallest devices */
-@media #{$extra-small-and-down}{
-@for $num-col from 2 through 12 {
-  .grid-col-xs#{$num-col} {
-    display: grid;
-    grid-template-columns: repeat($num-col, 1fr);
-  }
-}
 }
 
 /* Grid for mobile */

@@ -151,12 +151,6 @@
 }
 
 /* Hide/SHow classes */
-.hide-on-extra-small-only, .hide-on-extra-small-and-down {
-  @media #{$extra-small-and-down} {
-    display: none !important;
-  }
-}
-
 .hide-on-small-only, .hide-on-small-and-down {
   @media #{$small-and-down} {
     display: none !important;
