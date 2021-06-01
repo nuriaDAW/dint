@@ -641,7 +641,7 @@ ul.video-list .video-author {
   transform: skew(0deg, 3deg);
 }
 
-.skewed-background h1, .skewed-background .content {
+.skewed-background .content {
   transform: skew(0deg, -3deg);
 }
 
