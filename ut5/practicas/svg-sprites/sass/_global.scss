@@ -330,7 +330,7 @@ ul.video-list {
   transform: skew(0deg, 3deg);
 }
 
-.skewed-background .content {
+.skewed-background h1, .skewed-background .content {
   transform: skew(0deg, -3deg);
 }
 
